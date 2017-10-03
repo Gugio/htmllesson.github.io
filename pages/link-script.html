@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Link/Script</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="../img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+</head>
+<body>
+
+<main>
+    <nav class="page-nav">
+        <ol class="nav-list">
+            <li><a href="../index.html" class="nav-list-link"><span class="link-num">1</span>Структура HTML (правило
+                вкладення, коментар)</a></li>
+            <li><a href="tags.html" class="nav-list-link"><span class="link-num">2</span>Парні не парні теги.<br /> Блочні і
+                строчні.</a></li>
+            <li><a href="meta.html" class="nav-list-link"><span class="link-num">3</span><span class="one-line">Teг &lt;meta&gt;</span></a>
+            </li>
+            <li><a href="link-script.html" class="nav-list-link active"><span class="link-num">4</span><span class="one-line">Тег &lt;link&gt; i &lt;script&gt;</span></a>
+            </li>
+            <li><a href="symbols.html" class="nav-list-link"><span class="link-num">5</span><span
+                    class="one-line">Спец символи</span></a></li>
+            <li><a href="attr.html" class="nav-list-link"><span class="link-num">6</span><span class="one-line">Глобальні атрибути</span></a>
+            </li>
+            <li><a href="h.html" class="nav-list-link"><span class="link-num">7</span><span
+                    class="one-line">h1 - h6</span></a></li>
+            <li><a href="a.html" class="nav-list-link"><span class="link-num">8</span><span class="one-line">Тег &lt;a&gt;, &lt;map&gt;&lt;area&gt;&lt;/map&gt; </span></a>
+            <li><a href="lists.html" class="nav-list-link"><span class="link-num">9</span><span class="one-line">Списки &lt;ul&gt;, &lt;ol&gt;, &lt;dl&gt;</span></a>
+            </li>
+            <li><a href="input-textarea-btn.html" class="nav-list-link"><span class="link-num">10</span><span class="one-line">&lt;input&gt;,&lt;textarea&gt;,&lt;button&gt;</span></a></li>
+            <li><a href="table-form.html" class="nav-list-link"><span class="link-num">11</span><span class="one-line">&lt;table&gt;, &lt;form&gt;</span></a>
+            </li>
+            <li><a href="img-audio-video.html" class="nav-list-link"><span class="link-num">12</span><span class="one-line">&lt;img&gt;, &lt;audio&gt;, &lt;video&gt;</span></a>
+            </li>
+            <li><a href="semantics.html" class="nav-list-link"><span class="link-num">13</span><span class="one-line">Симантика</span></a>
+            </li>
+        </ol>
+    </nav>
+
+    <div class="main-content">
+        <div class="flex">
+            <div style="width: 100%; margin: 0 20px;">
+                <h1 style="text-align: center">&lt;link&gt;</h1>
+
+                <div style="width:80%;border:1px solid grey;padding:3px;margin: auto">&lt;head&gt;
+                    <div style="width:90%;border:1px solid grey;padding:5px;margin:20px">&lt;link rel="stylesheet"
+                        type="text/css" href="style.css" &gt;
+                    </div>
+                    <div style="width:90%;border:1px solid grey;padding:5px;margin:20px">&lt;link rel="stylesheet"
+                        href="style2.css" media="print" &gt;
+                    </div>
+                    <div style="width:90%;border:1px solid grey;padding:5px;margin:20px">&lt;link href="style2.css"
+                        media="screen and (max-width:1900px)"&gt;
+                    </div>
+                    <div style="width:90%;border:1px solid grey;padding:5px;margin:20px">&lt;link href="favicon.ico"
+                        rel="shortcut icon" type="image/x-icon"&gt;
+                    </div>
+                    &lt;/head&gt;
+                </div>
+                <h2>
+                    Атрибути:
+                </h2>
+                <table class="table">
+                    <tbody>
+                    <tr>
+                        <th>Атрибут</th>
+                        <th>Описание</th>
+                    </tr>
+                    <tr>
+                        <td class="left-th">href</td>
+                        <td>Путь к подключаемому файлу.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="left-th">media</td>
+                        <td>
+                            Тип устройства, для которого следует подключить файл. <br>
+                            Что имеется ввиду - вы можете подключить CSS файл только для больших экранов (значение <b>screen</b>)
+                            или только для маленьких экранов: для мобильников или планшетов (значение <b>handheld</b>).
+                            <br>
+                            <b>Возможные значения:</b> all | braille | handheld | print | screen | speech | projection |
+                            tty | tv.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="left-th">rel</td>
+                        <td>
+                            Тип подключаемого файла. <b>Возможные значения:</b> stylesheet | alternate.
+                            Значение <b>stylesheet</b> указывает на то, что подключается CSS файл,
+                            значение <b>alternate</b> используется, к примеру, для указания ссылки на файл в формате XML
+                            для описания ленты новостей, анонсов статей.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="left-th">charset</td>
+                        <td>Кодировка подключаемого файла. В настоящее время стандартом является <b>utf-8</b></td>
+                    </tr>
+                    <tr>
+                        <td class="left-th">type</td>
+                        <td>Тип данных подключаемого файла. Для CSS следует использовать <b>text/css</b>, для фавикона:
+                            <b>image/x-icon</b>.
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <h2>Значення властивості media:</h2>
+                <table class="table">
+                    <tbody>
+                    <tr>
+                        <th>Значение</th>
+                        <th>Описание</th>
+                    </tr>
+                    <tr>
+                        <td class="left-th">all</td>
+                        <td>Все устройства.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="left-th">screen</td>
+                        <td>Экран монитора.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="left-th">handheld</td>
+                        <td>Телефоны, смартфоны, устройства с маленьким экраном.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="left-th">braille</td>
+                        <td>Устройства, основанные на системе Брайля, предназначены для слепых людей.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="left-th">speech</td>
+                        <td>Речевые синтезаторы, а также программы для воспроизведения текста вслух. Сюда же входят
+                            речевые браузеры.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="left-th">print</td>
+                        <td>Принтеры.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="left-th">projection</td>
+                        <td>Проекторы.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="left-th">tty</td>
+                        <td>Телетайпы, терминалы, портативные устройства с ограниченными возможностями экрана. Для них
+                            не должны использоваться пиксели в качестве единиц измерения.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="left-th">tty</td>
+                        <td>Телевизоры, которые умеют открывать web страницы (бывает и такое).
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div style="width: 100%; margin: 0 20px">
+                <h1 style="text-align: center">&lt;script&gt;</h1>
+
+                <div style="width:80%;border:1px solid grey;padding:3px;margin: auto">
+                    <div style="width:90%;border:1px solid grey;padding:5px;margin:20px">
+                        &lt;script type="text/javascript"&gt;<br/>
+                        &emsp;document.write ('&lt;table width="100%" border="1"&gt;');<br>
+                        &emsp;&emsp;for (i=1; i<6; i++) {<br>
+                        &emsp;&emsp;&emsp;document.writeln("&lt;tr&gt;");<br>
+                        &emsp;&emsp;&emsp;for (j=1; j<6; j++) document.write("&lt;td&gt;" + i + j +<br>
+                        &emsp;&emsp;&emsp;"&lt;\/td&gt;");<br>
+                        &emsp;&emsp;&emsp;document.writeln("&lt;\/tr>");<br/>
+                        &emsp;&emsp;}<br>
+                        &emsp;document.write ("&lt;\/table&gt;");<br/>
+                    &lt;/script&gt;
+                    </div>
+                    <div style="width:90%;border:1px solid grey;padding:5px;margin:20px">&lt;script type="text/javascript" src="script.js"&gt;&lt;/script&gt;
+                    </div>
+
+                </div>
+                <h2>Атрибути:</h2>
+                <table class="table">
+                    <tbody><tr>
+                        <th style="width:15%">Attribute</th>
+                        <th style="width:15%">Value</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td class="html5badge">async</td>
+                        <td>async</td>
+                        <td>Загружает скрипт асинхронно (только для внешних скриптов)</td>
+                    </tr>
+                    <tr>
+                        <td>defer</td>
+                        <td>defer</td>
+                        <td>Откладывает выполнение скрипта до тех пор, пока вся страница не будет загружена полностью.</td>
+                    </tr>
+                    <tr>
+                        <td>src</td>
+                        <td><i>URL</i></td>
+                        <td>Адрес скрипта из внешнего файла для импорта в текущий документ.</td>
+                    </tr>
+                    <tr>
+                        <td>type</td>
+                        <td><i>media_type</i></td>
+                        <td>Определяет тип содержимого тега &lt;script&gt;.</td>
+                    </tr>
+                    </tbody></table>
+
+
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+</html>

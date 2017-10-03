@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title class="b-title">Img/Audio/Video</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="../img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+</head>
+<body>
+
+<main>
+    <nav class="page-nav">
+        <ol class="nav-list">
+            <li><a href="../index.html" class="nav-list-link"><span class="link-num">1</span>Структура HTML (правило
+                вкладення, коментар)</a></li>
+            <li><a href="tags.html" class="nav-list-link"><span class="link-num">2</span>Парні не парні теги.<br />
+                Блочні і
+                строчні.</a></li>
+            <li><a href="meta.html" class="nav-list-link"><span class="link-num">3</span><span class="one-line">Teг &lt;meta&gt;</span></a>
+            </li>
+            <li><a href="link-script.html" class="nav-list-link"><span class="link-num">4</span><span class="one-line">Тег &lt;link&gt; i &lt;script&gt;</span></a>
+            </li>
+            <li><a href="symbols.html" class="nav-list-link"><span class="link-num">5</span><span
+                    class="one-line">Спец символи</span></a></li>
+            <li><a href="attr.html" class="nav-list-link"><span class="link-num">6</span><span class="one-line">Глобальні атрибути</span></a>
+            </li>
+            <li><a href="h.html" class="nav-list-link"><span class="link-num">7</span><span
+                    class="one-line">h1 - h6</span></a></li>
+            <li><a href="a.html" class="nav-list-link"><span class="link-num">8</span><span class="one-line">Тег &lt;a&gt;, &lt;map&gt;&lt;area&gt;&lt;/map&gt; </span></a>
+            <li><a href="lists.html" class="nav-list-link"><span class="link-num">9</span><span class="one-line">Списки &lt;ul&gt;, &lt;ol&gt;, &lt;dl&gt;</span></a>
+            </li>
+            <li><a href="input-textarea-btn.html" class="nav-list-link"><span class="link-num">10</span><span
+                    class="one-line">&lt;input&gt;,&lt;textarea&gt;,&lt;button&gt;</span></a></li>
+            <li><a href="table-form.html" class="nav-list-link"><span class="link-num">11</span><span class="one-line">&lt;table&gt;, &lt;form&gt;</span></a>
+            </li>
+            <li><a href="img-audio-video.html" class="nav-list-link active"><span class="link-num">12</span><span
+                    class="one-line">&lt;img&gt;, &lt;audio&gt;, &lt;video&gt;</span></a>
+            </li>
+            <li><a href="semantics.html" class="nav-list-link"><span class="link-num">13</span><span class="one-line">Симантика</span></a>
+            </li>
+        </ol>
+    </nav>
+
+    <div class="main-content" style="max-width: 1200px;margin: auto">
+        <h1 style="text-align: center">Img</h1>
+        <div style="display: flex;margin-bottom: 100px;">
+            <div style="padding-right: 30px;width: 40%">
+                <span>
+                    Використовується для відображення зображення на сторінці у форматі <span class="spanOrange">jpg, gif, png, svg</span>. <br><br>
+                    Синтаксис: <span class="spanOrange">&lt;img</span> src="URL" alt="альтернативний текст" width="500px" height="253px"<span
+                        class="spanOrange">&gt;</span>
+                </span><br><br>
+
+                <img id="respImg"  src="https://i.kinja-img.com/gawker-media/image/upload/t_original/bhjivrw2chm9um9yrrmy.jpg"
+                     width="500"
+                     height="253"
+                     alt="стрьомний клоун">
+                <button id="respBtn" onclick="resp()">Add responsive</button> <span class="spanOrange">(max-width: 100%; height: auto;)</span>
+                <p>text after img</p>
+            </div>
+            <div style="width: 60%">
+                <table style="max-width: 100%" class="table">
+                    <tr>
+                        <th>Атрибути</th>
+                        <th>Значення</th>
+                    </tr>
+                    <tr>
+                        <td><code>src="URL"</code></td>
+                        <td>Обов'язковий атрибут. Вказує шлях до файлу, який буде відображатись</td>
+                    </tr>
+                    <tr>
+                        <td><code>alt="текст-опис"</code></td>
+                        <td>Обов'язковий атрибут. Задає текст-опис зображення, якщо сама картинка відсутня.</td>
+                    </tr>
+                    <tr>
+                        <td><code>border="число"</code></td>
+                        <td>Задає рамку для зображення. По-замовчуванню не відображається, крім випадку коли зображення
+                            не
+                            являє
+                            собою посилання (<code>&lt;a href="http://"&gt;</code>)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><code>width="число", height="число"</code></td>
+                        <td>Для зміни розмірів зображень, передбачені атрибути <code>height="висота"</code> та <code>width="ширина"</code>.
+                            Допускається використання значнь у пікселях та відсотках. Відсотковий запис відраховується
+                            від
+                            величини батьківського контейнера. Задавши один з параметрів, розміри вираховуються зі
+                            збереженням
+                            пропорцій.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><code>ismap</code></td>
+                        <td>Атрибут, який вказує, що елемент являє собою карту-зображення. Карта-зображення дозволяє
+                            прив'язати
+                            посилання до різних областей зображення.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><code>usemap="#ідентифікатор"</code></td>
+                        <td>Атрибут зв'язує між собою зображення та карту-зображення,
+                            яке задається тегом <code>&ltmap></code>. У якості такого зв'язку виступає ідентифікатор,
+                            який
+                            вказується у атрибуті <code>usemap</code> і те саме ім'я задане атрибутом <code>name</code>
+                            у
+                            тезі
+                            <code>&ltmap></code>.
+                            Ідентифікатор повинен починатись з (#).
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><code>longdesc="URL"</code></td>
+                        <td>Вказує на адресу документу, в якому знаходиться анотація до зображення.</td>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+
+        <h1 style="text-align: center">Video</h1>
+        <p>
+            Додає, відтворює та керує налаштуваннями відеоролику на сторінці. Шлях до файлу вказується через атрибут
+            src="URL" або вкладеним тегом &lt;source&gt;
+        </p>
+        <div style="display: flex; margin-bottom: 50px;">
+            <div style="margin-right: 30px;">
+                <dl>
+                    <dt><span class="spanOrange">&lt;video</span> width="500" height="300" controls<span
+                            class="spanOrange">&gt;</span></dt>
+                    <dd><span class="spanOrange">&lt;source</span> src="../video.ogv" type="video/ogv"<span
+                            class="spanOrange">&gt;</span></dd>
+                    <dd><span class="spanOrange">&lt;source</span> src="../video.mp4" type="video/mp4"<span
+                            class="spanOrange">&gt;</span></dd>
+                    <dd><span class="spanOrange">&lt;source</span> src="../video.webm" type="video/webm"<span
+                            class="spanOrange">&gt;</span></dd>
+                    <dt><span class="spanOrange">&lt;/video&gt;</span></dt>
+                </dl>
+
+                <video width="500" preload="metadata" height="300" controls muted style="border: 2px solid red;background-color: green">
+                    <source src="http://htmlbook.ru/example/video/duel.ogv" type="video/ogv">
+                    <source src="http://htmlbook.ru/example/video/duel.mp4" type="video/mp4">
+                    <source src="http://htmlbook.ru/example/video/duel.webm" type="video/webm">
+                </video>
+            </div>
+
+            <div>
+                <table class="table" border="1px">
+                    <tr>
+                        <th>Атрибути</th>
+                        <th>Значення</th>
+                    </tr>
+                    <tr>
+                        <td><code>src="URL"</code></td>
+                        <td>Вказує шлях до відеоролику</td>
+                    </tr>
+                    <tr>
+                        <td><code>width="ширина", height="висота"</code></td>
+                        <td>Задає область для відтворення відео</td>
+                    </tr>
+                    <tr>
+                        <td><code>preload="none | metadata | auto"</code></td>
+                        <td>Використовується для завантаження відео разом зі сторінкою. Ігнорується, якщо встановлено
+                            <code>autoplay</code>.
+                            <code>none</code> - не завантажувати;
+                            <code>metadata</code> - тільки службову інформацію;
+                            <code>auto</code> - завантажити повністю;
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><code>autoplay</code></td>
+                        <td>За наявності даного атрибуту відео відтворюється автоматично. <code>autoplay</code> відміняє
+                            дію
+                            <code>preload</code>. По-замовчуванню атрибут вимкнено.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><code>controls</code></td>
+                        <td>Додає панель керування. Вигляд та фунціонал панелі залежить від браузера. По-замовчуванню
+                            атрибут
+                            вимкнено.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><code>muted</code></td>
+                        <td>Вказує, що звук повинен бути вимкнений
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><code>loop</code></td>
+                        <td>Зациклює відтворення відео. По-замовчуванню вимкнено.</td>
+                    </tr>
+                    <tr>
+                        <td><code>poster="URL"</code></td>
+                        <td>Задає адресу зображення яке буде відображатись доки відео не доступно. Якщо відсутній
+                            браузер
+                            показує перший кадр відео.
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div style="display: flex;margin-bottom: 100px;">
+            <div>
+                <table class="table">
+                    <tbody>
+                    <tr>
+                        <th style="width:25%">Browser</th>
+                        <th style="width:25%">MP4</th>
+                        <th style="width:25%">WebM</th>
+                        <th style="width:25%">Ogg</th>
+                    </tr>
+                    <tr>
+                        <td>Internet Explorer</td>
+                        <td>✓</td>
+                        <td>&#10060;</td>
+                        <td>&#10060;</td>
+                    </tr>
+                    <tr>
+                        <td>Chrome</td>
+                        <td>✓</td>
+                        <td>✓</td>
+                        <td>✓</td>
+                    </tr>
+                    <tr>
+                        <td>Firefox</td>
+                        <td>✓<br>from Firefox 21<br>from Firefox 30 for Linux</td>
+                        <td>✓</td>
+                        <td>✓</td>
+                    </tr>
+                    <tr>
+                        <td>Safari</td>
+                        <td>✓</td>
+                        <td>&#10060;</td>
+                        <td>&#10060;</td>
+                    </tr>
+                    <tr>
+                        <td>Opera</td>
+                        <td>✓<br>From Opera 25</td>
+                        <td>✓</td>
+                        <td>✓</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <ul>
+                <li>MP4 = MPEG 4 файл з H264 відео кодеком і AAC аудіо кодеком</li>
+                <li>WebM = WebM файл з VP8 відео кодеком і Vorbis аудіо кодеком</li>
+                <li>Ogg = Ogg файл з Theora відео кодеком і Vorbis аудіо кодеком</li>
+            </ul>
+        </div>
+
+        <h1 style="text-align: center">Audio</h1>
+        <div style="display: flex;margin-bottom: 20px;">
+            <div style="margin-right: 30px;">
+                <p>
+                    Додає, відтворює та керує налаштуваннями аудіотреку на сторінці. Шлях до файлу вказується через атрибут
+                    <code>src="URL"</code> або вкладеним тегом <code>&ltsource></code> <br>
+                    Синтаксис
+                </p>
+                <dl>
+                    <dt><span class="spanOrange">&lt;audio&gt;</span></dt>
+                    <dd><span class="spanOrange">&lt;source</span> src="../music.mp3" type="audio/mp3"<span class="spanOrange">&gt;</span></dd>
+                    <dd><span class="spanOrange">&lt;source</span> src="../music.ogg" type="audio/ogg"<span class="spanOrange">&gt;</span></dd>
+                    <dd><span class="spanOrange">&lt;source</span> src="../music.wav" type="audio/wav"<span class="spanOrange">&gt;</span></dd>
+                    <dd>Your browser does not support the audio tag.</dd>
+                    <dt><span class="spanOrange">&lt;/audio&gt;</span></dt>
+                </dl>
+
+                <audio style="width: 400px;" controls preload="metadata">
+                    <source src="http://htmlbook.ru/example/audio/music.mp3" type="audio/mp3">
+                    <source src="http://htmlbook.ru/example/audio/music.ogg" type="audio/ogg; codecs=vorbis">
+                    Your browser does not support the audio tag.
+                </audio>
+            </div>
+            <div>
+                <table class="table">
+                    <caption>тег <code>&ltaudio></code></caption>
+                    <tr>
+                        <th>Атрибути</th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <td><code>src="URL"</code></td>
+                        <td>Вказує шлях до аудіофайлу</td>
+                    </tr>
+                    <tr>
+                        <td><code>preload="none | metadata | auto"</code></td>
+                        <td>Використовується для завантаження аудіо разом зі сторінкою. Ігнорується, якщо встановлено <code>autoplay</code>.
+                            <code>none</code> - не завантажувати;
+                            <code>metadata</code> - тільки службову інформацію;
+                            <code>auto</code> - завантажити повністю;
+                            за відсутності сприймається як <code>auto</code>.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><code>autoplay</code></td>
+                        <td>За наявності даного атрибуту аудіо відтворюється автоматично. autoplay відміняє дію
+                            <code>preload</code>. По-замовчуванню атрибут вимкнено.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><code>controls</code></td>
+                        <td>Додає панель керування. Вигляд та фунціонал панелі залежить від браузера. По-замовчуванню атрибут
+                            вимкнено.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><code>muted</code></td>
+                        <td>Вказує, що звук повинен бути вимкнений
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><code>loop</code></td>
+                        <td>Зациклює відтворення аудіо. По-замовчуванню вимкнено.</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <table class="table">
+            <tbody><tr>
+                <th style="width:25%">Browser</th>
+                <th style="width:25%">MP3</th>
+                <th style="width:25%">Wav</th>
+                <th style="width:25%">Ogg</th>
+            </tr>
+            <tr>
+                <td>Internet Explorer</td>
+                <td>&#10003;</td>
+                <td>&#10060;</td>
+                <td>&#10060;</td>
+            </tr>
+            <tr>
+                <td>Chrome</td>
+                <td>&#10003;</td>
+                <td>&#10003;</td>
+                <td>&#10003;</td>
+            </tr>
+            <tr>
+                <td>Firefox</td>
+                <td>&#10003;</td>
+                <td>&#10003;</td>
+                <td>&#10003;</td>
+            </tr>
+            <tr>
+                <td>Safari</td>
+                <td>&#10003;</td>
+                <td>&#10003;</td>
+                <td>&#10060;</td>
+            </tr>
+            <tr>
+                <td>Opera</td>
+                <td>&#10003;</td>
+                <td>&#10003;</td>
+                <td>&#10003;</td>
+            </tr>
+            </tbody></table>
+    </div>
+
+</main>
+<script src="../js/script.js"></script>
+</body>
+</html>
