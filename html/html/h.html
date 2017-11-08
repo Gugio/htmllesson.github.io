@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title class="b-title">H</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="../img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+</head>
+<body>
+
+<main>
+    <nav class="page-nav">
+        <ol class="nav-list">
+            <li><a href="../index.html" class="nav-list-link"><span class="link-num">1</span>Структура HTML (правило
+                вкладення, коментар)</a></li>
+            <li><a href="tags.html" class="nav-list-link"><span class="link-num">2</span>Парні не парні теги.<br />
+                Блочні і
+                строчні.</a></li>
+            <li><a href="meta.html" class="nav-list-link"><span class="link-num">3</span><span class="one-line">Teг &lt;meta&gt;</span></a>
+            </li>
+            <li><a href="link-script.html" class="nav-list-link"><span class="link-num">4</span><span class="one-line">Тег &lt;link&gt; i &lt;script&gt;</span></a>
+            </li>
+            <li><a href="symbols.html" class="nav-list-link"><span class="link-num">5</span><span
+                    class="one-line">Спец символи</span></a></li>
+            <li><a href="attr.html" class="nav-list-link"><span class="link-num">6</span><span class="one-line">Глобальні атрибути</span></a>
+            </li>
+            <li><a href="h.html" class="nav-list-link active"><span class="link-num">7</span><span
+                    class="one-line">h1 - h6</span></a></li>
+            <li><a href="a.html" class="nav-list-link"><span class="link-num">8</span><span class="one-line">Тег &lt;a&gt;, &lt;map&gt;&lt;area&gt;&lt;/map&gt; </span></a>
+            <li><a href="lists.html" class="nav-list-link"><span class="link-num">9</span><span class="one-line">Списки &lt;ul&gt;, &lt;ol&gt;, &lt;dl&gt;</span></a>
+            </li>
+            <li><a href="input-textarea-btn.html" class="nav-list-link"><span class="link-num">10</span><span class="one-line">&lt;input&gt;,&lt;textarea&gt;,&lt;button&gt;</span></a></li>
+            <li><a href="table-form.html" class="nav-list-link"><span class="link-num">11</span><span class="one-line">&lt;table&gt;, &lt;form&gt;</span></a>
+            </li>
+            <li><a href="img-audio-video.html" class="nav-list-link"><span class="link-num">12</span><span class="one-line">&lt;img&gt;, &lt;audio&gt;, &lt;video&gt;</span></a>
+            </li>
+            <li><a href="semantics.html" class="nav-list-link"><span class="link-num">13</span><span class="one-line">Семантика</span></a>
+            </li>
+        </ol>
+    </nav>
+
+    <div class="main-content">
+        <h1 style="text-align: center">h1-h6</h1>
+        <div style="display: flex; flex-wrap: wrap; width: 1000px; margin: auto">
+            <div style="width: 45%; margin: 20px 15px;">
+                <div class="blockH">
+                    <div class="blockHIn">-</div>
+                    <h1 style="background-color: #fff">h1</h1>
+                    <div class="blockHIn">-</div>
+                </div>
+                h1 {<br>
+                &emsp;<span class="spanOrange">display:</span> block;<br>
+                &emsp;<span class="spanOrange">font-size:</span> 2em; <span class="spanRed">(32px)</span><br>
+                &emsp;<span class="spanOrange">margin-top:</span> 0.67em; <span class="spanRed">(21.44px)</span><br>
+                &emsp;<span class="spanOrange">margin-bottom:</span> 0.67em; <span class="spanRed">(21.44px)</span><br>
+                &emsp;<span class="spanOrange">margin-left:</span> 0;<br>
+                &emsp;<span class="spanOrange">margin-right:</span> 0;<br>
+                &emsp;<span class="spanOrange">font-weight:</span> bold;<br>
+                }
+            </div>
+            <div style="width: 45%; margin: 20px 15px;">
+                <div class="blockH">
+                    <div class="blockHIn">-</div>
+                    <h2 style="background-color: #fff">h2</h2>
+                    <div class="blockHIn">-</div>
+                </div>
+                h2 {<br>
+                &emsp;<span class="spanOrange">display:</span> block;<br>
+                &emsp;<span class="spanOrange">font-size:</span> 1.5em; <span class="spanRed">(24px)</span><br>
+                &emsp;<span class="spanOrange">margin-top:</span> 0.83em; <span class="spanRed">(19.92px)</span><br>
+                &emsp;<span class="spanOrange">margin-bottom:</span> 0.83em; <span class="spanRed">(19.92px)</span><br>
+                &emsp;<span class="spanOrange">margin-left:</span> 0;<br>
+                &emsp;<span class="spanOrange">margin-right:</span> 0;<br>
+                &emsp;<span class="spanOrange">font-weight:</span> bold;<br>
+                }
+            </div>
+            <div style="width: 45%; margin: 20px 15px;">
+                <div class="blockH">
+                    <div class="blockHIn">-</div>
+                    <h3 style="background-color: #fff">h3</h3>
+                    <div class="blockHIn">-</div>
+                </div>
+                h3 {<br>
+                &emsp;<span class="spanOrange">display:</span> block;<br>
+                &emsp;<span class="spanOrange">font-size:</span> 1.17em; <span class="spanRed">(18.72px)</span><br>
+                &emsp;<span class="spanOrange">margin-top:</span> 1em; <span class="spanRed">(18.72px)</span><br>
+                &emsp;<span class="spanOrange">margin-bottom:</span> 1em; <span class="spanRed">(18.72px)</span><br>
+                &emsp;<span class="spanOrange">margin-left:</span> 0;<br>
+                &emsp;<span class="spanOrange">margin-right:</span> 0;<br>
+                &emsp;<span class="spanOrange">font-weight:</span> bold;<br>
+                }
+            </div>
+            <div style="width: 45%; margin: 20px 15px;">
+                <div class="blockH">
+                    <div class="blockHIn">-</div>
+                    <h4 style="background-color: #fff">h4</h4>
+                    <div class="blockHIn">-</div>
+                </div>
+                h4 {<br>
+                &emsp;<span class="spanOrange">display:</span> block;<br>
+                &emsp;<span class="spanOrange">font-size:</span> 1em; <span class="spanRed">(16px)</span><br>
+                &emsp;<span class="spanOrange">margin-top:</span> 1.33em; <span class="spanRed">(21.28px)</span><br>
+                &emsp;<span class="spanOrange">margin-bottom:</span> 1.33em; <span class="spanRed">(21.28px)</span><br>
+                &emsp;<span class="spanOrange">margin-left:</span> 0;<br>
+                &emsp;<span class="spanOrange">margin-right:</span> 0;<br>
+                &emsp;<span class="spanOrange">font-weight:</span> bold;<br>
+                }
+            </div>
+            <div style="width: 45%; margin: 20px 15px;">
+                <div class="blockH">
+                    <div class="blockHIn">-</div>
+                    <h5 style="background-color: #fff">h5</h5>
+                    <div class="blockHIn">-</div>
+                </div>
+                h5 {<br>
+                &emsp;<span class="spanOrange">display:</span> block;<br>
+                &emsp;<span class="spanOrange">font-size:</span> .83em; <span class="spanRed">(13.28px)</span><br>
+                &emsp;<span class="spanOrange">margin-top:</span> 1.67em; <span class="spanRed">(22.17px)</span><br>
+                &emsp;<span class="spanOrange">margin-bottom:</span> 1.67em; <span class="spanRed">(22.17px)</span><br>
+                &emsp;<span class="spanOrange">margin-left:</span> 0;<br>
+                &emsp;<span class="spanOrange">margin-right:</span> 0;<br>
+                &emsp;<span class="spanOrange">font-weight:</span> bold;<br>
+                }
+            </div>
+            <div style="width: 45%; margin: 20px 15px;">
+                <div class="blockH">
+                    <div class="blockHIn">-</div>
+                    <h6 style="background-color: #fff">h6</h6>
+                    <div class="blockHIn">-</div>
+                </div>
+                h6 {<br>
+                &emsp;<span class="spanOrange">display:</span> block;<br>
+                &emsp;<span class="spanOrange">font-size:</span> .67em; <span class="spanRed">(10.72px)</span><br>
+                &emsp;<span class="spanOrange">margin-top:</span> 2.33em; <span class="spanRed">(24.97px)</span><br>
+                &emsp;<span class="spanOrange">margin-bottom:</span> 2.33em; <span class="spanRed">(24.97px)</span><br>
+                &emsp;<span class="spanOrange">margin-left:</span> 0;<br>
+                &emsp;<span class="spanOrange">margin-right:</span> 0;<br>
+                &emsp;<span class="spanOrange">font-weight:</span> bold;<br>
+                }
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+</html>

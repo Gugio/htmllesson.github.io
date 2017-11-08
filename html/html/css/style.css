@@ -1,0 +1,217 @@
+.to-home {
+  display: block;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+}
+
+.b-title {
+  color: red;
+}
+
+.table {
+  border-collapse: collapse;
+}
+
+.table td, th {
+  border: 1px solid gray;
+  padding: 5px;
+}
+
+.table th {
+  background-color: #dbdbdb;
+}
+
+.table td:first-child {
+  font-size: 18px;
+  color: #ff6200;
+}
+
+.table.t2 td:nth-child(2) {
+  color: #009121;
+}
+
+.table .h5-icon {
+  padding-right: 16px;
+  background-image: url("https://www.w3schools.com/images/html5_badge20.png");
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.page-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 100%;
+  box-shadow: 5px 0 5px 2px rgba(0, 0, 0, .08), 2px 7px 7px 2px rgba(0, 0, 0, .15);
+  overflow: hidden;
+  overflow-y: auto;
+  background-color: rgb(255, 157, 62);
+}
+
+.page-nav:hover {
+  width: 250px;
+}
+
+.nav-list {
+  list-style: none;
+  box-sizing: border-box;
+  width: 250px;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-list li {
+  border-bottom: 1px solid white;
+}
+
+.nav-list-link {
+  position: relative;
+  display: block;
+  height: 40px;
+  padding: 10px 20px 10px 30px;
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  font-family: sans-serif;
+  font-size: 15px;
+  letter-spacing: -0.5px;
+}
+
+.one-line {
+  line-height: 40px;
+}
+
+.nav-list-link.active {
+  background-color: #04007b;
+  color: white;
+}
+
+.link-num {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+}
+
+.main-content {
+  margin-left: 50px;
+  padding: 50px;
+}
+
+.xmp {
+  font-size: 18px;
+}
+
+.xmp-format main p:first-child {
+  color: red;
+}
+
+.xmp-format main p:last-child {
+  color: green;
+}
+
+/*h3 {*/
+/*margin-bottom: 0;*/
+/*}*/
+
+h3 span {
+  opacity: 0;
+}
+
+/*img {*/
+/*border: 10px solid #f1f1f1;*/
+/*border-radius: 3px;*/
+/*}*/
+
+figcaption {
+  text-align: center;
+  font-weight: bold;
+}
+
+.line {
+  display: flex;
+}
+
+.meta-title {
+  display: flex;
+}
+
+.blockH {
+  background-color: #ffe4c4;
+}
+
+.blockHIn {
+  height: 0;
+  opacity: 0;
+}
+
+.spanOrange {
+  color: #ff9500;
+  font-size: 17px;
+}
+
+.spanRed {
+  color: red;
+}
+
+.listsStyling {
+  background-color: rgba(0, 145, 33, 0.41);
+  position: relative;
+}
+
+.listsStyling li {
+  background-color: #fff;
+}
+
+.listsStyling::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -16px;
+  left: 0;
+  width: 100%;
+  height: 16px;
+  background-color: bisque;
+}
+
+.listsStyling::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: -16px;
+  left: 0;
+  width: 100%;
+  height: 16px;
+  background-color: bisque;
+}
+
+dl.listsStyling {
+  background-color: #fff;
+}
+
+.listsStyling dd {
+  position: relative;
+}
+
+.listsStyling dd::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -40px;
+  background-color: bisque;
+  width: 40px;
+  height: 100%;
+
+}

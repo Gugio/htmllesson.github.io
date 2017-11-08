@@ -1,0 +1,37 @@
+@import '../utilities/_color';
+@import '../utilities/_placeholder';
+
+* {
+  box-sizing: border-box;
+
+  &::before,
+  &::after {
+    box-sizing: border-box;
+  }
+}
+
+body {
+  @extend %noIndent;
+  background-color: $base-bg;
+  color: $base-text;
+}
+
+a {
+  background-color: transparent;
+  color: $base-link;
+  text-decoration: none;
+
+  &:hover,
+  &:focus,
+  &:active {
+    outline: 0;
+    color: darken($base-link, 10%);
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+

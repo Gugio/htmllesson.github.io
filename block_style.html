@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+    <title>CSS</title>
+    <link rel="stylesheet" href="./css/main.css">
+  </head>
+  <body>
+    <nav class="main-nav"><a class="to-home" href="index.html">< Home</a>
+      <div class="nav-block"><a class="nav-link" href="selectors.html"><span class='nav-link-num'>1</span> Селектори, Псевдокласи, Каскадність, Псевдоелементи</a><a class="nav-link" href="css_boxmodel.html"><span class='nav-link-num'>2</span> СSS Box model</a><a class="nav-link" href="measurement.html"><span class='nav-link-num'>3</span> Одиниці виміру</a><a class="nav-link" href="position.html"><span class='nav-link-num'>4</span> Позиціонування</a><a class="nav-link" href="fonts.html"><span class='nav-link-num'>5</span> Стилізація тексту</a><a class="nav-link" href="block_style.html"><span class='nav-link-num'>6</span> Стилізація елементів</a><a class="nav-link" href=""><span class='nav-link-num'>7</span> @media</a><a class="nav-link" href="fonts.html"><span class='nav-link-num'>8</span> Анімація (2D, 3D)</a><a class="nav-link" href=""><span class='nav-link-num'>10</span> Display</a><a class="nav-link" href=""><span class='nav-link-num'>11</span> Префікси</a><a class="nav-link" href=""><span class='nav-link-num'>12</span> SVG</a><a class="nav-link" href=""><span class='nav-link-num'>13</span> Спрайти</a></div>
+      <div class="decorate"></div>
+    </nav>
+    <main class="main-content">
+      <div class="block-style">
+        <h1 class="main-title">Стилізація блоків</h1>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Властивість</th>
+              <th>Значення</th>
+              <th>Приклад</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td colspan="3">
+                background: background-color || background-image || background-repeat|| background-attachment || background-position</td>
+            </tr>
+            <tr>
+              <td>background-attachment: fixed / scroll / local;</td>
+              <td>
+                встановлює, чи буде прокручуватися фонове зображення разом з вмістом елементу.<br>fixed -       <br>
+                scroll -    <br>
+                local -   <br>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>background-color: #fff / rgba(0,0,0, 0.3) / transparent</td>
+              <td>Визначає колір фону елемента</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>background-image: url("url");</td>
+              <td>Встановлює фонове зображення для елемента.</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>background-repeat: no-repeat / repeat / repeat-x / repeat-y / space / round;</td>
+              <td>
+                Визначає, як буде повторюватися фонове зображення, встановлене за допомогою властивості background-image. <br>repeat - фонове зображення повторюється по горизонталі і вертикалі (за замовчуванням) <br>
+                no-repeat - встановлює одне фонове зображення в елементі без його повторень, положення якого визначається властивістю background-position (за замовчуванням в лівому верхньому куті)<br>
+                repeat-x - фоновий малюнок повторюється тільки по горизонталі<br>
+                repeat-y - фоновий малюнок повторюється тільки по вертикалі<br>
+                space - зображення повторюється стільки раз, щоб повністю заповнити область; якщо це не вдається, між картинками додається порожній простір.<br>
+                round - зображення повторюється так, щоб в області помістилося ціле число малюнків; якщо це не вдається зробити, то фонові малюнки масштабируются.
+              </td>
+              <td>div#brepet</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+    <script src="./js/libs/jquery/jquery.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

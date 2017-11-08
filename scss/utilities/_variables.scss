@@ -1,0 +1,13 @@
+// Grid vars ------------
+$screen-breakpoints : (
+    small  : 402px,
+    medium : 716px,
+    large  : 934px
+);
+
+$large-container: 835px;
+
+$small-screen : map_get($screen-breakpoints, 'small');
+$medium-screen: map_get($screen-breakpoints, 'medium');
+$large-screen : map_get($screen-breakpoints, 'large');
+// ----------------------

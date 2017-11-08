@@ -1,0 +1,21 @@
+{
+  "name": "test-Astound",
+  "authors": [
+    "Sviatoslav"
+  ],
+  "license": "ISC",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "source/js/libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "html5shiv": "^3.7.3",
+    "respond": "^1.4.2"
+  }
+}

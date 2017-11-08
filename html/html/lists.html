@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title class="b-title">Lists</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="../img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+</head>
+<body>
+
+<main>
+    <nav class="page-nav">
+        <ol class="nav-list">
+            <li><a href="../index.html" class="nav-list-link"><span class="link-num">1</span>Структура HTML (правило
+                вкладення, коментар)</a></li>
+            <li><a href="tags.html" class="nav-list-link"><span class="link-num">2</span>Парні не парні теги.<br /> Блочні і
+                строчні.</a></li>
+            <li><a href="meta.html" class="nav-list-link"><span class="link-num">3</span><span class="one-line">Teг &lt;meta&gt;</span></a>
+            </li>
+            <li><a href="link-script.html" class="nav-list-link"><span class="link-num">4</span><span class="one-line">Тег &lt;link&gt; i &lt;script&gt;</span></a>
+            </li>
+            <li><a href="symbols.html" class="nav-list-link"><span class="link-num">5</span><span
+                    class="one-line">Спец символи</span></a></li>
+            <li><a href="attr.html" class="nav-list-link"><span class="link-num">6</span><span class="one-line">Глобальні атрибути</span></a>
+            </li>
+            <li><a href="h.html" class="nav-list-link"><span class="link-num">7</span><span
+                    class="one-line">h1 - h6</span></a></li>
+            <li><a href="a.html" class="nav-list-link"><span class="link-num">8</span><span class="one-line">Тег &lt;a&gt;, &lt;map&gt;&lt;area&gt;&lt;/map&gt; </span></a>
+            <li><a href="lists.html" class="nav-list-link active"><span class="link-num">9</span><span class="one-line">Списки &lt;ul&gt;, &lt;ol&gt;, &lt;dl&gt;</span></a>
+            </li>
+            <li><a href="input-textarea-btn.html" class="nav-list-link"><span class="link-num">10</span><span class="one-line">&lt;input&gt;,&lt;textarea&gt;,&lt;button&gt;</span></a></li>
+            <li><a href="table-form.html" class="nav-list-link"><span class="link-num">11</span><span class="one-line">&lt;table&gt;, &lt;form&gt;</span></a>
+            </li>
+            <li><a href="img-audio-video.html" class="nav-list-link"><span class="link-num">12</span><span class="one-line">&lt;img&gt;, &lt;audio&gt;, &lt;video&gt;</span></a>
+            </li>
+            <li><a href="semantics.html" class="nav-list-link"><span class="link-num">13</span><span class="one-line">Семантика</span></a>
+            </li>
+        </ol>
+    </nav>
+
+    <div class="main-content">
+     <h1 style="text-align: center;">Lists</h1>
+        <div style="text-align: center"><span style="display: inline-block; height: 16px; width: 30px;background-color: rgba(0, 145, 33, 0.41);margin-right: 10px;vertical-align: middle"></span><span>- padding</span><span style="display: inline-block; height: 16px; width: 30px;background-color:bisque ;margin: 0 10px;vertical-align: middle"></span><span>- margin</span></div>
+        <div style="display: flex;flex-wrap: wrap;align-items: center;align-content: center; justify-content: center; width: 1100px; margin: auto">
+
+            <div style="width: 42%; display: flex; margin: 20px 15px; border: 1px solid gainsboro; padding: 15px;align-items: center;">
+                <div style="color: #ff9500;margin-right: 20px;">
+                    &lt;ul&gt;<br>
+                    &emsp;&lt;li&gt; Item 1 &lt;/li&gt;<br>
+                    &emsp;&lt;li&gt; Item 2 &lt;/li&gt;<br>
+                    &emsp;&lt;li&gt; Item 3 &lt;/li&gt;<br>
+                    &emsp;&lt;li&gt; Item 4 &lt;/li&gt;<br>
+                    &lt;/ul&gt;
+                </div>
+                <ul class="listsStyling">
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                    <li>Item 4</li>
+                </ul>
+                <div style="margin-left: 30px;">
+                    ul {<br>
+                    &emsp;<span class="spanOrange">display:</span> block;<br>
+                    &emsp;<span class="spanOrange">list-style-type:</span> disc;<br>
+                    &emsp;<span class="spanOrange">margin-top:</span> 1em; <span class="spanRed">(16px)</span><br>
+                    &emsp;<span class="spanOrange">margin-bottom:</span> 1em; <span class="spanRed">(16px)</span><br>
+                    &emsp;<span class="spanOrange">margin-left:</span> 0px;<br>
+                    &emsp;<span class="spanOrange">margin-right:</span> 0px;<br>
+                    &emsp;<span class="spanOrange">padding-left:</span> <span class="spanRed">40px</span>;<br>
+                    }
+                </div>
+            </div>
+            <div style="width: 42%; display: flex; margin: 20px 15px; border: 1px solid gainsboro; padding: 15px;align-items: center">
+                <div style="color: #ff9500;margin-right: 20px;">
+                    &lt;ol&gt;<br>
+                    &emsp;&lt;li&gt; Item 1 &lt;/li&gt;<br>
+                    &emsp;&lt;li&gt; Item 2 &lt;/li&gt;<br>
+                    &emsp;&lt;li&gt; Item 3 &lt;/li&gt;<br>
+                    &emsp;&lt;li&gt; Item 4 &lt;/li&gt;<br>
+                    &lt;/ol&gt;
+                </div>
+                <ol class="listsStyling">
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                    <li>Item 4</li>
+                </ol>
+                <div style="margin-left: 30px;">
+                    ol {<br>
+                    &emsp;<span class="spanOrange">display:</span> block;<br>
+                    &emsp;<span class="spanOrange">list-style-type:</span> decimal;<br>
+                    &emsp;<span class="spanOrange">margin-top:</span> 1em; <span class="spanRed">(16px)</span><br>
+                    &emsp;<span class="spanOrange">margin-bottom:</span> 1em; <span class="spanRed">(16px)</span><br>
+                    &emsp;<span class="spanOrange">margin-left:</span> 0px;<br>
+                    &emsp;<span class="spanOrange">margin-right:</span> 0px;<br>
+                    &emsp;<span class="spanOrange">padding-left:</span> <span class="spanRed">40px</span>;<br>
+                    }
+                </div>
+            </div>
+            <div style="width: 45%; display: flex; margin: 20px 15px; border: 1px solid gainsboro; padding: 15px;align-items: center">
+                <div style="color: #ff9500;margin-right: 20px;">
+                    &lt;dl&gt;<br>
+                    &emsp;&lt;dt&gt; Name 1 &lt;/dt&gt;<br>
+                    &emsp;&emsp;&lt;dd&gt; Item 1 &lt;/dd&gt;<br>
+                    &emsp;&lt;dt&gt; Name 2 &lt;/dt&gt;<br>
+                    &emsp;&emsp;&lt;dd&gt; Item 1 &lt;/dd&gt;<br>
+                    &emsp;&lt;dt&gt; Name 3 &lt;/dt&gt;<br>
+                    &emsp;&emsp;&lt;dd&gt; Item 1 &lt;/dd&gt;<br>
+                    &emsp;&lt;dt&gt; Name 4 &lt;/dt&gt;<br>
+                    &emsp;&emsp;&lt;dd&gt; Item 1 &lt;/dd&gt;<br>
+                    &lt;/dl&gt;
+                </div>
+                <dl class="listsStyling">
+                    <dt>Name 1</dt>
+                    <dd>Item 1</dd>
+                    <dt>Name 2</dt>
+                    <dd>Item 1</dd>
+                    <dt>Name 3</dt>
+                    <dd>Item 1</dd>
+                    <dt>Name 4</dt>
+                    <dd>Item 1</dd>
+                </dl>
+                <div style="margin-left: 30px;">
+                    dl {<br>
+                    &emsp;<span class="spanOrange">display:</span> block;<br>
+                    &emsp;<span class="spanOrange">margin-top:</span> 1em; <span class="spanRed">(16px)</span><br>
+                    &emsp;<span class="spanOrange">margin-bottom:</span> 1em; <span class="spanRed">(16px)</span><br>
+                    &emsp;<span class="spanOrange">margin-left:</span> 0px;<br>
+                    &emsp;<span class="spanOrange">margin-right:</span> 0px;<br>
+                    }
+                </div>
+            </div>
+
+        </div>
+    </div>
+</main>
+</body>
+</html>

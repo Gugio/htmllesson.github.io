@@ -1,0 +1,28 @@
+// General variables
+$fonts-path  : '../fonts/';
+$default-font: 'Helvetica', Arial, sans-serif;
+
+// Fonts variables
+$base-font-name : 'Open Sans';
+$extra-font-name: 'Oswald';
+
+$fonts-data: (
+  $base-font-name : (
+    1: ('open-sans/', 'open-sans-300', 'Open Sans Light', 'OpenSans-Light', 300),
+    2: ('open-sans/', 'open-sans-regular', 'Open Sans', 'OpenSans', 400),
+    3: ('open-sans/', 'open-sans-600', 'Open Sans Semibold', 'OpenSans-Semibold', 600),
+    4: ('open-sans/', 'open-sans-700', 'Open Sans Bold', 'OpenSans-Bold', 700)
+  ),
+  $extra-font-name : (
+    1: ('oswald/', 'oswald-700', 'Oswald Bold', 'Oswald-Bold', 700)
+  )
+);
+
+// Typography
+$base-font-size   : 16px;
+$base-font-family : $base-font-name, $default-font;
+$extra-font-family: $extra-font-name;
+
+@function line_height($lh, $fs) { // lh - line-height, fs - font-size
+  @return $lh / $fs; // value float or integer
+}

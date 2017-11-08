@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title class="b-title">Table/Form</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="../img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+</head>
+<body>
+
+<main>
+    <nav class="page-nav">
+        <ol class="nav-list">
+            <li><a href="../index.html" class="nav-list-link"><span class="link-num">1</span>Структура HTML (правило
+                вкладення, коментар)</a></li>
+            <li><a href="tags.html" class="nav-list-link"><span class="link-num">2</span>Парні не парні теги.<br />
+                Блочні і
+                строчні.</a></li>
+            <li><a href="meta.html" class="nav-list-link"><span class="link-num">3</span><span class="one-line">Teг &lt;meta&gt;</span></a>
+            </li>
+            <li><a href="link-script.html" class="nav-list-link"><span class="link-num">4</span><span class="one-line">Тег &lt;link&gt; i &lt;script&gt;</span></a>
+            </li>
+            <li><a href="symbols.html" class="nav-list-link"><span class="link-num">5</span><span
+                    class="one-line">Спец символи</span></a></li>
+            <li><a href="attr.html" class="nav-list-link"><span class="link-num">6</span><span class="one-line">Глобальні атрибути</span></a>
+            </li>
+            <li><a href="h.html" class="nav-list-link"><span class="link-num">7</span><span
+                    class="one-line">h1 - h6</span></a></li>
+            <li><a href="a.html" class="nav-list-link"><span class="link-num">8</span><span class="one-line">Тег &lt;a&gt;, &lt;map&gt;&lt;area&gt;&lt;/map&gt; </span></a>
+            <li><a href="lists.html" class="nav-list-link"><span class="link-num">9</span><span class="one-line">Списки &lt;ul&gt;, &lt;ol&gt;, &lt;dl&gt;</span></a>
+            </li>
+            <li><a href="input-textarea-btn.html" class="nav-list-link"><span class="link-num">10</span><span
+                    class="one-line">&lt;input&gt;,&lt;textarea&gt;,&lt;button&gt;</span></a></li>
+            <li><a href="table-form.html" class="nav-list-link active"><span class="link-num">11</span><span
+                    class="one-line">&lt;table&gt;, &lt;form&gt;</span></a>
+            </li>
+            <li><a href="img-audio-video.html" class="nav-list-link"><span class="link-num">12</span><span
+                    class="one-line">&lt;img&gt;, &lt;audio&gt;, &lt;video&gt;</span></a>
+            </li>
+            <li><a href="semantics.html" class="nav-list-link"><span class="link-num">13</span><span class="one-line">Семантика</span></a>
+            </li>
+        </ol>
+    </nav>
+
+    <div class="main-content">
+        <h1 style="text-align: center">Form</h1>
+
+        <div style="max-width: 1200px;margin: auto">
+            <p>
+                HTML форма, являє собою елемент керування, який застосовується для збору інформації
+                від відвідувачів сайту. Складається з текстових полів, кнопок, списків та
+                інших елементів. Форми передають дані на сервер.
+            </p>
+            <div style="display: flex;align-items: center">
+                <dl style="margin-right: 30px;">
+                    <dt>Елементи форми:</dt>
+                    <dd><span class="spanOrange">&lt;fieldset&gt;</span> - групування елементів форми</dd>
+                    <dd><span class="spanOrange">&lt;legend&gt;</span> - заголовок форми</dd>
+                    <dd><span class="spanOrange">&lt;input&gt;</span> - створення поля форми</dd>
+                    <dd><span class="spanOrange">&lt;textarea&gt;</span> - текстове поле введення</dd>
+                    <dd><span class="spanOrange">&lt;select&gt;</span> - випадаючий список</dd>
+                    <dd><span class="spanOrange">&lt;label&gt;</span> - підпис до поля форми</dd>
+                    <dd><span class="spanOrange">&lt;button&gt;</span> - кнопки</dd>
+                </dl>
+                <div>
+                    <span class="spanOrange">&lt;form</span> action="#"<span class="spanOrange">&gt;</span><br>
+                    &emsp;<span class="spanOrange">&lt;fieldset&gt;</span><br>
+                    &emsp;&emsp;<span class="spanOrange">&lt;legend&gt;</span> Заголовок форми <span class="spanOrange">&lt;/legend&gt;</span><br>
+                    &emsp;&emsp;<span class="spanOrange">&lt;label</span> for="name"<span class="spanOrange">&gt;</span>
+                    Ім'я* <span class="spanOrange">&lt;/label&gt;</span> <span class="spanOrange">&lt;input</span>
+                    id="name" type="text"<span class="spanOrange">&gt;</span><br>
+                    &emsp;&emsp;<span class="spanOrange">&lt;label&gt;</span>E-mail <span
+                        class="spanOrange">&lt;input</span> id="name" type="email"<span
+                        class="spanOrange">&gt;</span><span class="spanOrange">&lt;/label&gt;</span><br>
+                    &emsp;&emsp;<span class="spanOrange">&lt;label</span> for="description"<span
+                        class="spanOrange">&gt;</span> Description <span class="spanOrange">&lt;/label&gt;</span><span
+                        class="spanOrange">&lt;textarea</span> id="description"<span class="spanOrange">&gt;</span><br>
+                    &emsp;&emsp; <span class="spanOrange">&lt;label&gt;</span><span class="spanOrange">&lt;input</span>
+                    type="radio" name="r1" required<span class="spanOrange">&gt;</span>option1<span class="spanOrange">&lt;/label&gt;</span><br>
+                    &emsp;&emsp; <span class="spanOrange">&lt;label&gt;</span><span class="spanOrange">&lt;input</span>
+                    type="radio" name="r1"<span class="spanOrange">&gt;</span>option2<span class="spanOrange">&lt;/label&gt;</span><br>
+                    &emsp;&emsp; <span class="spanOrange">&lt;label&gt;</span><span class="spanOrange">&lt;input</span>
+                    type="radio" name="r1"<span class="spanOrange">&gt;</span>option3<span class="spanOrange">&lt;/label&gt;</span><br>
+                    &emsp;&emsp;<span class="spanOrange">&lt;input</span> type="submit" value="Send"<span
+                        class="spanOrange">&gt;</span><br>
+                    &emsp;<span class="spanOrange">&lt;/fieldset&gt;</span><br>
+                    <span class="spanOrange">&lt;/form&gt;</span>
+                </div>
+
+            </div>
+            <div style="display: flex; margin-bottom: 30px;">
+                <div style="width: 40%;margin-right: 20px;">
+                    <form action="#" style="width: 450px;">
+                        <fieldset>
+                            <legend>Заголовок форми</legend>
+                            <label style="display: block; padding: 10px;" for="name">Ім'я *</label><input required
+                                                                                                          type="text"
+                                                                                                          id="name">
+                            <label><span style="display: block;padding: 10px;">E-mail</span><input type="email"
+                                                                                                   style="display: block;"
+                                                                                                   id="email"></label>
+                            <label style="display: block; padding: 10px;"
+                                   for="description">Description </label><textarea id="description" cols="30"
+                                                                                   rows="10"></textarea><br>
+                            <label><input type="radio" name="r1" required>option1</label>
+                            <label><input type="radio" name="r1">option2</label>
+                            <label><input type="radio" name="r1">option3</label><br>
+                            <label><input type="checkbox" name="r1" required>check1</label>
+                            <label><input type="checkbox" name="r1">check2</label>
+                            <label><input type="checkbox" name="r1">check3</label><br>
+                            <input type="submit" value="Send">
+                        </fieldset>
+
+                    </form>
+                </div>
+
+                <div>
+                    <table class="table" border="1">
+                        <tr>
+                            <th>Атрибути тега &lt;form&gt;</th>
+                            <th>Значення</th>
+                        </tr>
+
+                        <tr>
+                            <td>accept-charset="ISO-8859-1"</td>
+                            <td>Значення атрибуту являє собою список кодування символів, який буде використовуватись для
+                                відправлення форми.
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>action="action.php"</td>
+                            <td><b>Обов'язковий атрибут</b>, який вказує на обробник до якого звертаються дані форми
+                                при їх відправленні на сервер. Являє собою файл (пр. action.php), в якому описані дії з
+                                отриманими даними.
+                                У випадку, якщо вся робота виконується на стороні клієнта сценаріями JavaScript, то для
+                                атрибута
+                                action можна задати значення "#".
+                                Також допускається відправлення даних форми на mail (приклад &lt;form
+                                action="mailto:адрес
+                                вашей
+                                электронной почты" enctype="text/plain"&gt;&lt;/form&gt;)
+
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>autocomplete="on | off"</td>
+                            <td>Відповідає за запам'ятовування введених даних у текстове поле і автодоповнення їх при
+                                введенні.
+                                on - поле не захищено та його значення можна витягувати та зберігати.
+                                off - відключає автозаповнення.
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>name="ім'я"</td>
+                            <td>Задає ім'я для форми яке використовується для доступу до елементів через сценарії.</td>
+                        </tr>
+
+                        <tr>
+                            <td>method="get | post"</td>
+                            <td>Повідомляє сервер про метод запиту. <code>get</code> визначений для отримання інформації
+                                у
+                                адресному рядку.
+                                пара "ім'я=значення" приєднується у цьому випадку до адреси після знаку "?" та
+                                розділяється
+                                "&".
+                                <code>post</code> відправляє на сервер дані у запиті браузера. Це дозволяє відправити
+                                більший
+                                об'єм даних, аніж у методі <code>get</code> який обмежується розміром у 4Кб.
+                                По-замовчуванню - get.
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>novalidate</td>
+                            <td> Відключає перевірку у кнопці відправлення форми</td>
+                        </tr>
+
+                        <tr>
+                            <td>enctype="application/x-www-form-urlencoded | multipart/form-data | text/plain"</td>
+                            <td>Визначає метод кодування даних.
+                                Використовується у випадку відправки файлу, варто задати значення атрибуту
+                                multipart/form-data.
+                                По-замовчуванню значення: application/x-www-form-urlencoded
+                            </td>
+                        </tr>
+
+                    </table>
+                </div>
+            </div>
+            <div style="display: flex; align-items: center">
+                <h2 style="margin-right: 30px;">fieldset</h2>
+                <table class="table">
+                    <tr>
+                        <td>disabled</td>
+                        <td>Блокує поля форми в групі.</td>
+                    </tr>
+                    <tr>
+                        <td>form="ID форми"</td>
+                        <td>Зв'язує групу з формою.</td>
+                    </tr>
+                    <tr>
+                        <td>title="підказка"</td>
+                        <td>Додає спливаючу підказку до групи форми.</td>
+                    </tr>
+                </table>
+            </div>
+
+
+            <h1 style="text-align: center">Table</h1>
+            <p>
+                Задає таблицю на сторінці. Будь-яка таблиця складається з рядків та слотів, які задаються за допомогою
+                тегів
+                &lt;tr&gt;, &lt;td&gt;. Всередині контейнеру &lt;table&gt;
+                допускається використання наступих елементів:
+            </p>
+            <p>
+                <span class="spanOrange">&lt;caption&gt;</span> - призначений для створення заголовка до таблиці і може
+                розміщуватися лише всередині контейнера &lt;table&gt;, причому відразу після відкриваючого тега.<br>
+
+                <span class="spanOrange">&lt;colgroup&gt;</span> - призначений для завдання ширини і стилю однієї або
+                декількох колонок таблиці.<br>
+                <span class="spanOrange">&lt;col&gt;</span> - задає ширину і інші характеристики однієї або декількох
+                колонок таблиці.<br>
+                <span class="spanOrange">&lt;thead&gt;</span> - для для групи рядків, які представлені у верхній частині
+                сторінки. Допукається тільки один thead<br>
+                <span class="spanOrange">&lt;tbody&gt;</span> - для зберігання одного чи кількох рядків таблиці. Це
+                дозволяє створювати структурні блоки.<br>
+                <span class="spanOrange">&lt;tfoot&gt;</span> - група рядків, які представлені внизу таблиці. Хоча тег
+                &lt;tfoot&gt; в вихідному коді повинен бути визначений до тега &lt;tbody&gt;, браузери відображають його
+                в самому низу таблиці.<br>
+                <span class="spanOrange">&lt;tr&gt;</span> - служить контейнером для створення рядка таблиці<br>
+                <span class="spanOrange">&lt;th&gt;</span> - призначений для створення однієї комірки таблиці, яка
+                позначається як заголовна.<br>
+                <span class="spanOrange">&lt;td&gt;</span> - призначений для створення однієї комірки таблиці
+            </p>
+
+            <h4>Синтаксис:</h4>
+            <div style="display: flex;align-items: flex-start;margin-bottom: 30px;">
+                <dl style="margin:0 30px 0 0;">
+                    <dt>&lt;table&gt;</dt>
+                    <dd>&lt;tr&gt;
+                        <span style="display: block; margin-left: 2rem;">&lt;td&gt; ... &lt;/td&gt;</span>
+                    </dd>
+                    <dd>&lt;/tr&gt;</dd>
+                    <dt>&lt;/table&gt;</dt>
+                </dl>
+
+                <div>
+                    &lt;table&gt;<br>
+                    &emsp;&lt;caption&gt; Заголовок таблиці &lt;/caption&gt;<br>
+                    &emsp;&lt;thead&gt;<br>
+                    &emsp;&emsp;&lt;tr&gt;&lt;th&gt; ... &lt;/th&gt;&lt;/tr&gt;<br>
+                    &emsp;&emsp;&lt;tr&gt;&lt;td&gt; ... &lt;/td&gt;&lt;/tr&gt;<br>
+                    &emsp;&lt;/thead&gt;<br>
+                    &emsp;&lt;tfoot&gt;<br>
+                    &emsp;&emsp;&lt;tr&gt;&lt;td&gt; ... &lt;/td&gt;&lt;/tr&gt;<br>
+                    &emsp;&lt;/tfoot&gt;<br>
+                    &emsp;&lt;tbody&gt;<br>
+                    &emsp;&emsp;&lt;tr&gt;&lt;td&gt; ... &lt;/td&gt;&lt;/tr&gt;<br>
+                    &emsp;&lt;/tbody&gt;<br>
+                    &lt;/table&gt;
+                </div>
+            </div>
+            <table class="table" border="1">
+                <colgroup>
+                    <col width="30%">
+                    <col width="70%">
+                </colgroup>
+
+                <tr>
+                    <th>Атрибути &lt;table&gt;</th>
+                    <th>Значення</th>
+                </tr>
+                <tr>
+                    <td>align="left | center | right"</td>
+                    <td>Вирівнювання таблиці. left - по лівому краю center - по центру right - по правому краю</td>
+                </tr>
+                <tr>
+                    <td>background="URL"</td>
+                    <td>Задає фонове зображення для таблиці. На відміну від звичайного зображення, для фону не
+                        встановлюється ширина та висота, і воно відображається у натуральну величину.
+                        Якщо малюнок менший за розмір елемента, то він повторюється по по-горизонталі та вертикалі.
+                    </td>
+                </tr>
+                <tr>
+                    <td>bgcolor="колір"</td>
+                    <td>Встановлює колір фону для таблиці</td>
+                </tr>
+                <tr>
+                    <td>border="число"</td>
+                    <td>Встановлює товщину рамки в пікселях. По-замовчуванню = 0</td>
+                </tr>
+                <tr>
+                    <td>bordercolor="колір"</td>
+                    <td>Задає колір для рамки</td>
+                </tr>
+                <tr>
+                    <td>cellpadding="значення"</td>
+                    <td>Встановлює відступ між границею слоту та її вмістом. По-замовчуванню = 0, тому текст "налипає"
+                        на
+                        границі свого слоту.
+                    </td>
+                </tr>
+                <tr>
+                    <td>cellspacing="значение"</td>
+                    <td>Встановлює відступи між слотами таблиці у пікселях</td>
+                </tr>
+                <tr>
+                    <td>cols="число"</td>
+                    <td>Кількість колонок у таблиці. Без даного атрибуту, таблиця відобразиться тільки після того як
+                        браузер
+                        загрузить та проаналізує весь її вміст.
+                    </td>
+                </tr>
+                <tr>
+                    <td>frame="значення"</td>
+                    <td>вказує браузеру як відображати рамку таблиці. Можливі значення: <br>
+                        void - не відображати; <br>
+                        border - границя навколо таблиці; <br>
+                        above - границя по верхньому краю; <br>
+                        below - по нижньому краю; <br>
+                        hsides - тільки горизонтальні границі; <br>
+                        vsides - вертикальні границі; <br>
+                        rhs - на правій стороні таблиці; <br>
+                        lhs - на лівій стороні таблиці;
+                    </td>
+                </tr>
+                <tr>
+                    <td>height="значення", width="значення"</td>
+                    <td>Розмір таблиці.</td>
+                </tr>
+                <tr>
+                    <td>bordercolor="колір"</td>
+                    <td>Задає колір для рамки</td>
+                </tr>
+                <tbody>
+
+                <tr>
+                    <th>Атрибути &lt;th&gt;, &lt;td&gt;</th>
+                    <th>Значення</th>
+                </tr>
+                <tr>
+                    <td>colspan="число"</td>
+                    <td>Встановлює число комірок, які повинні бути об'єднані по горизонталі.</td>
+                </tr>
+                <tr>
+                    <td>rowspan="число"</td>
+                    <td>Встановлює число комірок, які повинні бути об'єднані по вертикалі.</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <!--<table  align="right" class="table">-->
+            <!--<tr>-->
+            <!--<th>Атрибути внутрішніх тегів</th>-->
+            <!--<th>Значення</th>-->
+            <!--<th></th>-->
+            <!--</tr>-->
+            <!--<tr>-->
+            <!--<td>align</td>-->
+            <!--<td>Определяет выравнивание заголовка по горизонтали.</td>-->
+            <!--<td>caption,tbody,tfoot,thead,th,td,tr,col,colgroup</td>-->
+            <!--</tr>-->
+            <!--<tr>-->
+            <!--<td>valign</td>-->
+            <!--<td>Устанавливает расположение заголовка до или после таблицы.</td>-->
+            <!--<td>&lt;caption&gt;,&lt;tbody&gt;,&lt;tfoot&gt;,&lt;thead&gt;,&lt;th&gt;,&lt;td&gt;,&lt;tr&gt;,&lt;col&gt;,&lt;colgroup&gt;</td>-->
+            <!--</tr>-->
+
+
+            <!--<tr>-->
+            <!--<td>abbr="текст"</td>-->
+            <!--<td>Краткое описание содержимого ячейки.</td>-->
+            <!--<td>&lt;th&gt;,&lt;td&gt;</td>-->
+            <!--</tr>-->
+            <!--<tr>-->
+            <!--<td>align</td>-->
+            <!--<td>Определяет выравнивание содержимого ячейки по горизонтали.</td>-->
+            <!--<td>all</td>-->
+            <!--</tr>-->
+            <!--<tr>-->
+            <!--<td><a href="http://htmlbook.ru/html/th/axis">axis</a></td>-->
+            <!--<td>Группирует ячейки связанные между собой похожей информацией.</td>-->
+            <!--<td></td>-->
+            <!--</tr>-->
+            <!--<tr>-->
+            <!--<td><a href="http://htmlbook.ru/html/th/background">background</a></td>-->
+            <!--<td>Задает фоновый рисунок в ячейке.</td>-->
+            <!--<td></td>-->
+            <!--</tr>-->
+            <!--<tr>-->
+            <!--<td><a href="http://htmlbook.ru/html/th/bgcolor">bgcolor</a></td>-->
+            <!--<td>Цвет фона ячейки.</td>-->
+            <!--<td></td>-->
+            <!--</tr>-->
+            <!--<tr>-->
+            <!--<td><a href="http://htmlbook.ru/html/th/bordercolor">bordercolor</a></td>-->
+            <!--<td>Цвет рамки.</td>-->
+            <!--<td></td>-->
+            <!--</tr>-->
+            <!--<tr>-->
+            <!--<td><a href="http://htmlbook.ru/html/th/char">char</a></td>-->
+            <!--<td>Выравнивает содержимое ячейки по заданному символу.</td>-->
+            <!--<td></td>-->
+            <!--</tr>-->
+            <!--<tr>-->
+            <!--<td><a href="http://htmlbook.ru/html/th/charoff">charoff</a></td>-->
+            <!--<td>Смещает содержимое ячейки относительно заданного символа.</td>-->
+            <!--<td></td>-->
+            <!--</tr>-->
+            <!--<tr>-->
+            <!--<td><a href="http://htmlbook.ru/html/th/colspan">colspan</a></td>-->
+            <!--<td>Объединяет горизонтальные ячейки.</td>-->
+            <!--<td></td>-->
+            <!--</tr>-->
+            <!--<tr>-->
+            <!--<td><a href="http://htmlbook.ru/html/th/headers">headers</a></td>-->
+            <!--<td>Позволяет связать ячейки таблицы с заголовками в речевых браузерах.</td>-->
+            <!--<td></td>-->
+            <!--</tr>-->
+            <!--<tr>-->
+            <!--<td><a href="http://htmlbook.ru/html/th/height">height</a></td>-->
+            <!--<td>Высота ячейки.</td>-->
+            <!--<td></td>-->
+            <!--</tr>-->
+            <!--<tr>-->
+            <!--<td><a href="http://htmlbook.ru/html/th/nowrap">nowrap</a></td>-->
+            <!--<td>Запрещает перенос строк.</td>-->
+            <!--<td></td>-->
+            <!--</tr>-->
+            <!--<tr>-->
+            <!--<td><a href="http://htmlbook.ru/html/th/rowspan">rowspan</a></td>-->
+            <!--<td>Объединяет вертикальные ячейки.</td>-->
+            <!--<td></td>-->
+            <!--</tr>-->
+            <!--<tr>-->
+            <!--<td><a href="http://htmlbook.ru/html/th/scope">scope</a></td>-->
+            <!--<td>Позволяет связать ячейки простой таблицы с заголовками в речевых браузерах.</td>-->
+            <!--<td></td>-->
+            <!--</tr>-->
+            <!--<tr>-->
+            <!--<td><a href="http://htmlbook.ru/html/th/valign">valign</a></td>-->
+            <!--<td>Выравнивание содержимого ячейки по вертикали.</td>-->
+            <!--<td></td>-->
+            <!--</tr>-->
+            <!--<tr>-->
+            <!--<td><a href="http://htmlbook.ru/html/th/width">width</a></td>-->
+            <!--<td>Ширина ячейки.</td>-->
+            <!--<td></td>-->
+            <!--</tr>-->
+
+            <!--</table>-->
+        </div>
+    </div>
+</main>
+</body>
+</html>

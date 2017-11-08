@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+    <title>CSS</title>
+    <link rel="stylesheet" href="./css/main.css">
+  </head>
+  <body>
+    <nav class="main-nav"><a class="to-home" href="index.html">< Home</a>
+      <div class="nav-block"><a class="nav-link" href="selectors.html"><span class='nav-link-num'>1</span> Селектори, Псевдокласи, Каскадність, Псевдоелементи</a><a class="nav-link" href="css_boxmodel.html"><span class='nav-link-num'>2</span> СSS Box model</a><a class="nav-link" href="measurement.html"><span class='nav-link-num'>3</span> Одиниці виміру</a><a class="nav-link" href="position.html"><span class='nav-link-num'>4</span> Позиціонування</a><a class="nav-link" href="fonts.html"><span class='nav-link-num'>5</span> Стилізація тексту</a><a class="nav-link" href="block_style.html"><span class='nav-link-num'>6</span> Стилізація елементів</a><a class="nav-link" href=""><span class='nav-link-num'>7</span> @media</a><a class="nav-link" href="fonts.html"><span class='nav-link-num'>8</span> Анімація (2D, 3D)</a><a class="nav-link" href=""><span class='nav-link-num'>10</span> Display</a><a class="nav-link" href=""><span class='nav-link-num'>11</span> Префікси</a><a class="nav-link" href=""><span class='nav-link-num'>12</span> SVG</a><a class="nav-link" href=""><span class='nav-link-num'>13</span> Спрайти</a></div>
+      <div class="decorate"></div>
+    </nav>
+    <main class="main-content">
+      <div class="container">
+        <div class="position">
+          <h1 class="main-title">Властивість <code>position</code></h1>
+          <p>Властивість <code>position</code> визначає тип методу позиціонування для елемента (<code>static</code>, <code>relative</code>, <code>fixed</code>, <code>absolute</code>).</p>
+          <h2>static</h2>
+          <figure class="code"><pre><code><span class="nc">.static</span> <span class="p">{</span><br>&emsp;&emsp;&emsp;<span class="nl">position</span><span class="p">: </span><span class="nb">static</span><span class="p">;</span><br><span class="p">}</span></code></pre></figure>
+          <div class="visual"><span class="label">&lt;div class="static"&gt;</span>
+            <p><code>static</code> є значенням за замовчуванням. Елемент з <code>position: static;</code> відображається як звичайно і не буде позиціонуватися будь-яким особливим способом.</p><span class="label">&lt;/div&gt;</span>
+          </div>
+          <h2>relative</h2>
+          <figure class="code"><pre><code><span class="nc">.relative1</span> <span class="p">{</span><br>&emsp;&emsp;&emsp;<span class="nl">position</span><span class="p">:</span> <span class="nb">relative</span><span class="p">;</span><br><span class="p">}</span><br><br><span class="nc">.relative2</span> <span class="p">{</span><br>&emsp;&emsp;&emsp;<span class="nl">position</span><span class="p">:</span> <span class="nb">relative</span><span class="p">;</span><br>&emsp;&emsp;&emsp;<span class="nl">top</span><span class="p">:</span> <span class="m">-20px</span><span class="p">;</span><br>&emsp;&emsp;&emsp;<span class="nl">left</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span><span class="nl"><br><span class="p">}</span></code></pre></figure>
+          <div class="visual"><span class="label">&lt;div class="relative1"&gt;</span>
+            <p><code>relative</code> поводиться в точності як <code>static</code> але лише до тих пір, поки ви не додасте деякі додаткові властивості.</p><span class="label">&lt;/div&gt;</span>
+          </div>
+          <div class="visual2" style="position: relative; top: -20px; left: 20px;"><span class="label">&lt;div class="relative2"&gt;</span>
+            <p>Додавання властивостей <code>top</code>, <code>right</code>, <code>bottom</code>, и <code>left</code> змінює позицію елемента, зміщуючи його в ту чи іншу сторону щодо його початкового розташування. Інший контент НЕ буде перебудовуватися, щоб заповнити будь-який вільний простір залишений цим елементом.</p><span class="label">&lt;/div&gt;</span>
+          </div>
+          <div class="visual"><span class="label">&lt;div&gt;</span>
+            <p>наступний блок</p><span class="label">&lt;/div&gt;</span>
+          </div>
+          <h2>fixed</h2>
+          <p>Фіксоване позиціювання елемента щодо вікна браузера. Елемент завжди займає одне і теж місце навіть при прокручуванні сторінки, немов він приклеєний до екрану. Також як і для <code>relative</code>, додаткові властивості <code>top</code>, <code>right</code>, <code>bottom</code>, и <code>left</code> для даного позиціонування працюватимуть.</p>
+          <figure class="code"><pre><code class="language-css" data-lang="css"><span class="nc">.fixed</span> <span class="p">{</span><br>&emsp;&emsp;&emsp;<span class="nl">position</span><span class="p">:</span> <span class="nb">fixed</span><span class="p">;</span><br>&emsp;&emsp;&emsp;<span class="nl">bottom</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span><br>&emsp;&emsp;&emsp;<span class="nl">right</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span><br>&emsp;&emsp;&emsp;<span class="nl">background-color</span><span class="p">:</span> <span class="no">green</span><span class="p">;</span><br><span class="p">}</span></code></pre></figure>
+          <p>Фіксований елемент не залишає за собою вільний простір на сторінці, де він був розташований.</p>
+          <div class="visual"><span class="label">&lt;div&gt;</span>
+            <p>А де подівся наш друг <code>fixed</code>?</p><span class="label">&lt;/div&gt;</span>
+          </div>
+          <div class="fixed visual"><span class="label">&lt;div class="fixed"&gt;</span>
+            <p>А я fixed хе :)</p><span class="label">&lt;/div&gt;</span>
+          </div>
+          <div class="visual"><span class="label">&lt;div&gt;</span>
+            <p>В нього тепер своє життя</p><span class="label">&lt;/div&gt;</span>
+          </div>
+          <h2>absolute</h2>
+          <p><code>absolute</code> поводиться як <code>fixed</code> за винятком того, що позиціювання відраховується щодо найближчого розташованого, <b>позиціонованого</b> батька а не щодо вікна браузера. Якщо елемент абсолютно позиціонується і не має батька, то він використовує тіло документа і продовжує рухатись разом з усією сторінкою при скролінгу. Пам'ятайте, що "позиціонований" елемент - це елемент з будь-яким значенням властивості <code>position</code> крім значення <code>static</code>.</p>
+          <figure class="code"><pre><code class="language-css" data-lang="css"><span class="nc">.relative</span> <span class="p">{</span><br>&emsp;&emsp;&emsp;<span class="nl">position</span><span class="p">:</span> <span class="nb">relative</span><span class="p">;</span><br><span class="p">}</span><span class="nc"><br><br>.absolute</span> <span class="p">{<br>&emsp;&emsp;&emsp;</span><span class="nl">position</span><span class="p">:</span> <span class="nb">absolute</span><span class="p">;</span><br>&emsp;&emsp;&emsp;<span class="nl">top</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span><br>&emsp;&emsp;&emsp;<span class="nl">right</span><span class="p">:</span> <span class="m">100px</span><span class="p">;</span><br><span class="p">}</span></code></pre></figure>
+          <div class="visual"><span class="label">&lt;div class="relative"&gt;</span>
+            <p>Я позиційований такщо ти від мене не втечеш далеко</p>
+            <div class="visual2 absolute"><span class="label">&lt;div class="absolute"&gt;</span>
+              <p>А я <code>absolute</code> ну а шо</p><span class="label">&lt;/div&gt;</span>
+            </div><span class="label">&lt;/div&gt;</span>
+          </div>
+          <p>А цей текст вам не потрібно читати, бо це тупо муть яку я написав, щоб побачити що відбувається в психопата в мозгу після того як його вирізали ножиком для чистки крумплі</p>
+          <section class="indexz">
+            <h2>z-index</h2>
+            <p>Властивість <code>z-index</code> визначає позицію елемента по осі z (визначає порядок накладання елемента один на другий)</p>
+            <div class="z-container">
+              <div class="z-wrap">
+                <div class="z z1"></div>
+                <div class="z z2"></div>
+                <div class="z z3"></div>
+              </div>
+              <div class="z-wrap">
+                <div class="z z1">z-index: 1;</div>
+                <div class="z z2"></div>
+                <div class="z z3"></div>
+                <div class="z z4"></div>
+              </div>
+            </div>
+          </section>
+          <h1 class="main-title">Вертикальне / горизонтальне вирівнювання.</h1>
+          <p>В CSS є всього кілька технік центрування елементів. Якщо їх знати, то більшість завдань вирішуються просто.</p>
+          <h2>Горизонтальне вирівнювання</h2>
+          <p>Для центрування <code>inline</code>, <code>inline-block</code> елементів - досить поставити батьківському блокові text-align: center;</p>
+          <figure class="code"><pre><code><span class="nc">.wrap</span> <span class="p">{</span><br>&emsp;&emsp;&emsp;<span class="nl">text-align</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span><br><span class="p">}</span></code></pre></figure>
+          <div class="visual" style="text-align:center;"><span class="label">&lt;div class="wrap"&gt;</span>
+            <div class="visual2" style="display: inline-block;"><span class="label">&lt;span&gt;</span>
+              <p>Test Test Test</p><span class="label">&lt;/span&gt;</span>
+            </div><span class="label">&lt;/div&gt;</span>
+          </div>
+          <p>Для центрування блоку це вже не підійде, властивість просто не подіє на блок, але на інлайнові елементи в середині дочірнього елемента подіє тому що властивість передається</p>
+          <p>Блок по горизонталі центрується <code>margin: auto;</code></p>
+          <figure class="code"><pre><code><span class="nc">.wrap</span> <span class="p">{</span><br>&emsp;&emsp;&emsp;<span class="nl">text-align</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span><br><span class="p">}</span><br><br><span class="nc">.inner</span> <span class="p">{</span><br>&emsp;&emsp;&emsp;<span class="nl">display</span><span class="p">:</span> <span class="nb">block</span><span class="p">;</span><br>&emsp;&emsp;&emsp;<span class="nl">width</span><span class="p">:</span> <span class="m">60%</span><span class="p">;</span><br>&emsp;&emsp;&emsp;<span class="nl">margin</span><span class="p">:</span> <span class="m">0 auto</span><span class="p">;</span><span class="nl"><br><span class="p">}</span></code></pre></figure>
+          <div class="visual" style="text-align:center;"><span class="label">&lt;div class="wrap"&gt;</span>
+            <div class="visual2" style="display: block;width: 60%;margin: 0 auto;"><span class="label">&lt;div class='inner'&gt;</span>
+              <div class="visual2" style="display: inline-block;"><span class="label">&lt;span&gt;</span>
+                <p>Test Test Test</p><span class="label">&lt;/span&gt;</span>
+              </div><span class="label">&lt;/div&gt;</span>
+            </div><span class="label">&lt;/div&gt;</span>
+          </div>
+          <h2>Вертикальне вирівнювання</h2>
+          <p>Вертикальне вирівнювання з початку не було передбачено в специфікації CSS і донині викликає ряд проблем.</p>
+          <h3>вирівнювання з position: absolute;</h3>
+          <figure class="code"><pre><code><span class="nc">.wrap</span> <span class="p">{</span><br>&emsp;&emsp;&emsp;<span class="nl">position</span><span class="p">:</span> <span class="nb">relative</span><span class="p">;</span><br><span class="p">}</span><br><br><span class="nc">.inner-1</span> <span class="p">{</span><br>&emsp;&emsp;&emsp;<span class="nl">position</span><span class="p">:</span> <span class="nb">absolute</span><span class="p">;</span><br>&emsp;&emsp;&emsp;<span class="nl">top</span><span class="p">:</span> <span class="nb">50%</span><span class="p">;</span><br>&emsp;&emsp;&emsp;<span class="nl">height</span><span class="p">:</span> <span class="nb">120px</span><span class="p">;</span><br>&emsp;&emsp;&emsp;<span class="nl">margin-top</span><span class="p">:</span> <span class="nb">-60px</span><span class="p">;</span> <span class='com'>/* або top: calc(50% - 60px); */</span><br><span class="nl"><span class="p">}</span><br><br><span class="nc">.inner-2</span> <span class="p">{</span><br>&emsp;&emsp;&emsp;<span class="nl">position</span><span class="p">:</span> <span class="nb">absolute</span><span class="p">;</span><br>&emsp;&emsp;&emsp;<span class="nl">top</span><span class="p">:</span> <span class="nb">50%</span><span class="p">;</span><br>&emsp;&emsp;&emsp;<span class="nl">left</span><span class="p">:</span> <span class="nb">50%</span><span class="p">;</span><br>&emsp;&emsp;&emsp;<span class="nl">transform</span><span class="p">:</span> <span class="nb">translate(-50%)</span><span class="p">;</span><span class="nl"><br><span class="p">}</span></code></pre></figure>
+          <div class="visual" style="height: 250px;"><span class="label">&lt;div class="wrap"&gt;</span>
+            <div class="visual2" style="position: absolute;height: 120px;top: 50%;margin-top: -60px;"><span class="label">&lt;div class="inner-1"&gt;</span>
+              <p>Висота статична (120px)</p><span class="label">&lt;/div&gt;</span>
+            </div>
+            <div class="visual2" style="position: absolute;top: 50%; left: 50%;transform: translate(-50%, -50%);"><span class="label">&lt;div class="inner-2"&gt;</span>
+              <p>Висода довільна (залежить від контенту)</p><span class="label">&lt;/div&gt;</span>
+            </div><span class="label">&lt;/div&gt;</span>
+          </div>
+          <h3>вирівнювання з line-height;</h3>
+          <figure class="code"><pre><code><span class="nc">.wrap</span> <span class="p">{</span><br>&emsp;&emsp;&emsp;<span class="nl">height</span><span class="p">:</span> <span class="nb">250px</span><span class="p">;</span><br>&emsp;&emsp;&emsp;<span class="nl">padding</span><span class="p">:</span> <span class="nb">20px</span><span class="p">;</span><br>&emsp;&emsp;&emsp;<span class="nl">line-height</span><span class="p">:</span> <span class="nb">210px</span><span class="p">;</span><br><span class="p">}</span><br><br><span class="nc">.inner-1</span> <span class="p">{</span><br>&emsp;&emsp;&emsp;<span class="nl">display</span><span class="p">:</span> <span class="nb">inline-block</span><span class="p">;</span><br>&emsp;&emsp;&emsp;<span class="nl">height</span><span class="p">:</span> <span class="nb">120px</span><span class="p">;</span><br>&emsp;&emsp;&emsp;<span class="nl">line-height</span><span class="p">:</span> <span class="nb">1.25</span><span class="p">;</span><br>&emsp;&emsp;&emsp;<span class="nl">vertical-align</span><span class="p">:</span> <span class="nb">middle</span><span class="p">;</span><br><span class="nl"><span class="p">}</span><br><br><span class="nc">.inner-2</span> <span class="p">{</span><br>&emsp;&emsp;&emsp;<span class="nl">line-height</span><span class="p">:</span> <span class="nb">1.25</span><span class="p">;</span><br>&emsp;&emsp;&emsp;<span class="nl">vertical-align</span><span class="p">:</span> <span class="nb">middle</span><span class="p">;</span><br><span class="p">}</span></code></pre></figure>
+          <div class="visual" style="height:250px; padding: 20px;line-height: 210px;"><span class="label">&lt;div class="wrap"&gt;</span>
+            <div class="visual2" style="display: inline-block;height: 120px;line-height: initial;vertical-align: middle;"><span class="label">&lt;div class="inner-1"&gt;</span>
+              <p>Висота статична (120px)</p><span class="label">&lt;/div&gt;</span>
+            </div>
+            <div class="visual2" style="display: inline-block;line-height: initial;vertical-align: middle;"><span class="label">&lt;span class="inner-2"&gt;</span>
+              <p>Висода довільна (залежить від контенту)</p><span class="label">&lt;/span&gt;</span>
+            </div><span class="label">&lt;/div&gt;</span>
+          </div>
+          <h3>вирівнювання з ::before;</h3>
+          <figure class="code"><pre><code><span class="nc">.wrap</span> <span class="p">{</span><br>&emsp;&emsp;&emsp;<span class="nl">height</span><span class="p">:</span> <span class="nb">250px</span><span class="p">;</span><br>&emsp;&emsp;&emsp;<span class="nl">padding</span><span class="p">:</span> <span class="nb">20px</span><span class="p">;</span><br><span class="p">}</span><br><br><span class="nc">.wrap::before</span> <span class="p">{</span><br>&emsp;&emsp;&emsp;<span class="nl">content</span><span class="p">:</span> <span class="nb">''</span><span class="p">;</span><br>&emsp;&emsp;&emsp;<span class="nl">display</span><span class="p">:</span> <span class="nb">inline-block</span><span class="p">;</span><br>&emsp;&emsp;&emsp;<span class="nl">height</span><span class="p">:</span> <span class="nb">100%</span><span class="p">;</span><br>&emsp;&emsp;&emsp;<span class="nl">vertical-align</span><span class="p">:</span> <span class="nb">middle</span><span class="p">;</span><br><span class="p">}</span><br><br><span class="nc">.inner-1</span> <span class="p">{</span><br>&emsp;&emsp;&emsp;<span class="nl">display</span><span class="p">:</span> <span class="nb">inline-block</span><span class="p">;</span><br>&emsp;&emsp;&emsp;<span class="nl">height</span><span class="p">:</span> <span class="nb">120px</span><span class="p">;</span><br>&emsp;&emsp;&emsp;<span class="nl">vertical-align</span><span class="p">:</span> <span class="nb">middle</span><span class="p">;</span><br><span class="nl"><span class="p">}</span><br><br><span class="nc">.inner-2</span> <span class="p">{</span><br>&emsp;&emsp;&emsp;<span class="nl">vertical-align</span><span class="p">:</span> <span class="nb">middle</span><span class="p">;</span><br><span class="p">}</span></code></pre></figure>
+          <div style="display:flex;">
+            <div></div>
+            <div class="visual before-align" style="height:250px; padding: 20px;flex-grow:1;"><span class="label">&lt;div class="wrap"&gt;</span>
+              <div class="visual2" style="display: inline-block;vertical-align: middle;"><span class="label">&lt;span class="inner-2"&gt;</span>
+                <p>Висода довільна (залежить від контенту)</p><span class="label">&lt;/span&gt;</span>
+              </div>
+              <div class="visual2" style="display: inline-block;height: 120px;vertical-align: middle;"><span class="label">&lt;div class="inner-1"&gt;</span>
+                <p>Висота статична (120px)</p><span class="label">&lt;/div&gt;</span>
+              </div><span class="label">&lt;/div&gt;</span>
+            </div>
+          </div>
+          <h2>Вирівнювання в тексті</h2>
+          <p>Для інлайнових елементів <code>display: inline / inline-block</code>, включаючи картинки, властивість vertical-align центрує сам інлайн-елемент в навколишньому його тексті, <code>inline</code> i <code>inline-block</code> елементах.</p>
+          <p class="vertica-text"><code>baseline</code> (за замовчуванням) <span class='vimg' style='vertical-align:baseline'></span><br><code>top</code> зверху <span class='vimg' style='vertical-align:top'></span><br><code>bottom</code> знизу <span class='vimg' style='vertical-align:bottom'></span><br> <code>middle</code> (по середині) <span class='vimg' style='vertical-align:middle'></span><br><code>sub</code> на рівні <sub>саб елемент</sub> <span class='vimg' style='vertical-align:sub'></span><br> <code>super</code> на рівні <sup>саб елемент</sup> <span class='vimg' style='vertical-align:super'></span><br> <code>text-top</code> (верхня границя на рівні з текстоМ) <span class='vimg' style='vertical-align:text-top'></span><br> <code>text-bottom</code> (нижня границя на рівні з текстоМ) <span class='vimg' style='vertical-align:text-bottom'></span></p>
+          <ul>
+            <li>Для вертикального вирівнювання тексту краще використовувати вертикальні відступи або властивість <code>line-height</code>.</li>
+            <li>Для абсолютно позиціонованих елементів з відомою висотою (наприклад, іконок) ідеально підійде спосіб з негативною властивістю <code>margin-top</code>.</li>
+            <li>Для більш складних випадків, коли невідома висота блоку, потрібно використовувати псевдоелемент або властивість <code>transform</code>.</li>
+            <li>Ну а якщо вам пощастило настільки, що не потрібно підтримувати старі версії браузера IE, то, звичайно, краще використовувати <code>Flexbox</code>.</li>
+          </ul>
+          <h1 class="main-title">Float</h1>
+          <p><span class='orange-text'>float</span>: left | right | none | inherit;</p>
+          <p>При застосуванні цієї властивості відбувається наступне:</p>
+          <ol>
+            <li>Елемент позиціонується як звичайно, а потім виводяться з потоку документа і переміщається вліво (для <span class='orange-text'>left</span>) або вправо (для <span class='orange-text'>right</span>) до того, як торкнеться або батьківського кордону, або іншого елемента з <span class='orange-text'>float</span>.</li>
+            <li>Якщо простору по горизонталі не хватає для того, щоб помістити елемент, то він рухається вниз до тих пір, поки не влізе.</li>
+            <li>Інші непозиціоновані блочні елементи без <span class='orange-text'>float</span> ведуть себе так, як ніби елемента з <span class='orange-text'>float</span> немає, так як він випадає з потоку.</li>
+            <li>Строки (<span class='orange-text'>inline</span>-елементи), напроти, "знають" про <span class='orange-text'>float</span> елемент і обтікають елемент по сторонах.</li>
+          </ol>
+          <p>Ще деталі:</p>
+          <ol>
+            <li>
+              Елемент при наявності <span class='orange-text'>float</span> отримує <span class='orange-text'>display: block;</span>. (навіть якщо у нього втановлена властивість <span class='orange-text'>display</span>: inline / inline-block;)<br>Виключенням є деякі рідкі властивості <span class='orange-text'>display</span>, подібні до <span class='orange-text'>inline-table</span> та <span class='orange-text'>run-in</span>.</li>
+            <li>Ширина флоат-блока визначається по контенту.</li>
+            <li>Вертикальний margin елементів з <span class='orange-text'>float</span> елементом не зливається, в відмінності від звичайних блочних елементів.</li>
+          </ol>
+          <div class="float-block">
+            <h3>Pikachu</h3><img class="f-left" src="img/pi1.png" alt="pikachu" width="260px">
+            <p>
+              <img src='img/s1.png' alt='pikachu' width='80px'> Pikachu (Japanese: ピカチュウ Pikachu) is an Electric-type Pokémon introduced in Generation I.It evolves from Pichu when leveled up with high friendship and evolves into Raichu when exposed to a Thunder Stone. However, the starter Pikachu in Pokémon Yellow will refuse to evolve into Raichu unless it is traded and evolved on another save file.</p><img class="f-right" src="img/pi2.png" alt="pikachu" width="80px">
+            <p>
+              In Alola, Pikachu will evolve into Alolan Raichu when exposed to a Thunder Stone.Pikachu is popularly known as the mascot of the Pokémon franchise and a major representative of Nintendo's collective mascots.</p>
+          </div>
+          <p>Щоб забрати "схлопування" є декілька методів з використання властивості <span class='orange-text'>clear</span>: left / right / both:
+            <ol>
+              <li>Добавити в кінель контенту батьківського блока <span class='orange-text'>&lt;div</span> style='clear: both;<span class='orange-text'>'&gt; &lt;/div&gt;</span></li>
+              <li>Універсальний клас .clearfix для того щоб не добавляти лишній елемент в html структуру:<br>
+                <figure class="code"><pre><code><span class="nc">.clearfix:after</span> <span class="p">{</span><br>&emsp;&emsp;&emsp;<span class="nl">content</span><span class="p">:</span> <span class="nb">""</span><span class="p">;</span><br>&emsp;&emsp;&emsp;<span class="nl">display</span><span class="p">:</span> <span class="nb">block</span><span class="p">;</span><br>&emsp;&emsp;&emsp;<span class="nl">clear</span><span class="p">:</span> <span class="nb">both</span><span class="p">;</span><br>&emsp;&emsp;&emsp;<span class="nl">visibility</span><span class="p">:</span> <span class="nb">hidden</span><span class="p">;</span><br>&emsp;&emsp;&emsp;<span class="nl">height</span><span class="p">:</span> <span class="nb">0</span><span class="p">;</span><br><span class="p">}</span></code></pre></figure>
+              </li>
+              <li>Задати батьківському блоку властивість float або overflow: hidden / auto;</li>
+            </ol>
+          </p>
+          <div class="float-blocks">
+            <div class="blocks"></div>
+            <div class="blocks large"></div>
+            <div class="blocks"></div>
+            <div class="blocks"></div>
+            <div class="blocks"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="./js/libs/jquery/jquery.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

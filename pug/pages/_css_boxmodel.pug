@@ -1,0 +1,78 @@
+main.main-content
+    .container
+        div.item-content
+            h1.main-title Css Box model
+
+            section.box-model
+                div
+                    img(src='../img/box-model.png' alt='box-model' width='400' height='350')
+                div.flex
+                    div
+                        p <span class="orange-text">box-sizing:</span> content-box;<br><span class="orange-text">width:</span> 200px;<br><span class="orange-text">margin:</span> 40px;<br><span class="orange-text">padding:</span> 30px;<br><span class="orange-text">border:</span> 5px solid green;
+                        div.box-wrap.first
+                            div.box.content-box <span>content-box</span>
+                    div
+                        p <span class="orange-text">box-sizing:</span> border-box;<br><span class="orange-text">width:</span> 270px;<br><span class="orange-text">margin:</span> 40px;<br><span class="orange-text">padding:</span> 30px;<br><span class="orange-text">border:</span> 5px solid green;
+                        div.box-wrap
+                            div.box.border-box <span>border-box</span>
+
+                img(src="../img/margin-collapse.png" alt='margin collapse')
+                div.box-wrap.text-left.inline
+                    span.inline-box <span>inline element</span>
+                    span.bordred
+                    span.inline-box <span>inline element</span>
+                div.box-wrap.text-left.width-low
+                    span.inline-box <span>inline element</span>
+                    span.inline-box <span>inline element</span>
+
+                table(style='margin-top:50px;').table
+                    colgroup
+                        col(width='200px')
+                        col(width='275px')
+                        col
+                    tr
+                        td display:
+                        td inline;
+                        td не відображає width i height
+                    tr
+                        td display:
+                        td block;<br>inline-block;
+                        td відображає всі властивості
+                    tr
+                        th(colspan="2") Зв'язані властивості
+                    tr
+                        td box-sizing:
+                        td content-box; <br> border-box;
+                        td Властивість box-sizing використовується для зміни блочної моделі CSS застосовуваної за замовчуванням, за допомогою якої обчислюються ширина і висота елементів.<br><span class='orange-text'>border-box</span> - розмір задається враховуючи контент, padding i border-width<br><span class='orange-text'>content-box</span> - ширина задається враховуючи тільки контент.
+                    tr
+                        td background-clip:
+                        td border-box;<br>padding-box;<br>content-box;
+                        td вказує, як поширюється фон елемента, колір або зображення:<br><span class='orange-text'>border-box</span> - фон займає весть прості враховуючи ширину бордера і відображається під бордером.<br><span class='orange-text'>padding-box</span> - фон займає простір контенту і padding.<br><span class='orange-text'>content-box</span> - фон відображається тільки під контентом
+                    tr
+                        td(colspan='2') height: 50px;<br>min-height: 50px;<br>max-height: 100px;
+
+                        td задає висоту елементу.<br><span class='orange-text'>min-height</span> - мінімальна висота.<br><span class='orange-text'>max-height</span> - максимальна висота.
+                    tr
+                        td(colspan='2') width: 100px;<br>min-width: 100px;<br>max-width: 300px;
+
+                        td задає ширину елементу.<br><span class='orange-text'>min-width</span> - мінімальна ширина.<br><span class='orange-text'>max-width</span> - максимальна ширина.
+                    tr
+                        td padding: 20px;
+                        td padding-left:<br>padding-right:<br>padding-top:<br>padding-bottom:<br>padding: 20px 30px;<br>padding: 20px 30px 10px;<br>padding: 20px 30px 40px 50px;
+                        td встановлює відступи з усіх сторін елемента. Область відступів це простір між вмістом елемента і його бордером. Негативні значення не допускаються.
+                    tr
+                        td margin: 20px;
+                        td margin-left:<br>margin-right:<br>margin-top:<br>margin-bottom:<br>margin: 20px 30px;<br>margin: 20px 30px 10px;<br>margin: 20px 30px 40px 50px;
+                        td встановлює відступи з усіх сторін елемента. Область відступів це простір між бордером елемента і його сусідами.
+                    tr
+                        td border-width
+                        td border-top-width: thin;(2px)<br>border-right-width: medium;(4px)<br>border-bottom-width: thick;(6px)<br>border-left-width: 5px;<br>
+                        td задає товщину бордера елемента
+
+
+
+
+
+
+
+

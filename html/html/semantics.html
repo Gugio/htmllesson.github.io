@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title class="b-title">Semantics</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="../img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+</head>
+<body>
+
+<main>
+    <nav class="page-nav">
+        <ol class="nav-list">
+            <li><a href="../index.html" class="nav-list-link"><span class="link-num">1</span>Структура HTML (правило
+                вкладення, коментар)</a></li>
+            <li><a href="tags.html" class="nav-list-link"><span class="link-num">2</span>Парні не парні теги.<br />
+                Блочні і
+                строчні.</a></li>
+            <li><a href="meta.html" class="nav-list-link"><span class="link-num">3</span><span class="one-line">Teг &lt;meta&gt;</span></a>
+            </li>
+            <li><a href="link-script.html" class="nav-list-link"><span class="link-num">4</span><span class="one-line">Тег &lt;link&gt; i &lt;script&gt;</span></a>
+            </li>
+            <li><a href="symbols.html" class="nav-list-link"><span class="link-num">5</span><span
+                    class="one-line">Спец символи</span></a></li>
+            <li><a href="attr.html" class="nav-list-link"><span class="link-num">6</span><span class="one-line">Глобальні атрибути</span></a>
+            </li>
+            <li><a href="h.html" class="nav-list-link"><span class="link-num">7</span><span
+                    class="one-line">h1 - h6</span></a></li>
+            <li><a href="a.html" class="nav-list-link"><span class="link-num">8</span><span class="one-line">Тег &lt;a&gt;, &lt;map&gt;&lt;area&gt;&lt;/map&gt; </span></a>
+            <li><a href="lists.html" class="nav-list-link"><span class="link-num">9</span><span class="one-line">Списки &lt;ul&gt;, &lt;ol&gt;, &lt;dl&gt;</span></a>
+            </li>
+            <li><a href="input-textarea-btn.html" class="nav-list-link"><span class="link-num">10</span><span
+                    class="one-line">&lt;input&gt;,&lt;textarea&gt;,&lt;button&gt;</span></a></li>
+            <li><a href="table-form.html" class="nav-list-link"><span class="link-num">11</span><span class="one-line">&lt;table&gt;, &lt;form&gt;</span></a>
+            </li>
+            <li><a href="img-audio-video.html" class="nav-list-link"><span class="link-num">12</span><span
+                    class="one-line">&lt;img&gt;, &lt;audio&gt;, &lt;video&gt;</span></a>
+            </li>
+            <li><a href="semantics.html" class="nav-list-link active"><span class="link-num">13</span><span
+                    class="one-line">Семантика</span></a>
+            </li>
+        </ol>
+    </nav>
+
+    <div class="main-content">
+        <h1 style="text-align: center;">Ceмантика</h1>
+        <div style="display: flex; justify-content: center;align-items: center;">
+            <div style="width: 500px;background-color: dimgrey; padding: 5px;border: 1px solid black;font-size: 20px;text-align: center;margin-right: 25px;">
+                <header style="line-height: 50px; background-color: #fff;margin-bottom: 5px;text-align: center;">
+                    &lt;header&gt;</header>
+
+
+                <nav style="line-height: 40px; background-color: #fff;margin-bottom: 5px;text-align: center;">
+                    &lt;nav&gt;</nav>
+
+                <div style="display: flex;margin-bottom: 5px;">
+                    <div style="width: 70%;padding: 5px;background-color: #00a19b;text-align: left;margin-bottom: 5px;margin-right: 5px;">
+                        &lt;main&gt;
+                        <section style="padding: 5px;background-color: #bcbcbc;text-align: left">
+                            &lt;section&gt;
+                            <article
+                                    style="line-height: 40px;background-color: #fff;margin-bottom: 5px;text-align: center;">
+                                &lt;article&gt;</article>
+                            <article
+                                    style="line-height: 40px;background-color: #fff;margin-bottom: 5px;text-align: center;">
+                                &lt;article&gt;</article>
+                            <article
+                                    style="line-height: 40px;background-color: #fff;margin-bottom: 5px;text-align: center;">
+                                &lt;article&gt;</article>
+
+                        </section>
+                    </div>
+                    <div style="flex-grow: 1; background-color: #fff; padding: 5px;text-align: center">
+                        &lt;aside&gt;</div>
+                </div>
+
+                <footer style="line-height: 50px; background-color: #fff;text-align: center;">&lt;footer&gt;</footer>
+
+            </div>
+            <div style="max-width: 1000px">
+                <table class="table" >
+                    <tbody>
+                    <tr>
+                        <th style="width:20%">Тег</th>
+                        <th>Призначення</th>
+                    </tr>
+                    <tr>
+                        <td>&lt;article&gt;</td>
+                        <td>Вказує статтю</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;aside&gt;</td>
+                        <td>Вказує зміст в 'стороні' від основного контенту</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;address&gt;</td>
+                        <td>Використовується для визначення контактної інформації <address>автора / власника</address> документа або статті.</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;details&gt;</td>
+                        <td><details>Вказує додаткові відомості, які користувач може переглянути або сховати</details></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;figcaption&gt;</td>
+                        <td>Вказує заголовок елемента фігури</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;figure&gt;</td>
+                        <td>Вказує автономний вміст, як ілюстрації, діаграми, фотографії, та інше.</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;footer&gt;</td>
+                        <td>Вказує нижній колонтитул для документа або розділу</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;header&gt;</td>
+                        <td>Вказує заголовок для документа або розділу</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;main&gt;</td>
+                        <td>Вказує основний зміст документа</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;mark&gt;</td>
+                        <td><mark>Виділяє</mark> текст</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;nav&gt;</td>
+                        <td>Вказує навігаційні посилання</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;section&gt;</td>
+                        <td>Визначає розділ у документі</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;time&gt;</td>
+                        <td>Вказує дату / час <span class="spanOrange">&lt;time</span> datetime="2017-10-2"<span class="spanOrange">&gt;</span> 2 Октября 2017<span class="spanOrange">&lt;/time&gt;</span></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;bdi&gt;</td>
+                        <td>Відділяє фрагмент тексту, який повинен бути відокремлений від решти тексту для
+                            двонаправленого форматування тексту. Використовується для текстів,
+                            <bdi>написаних одночасно в мовах, читаються зліва направо та справа наліво.</bdi>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&lt;wbr&gt;</td>
+                        <td>Одиночний тег, показує браузеру місце, де можна додати розрив довжини рядка в разі потреби.<br>
+                            https://www.sdgsgs.com/fsgb765dsfv6g78wtf834yr903n4yt09v2b34t9/<span class="spanOrange">&lt;wbr&gt;</span><wbr>/345ut0n234tun34/29834vb93434/32v4t2n389t3v24t
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div><br>
+        </div>
+    </div>
+</main>
+</body>
+</html>
