@@ -278,6 +278,9 @@ h6 {
 .orange-text {
   color: #de7300; }
 
+.blue-text {
+  color: blue; }
+
 table {
   border-collapse: collapse;
   border-spacing: 0; }
@@ -416,16 +419,6 @@ td:first-child {
     height: 50px;
     text-align: center;
     flex-shrink: 0; }
-
-.block-style {
-  max-width: 1100px;
-  margin: auto; }
-
-#brepet {
-  width: 200px;
-  height: 200px;
-  background-color: #00a19b;
-  background-image: url("img/"); }
 
 .selectors {
   max-width: 1000px;
@@ -851,3 +844,77 @@ table.measure-table tr:last-child td {
     list-style: none;
     margin: 0;
     padding: 0; }
+
+.block-style {
+  max-width: 1100px;
+  margin: 0 auto 100px; }
+
+.back-exemp {
+  width: 200px;
+  height: 200px;
+  background-color: #00a19b;
+  margin: auto;
+  transition: all .25s ease-out; }
+  .back-exemp.border {
+    border: 50px solid transparent;
+    padding: 50px;
+    border-image: url("../img/s1.png"); }
+
+#over {
+  padding: 15px;
+  font-size: 17px; }
+  #over::before {
+    content: '!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!';
+    display: block; }
+
+#brepet {
+  background-image: url("../img/s1.png");
+  width: 250px; }
+
+#bsize {
+  background-image: url("../img/s1.png");
+  background-repeat: no-repeat;
+  width: 250px; }
+
+#battach {
+  background: #00a19b url("../img/b.png") no-repeat;
+  color: red;
+  overflow: auto;
+  background-size: cover; }
+  #battach::before {
+    content: 'asdasdasdasadasdsdasdasdsadasdasdasdasdasdasdsadasdasdsadsa';
+    display: block; }
+
+#bclip {
+  padding: 20px;
+  background: url("../img/b2.png") no-repeat;
+  font-size: 13px;
+  border: 10px solid rgba(0, 0, 0, 0.5); }
+
+#borig {
+  padding: 20px;
+  background: url("../img/b2.png") no-repeat;
+  font-size: 13px;
+  border: 10px solid rgba(0, 0, 0, 0.5); }
+
+#opa {
+  background: url("../img/b2.png") no-repeat;
+  padding: 50px 0; }
+
+.radio-repeat {
+  color: orange;
+  cursor: pointer; }
+  .radio-repeat input {
+    margin-right: 10px;
+    outline: none;
+    vertical-align: middle; }
+
+.border-s {
+  display: inline-block;
+  background-color: red;
+  border-width: 5px;
+  border-color: black;
+  padding: 5px;
+  color: #fff;
+  font-weight: 600;
+  margin: 10px; }

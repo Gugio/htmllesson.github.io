@@ -1,112 +1,44 @@
+var respImg = document.getElementById('respImg');
+var respBtn = document.getElementById('respBtn');
+
+function resp() {
+  if (respImg.hasAttribute('style')) {
+    respImg.removeAttribute('style');
+    respBtn.innerHTML = 'Add responsive';
+    return;
+  }
+  respImg.setAttribute('style', 'max-width:100%;height:auto;');
+  respBtn.innerHTML = 'Remove responsive';
+}
+
+
 (function ($) {
   'use strict';
-
-  var $shareBtn = $('#shareBtn');
-  var $shareBtnClose = $('#shareBtnClose');
-  var $shareBlock = $('.share-links');
-
-  var $sizeBtn = $('.size-btn span');
-
-  var $listSlider = $('#itemsSlider');
-  var $itemsList = $listSlider.find('.items-list');
-  var $prev = $listSlider.find('.prev');
-  var $next = $listSlider.find('.next');
-  var slideCount = $listSlider.find('li').length;
-  var slideWidth = $listSlider.width();
-  var sliderListWidth = slideCount * slideWidth;
-
-  $itemsList.css({
-    width: sliderListWidth,
-    marginLeft: -slideWidth
-  });
-
-  $listSlider.find('li').css({
-    width: slideWidth
-  });
-
-  $(window).on('load', function () {
-    var viewportWidth = $(document).width();
-
-    if (viewportWidth < 699) {
-      $listSlider.find('li:last-child').prependTo($itemsList);
-    }
-  });
-
-  $(window).on('load resize', function () {
-    var viewportWidth =  $(window).width();
-
-    if (viewportWidth < 699) {
-      slideWidth = $listSlider.width();
-      sliderListWidth = slideCount * slideWidth;
-
-      $itemsList.css({
-        width: sliderListWidth,
-        marginLeft: -slideWidth
-      });
-
-      $listSlider.find('li').css({
-        width: slideWidth
-      });
-    } else {
-      $itemsList.css({
-        width: '',
-        marginLeft: ''
-      });
-      $itemsList.find('li').css({
-        width: ''
-      });
-    }
-  });
+  var brepet = $('#brepet');
+  var battach = $('#battach');
+  var bclip = $('#bclip');
+  var borig = $('#borig');
+  var bsize = $('#bsize');
+  var over = $('#over');
+  var brepetR = $('.radioRepeat');
+  var brepetRO = $('.brepetRO');
 
   $(document).ready(function () {
-
-    //Hack for IE8 ---------------
-    $sizeBtn.click(function () {
-      $sizeBtn.removeClass('checked');
-      $(this).addClass('checked');
-    });
-    // ---------------------------
-
-    $shareBtn.on('click', function () {
-      $shareBlock.toggleClass('hide');
+    brepetR.on('click', function (e) {
+      var target = e.target;
+      var datav = target.getAttribute('data-content');
+      brepet.css('background-repeat', datav);
+      battach.css('background-attachment', datav);
+      bsize.css('background-size', datav);
+      bclip.css('background-clip', datav);
+      over.css('overflow', datav);
     });
 
-    $shareBtnClose.on('click', function () {
-      $shareBlock.toggleClass('hide');
-    });
-
-    $(document).on('click', function (event) {
-      var $el = $(event.target);
-
-      if (!$el.closest('.item-share').length) {
-        $shareBlock.addClass('hide');
-      }
-
-      event.stopPropagation();
-    });
-
-    function slideLeft() {
-      $itemsList.animate({ left: +slideWidth }, 250, function () {
-        $listSlider.find('li:last-child').prependTo($itemsList);
-        $itemsList.css('left', '');
-      });
-    }
-
-    function slideRight() {
-      $itemsList.animate({ left: -slideWidth }, 250, function () {
-        $listSlider.find('li:first-child').appendTo($itemsList);
-        $itemsList.css('left', '');
-      });
-    }
-
-    $prev.on('click', function (event) {
-      slideLeft();
-      event.stopPropagation();
-    });
-
-    $next.on('click', function (event) {
-      slideRight();
-      event.stopPropagation();
-    });
+    brepetRO.on('click', function (e) {
+      var target = e.target;
+      var datav = target.getAttribute('data-content');
+      borig.css('background-origin', datav);
+    })
   });
 })(jQuery);
+

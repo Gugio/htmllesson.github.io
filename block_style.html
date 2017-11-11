@@ -16,6 +16,11 @@
       <div class="block-style">
         <h1 class="main-title">Стилізація блоків</h1>
         <table class="table">
+          <colgroup>
+            <col width="250px">
+            <col>
+            <col>
+          </colgroup>
           <thead>
             <tr>
               <th>Властивість</th>
@@ -25,20 +30,23 @@
           </thead>
           <tbody>
             <tr>
-              <td colspan="3">
-                background: background-color || background-image || background-repeat|| background-attachment || background-position</td>
-            </tr>
-            <tr>
-              <td>background-attachment: fixed / scroll / local;</td>
+              <td>overflow<br> overflow-x<br> overflow-y</td>
               <td>
-                встановлює, чи буде прокручуватися фонове зображення разом з вмістом елементу.<br>fixed -       <br>
-                scroll -    <br>
-                local -   <br>
+                Управляє відображенням змісту блокового елемента, якщо воно цілком не поміщається і виходить за область заданих розмірів.<div class='radioRepeat'><a href='javascript:;' class='radio-repeat' data-content='visible'>visible</a> - відображає весь вміст елемента, навіть за межами встановленої висоти і ширини.<br>
+                <a href='javascript:;' class='radio-repeat' data-content='hidden'>hidden</a> - відображає лише область всередині елемента, інше буде приховано.<br>
+                <a href='javascript:;' class='radio-repeat' data-content='scroll'>scroll</a> - завжди додаються смуги прокрутки.<br>
+                <a href='javascript:;' class='radio-repeat' data-content='auto'>auto</a> - прокрутка додається тільки при необхідності.<div>
               </td>
-              <td></td>
+              <td>
+                <div class="back-exemp" id="over">Управляє відображенням змісту блокового елемента, якщо воно цілком не поміщається і виходить за область заданих розмірів.</div>
+              </td>
             </tr>
             <tr>
-              <td>background-color: #fff / rgba(0,0,0, 0.3) / transparent</td>
+              <td colspan="3">
+                background: <span style='color:blue;'>background-color || background-image || background-repeat|| background-attachment || background-position</span></td>
+            </tr>
+            <tr>
+              <td>background-color: <span style='color:#000;'>#fff / rgba(0,0,0, 0.3) / transparent</span></td>
               <td>Визначає колір фону елемента</td>
               <td></td>
             </tr>
@@ -48,36 +56,147 @@
               <td></td>
             </tr>
             <tr>
-              <td>background-repeat: no-repeat / repeat / repeat-x / repeat-y / space / round;</td>
+              <td>background-repeat</td>
               <td>
-                Визначає, як буде повторюватися фонове зображення, встановлене за допомогою властивості background-image. <br>repeat - фонове зображення повторюється по горизонталі і вертикалі (за замовчуванням) <br>
-                no-repeat - встановлює одне фонове зображення в елементі без його повторень, положення якого визначається властивістю background-position (за замовчуванням в лівому верхньому куті)<br>
-                repeat-x - фоновий малюнок повторюється тільки по горизонталі<br>
-                repeat-y - фоновий малюнок повторюється тільки по вертикалі<br>
-                space - зображення повторюється стільки раз, щоб повністю заповнити область; якщо це не вдається, між картинками додається порожній простір.<br>
-                round - зображення повторюється так, щоб в області помістилося ціле число малюнків; якщо це не вдається зробити, то фонові малюнки масштабируются.
+                Визначає, як буде повторюватися фонове зображення, встановлене за допомогою властивості background-image. <br> <div class='radioRepeat'><a href='javascript:;' class='radio-repeat' data-content='repeat'>repeat</a> - фонове зображення повторюється по горизонталі і вертикалі (за замовчуванням) <br>
+                <a href='javascript:;' class='radio-repeat' data-content='no-repeat'>no-repeat</a> - встановлює одне фонове зображення в елементі без його повторень, положення якого визначається властивістю background-position (за замовчуванням в лівому верхньому куті)<br>
+                <a href='javascript:;' class='radio-repeat' data-content='repeat-x'>repeat-x</a> - фоновий малюнок повторюється тільки по горизонталі<br>
+                <a href='javascript:;' class='radio-repeat' data-content='repeat-y'>repeat-y</a> - фоновий малюнок повторюється тільки по вертикалі<br>
+                <a href='javascript:;' class='radio-repeat' data-content='space'>space</a> - зображення повторюється стільки раз, щоб повністю заповнити область; якщо це не вдається, між картинками додається порожній простір.<br>
+                <a href='javascript:;' class='radio-repeat' data-content='round'>round</a> - зображення повторюється так, щоб в області помістилося ціле число малюнків; якщо це не вдається зробити, то фонові малюнки масштабируются.</div>
               </td>
-              <td>div#brepet</td>
+              <td>
+                <div class="back-exemp" id="brepet"></div>
+              </td>
             </tr>
             <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
+              <td>
+                background-position<br>background-position-x<br>
+                background-position-y<br>
+              </td>
+              <td>У властивості <span class='orange-text'>background-position</span> два значення, положення по горизонталі (може бути - <span class='blue-text'>left, center, right</span>) і вертикалі (може бути - <span class='blue-text'>top, center, bottom</span>). Положення також можна задавати у відсотках, пікселях або інших одиницях. Якщо застосовуються ключові слова, то порядок їх прямування не має значення, при процентній записи спочатку задається положення малюнка по горизонталі, а потім, через пробіл, положення по вертикалі.</td>
               <td></td>
             </tr>
             <tr>
+              <td>background-size</td>
+              <td>
+                Масштабує фонове зображення, згідно із заданими розмірами. <br><div class='radioRepeat'><a href='javascript:;' class='radio-repeat' data-content='100% 150px'>px em rem %</a> - задає розмір в одиницях, у відсотках розмір задається від ширини, висоти елемента (100% 150px)<br>
+                <a href='javascript:;' class='radio-repeat' data-content='auto'>auto</a> - якщо задано одночасно для ширини і висоти (auto auto), розміри фону залишаються вихідними; якщо тільки для одного боку картинки (100px auto), то розмір обчислюється автоматично виходячи з пропорцій картинки.<br>
+                <a href='javascript:;' class='radio-repeat' data-content='cover'>cover</a> - масштабує зображення зі збереженням пропорцій так, щоб його ширина або висота дорівнювала ширині або висоті блоку.<br>
+                <a href='javascript:;' class='radio-repeat' data-content='contain'>contain</a> - масштабує зображення зі збереженням пропорцій таким чином, щоб картинка цілком помістилася всередину блоку.</div>
+              </td>
+              <td>
+                <div class="back-exemp" id="bsize"></div>
+              </td>
+            </tr>
+            <tr>
+              <td>background-attachment</td>
+              <td>
+                Встановлює, чи буде прокручуватися фонове зображення разом з вмістом елементу.<br><div class='radioRepeat'><a href='javascript:;' class='radio-repeat' data-content='scroll'>scroll</a> - дозволяє переміщатися фону разом з вмістом.(default)<br>
+                <a href='javascript:;' class='radio-repeat' data-content='fixed'>fixed</a> - робить фонове зображення елемента нерухомим.<br>
+                <a href='javascript:;' class='radio-repeat' data-content='local'>local</a> - фон фіксується з урахуванням поведінки елемента. Якщо елемент має прокрутку, то фон буде прокручуватися разом з вмістом, але фон, що виходить за рамки елемента, залишається на місці.<br></div>
+              </td>
+              <td>
+                <div class="back-exemp" id="battach">Lorem ipsum dolor sit amet, cum an diam everti civibus, ut nam clita fuisset interesset. Reque postulant quaerendum te mea, quo cu affert lobortis comprehensam. Lorem ipsum dolor sit amet, cum an diam everti civibus, ut nam clita fuisset interesset. Reque postulant quaerendum te mea, quo cu affert lobortis comprehensam. Lorem ipsum dolor sit amet, cum an diam everti civibus, ut nam clita fuisset interesset. Reque postulant quaerendum te mea, quo cu affert lobortis comprehensam.</div>
+              </td>
+            </tr>
+            <tr>
+              <td>background-clip</td>
+              <td>
+                Визначає, як колір фону або фонова картинка повинна виводитися під кордонами. Ефект помітний при прозорих або пунктирних межах.<div class='radioRepeat'><a href='javascript:;' class='radio-repeat' data-content='border-box'>border-box</a> - виводиться під кордонами.(default)<br>
+                <a href='javascript:;' class='radio-repeat' data-content='padding-box'>padding-box</a> - відображається всередині кордонів.<br>
+                <a href='javascript:;' class='radio-repeat' data-content='content-box'>content-box</a> - відображається тільки всередині контенту.<br></div>
+              </td>
+              <td>
+                <div class="back-exemp" id="bclip"><span>Визначає, як колір фону або фонова картинка повинна виводитися під кордонами. Ефект помітний при прозорих або пунктирних межах.</span></div>
+              </td>
+            </tr>
+            <tr>
+              <td>background-origin</td>
+              <td>
+                Властивість <span class='orange-text'>background-origin</span> визначає область позиціонування фонового малюнка. Це властивість не застосовується, коли значення <span class='blue-text'>background-attachment</span> задано як <span class='blue-text'>fixed.</span><br><div class='brepetRO'><a href='javascript:;' class='radio-repeat' data-content='padding-box'>padding-box</a> - позиціонується щодо краю елемента з урахуванням товщини кордону.<br>
+                <a href='javascript:;' class='radio-repeat' data-content='border-box'>border-box</a> - позиціонується щодо кордону, при цьому лінія кордону може перекривати зображення.<br>
+                <a href='javascript:;' class='radio-repeat' data-content='content-box'>content-box</a> - позиціонується щодо вмісту елемента.<br></div>
+              </td>
+              <td>
+                <div class="back-exemp" id="borig"><span>Визначає, як колір фону або фонова картинка повинна виводитися під кордонами. Ефект помітний при прозорих або пунктирних межах.</span></div>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="3">border: <span class='blue-text'>border-width || border-style || border-color</span></td>
+            </tr>
+            <tr>
+              <td>border-width</td>
+              <td>Визначає товщину кордону <br> <span class='blue-text'>px / em / rem / medium / thick / thin</span></td>
               <td></td>
+            </tr>
+            <tr>
+              <td>border-style</td>
+              <td colspan="2">
+                Задає вигляд бордера<div class='brepetRO'><a href='javascript:;' class='radio-repeat' data-content='local'>
+                <div class='border-s' style='border-style:dotted'>dotted</div>
+                <div class='border-s' style='border-style:dashed'>dashed</div>
+                <div class='border-s' style='border-style:solid'>solid</div>
+                <div class='border-s' style='border-style:double'>double</div>
+                <div class='border-s' style='border-style:groove'>groove</div>
+                <div class='border-s' style='border-style:ridge'>ridge</div>
+                <div class='border-s' style='border-style:inset'>inset</div>
+                <div class='border-s' style='border-style:outset'>outset</div>
+              </td>
+            </tr>
+            <tr>
+              <td>border-color</td>
+              <td>Визначає колір бордера<br> (#fff, rgba().....)</td>
               <td></td>
-              <td></td>
+            </tr>
+            <tr>
+              <td>border-image</td>
+              <td>
+                встановлює малюнок бордера <br>url('url')</td>
+              <td>
+                <div class="back-exemp border"></div>
+              </td>
+            </tr>
+            <tr>
+              <td>список значень</td>
+              <td colspan="2">
+                border-top, border-bottom, border-left, border-right <br>
+                -width, -color, -style
+              </td>
+            </tr>
+            <tr>
+              <td>border-radius</td>
+              <td>
+                Встановлює радіус скруглення куточків рамки. Якщо рамка не задана, то округлення також відбувається і з фоном.<br>Дозволяється використовувати одне, два, три або чотири значення, перераховуючи їх через пробіл. Також допустимо писати два значення через косу риску (/). Як значення вказуються числа в будь-якому допустимому для CSS форматі. У разі застосування відсотків, відлік ведеться щодо ширини блоку.<br>
+                1 - Радіус вказується для всіх чотирьох куточків.<br>
+                2 - Перше значення задає радіус верхнього лівого і нижнього правого куточків, друге значення - верхнього правого і нижнього лівого куточків.<br>
+                3 - Перше значення встановлює радіус для верхнього лівого кутка, друге - одночасно для верхнього правого і нижнього лівого куточків, а третє - для нижнього правого куточка.<br>
+                4 - По черзі встановлює радіус для верхнього лівого, верхнього правого, нижнього правого і нижнього лівого куточків.<br>
+                <img src='img/border.png' width='350px'><br>
+                У разі завдання двох параметрів через косу риску, то перший параметр задає радіус по горизонталі, а другий по вертикалі (еліптичні куточки).
+              </td>
+              <td>
+                <div style="border-radius: 50%;width: 200px;height:50px;background-color:#00a19b;line-height:50px;text-align:center;color:#fff;margin:0 auto 10px;">border-radius: 50%;</div>
+                <div style="border-radius: 50px;width: 200px;height:50px;background-color:#00a19b;line-height:50px;text-align:center;color:#fff;margin:0 auto 10px;">border-radius: 50px;</div>
+                <div style="border-radius: 50px 0 0 50px;width:250px;height:50px;background-color:#00a19b;line-height:50px;text-align:center;color:#fff;margin:0 auto 10px;">border-radius: 50px 0 0 50px;</div>
+                <div style="border-radius: 40px 10px;width:250px;height:50px;background-color:#00a19b;line-height:50px;text-align:center;color:#fff;margin:0 auto 10px;">border-radius: 40px 10px;</div>
+                <div style="border-radius: 13em/3em;width:250px;height:50px;background-color:#00a19b;line-height:50px;text-align:center;color:#fff;margin:0 auto 10px;">border-radius: 13em/3em;</div>
+                <div style="border-radius: 13em 0.5em/1em 0.5em;width:250px;height:50px;background-color:#00a19b;line-height:50px;text-align:center;color:#fff;margin:0 auto 10px;">border-radius: 13em 0.5em/1em 0.5em;</div>
+              </td>
+            </tr>
+            <tr>
+              <td>список значень</td>
+              <td colspan="2">border-top-left-radius, border-top-right-radius, border-bottom-left-radius, border-bottom-right-radius</td>
+            </tr>
+            <tr>
+              <td>opacity</td>
+              <td>
+                Визначає рівень прозорості елемента. При частковій або повної прозорості через елемент проступає фоновий малюнок або інші елементи, розташовані нижче напівпрозорого об'єкту.<br>Приймає значення від 0 до 1</td>
+              <td>
+                <div class="back-exemp" id="opa">
+                  <div style="opacity:0.5;width:100px;height:100px;background-color:red;color:#fff;margin:auto;padding:10px;">Визначає рівень прозорості елемента.</div>
+                </div>
+              </td>
             </tr>
           </tbody>
         </table>
