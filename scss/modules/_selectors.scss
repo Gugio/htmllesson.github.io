@@ -721,6 +721,16 @@ table.measure-table {
   padding: 50px 0;
 }
 
+.bgradient {
+  height: 70px;
+  color: #fff;
+  margin-bottom: 10px;
+
+  &.radial {
+    height: 150px;
+  }
+}
+
 .radio-repeat {
   color: orange;
   cursor: pointer;
@@ -743,3 +753,6 @@ table.measure-table {
   margin: 10px;
 
 }
+
+//------------------------------------------------------------------------------
+//ruls -------------------------------------------------------------------------

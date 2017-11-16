@@ -901,6 +901,13 @@ table.measure-table tr:last-child td {
   background: url("../img/b2.png") no-repeat;
   padding: 50px 0; }
 
+.bgradient {
+  height: 70px;
+  color: #fff;
+  margin-bottom: 10px; }
+  .bgradient.radial {
+    height: 150px; }
+
 .radio-repeat {
   color: orange;
   cursor: pointer; }
