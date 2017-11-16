@@ -925,3 +925,44 @@ table.measure-table tr:last-child td {
   color: #fff;
   font-weight: 600;
   margin: 10px; }
+
+.media {
+  max-width: 1000px;
+  margin: auto;
+  margin-bottom: 100px; }
+
+.code {
+  display: block;
+  text-shadow: 1px 1px 0 black;
+  background-color: #333333;
+  background-image: linear-gradient(to bottom, #333333, #000000);
+  color: white;
+  padding: 1em;
+  border-color: rgba(255, 255, 255, 0.3);
+  border-width: 3px;
+  border-style: solid;
+  border-radius: 10px;
+  white-space: pre;
+  margin-bottom: 40px; }
+  .code::before {
+    content: "css";
+    float: right;
+    color: black;
+    text-shadow: -1px 1px 0 #666;
+    font-size: 1.5em; }
+  .code .nc {
+    color: #FFD357; }
+  .code .p {
+    color: #ffffff; }
+  .code .nl {
+    color: #ffffff; }
+  .code .nb {
+    color: #ABEBD9; }
+  .code .com {
+    color: silver; }
+  .code .orange {
+    color: #de7300; }
+  .code .green {
+    color: #4caf50; }
+  .code .brown {
+    color: #89472d; }

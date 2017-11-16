@@ -1,3 +1,140 @@
 main.main-content
-    div.media
-        h1.main-title @media
+    .container
+        .media
+            h1.main-title <code>@media</code>
+            p <code>@media</code> запити, застосовуються для визначення типу приладу, для якого будуть застосовані стилі. В залежності від параметрів заданих у запиті, будуть застосовуватись задані для них стилі. Медіа-запити додаються в самому кінці таблиці стилів, для надання їм вищого пріорітету.
+
+            p
+
+            figure.code <span class="orange">@media</span> <span class="green">screen</span> and
+                |  (<span class="nc">min-width</span>: <span class="nb">768</span><span class="green">px</span>)&emsp;{
+                | <span class="nc">.selector</span> {
+                | &emsp;<span class="brown">/* CSS-стилі */</span>
+                |   }
+                | }
+
+            .description
+                h2 Що таке <code>@media</code> запити?
+                p <code>@media</code> запит складаться з ключового слова, яке описує тип пристрою та виразу. З поміж усіх виразів частіше використовуються <code style="">min-width</code> та <code>max-width</code>. Медіа запит, це логічний вираз який повертає <code>true</code> або <code>false</code>
+
+            h2 Логічні опеатори
+            p За допомогою логічних операторів можливо задати комбіновані медіа-запити, у яких буде перевірятись відповідність декільком умовам
+
+
+            h3 Оператор <code>and</code> пов'язує різні умови:
+
+            figure.code <span class="orange">@media</span>
+                |  (<span class="nc">min-width</span>: <span class="nb">768</span><span class="green">px</span>) and (<span class="nc">max-width</span>: <span class="nb">980</span><span class="green">px</span>)&emsp;{
+                | <span class="nc">.selector</span> {
+                | &emsp;<span class="brown">/* CSS-стилі */</span>
+                |   }
+                | }
+
+            p Стилі цього запиту будуть застосовуватись для всіх пристроїв ширина області перегляду яких варіюється від 768px до 980px
+
+            p Правило: <code>@media all and (max-width: 800px) { /* CSS-стилі */; }</code>, буде рівнозначне правилу: <code>@media (max-width: 600px) {...}</code> (без вказання типу пристрою, застосовується по замовчуванню <code>all</code>)
+
+            h3 Оператор кома:
+
+            figure.code <span class="orange">@media</span> <span class="green">screen</span>, <span class="green">projection</span>&emsp;{
+                |
+                |   &emsp;<span class="brown">/* CSS-стилі */</span>
+                | }
+
+            p Оператор коми працює по аналогії з оператором <code>or</code>
+
+            p У цьому прикладі стилі спрацюють тільки для екранних <strong>або</strong> проекторних пристроїв
+
+            h3 Оператор <code>not</code>:
+
+            figure.code <span class="orange">@media</span> not all and (orientation: landscape)&emsp;{
+                |
+                |   &emsp;<span class="brown">/* CSS-стилі */</span>
+                | }
+
+            p Оператор <code>not</code> дозволяє спрацювати медіа-запиту у протилежному випадку. Додається на початку медіа-запиту, та застосовується для нього цілком. </br>
+                |
+                | Тобто запит з прикладу, буде еквівалентним запиту <code>@media not (all and (width: 800px)) {...}</code>
+
+            p Якщо запит складений з використанням коми, то оператор <code>not</code> буде застосовуватись до частини яка вказується перед комою.
+
+            figure.code <span class="orange">@media</span> not <span class="green">screen</span> and (color), <span class="green">print</span> and (color)&emsp;{
+                |
+                |   &emsp;<span class="brown">/* CSS-стилі */</span>
+                | }
+
+            h2 Типи пристроїв
+
+            table.table
+                colgroup
+                    col(width='180px')
+                    col
+                    col
+
+                tr
+                    th Значення
+                    th Опис
+                tr
+                    td all
+                    td всі типи пристроїв
+                tr
+                    td print
+                    td Використовується для документів, які переглядаються на екрані у режимі попереднього перегляду для друку
+                tr
+                    td screen
+                    td Використовується для екранів
+                tr
+                    td speech
+                    td Використовується для синтезаторів голосу
+
+            h2 Характеристики пристроїв
+
+            p До характеристик пристроїв відносяться параметри які перевіряється.
+
+                table.table
+                    colgroup
+                        col(width='180px')
+                        col
+                        col
+
+                    tr
+                        th Парвметр
+                        th Опис
+                    tr
+                        td width
+                        td Перевіряє ширину області перегляду. Значення задаються у одиницях виміру px/rem/em/... наприклад <code>(width: 768px)</code>.
+                            |
+                            |<code>min-width</code> Застосовує стилі, якщо ширина області перегляду більша за становлене значення
+                            |<code>max-width</code> Застосовує стилі, якщо ширина області перегляду менша за становлене значення
+                    tr
+                        td height
+                        td Перевіряє висоту області перегляду. Значення задаються у одиницях виміру px/rem/em/... наприклад <code>(height: 320px)</code>.
+                            |
+                            | <code>min-height</code> Застосовує стилі, якщо ширина області перегляду більша за становлене значення
+                            | <code>max-height</code> Застосовує стилі, якщо ширина області перегляду менша за становлене значення
+                    tr
+                        td acpect-ratio
+                        td Перевіряє співвідношення сторін області перегляду. Наприклад 16:9, визначається так: <code>(aspect-ratio: 16/9)</code>
+                            |
+                            | <code>min-aspect-ratio</code> Перевіряє мінімальне співвідношення
+                            | <code>max-aspect-ratio</code> Перевіряє максимальне співвідношення
+                    tr
+                        td orientation
+                        td Перевіряє орієнтацію області перегляду. Приймає два значення:
+                            |
+                            | <code>(orientation: portrait)</code>
+                            | <code>(orientation: landscape)</code>
+                    tr
+                        td resolution
+                        td Перевіряє роздільну здатність пристрою. Значення також може перевіряти к-сть точок на дюйм (dpi), або на сантиметр (dpcm).
+                            |
+                            | <code>(resolution: 300dpi)</code>
+                            | <code>max-resolution</code> Максимальна роздільна здатність
+                            | <code>min-resolution</code> Мінімальна роздільна здатність
+                    tr
+                        td color
+                        td Перевіряє кількість біт на кожен кольоровий компонент.
+                            | Наприклад <code>(min-color: 4)</code> означає, що екран пристрою повинен мати 4-бітну глибину кольору
+                            |
+                            | <code>max-color</code> Максимальна Максимальна к-сть біт
+                            | <code>min-color</code> Мінімальна к-сть біт
