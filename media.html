@@ -9,12 +9,155 @@
   </head>
   <body>
     <nav class="main-nav"><a class="to-home" href="index.html">< Home</a>
-      <div class="nav-block"><a class="nav-link" href="selectors.html"><span class='nav-link-num'>1</span> Селектори, Псевдокласи, Каскадність, Псевдоелементи</a><a class="nav-link" href="css_boxmodel.html"><span class='nav-link-num'>2</span> СSS Box model</a><a class="nav-link" href="measurement.html"><span class='nav-link-num'>3</span> Одиниці виміру</a><a class="nav-link" href="position.html"><span class='nav-link-num'>4</span> Позиціонування</a><a class="nav-link" href="fonts.html"><span class='nav-link-num'>5</span> Стилізація тексту</a><a class="nav-link" href="block_style.html"><span class='nav-link-num'>6</span> Стилізація елементів</a><a class="nav-link" href="media.html"><span class='nav-link-num'>7</span> @media</a><a class="nav-link" href="fonts.html"><span class='nav-link-num'>8</span> Анімація (2D, 3D)</a><a class="nav-link" href=""><span class='nav-link-num'>10</span> Display</a><a class="nav-link" href=""><span class='nav-link-num'>11</span> Префікси</a><a class="nav-link" href=""><span class='nav-link-num'>12</span> SVG</a><a class="nav-link" href=""><span class='nav-link-num'>13</span> Спрайти</a></div>
+      <div class="nav-block"><a class="nav-link" href="selectors.html"><span class='nav-link-num'>1</span> Селектори, Псевдокласи, Каскадність, Псевдоелементи</a><a class="nav-link" href="css_boxmodel.html"><span class='nav-link-num'>2</span> СSS Box model</a><a class="nav-link" href="measurement.html"><span class='nav-link-num'>3</span> Одиниці виміру</a><a class="nav-link" href="position.html"><span class='nav-link-num'>4</span> Позиціонування</a><a class="nav-link" href="fonts.html"><span class='nav-link-num'>5</span> Стилізація тексту</a><a class="nav-link" href="block_style.html"><span class='nav-link-num'>6</span> Стилізація елементів</a><a class="nav-link" href="media.html"><span class='nav-link-num'>7</span> @media</a><a class="nav-link" href="transform.html"><span class='nav-link-num'>9</span> Трансформація</a><a class="nav-link" href="animations.html"><span class='nav-link-num'>8</span> Анімація (2D, 3D)</a><a class="nav-link" href="flexbox.html"><span class='nav-link-num'>9</span> Flex-box</a><a class="nav-link" href=""><span class='nav-link-num'>10</span> Display</a><a class="nav-link" href=""><span class='nav-link-num'>11</span> Префікси</a><a class="nav-link" href=""><span class='nav-link-num'>12</span> SVG</a><a class="nav-link" href=""><span class='nav-link-num'>13</span> Спрайти</a></div>
       <div class="decorate"></div>
     </nav>
     <main class="main-content">
-      <div class="media">
-        <h1 class="main-title">@media</h1>
+      <div class="container">
+        <div class="media">
+          <h1 class="main-title"><code>@media</code></h1>
+          <p><code>@media</code> запити, застосовуються для визначення типу приладу, для якого будуть застосовані стилі. В залежності від параметрів заданих у запиті, будуть застосовуватись задані для них стилі. Медіа-запити додаються в самому кінці таблиці стилів, для надання їм вищого пріорітету.</p>
+          <p></p>
+          <figure class="code">
+            <span class="orange">@media</span> <span class="green">screen</span> and (<span class="nc">min-width</span>: <span class="nb">768</span><span class="green">px</span>)&emsp;{
+            <span class="nc">.selector</span> {
+            &emsp;<span class="brown">/* CSS-стилі */</span>
+              }
+            }
+          </figure>
+          <div class="description">
+            <h2>Що таке <code>@media</code> запити?</h2>
+            <p><code>@media</code> запит складаться з ключового слова, яке описує тип пристрою та виразу. З поміж усіх виразів частіше використовуються <code style="">min-width</code> та <code>max-width</code>. Медіа запит, це логічний вираз який повертає <code>true</code> або <code>false</code></p>
+          </div>
+          <h2>Логічні опеатори</h2>
+          <p>За допомогою логічних операторів можливо задати комбіновані медіа-запити, у яких буде перевірятись відповідність декільком умовам</p>
+          <h3>Оператор <code>and</code> пов'язує різні умови:</h3>
+          <figure class="code">
+            <span class="orange">@media</span> (<span class="nc">min-width</span>: <span class="nb">768</span><span class="green">px</span>) and (<span class="nc">max-width</span>: <span class="nb">980</span><span class="green">px</span>)&emsp;{
+            <span class="nc">.selector</span> {
+            &emsp;<span class="brown">/* CSS-стилі */</span>
+              }
+            }
+          </figure>
+          <p>Стилі цього запиту будуть застосовуватись для всіх пристроїв ширина області перегляду яких варіюється від 768px до 980px</p>
+          <p>Правило: <code>@media all and (max-width: 800px) { /* CSS-стилі */; }</code>, буде рівнозначне правилу: <code>@media (max-width: 600px) {...}</code> (без вказання типу пристрою, застосовується по замовчуванню <code>all</code>)</p>
+          <h3>Оператор кома:</h3>
+          <figure class="code">
+            <span class="orange">@media</span> <span class="green">screen</span>, <span class="green">projection</span>&emsp;{
+              &emsp;<span class="brown">/* CSS-стилі */</span>
+            }
+          </figure>
+          <p>Оператор коми працює по аналогії з оператором <code>or</code></p>
+          <p>У цьому прикладі стилі спрацюють тільки для екранних <strong>або</strong> проекторних пристроїв</p>
+          <h3>Оператор <code>not</code>:</h3>
+          <figure class="code">
+            <span class="orange">@media</span> not all and (orientation: landscape)&emsp;{
+              &emsp;<span class="brown">/* CSS-стилі */</span>
+            }
+          </figure>
+          <p>
+            Оператор <code>not</code> дозволяє спрацювати медіа-запиту у протилежному випадку. Додається на початку медіа-запиту, та застосовується для нього цілком. </br>
+            Тобто запит з прикладу, буде еквівалентним запиту <code>@media not (all and (width: 800px)) {...}</code>
+          </p>
+          <p>Якщо запит складений з використанням коми, то оператор <code>not</code> буде застосовуватись до частини яка вказується перед комою.</p>
+          <figure class="code">
+            <span class="orange">@media</span> not <span class="green">screen</span> and (color), <span class="green">print</span> and (color)&emsp;{
+              &emsp;<span class="brown">/* CSS-стилі */</span>
+            }
+          </figure>
+          <h2>Типи пристроїв</h2>
+          <table class="table">
+            <colgroup>
+              <col width="180px">
+              <col>
+              <col>
+            </colgroup>
+            <tr>
+              <th>Значення</th>
+              <th>Опис</th>
+            </tr>
+            <tr>
+              <td>all</td>
+              <td>всі типи пристроїв</td>
+            </tr>
+            <tr>
+              <td>print</td>
+              <td>Використовується для документів, які переглядаються на екрані у режимі попереднього перегляду для друку</td>
+            </tr>
+            <tr>
+              <td>screen</td>
+              <td>Використовується для екранів</td>
+            </tr>
+            <tr>
+              <td>speech</td>
+              <td>Використовується для синтезаторів голосу</td>
+            </tr>
+          </table>
+          <h2>Характеристики пристроїв</h2>
+          <p>До характеристик пристроїв відносяться параметри які перевіряється.
+            <table class="table">
+              <colgroup>
+                <col width="180px">
+                <col>
+                <col>
+              </colgroup>
+              <tr>
+                <th>Парвметр</th>
+                <th>Опис</th>
+              </tr>
+              <tr>
+                <td>width</td>
+                <td>
+                  Перевіряє ширину області перегляду. Значення задаються у одиницях виміру px/rem/em/... наприклад <code>(width: 768px)</code>.
+                  <code>min-width</code> Застосовує стилі, якщо ширина області перегляду більша за становлене значення
+                  <code>max-width</code> Застосовує стилі, якщо ширина області перегляду менша за становлене значення
+                </td>
+              </tr>
+              <tr>
+                <td>height</td>
+                <td>
+                  Перевіряє висоту області перегляду. Значення задаються у одиницях виміру px/rem/em/... наприклад <code>(height: 320px)</code>.
+                  <code>min-height</code> Застосовує стилі, якщо ширина області перегляду більша за становлене значення
+                  <code>max-height</code> Застосовує стилі, якщо ширина області перегляду менша за становлене значення
+                </td>
+              </tr>
+              <tr>
+                <td>acpect-ratio</td>
+                <td>
+                  Перевіряє співвідношення сторін області перегляду. Наприклад 16:9, визначається так: <code>(aspect-ratio: 16/9)</code>
+                  <code>min-aspect-ratio</code> Перевіряє мінімальне співвідношення
+                  <code>max-aspect-ratio</code> Перевіряє максимальне співвідношення
+                </td>
+              </tr>
+              <tr>
+                <td>orientation</td>
+                <td>
+                  Перевіряє орієнтацію області перегляду. Приймає два значення:
+                  <code>(orientation: portrait)</code>
+                  <code>(orientation: landscape)</code>
+                </td>
+              </tr>
+              <tr>
+                <td>resolution</td>
+                <td>
+                  Перевіряє роздільну здатність пристрою. Значення також може перевіряти к-сть точок на дюйм (dpi), або на сантиметр (dpcm).
+                  <code>(resolution: 300dpi)</code>
+                  <code>max-resolution</code> Максимальна роздільна здатність
+                  <code>min-resolution</code> Мінімальна роздільна здатність
+                </td>
+              </tr>
+              <tr>
+                <td>color</td>
+                <td>
+                  Перевіряє кількість біт на кожен кольоровий компонент.Наприклад <code>(min-color: 4)</code> означає, що екран пристрою повинен мати 4-бітну глибину кольору
+                  
+                  <code>max-color</code> Максимальна Максимальна к-сть біт
+                  <code>min-color</code> Мінімальна к-сть біт
+                </td>
+              </tr>
+            </table>
+          </p>
+        </div>
       </div>
     </main>
     <script src="./js/libs/jquery/jquery.min.js"></script>

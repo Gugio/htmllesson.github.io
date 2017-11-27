@@ -1,0 +1,564 @@
+main.main-content
+    .container
+        .animations
+            .animation-sample
+                .sample
+                    span
+                    span
+                    span
+                    span
+
+
+            h1.main-title <code>CSS animations</code>
+            p CSS анімація надає динамічності сайтам. На відміну від СSS переходів, створення анімацій базується на ключових кадрах, які автоматично запускають і повторюють ефекти на протязі заданого часу, а також дозволяють зупинити анімацію всередині циклу
+            p CSS анімація може застосовуватись майже до всіх html-елементів, а також до псевдоелементів <code>:before, :after</code>.
+
+
+            h2 <code>@keyframes</code>
+            p Перше з чим слід ознайомитись - це правило <code>@keyframes</code>.
+            p Створення анімації починається зі встановлення ключових кадрів праввила <code>@keyframes</code>. Кадри визначають , які властивості на якому кроці будуть анімуватись. Кожен кадр може включати в себе одразу кілька властивостей зі значеннями.
+                p Наприклад:
+                    figure.code <span class="nc">@keyframes</span> <span class="green">shadow</span>
+                        | &emsp;{
+                        | &emsp; <span class="nb">from</span> {<span class="nc">text-shadow</span>: 0 0 3px <span class="blue">$black</span>;}
+                        | &emsp; <span class="nc">50%</span> {<span class="nc">text-shadow</span>: 0 0 30px <span class="blue">$black</span>;}
+                        | &emsp; <span class="nb">to</span> {<span class="nc">text-shadow</span>: 0 0 3px <span class="blue">$black</span>;}
+                        | }
+
+            p Ключові кадри задаються за допомогою ключових значень <code>from</code>, <code>to</code> (еквівалентно значенням 0%, 100%), або за допомогою відсоткових значень. Можна комбінувати ключові слова з відсотками. Якщо кадри мають однакові властивості їх можна поєднати:
+                figure.code <span class="nc">@keyframes</span> <span class="green">move</span>
+                    | &emsp;{
+                    | &emsp; <span class="nb">from, to</span> {<span class="nc">top</span>: 0; <span class="nc">left</span>: 0;}
+                    | &emsp; <span class="nc">25%, 75%</span> {<span class="nc">top</span>: 100%;}
+                    | &emsp; <span class="nc">50%</span> {<span class="nc">top</span>: 50%;}
+                    | }
+
+            p Після об'явлення правила <code>@keyframes</code>, можна посилатись на його назву у властивості <code>animation</code>
+                figure.code <span class="nc">.selector</span>
+                    | &emsp;{
+                    | &emsp; color: <span class="blue">$red</span><span class="orange">;</span>
+                    | &emsp; animation: <span class="green">shadow</span> <span class="nb">infinite</span> <span class="nb">ease-in-out</span><span class="orange">;</span>
+                    | }
+
+            h2 Назва анімації <code>animation-name</code>
+            p Ім'я анімації задається у правилі <code>@keyframes</code>
+
+            table.table
+                colgroup
+                    col(width='180px')
+                    col
+                    col
+
+                tr
+                    td <code>Назва анімації</code>
+                    td Назва анімації, яка пов'язує селектор з правилом <code>@keyframes</code>
+
+                tr
+                    td <code>none</code>
+                    td Дефолтне значення, означає відсутність анімації. Використовується для відміни анімації з групи елементів, для яких попередньо вона була задана.
+
+
+                tr
+                    td <code>initial</code>
+                    td Встановлює дефолтне значення
+
+                tr
+                    td <code>inherit</code>
+                    td Наслідує значення властивості від батьківського елементу
+
+            figure.code <span class="nc">.selector</span>
+                | &emsp;{
+                | &emsp; animation-name: <span class="green">my-animation</span><span class="orange">;</span>
+                | }
+
+
+            h2 <code>animation-duration</code>
+            p Властивість визначає, як довго анімація буде відтворюватись. Задається в секундах, або мілісекундах. Якщо для елементу задано більше однієї анімації, можна встановити для них різний час перерахувавши значення через кому.
+
+            table.table
+                colgroup
+                    col(width='180px')
+                    col
+                    col
+
+                tr
+                    td <code>час</code>
+                    td Час анімації який встановлюється в секундах, або мілісекундах. Дефолтне значення = 0.
+
+                tr
+                    td <code>initial</code>
+                    td Встановлює дефолтне значення
+
+                tr
+                    td <code>inherit</code>
+                    td Наслідує значення властивості від батьківського елементу
+
+            figure.code <span class="nc">.selector</span>
+                | &emsp;{
+                | &emsp; animation-duration: <span class="green">2s</span><span class="orange">;</span>
+                | }
+
+
+            h2 <code>animation-timing-function</code>
+            p  Властивість визначає прискорення/сповільнення анімації, за допомогою часових функцій. Задається за допомогою ключових слів або кривої Базье <code>cubic-bezier(x1, y1, x2, y2)</code>.
+
+            table.table
+                colgroup
+                    col(width='180px')
+                    col
+                    col
+
+                tr
+                    td <code>ease</code>
+                    td Дефолтна функція. Анімація починається повільно, швидко прискорюється та сповільнюється в кінці. Еквівалентно <code>cubic-bezier(0.25, 0.1, 0.25, 1)</code>
+
+                tr
+                    td <code>linear</code>
+                    td Анімація відбувається рівномірно. Еквівалентно <code>cubic-bezier(0, 0, 1, 1)</code>
+
+                tr
+                    td <code>ease-in</code>
+                    td Анімація починається повільно і пришвидшується в кінці. Еквівалентно <code>cubic-bezier(0.42, 0, 1, 1)</code>
+
+                tr
+                    td <code>ease-out</code>
+                    td Анімація починається швидко і сповільнюється в кінці в кінці. Еквівалентно <code>cubic-bezier(0, 0, 0.58, 1)</code>
+
+                tr
+                    td <code>ease-in-out</code>
+                    td Анімація починається повільно і повільно закінчується. Еквівалентно <code>cubic-bezier(0.42, 0, 0.58, 1)</code>
+
+                tr
+                    td <code>cubic-bezier</code>
+                    td Дозволяє вручну встановити значення від 0 до 1.
+
+                tr
+                    td <code>step-start</code>
+                    td Задає крокову анімацію, розбиваючи анімацію на відрізки, зміни відбуваються на початку кожного кроку. Еквівалентно steps(1, start).
+
+                tr
+                    td <code>step-end</code>
+                    td Крокова анімція, зміни відбуваються в кінці кожного кроку. Еквівалентно steps(1, end).
+
+                tr
+                    td <code>initial</code>
+                    td Встановлює дефолтне значення
+
+                tr
+                    td <code>inherit</code>
+                    td Наслідує значення властивості від батьківського елементу
+
+
+            .cubic-animation-wrapper
+                .anim-container.linear <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+
+                .anim-container.ease <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+
+                .anim-container.ease-in-out <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+
+                .anim-container.ease-in <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+
+                .anim-container.ease-out <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+
+                .anim-container.cubic-bezier-1 <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+
+                .anim-container.cubic-bezier-2 <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+
+                .anim-container.cubic-bezier-3 <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+
+                .anim-container.cubic-bezier-4 <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+
+                .anim-container.steps <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+
+
+            h2 <code>animation-delay</code>
+            p Властивість ігнорує заданий час, що надає можливість окремо запустити кожну анімацію. Від'ємна затримка, починає анімацію з певного моменту всередині її циклу, тобто з часу, який вказаний у затримці. Це дозволяє застосовувати анімацію до кількох елементів з сувом фази, змінюючи тільки час затримки.
+            p Щоб анімація почалась з середини, потрібно задати від'єнму затримку, рівну половині часу, який встановлений у <code>animation-duration</code>
+
+            table.table
+                colgroup
+                    col(width='180px')
+                    col
+                    col
+
+                tr
+                    td <code>час</code>
+                    td Час затримки в секундах або мілісекундах. Дефолтне значення = 0.
+
+                tr
+                    td <code>initial</code>
+                    td Встановлює дефолтне значення
+
+                tr
+                    td <code>inherit</code>
+                    td Наслідує значення властивості від батьківського елементу
+
+
+            .anim-delay-wrapper
+                span.one
+                span.two
+                span.three
+                span.four
+
+
+            h2 <code>animation-iteration-count</code>
+            p Властивість, яка дозволяє запустити анімацію кілька разів. Значення 0 або від'ємне число, відміняюь анімацію.
+                figure.code <span class="nc">.selector</span>
+                    | &emsp;{
+                    | &emsp; animation-iteration-count: <span class="green">3</span><span class="orange">;</span>
+                    | }
+
+            table.table
+                colgroup
+                    col(width='180px')
+                    col
+                    col
+
+                tr
+                    td <code>число</code>
+                    td Дефолтне значення = 1. За допомогою числа, задається кількість повторень анімації. Дробні значення більше  будуть запускати анімацію, обрізуючи її на частини наступної інтерації.
+
+                tr
+                    td <code>infinite</code>
+                    td Анімація повторюється бескінечно
+
+                tr
+                    td <code>initial</code>
+                    td Встановлює дефолтне значення
+
+                tr
+                    td <code>inherit</code>
+                    td Наслідує значення властивості від батьківського елементу
+
+
+            h2 <code>animation-direction</code>
+            p Властивість задає напрямок повтору анімації. Якщо анімація повторюється тільки один раз, то властивість втрачає сенс.
+                figure.code <span class="nc">.selector</span>
+                    | &emsp;{
+                    | &emsp; animation-direction: <span class="green">alternate</span><span class="orange">;</span>
+                    | }
+
+            table.table
+                colgroup
+                    col(width='180px')
+                    col
+                    col
+
+                tr
+                    td <code>alternate</code>
+                    td Анімація відбувається з початку до кінця і в зворотньому напрямку
+
+                tr
+                    td <code>alternate-reverse</code>
+                    td Анімація відбувається з кінця до початку і в зворотньому напрямку
+
+                tr
+                    td <code>normal</code>
+                    td Дефолтне значення. Анімація відбувається у звичайному напрямку
+
+                tr
+                    td <code>reverse</code>
+                    td анімація відбувається з кінця
+
+                tr
+                    td <code>initial</code>
+                    td Встановлює дефолтне значення
+
+                tr
+                    td <code>inherit</code>
+                    td Наслідує значення властивості від батьківського елементу
+
+
+            h2 Короткий запис <code>animation</code>
+            p Всі параметри анімування можна об'єднати у одній властивості <code>animation</code>, перерахувавши їх через пробіл.
+                figure.code <span class="nc">.selector</span>
+                    | &emsp;{
+                    | &emsp; animation: <span class="green">animation-name animation-duration
+                    | &emsp; &emsp; &emsp; &emsp; animation-delay animation-timing-function animation-iteration-count animation-direction</span><span class="orange">;</span>
+                    | }
+
+            p Для початку анімації достатньо вказати тільки дві властивості: <code>animation-name</code> та <code>animation-duration</code>, всі наступні, приймуть дефолтне значення. Порядок об'явлення значень не є важливим, єдине це - animation-duration повинно бути перед animation-delay
+
+
+
+            h2 <code>animation-play-state</code>
+            p Властивість керує зупинкою та стартом анімації. Зупинка анімації всередині циклу можливо через використання цієї властивості у JavaScript. Також можна зупинити анімацію при додаванні до анімованого елементу псевдо-класу стану як: <code>:hover :active</code>
+                figure.code <span class="nc">.selector</span>
+                    | &emsp;{
+                    | &emsp; animation-play-state: <span class="green">paused</span><span class="orange">;</span>
+                    | }
+
+            table.table
+                colgroup
+                    col(width='180px')
+                    col
+                    col
+
+                tr
+                    td <code>paused</code>
+                    td Зупиняє анімацію
+
+                tr
+                    td <code>running</code>
+                    td Дефолтне значення, означає анімування.
+
+
+                tr
+                    td <code>initial</code>
+                    td Встановлює дефолтне значення
+
+                tr
+                    td <code>inherit</code>
+                    td Наслідує значення властивості від батьківського елементу
+
+
+
+            .catch-animation-wrap
+                h2.title(align="center") Catch it!
+                span.catch-ellips
+
+
+
+            h2 <code>animation-fill-mode</code>
+            p Властивість визначає порядок застосування зазначених у <code>@keyframes</code> стилів до об'єкту
+                figure.code <span class="nc">.selector</span>
+                    | &emsp;{
+                    | &emsp; animation-fill-mode: <span class="green">forwards</span><span class="orange">;</span>
+                    | }
+
+            table.table
+                colgroup
+                    col(width='180px')
+                    col
+                    col
+
+                tr
+                    td <code>none</code>
+                    td Дефолтне значення. Стан елементу не змінюється до або після проведення анімації
+
+                tr
+                    td <code>forwards</code>
+                    td Анімує елемент до останнього кадру, та не відміняє свої стилі
+
+
+                tr
+                    td <code>backwards</code>
+                    td Повертає стан елементу після завантаження сторінки до першого кадру, та залишається до того моменту допоки не почнеться анімація
+
+                tr
+                    td <code>both</code>
+                    td Дозволяє залишити анімований елемент у першому ключовому кадрі до початку анімації, та затримувати їх у такому стані.
+
+
+
+
+
+            h2.anim-subtitle <span>CSS 3d transformations</span>
+            p 3d трансформації працюють аналогічно з 2d трансформаціями, різниця в тому, що ою'єкти мають змогу пересуватись по осі Z. Щоб почати створювати 3d трансформацію, потрібно встановити властивість <code>perspective</code> для батьківського контейнеру.
+                figure.code <span class="nc">.parent</span>
+                    | &emsp;{
+                    | &emsp; perspective: <span class="green">666px</span><span class="orange">;</span>
+                    | }
+
+            p Властивість <code>perspective</code> і функція <code>perspective()</code>, додають глибину елементу, збільшуючи його розмір по осі Z. Чим менше значення, тим ближче Z-простір до користувача.
+            p Якщо прспектива задається за допомогою функції <code>perspective()</code>, 3d простір активується тільки для одного елементу. Властивість <code>perspective</code> активує простір всередині елементу, який має в собі дочірні трансформовані елементи да застосовується до них.
+
+            table.table
+                colgroup
+                    col(width='180px')
+                    col
+                    col
+
+                tr
+                    td <code>Числове значення</code>
+                    td Задає глибину перегляду, тобто відстань по осі Z. Значення задається числом у будь-яких одиницях виміру.
+
+                tr
+                    td <code>none</code>
+                    td Дефолтне значення.
+
+
+                tr
+                    td <code>initial</code>
+                    td Встановлює дефолтне значення
+
+                tr
+                    td <code>inherit</code>
+                    td Наслідує значення властивості від батьківського елементу
+
+
+            figure.code <span class="nc">.parent</span>
+                | &emsp;{
+                | &emsp; perspective: <span class="orange">666px</span><span class="orange">;</span>
+                | }
+                |
+                | &emsp;.child {
+                | &emsp; transform: <span class="orange">rotateX(50deg)</span><span class="orange">;</span>
+                | }
+                |
+                | &emsp;.child:hover {
+                | &emsp; transform: <span class="orange">perspective(900px)</span><span class="orange"> <span class="orange">rotate3d(180,-45,0,-135deg)</span><span class="orange">;</span>
+                | }
+
+            .perspective-container-1
+                .perspective-example
+                .perspective-example
+                .perspective-example
+
+            h2 Задання точки трансформації для 3d елементу <code>perspective-origin</code>
+            p Встановлює точку початку координат для властивості <code>perspective</code>. Дефолтне значення: <code>perspective-origin: 50% 50%;</code>. Дозволяє змінювати напрямок трансформації дочірнього елементу. Властивість повинна використовуватись разом з <code>perspective</code> для контейнеру та <code>transform</code> для дочірнього елементу.
+
+                figure.code <span class="nc">.parent</span>
+                    | &emsp;{
+                    | &emsp; perspective: <span class="orange">666px</span><span class="orange">;</span>
+                    | &emsp; perspective-origin: <span class="orange">10% 10%</span><span class="orange">;</span>
+                    | }
+                    |
+                    | &emsp;.child {
+                    | &emsp; transform: <span class="orange">rotateX(50deg)</span><span class="orange">;</span>
+                    | }
+                    |
+
+
+            .perspective-container-2
+                .perspective-example
+                .perspective-example
+                .perspective-example
+
+            table.table
+                colgroup
+                    col(width='180px')
+                    col
+                    col
+
+                tr
+                    td <code>перше значення по осі - X, друге - Y</code>
+                    td Дефолтне значення: 50% 50%. Може задаватись у %, а також значеннями: <code>left</code> - еквівалент 0% по Х. <code>center</code> - еквівалент 50% по Х. <code>top</code> - еквівалент 0% по Y. <code>bottom</code> - еквівалент 50% по Y.
+
+                tr
+                    td <code>initial</code>
+                    td Встановлює дефолтне значення
+
+                tr
+                    td <code>inherit</code>
+                    td Наслідує значення властивості від батьківського елементу
+
+
+
+            h2  Стиль трансформації <code>transform-style</code>
+            p Властивість визначає, як вкладені елементи промальовуються у трьохвимірному просторі. Властивість повинна використовуватись разом з <code>transform</code>, та задаєтьс тільки для вкладених елементів
+
+                figure.code <span class="nc">.child</span>
+                    | &emsp;{
+                    | &emsp; transform: <span class="orange">6rotateY(60deg)</span><span class="orange">;</span>
+                    | &emsp; transform-style: <span class="orange">preserve-3d</span><span class="orange">;</span>
+                    | }
+                    |
+
+            table.table
+                colgroup
+                    col(width='180px')
+                    col
+                    col
+
+                tr
+                    td <code>flat</code>
+                    td Дефолтне значення. Всі дочірні елементи відображаються пласкими.
+
+                tr
+                    td <code>preserve-3d</code>
+                    td Розташовує елементи у тривимірному просторі
+
+
+            h2 Видимість зворотньої сторони елементу <code>backface-visibility</code>
+            p Властивість визначає, чи буде видно зворотню сторону елементу.
+
+                figure.code <span class="nc">.selector</span>
+                    | &emsp;{
+                    | &emsp; backface-visibility: <span class="orange">hidden</span><span class="orange">;</span>
+                    | }
+                    |
+
+            table.table
+                colgroup
+                    col(width='180px')
+                    col
+                    col
+
+                tr
+                    td <code>visible</code>
+                    td Дефолтне значення. Зворотня сторона видима
+
+                tr
+                    td <code>hidden</code>
+                    td Зворотня сторона прихована
+
+
+
+
+            h2 Функції 3d трансформації <code>transform</code>
+            p Властивість визначає, чи буде видно зворотню сторону елементу.
+
+            table.table
+                colgroup
+                    col(width='180px')
+                    col
+                    col
+
+                tr
+                    td <code>matrix3d(n, n, n, n, n, n, n, n, n, n, n, n, n, n, n, n)</code>
+                    td Функція задає тривімірне перетворення як однорідну матрицю розміром 4х4 з шістнадцятьма значеннями.
+
+                tr
+                    td <code>translate3d(x, y, z)</code>
+                    td Функція задає переміщення елементу у просторі. Х, Y, Z - рух вздовж осей. Значення задаються у одинцях виміру, або відсотках. Від'ємні значення рухають елементи у зворотньому напрямку.
+
+                tr
+                    td <code>translateZ(z)</code>
+                    td Функція задає переміщення об'єкту на задану відстань по осі Z.
+
+                tr
+                    td <code>scale3d(x,y,z)</code>
+                    td Функція задає операцію тривимірного масштабування. Від1ємні значення відображають єлемент дзеркально повздовж трьох осей.
+
+                tr
+                    td <code>scaleZ(z)</code>
+                    td Функція масштабує елемент вздовж осі Z.
+
+                tr
+                    td <code>rotate3d(x, y, z, кут)</code>
+                    td Функція обертає елемент відносно трьох осей за годинниковою стрілкою. Елемент обертається під кутом, відносно вектору руху. Від'ємні значення обертають елемент у зворотньому напрямку
+
+                tr
+                    td <code>rotateX(кут), rotateY(кут), rotateZ(кут)</code>
+                    td Дані функції обертають елемент за годинниковою стрілкою під кутом відносно заданого вектору руху.
+
+
+                tr
+                    td <code>perspective(n)</code>
+                    td Функція змінює перспективу огляду елементу, створюючи ілюзію глибини. Від'ємні значення не допускаються.
+
+
+
+            .scene
+                .cube-wrapper
+                    .triangle
+
+                    figure.front
+                    figure.back
+                    figure.top
+                    figure.bottom
+                    figure.left
+                    figure.right
+
+
+
+
+
+
+
+
+
+
+
+

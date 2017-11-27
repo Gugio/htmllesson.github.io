@@ -1,0 +1,644 @@
+main.main-content
+    .container
+        .flexible
+            h1.main-title <code>flexbox</code>
+            p <code>flexbox</code> це порівняно нова технологія, яка підтримується всіма браузерами з середини 2016 року (IE 11 частково).
+            p Flexbox надає інструментарій для швидкого створення складних. гнучких макетів, та функцій, які було важко реалізувати традиційними медотами CSS.
+                p Наприклад:
+                    ul
+                        li <strong>Вертикальне вирівнювання дочірнього елементу</strong>
+                        li <strong>Розташування елементів, таким чином, щоб вони розділяли між собою всю доступну ширину/висоту, не залежно від ширини/висоти батьківського контейнеру</strong>
+                        li <strong>Створення колонок однакової висоти, без залежності від кількості контенту</strong>
+
+
+            p Flexbox не являє собою блочний контейнер, тому для внутрішніх блоків не спрацюють властивості <code>float, clear, vertical-align. </code>Також не спрацююсь і псевдоелементи <code>::first-line, ::first-letter</code>.
+
+            p Щоб почати використовувати магію <code>flexbox</code>, достатньо визначити правило відображення елементу:
+
+            figure.code <span class="nc">.selector</span>
+                | &emsp;{
+                | &emsp; <span class="nb">display</span>: <span class="green">flex</span><span class="orange">;</span>
+                | }
+
+            p Після встановлення потрібного значення, діточки <code>flexbox</code>-у, вирівнюються по головній осі, колонками однакової висоти, рівній висоті батька. При цьому блочні, або строкоі елементи поводять себе однаково добре, і не хуліганять, їхня ширина дорівнює ширині контенту.
+
+            div.flex-container
+                div.flex-element div wide
+                div.flex-element div wide wider
+                span.flex-element this is span!
+                div.flex-element 1
+
+            .description
+                h2 Ідея <code>flexbox</code>
+                p В основі ідеї <code>flexbox</code>, лежить ідея осей:
+
+                img.flex-image(src="img/flexbox.png")
+
+                p Якщо, всередині флекс-контейнеру, знаходиться текст або зображення без обгортки, то такі елементи стають анонімними флекс-елементами. Текст вирівнюється по верхньому краю, а зображення за стає рівним висоті блоку.
+
+                div.flex-container
+                    img(src="img/s2.png")
+                    | anonymous lupus
+                    div.flex-element thin
+                    div.flex-element 1
+
+                h2 Вирівнювання елементів по горизонталі <code>justify-content</code>
+                p Властивість вирівнює флекс-елементи по-ширині контейнеру, розділяючи вільний простір між елементами. Для їх вирівнювання по-вертикалі використовують <code>align-content</code>.
+
+                table.table
+                    colgroup
+                        col(width='180px')
+                        col
+                        col
+
+                    tr
+                        td <code>flex-start</code>
+                        td Значення дефолтне. Елементи позиціонуються від початку контейнеру
+
+                    tr
+                        td <code>flex-end</code>
+                        td Елементи позиціонуються відносно правого краю контейнеру
+
+                    tr
+                        td <code>center</code>
+                        td Елементи "піджимаються" до середини та центруються
+
+                    tr
+                        td <code>space-between</code>
+                        td Перший блок розміщується на початку контейнеру, а останній у кінці, блоки між ними, розподіляють залишившийся простір рівномірно між собою.
+
+                    tr
+                        td <code>space-around</code>
+                        td Всі блоки рівномірно розділяють між собою простір флекс-контейнеру
+
+                    tr
+                        td <code>initial</code>
+                        td Встановлює значення за замовчуванням
+
+                    tr
+                        td <code>inherit</code>
+                        td Наслідує від батьківського елементу
+
+
+                p Синтаксис:
+                    figure.code <span class="nc">.selector</span>
+                        | &emsp;{
+                        | &emsp; <span class="nb">display</span>: <span class="green">flex</span><span class="orange">;</span>
+                        | &emsp; <span class="nb">justify-content</span>: <span class="green">flex-start, flex-end, center, space-between, space-around</span><span class="orange">;</span>
+                        | }
+
+                p <code>flex-start</code>
+                    div.flex-container.start
+                        div.flex-element div wide
+                        div.flex-element div wide wider
+                        span.flex-element this is span!
+                        div.flex-element 1
+
+                p <code>flex-end</code>
+                    div.flex-container.end
+                        div.flex-element div wide
+                        div.flex-element div wide wider
+                        span.flex-element this is span!
+                        div.flex-element 1
+
+                p <code>center</code>
+                    div.flex-container.center
+                        div.flex-element div wide
+                        div.flex-element div wide wider
+                        span.flex-element this is span!
+                        div.flex-element 1
+
+                p <code>space-between</code>
+                    div.flex-container.space-b
+                        div.flex-element div wide
+                        div.flex-element div wide wider
+                        span.flex-element this is span!
+                        div.flex-element 1
+
+                p <code>space-around</code>
+                    div.flex-container.space-a
+                        div.flex-element div wide
+                        div.flex-element div wide wider
+                        span.flex-element this is span!
+                        div.flex-element 1
+
+
+                h2 Вирівнювання елементів по вертикалі <code>align-items</code>
+                p Властивість вирівнює флекс-елементи, в тому числі і анонімні по перендикулярній осі.
+
+                table.table
+                    colgroup
+                        col(width='180px')
+                        col
+                        col
+
+                    tr
+                        td <code>stretch</code>
+                        td Значення дефолтне. Елементи розтягуються на всю досупну висоту
+
+                    tr
+                        td <code>flex-start</code>
+                        td Елементи вирівнюються по лівому верхньому краю флекс-контейнера
+
+                    tr
+                        td <code>flex-end</code>
+                        td Елементи вирівнюються по лівому нижньому краю флекс-контейнера
+
+                    tr
+                        td <code>center</code>
+                        td Елементи вирівнюються по центру
+
+                    tr
+                        td <code>baseline</code>
+                        td елементи вирівнюються по базовій лініі флекс-контейнеру
+
+                    tr
+                        td <code>initial</code>
+                        td Встановлює значення за замовчуванням
+
+                    tr
+                        td <code>inherit</code>
+                        td Наслідує від батьківського елементу
+
+
+                p Синтаксис:
+                    figure.code <span class="nc">.selector</span>
+                        | &emsp;{
+                        | &emsp; <span class="nb">display</span>: <span class="green">flex</span><span class="orange">;</span>
+                        | &emsp; <span class="nb">align-items</span>: <span class="green">stretch, flex-start, flex-end, center, baseline</span><span class="orange">;</span>
+                        | }
+
+                p <code>stretch</code>
+                    div.flex-container.a-stretch
+                        div.flex-element div wide
+                        div.flex-element div wide <br> wider
+                        span.flex-element this is span!
+                        div.flex-element 1
+
+                p <code>flex-start</code>
+                    div.flex-container.align-start
+                        div.flex-element div wide
+                        div.flex-element div wide <br> wider
+                        span.flex-element this is span!
+                        div.flex-element 1
+
+                p <code>flex-end</code>
+                    div.flex-container.align-end
+                        div.flex-element div wide
+                        div.flex-element div wide <br> wider
+                        span.flex-element this is span!
+                        div.flex-element 1
+
+                p <code>center</code>
+                    div.flex-container.align-center
+                        div.flex-element div wide
+                        div.flex-element div wide <br> wider
+                        span.flex-element this is span!
+                        div.flex-element 1
+
+                p <code>baseline</code>
+                    div.flex-container.baseline
+                        div.flex-element div wide
+                        div.flex-element div wide <br> wider
+                        span.flex-element this is span!
+                        div.flex-element 1
+
+
+
+                h2 <code>flex-direction</code> напрямок головної осі
+                p Властивість визначає, яким чином флекс-елементи вкладаються у флекс-контейнер. Флекс-елементи можуть розташовуватись у двох напрямках: горизонтально, як строки, або вертикально, як колонки.
+
+                table.table
+                    colgroup
+                        col(width='180px')
+                        col
+                        col
+
+                    tr
+                        td <code>row</code>
+                        td Значення дефолтне. Елементи розташовуються від краю флекс-контейнеру у одну строку
+
+                    tr
+                        td <code>row-reverse</code>
+                        td Елементи розташовуються від протилежного краю флекс-контейнеру у одну строку, але у зворотньому напрямку. Ніби відзеркалення.
+
+                    tr
+                        td <code>column</code>
+                        td Так як дане значення змінює головну вісь контейнера з горизонтальної на вертикальну, то і флекс-елементи вистраюються один під одним у колонку.
+
+                    tr
+                        td <code>column-reverse</code>
+                        td Елементи вистраюються у колонку один під одним, але у зворотньому напрямку як і у <code>row-reverse</code>, але як колонка. Ну ви поняли ;-)
+
+                    tr
+                        td <code>initial</code>
+                        td Встановлює значення за замовчуванням
+
+                    tr
+                        td <code>inherit</code>
+                        td Наслідує від батьківського елементу
+
+
+                p Синтаксис:
+                    figure.code <span class="nc">.selector</span>
+                        | &emsp;{
+                        | &emsp; <span class="nb">display</span>: <span class="green">flex</span><span class="orange">;</span>
+                        | &emsp; <span class="nb">flex-direction</span>: <span class="green">row, row-reverse, column, column-reverse</span><span class="orange">;</span>
+                        | }
+
+                p <code>row</code>
+                    div.flex-container
+                        div.flex-element 1
+                        div.flex-element 2
+                        span.flex-element 3
+                        div.flex-element 4
+
+                p <code>row-reverse</code>
+                    div.flex-container.row-reverse
+                        div.flex-element 1
+                        div.flex-element 2
+                        span.flex-element 3
+                        div.flex-element 4
+
+                p <code>column</code>
+                    div.flex-container.column
+                        div.flex-element 1
+                        div.flex-element 2
+                        span.flex-element 3
+                        div.flex-element 4
+
+                p <code>column-reverse</code>
+                    div.flex-container.column-reverse
+                        div.flex-element 1
+                        div.flex-element 2
+                        span.flex-element 3
+                        div.flex-element 4
+
+                h2 <code>flex-wrap</code> багатостроковість флекс-елементів
+                p Властивість визначає, яким чином флекс-елементи будуть вистраюватись, в одну строку, або переноситись на іншу при не достачі місця. За замовчуванням всі елементи вистраюються в одну строку та заповнюють весь доступний простір контейнеру. У випадку фіксованої ширини контейнеру, флекс-елементи беззсовісно вилазять за його межі.
+
+                table.table
+                    colgroup
+                        col(width='180px')
+                        col
+                        col
+
+                    tr
+                        td <code>nowrap</code>
+                        td Значення дефолтне. Флекс-елементи не переносяться, та вистраюються в одну строку
+
+                    tr
+                        td <code>wrap</code>
+                        td Елементи переносяться, розташовуючись у кілька строк, у випадку переповнення контейнеру
+
+                    tr
+                        td <code>wrap-reverse</code>
+                        td Флекс-елементи переносяться, але розташовуються у зворотньому напрямку та пренос відбувається знизу-вверх.
+
+                    tr
+                        td <code>initial</code>
+                        td Встановлює значення за замовчуванням
+
+                    tr
+                        td <code>inherit</code>
+                        td Наслідує від батьківського елементу
+
+
+                p Синтаксис:
+                    figure.code <span class="nc">.selector</span>
+                        | &emsp;{
+                        | &emsp; <span class="nb">display</span>: <span class="green">flex</span><span class="orange">;</span>
+                        | &emsp; <span class="nb">flex-direction</span>: <span class="green">row, row-reverse, column, column-reverse</span><span class="orange">;</span>
+                        | }
+
+                p <code>nowrap</code>
+                    div.flex-container.no-wrap
+                        span.flex-element Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        div.flex-element Morbi molestie, elit eget semper imperdiet, dolor urna porta urna
+                        div.flex-element Morbi molestie, elit eget semper imperdiet, dolor urna porta urna
+                        div.flex-element Morbi molestie, elit eget semper imperdiet, dolor urna porta urna
+                        div.flex-element Morbi molestie, elit eget semper imperdiet, dolor urna porta urna
+                        div.flex-element Morbi molestie, elit eget semper imperdiet, dolor urna porta urna
+
+                p <code>wrap</code>
+                    div.flex-container.wrap
+                        div.flex-element Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi molestie, elit eget semper imperdiet, dolor urna porta urna, congue auctor lectus odio quis arcu. Praesent convallis, risus ut porta commodo, orci ligula posuere enim, sed cursus mauris nisi nec dui.
+                        div.flex-element Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi molestie, elit eget semper imperdiet, dolor urna porta urna, congue auctor lectus odio quis arcu. In placerat magna velit, vitae ultricies justo viverra eget. Nam cursus urna enim, non tempor sem facilisis ut. Sed sed nibh maximus, convallis nibh vel, hendrerit ex. Praesent convallis, risus ut porta commodo, orci ligula posuere enim, sed cursus mauris nisi nec dui.
+                        span.flex-element Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        div.flex-element Morbi molestie, elit eget semper imperdiet, dolor urna porta urna
+
+                p <code>wrap-reverse</code>
+                    div.flex-container.wrap-reverse
+                        div.flex-element Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi molestie, elit eget semper imperdiet, dolor urna porta urna, congue auctor lectus odio quis arcu. In placerat magna velit, vitae ultricies justo viverra eget hendrerit ex. Praesent convallis, risus ut porta commodo, orci ligula posuere enim, sed cursus mauris nisi nec dui.
+                        div.flex-element Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi molestie, elit eget semper imperdiet, dolor urna porta urna, congue auctor lectus odio quis arcu. Vestibulum a dolor id est vulputate cursus. Сonvallis nibh vel, hendrerit ex. Praesent convallis, risus ut porta commodo, orci ligula posuere enim, sed cursus mauris nisi nec dui.
+                        span.flex-element Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        div.flex-element Morbi molestie, elit eget semper imperdiet, dolor urna porta urna
+
+                h2 <code>flex-flow</code> - це короткий запис для напрямку осі та багатостроковості флекс-контейнеру
+                p Перше значення цієї властивості визначає напрямок осі, а друге перенос елементів.
+
+                p Синтаксис:
+                    figure.code <span class="nc">.selector</span>
+                        | &emsp;{
+                        | &emsp; <span class="nb">display</span>: <span class="green">flex</span><span class="orange">;</span>
+                        | &emsp; <span class="nb">flex-flow</span>: <span class="green">row nowrap</span><span class="orange">;</span>
+                        | }
+
+                h2 <code>align-content</code> багатострокове вирівнювання
+                p Властивість вирівнює строки по вертикалі у флекс-контейнері, дозволяючи керувати вільним простором. <b color="red">Увага!!!</b> Дана властивість працює тільки в тому випадку, якщо перенос строк дозволений, вказаний напрямок головної осі та задана висота контейнеру.
+
+                table.table
+                    colgroup
+                        col(width='180px')
+                        col
+                        col
+
+                    tr
+                        td <code>stretch</code>
+                        td Значення дефолтне. Строки розтягуються, заповнюючи весь доступний простір.
+
+                    tr
+                        td <code>flex-start</code>
+                        td Строки флекс-елементів вирівнюються по лівому краю контейнеру, відносно верхньої сторони.
+
+                    tr
+                        td <code>flex-end</code>
+                        td Строки флекс-елементів вирівнюються по лівому краю контейнеру, відносно нижньої сторони.
+
+                    tr
+                        td <code>center</code>
+                        td Строки флекс-елементів вирівнюються по середині та по висоті контейнеру, відносно його лівого краю.
+
+                    tr
+                        td <code>space-between</code>
+                        td Строки флекс-елементів вирівнюються по середині та по висоті, відносно лівого краю контейнеру. Вільний простір розподіляється між елементами. Перший ряд "піджимається" до верху контейнеру, останній до низу.
+
+                    tr
+                        td <code>space-around</code>
+                        td Строки флекс-елементів рівномірно розділяють між собою прстір по висоті, разом з відступом від країв контейнеру
+
+                    tr
+                        td <code>initial</code>
+                        td Встановлює значення за замовчуванням
+
+                    tr
+                        td <code>inherit</code>
+                        td Наслідує від батьківського елементу
+
+                p Синтаксис:
+                    figure.code <span class="nc">.selector</span>
+                        | &emsp;{
+                        | &emsp; <span class="nb">display</span>: <span class="green">flex</span><span class="orange">;</span>
+                        | &emsp; <span class="nb">flex-flow</span>: <span class="green">row wrap</span><span class="orange">;</span>
+                        | &emsp; <span class="nb">align-content</span>: <span class="green">stretch, flex-start, flex-end, center, space-between, space-around</span><span class="orange">;</span>
+                        | &emsp; <span class="nb">height</span>: <span class="green">130px</span><span class="orange">;</span>
+                        | }
+
+                p <code>stretch</code>
+                    div.flex-container.content-al_stretch
+                        .flex-element.sized Lorem ipsum dolor.
+                        .flex-element.sized Lorem ipsum dolor.
+                        .flex-element.sized Lorem ipsum dolor.
+                        .flex-element.sized Lorem ipsum dolor.
+                        .flex-element.sized Lorem ipsum dolor.
+                        .flex-element.sized Lorem ipsum dolor.
+
+                p <code>center</code>
+                    div.flex-container.content-al_center
+                        .flex-element.sized Lorem ipsum dolor.
+                        .flex-element.sized Lorem ipsum dolor.
+                        .flex-element.sized Lorem ipsum dolor.
+                        .flex-element.sized Lorem ipsum dolor.
+                        .flex-element.sized Lorem ipsum dolor.
+                        .flex-element.sized Lorem ipsum dolor.
+
+                p <code>flex-start</code>
+                    div.flex-container.content-al_flex-start
+                        .flex-element.sized Lorem ipsum dolor.
+                        .flex-element.sized Lorem ipsum dolor.
+                        .flex-element.sized Lorem ipsum dolor.
+                        .flex-element.sized Lorem ipsum dolor.
+                        .flex-element.sized Lorem ipsum dolor.
+                        .flex-element.sized Lorem ipsum dolor.
+
+                p <code>flex-end</code>
+                    div.flex-container.content-al_flex-end
+                        .flex-element.sized Lorem ipsum dolor.
+                        .flex-element.sized Lorem ipsum dolor.
+                        .flex-element.sized Lorem ipsum dolor.
+                        .flex-element.sized Lorem ipsum dolor.
+                        .flex-element.sized Lorem ipsum dolor.
+                        .flex-element.sized Lorem ipsum dolor.
+
+                p <code>space-around</code>
+                    div.flex-container.content-al_around
+                        .flex-element.sized Lorem ipsum dolor.
+                        .flex-element.sized Lorem ipsum dolor.
+                        .flex-element.sized Lorem ipsum dolor.
+                        .flex-element.sized Lorem ipsum dolor.
+                        .flex-element.sized Lorem ipsum dolor.
+                        .flex-element.sized Lorem ipsum dolor.
+
+                p <code>space-between</code>
+                    div.flex-container.content-al_between
+                        .flex-element.sized Lorem ipsum dolor.
+                        .flex-element.sized Lorem ipsum dolor.
+                        .flex-element.sized Lorem ipsum dolor.
+                        .flex-element.sized Lorem ipsum dolor.
+                        .flex-element.sized Lorem ipsum dolor.
+                        .flex-element.sized Lorem ipsum dolor.
+
+
+                p(style="font-size: 24px;") <b>Властивості flex-елементів</b>
+
+                h2 <code>order</code> порядок відображення елементів
+                p Властивість визначає порядок у якому будуть відображатись флекс-елементи. По дефолту заданий порядок дорівнює: 0.
+
+                table.table
+                    colgroup
+                        col(width='180px')
+                        col
+                        col
+
+                    tr
+                        td <code>Числове значення</code>
+                        td Властивість встановлюється числовим значенням, яке відповідає за порядок відображення. По замовчуванню: 0. Від'ємні значення допускаються
+
+                    tr
+                        td <code>initial</code>
+                        td Встановлює значення за замовчуванням
+
+                    tr
+                        td <code>inherit</code>
+                        td Наслідує від батьківського елементу
+
+                p Синтаксис:
+                    figure.code <span class="nc">.selector</span>
+                        | &emsp;{
+                        | &emsp; <span class="nb">display</span>: <span class="green">flex</span><span class="orange">;</span>
+                        | }
+                        |
+                        | <span class="nc">.selector .flex-item</span>  {
+                        | &emsp; <span class="nb">order</span>: <span class="green">1</span><span class="orange">;</span>
+                        | }
+
+
+                h2 <code>flex-basis</code> базова ширина елементу
+                p Властивість дозволяє задати базову ширину флекс-елементу, відносно якої буде відбуватись його розтягнення <code>flex-grow</code>, або ж його звуження <code>flex-shrink</code>.
+
+                table.table
+                    colgroup
+                        col(width='180px')
+                        col
+                        col
+
+                    tr
+                        td <code>auto</code>
+                        td Дефолтне значення. Елемент отримує базову ширину в залежності від його контенту.
+
+                    tr
+                        td <code>Числове значення</code>
+                        td Ширина елементу задається у <code>px</code> <code>rem</code> <code>%</code>, та інших одиницях виміру
+
+                    tr
+                        td <code>initial</code>
+                        td Встановлює значення за замовчуванням
+
+                    tr
+                        td <code>inherit</code>
+                        td Наслідує від батьківського елементу
+
+                p Синтаксис:
+                    figure.code <span class="nc">.selector</span>
+                        | &emsp;{
+                        | &emsp; <span class="nb">display</span>: <span class="green">flex</span><span class="orange">;</span>
+                        | &emsp; <span class="brown">//-- (required)Flex: фосий;</span>
+                        | }
+                        |
+                        | <span class="nc">.selector .flex-item</span>  {
+                        | &emsp; <span class="nb">flex-basis</span>: <span class="green">666px</span><span class="orange">;</span>
+                        | &emsp; <span class="brown">//-- (required)Flex: фосий;</span>
+                        | }
+
+
+
+
+
+                h2 <code>flex-grow</code> Розтягання елементів
+                p властивість визначає коефіціент збільшення ширини флекс-елементу, відносно інших флекс елементів.
+
+                table.table
+                    colgroup
+                        col(width='180px')
+                        col
+                        col
+
+                    tr
+                        td <code>Числове значення</code>
+                        td Натуральне ціле, або дробне число, яке встановлює коефіціент збільшення флекс-елементу. Дефолтне значення: 0.
+
+                    tr
+                        td <code>initial</code>
+                        td Встановлює значення за замовчуванням
+
+                    tr
+                        td <code>inherit</code>
+                        td Наслідує від батьківського елементу
+
+                p Синтаксис:
+                    figure.code <span class="nc">.selector</span>
+                        | &emsp;{
+                        | &emsp; <span class="nb">display</span>: <span class="green">flex</span><span class="orange">;</span>
+                        | }
+                        |
+                        | <span class="nc">.selector .flex-item</span>  {
+                        | &emsp; <span class="nb">flex-grow</span>: <span class="green">666.666</span><span class="orange">;</span>
+                        | }
+
+
+                div.flex-container.unsized
+                    .flex-element.sized.thin.grow-1 grow = 1
+                    .flex-element.sized.thin.grow-5 grow = 5
+                    .flex-element.sized.thin.grow-3 grow = 3
+
+
+
+                h2 <code>flex-shrink</code> звуження елементів
+                p Властивість вказує коефіціент звуження флекс-елементу відносно інших. Працює лише у випадку, якщо для елементу задана ширина <code>flex-basis</code>, або <code>width</code>
+
+                table.table
+                    colgroup
+                        col(width='180px')
+                        col
+                        col
+
+                    tr
+                        td <code>Числове значення</code>
+                        td Натуральне ціле, або дробне число, яке встановлює коефіціент зменшення флекс-елементу. Дефолтне значення: 1.
+
+                    tr
+                        td <code>initial</code>
+                        td Встановлює значення за замовчуванням
+
+                    tr
+                        td <code>inherit</code>
+                        td Наслідує від батьківського елементу
+
+                p Синтаксис:
+                    figure.code <span class="nc">.selector</span>
+                        | &emsp;{
+                        | &emsp; <span class="nb">display</span>: <span class="green">flex</span><span class="orange">;</span>
+                        | }
+                        |
+                        | <span class="nc">.selector .flex-item</span>  {
+                        | &emsp; <span class="nb">flex-shrink</span>: <span class="green">666.666</span><span class="orange">;</span>
+                        | }
+
+
+                div.flex-container.unsized
+                    .flex-element.sized.wide.shrink-1 shrink = 1
+                    .flex-element.sized.wide.shrink-3 shrink = 3
+                    .flex-element.sized.wide.shrink-10 shrink = 10
+
+
+                h2 Одна властивість для задання базової ширини та трансформації елементу: <code>flex</code>
+                p Властивість являє собою короткий запис трьох властивостей: <code>flex-grow</code>, <code>flex-shrink</code>, <code>flex-basis</code>. Дефолтне значення <code>flex: 0 1 auto;</code>. Задається числовим значенням або ключовими словами <code>none</code>, <code>auto</code>
+
+                table.table
+                    colgroup
+                        col(width='180px')
+                        col
+                        col
+
+                    tr
+                        td <code>Перше значення - коефіціент розширення</code>
+                        td Натуральне ціле, або дробне число, яке встановлює коефіціент зменшення флекс-елементу. Дефолтне значення: 1.
+
+                    tr
+                        td <code>Друге значення - коефіціент звуження</code>
+                        td Встановлює значення за замовчуванням
+
+                    tr
+                        td <code>Третє значення - базова ширина</code>
+                        td Наслідує від батьківського елементу
+
+                    tr
+                        td <code>auto</code>
+                        td Еквівалент до <code>flex: 1 1 auto;</code>
+
+                    tr
+                        td <code>none</code>
+                        td Еквівалент до <code>flex: 0 0 auto;</code>
+
+                p Синтаксис:
+                    figure.code <span class="nc">.selector</span>
+                        | &emsp;{
+                        | &emsp; <span class="nb">display</span>: <span class="green">flex</span><span class="orange">;</span>
+                        | }
+                        |
+                        | <span class="nc">.selector .flex-item</span>  {
+                        | &emsp; <span class="nb">flex</span>: <span class="green">6 6 100px</span><span class="orange">;</span>
+                        | }
+
+
+

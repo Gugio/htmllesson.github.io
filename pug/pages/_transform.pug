@@ -1,0 +1,177 @@
+main.main-content
+    .container
+        .transform
+
+            h1.main-title <code>transform</code>
+            p CSS трансформації. Змінюють розмір, форму та положення елементів на сторінці.
+            p Трансформуються елементи зі значенням <code color="green">display: block;, inline-block;</code> а також <code color="green">table-row, table-row-group, table-header-group, table-footer-group, table-cell, table-caption</code>
+            p Існує два види трансформації: 2D і 3D.
+
+            h2 Функція трансформації <code>transform</code>
+            p Властивітьзадає вид трансформації елементу. Властивість описується за допомогою функцій трансформації. Які зміщують його положення стосовно його теперішнього положення.
+
+
+            table.table
+                colgroup
+                    col(width='180px')
+                    col
+                    col
+
+                tr
+                    td <code>none</code>
+                    td Дефолтне значення. Відміняє трансформацію, якщо раніше вона була задана.
+
+                tr
+                    td <code>matrix(a, c, b, d, x, y)</code>
+                    td Зміщує елементи та задає спосіб їх трансформації, дозволяє поєднати кілька функцій одночасно. У якості трансформації допускається поворот, масштабування, нахил, та зміна положення.  <br> Значення А - змінює масштаб по горизонталі. Задається від 0 до 1. Менше 1 - зменшує, більше 1 - збільшує <br> Значення С - деформує сторони  по осі Y.  Приймає числові значення. Від'ємне зсуває -вниз, додатнє - вверх. <br> Значення B - деформує сторони  по осі X.  Приймає числові значення. Від'ємне зсуває - вправо, додатнє - вліво. <br> Значення D - змінює масштаб по вертикалі. Задається від 0 до 1. Менше 1 - зменшує, більше 1 - збільшує. <br> Значення Х - зміщує елемент по осі X.  Приймає числові значення. Від'ємне зміщує - вліво, додатнє - вправо. <br> Значення Y - зміщує елемент по осі Y. Приймає числові значення. Від'ємне зміщує - вверх, додатнє - вниз.
+
+                tr
+                    td <code>translate(x,y)</code>
+                    td Зсуває елемент по осям (x,y), відносно його положення. Додатнє значення - вправо по Х, або вниз по Y.  Від'ємне значення - вліво по Х, або вверх по Y.
+
+                tr
+                    td <code>translateX(n)</code>
+                    td Зсуває елемент по осі Х. Приймає числові/відсоткові значення.
+
+                tr
+                    td <code>translateY(n)</code>
+                    td Зсуває елемент по осі Y. Приймає числові/відсоткові значення.
+
+                tr
+                    td <code>scale(x,y)</code>
+                    td Масштабує елементи по осям. Значення від 1 до 0 - зменшують елемент. Перше значення масштабує по висоті, друг - по ширині.
+
+                tr
+                    td <code>scaleX(n)</code>
+                    td Масштабує елемент по ширині, роблячи його вужче/ширше. Якщо значення більше 1 то елемент стає ширшим, нижче 1 - вужчим
+
+                tr
+                    td <code>scaleY(n)</code>
+                    td Масштабує елемент по висоті, роблячи його вище/коротше. Якщо значення більше 1 то елемент стає вищим, нижче 1 - коротшим
+
+                tr
+                    td <code>rotate(градус)</code>
+                    td Використовується для обертання елементу довкола його центру. Приймаються значення у градусах (360deg). Від'ємне значення обертає елемент проти годинникової стрілки, додатнє - за годинниковою стрілкою.
+
+                tr
+                    td <code>skew(x-градус, y-градус)</code>
+                    td Деформація сторін елементу відносно осейю Якщо вказано одне значення, інше вираховується автоматично.
+
+                tr
+                    td <code>skewX(градус)</code>
+                    td Деформує сторони по осі Х
+
+                tr
+                    td <code>skewY(градус)</code>
+                    td Деформує сторони по осі Y
+
+
+
+            .transform-samples
+                .transform-wrap
+                    .trans-element.one translateX(20px)
+
+                .transform-wrap
+                    .trans-element.two translateY(-20px)
+
+                .transform-wrap
+                    .trans-element.three translate(-20px, 20px)
+
+                .transform-wrap
+                    .trans-element.four scaleX(-1)
+
+                .transform-wrap
+                    .trans-element.five scaleY(1.2)
+
+                .transform-wrap
+                    .trans-element.six scale(1.2, 0.5)
+
+                .transform-wrap
+                    .trans-element.seven rotate(720deg)
+
+                .transform-wrap
+                    .trans-element.eight skewX(20deg)
+
+                .transform-wrap
+                    .trans-element.nine skewY(-20deg)
+
+                .transform-wrap
+                    .trans-element.ten skew(-20deg, 20deg)
+
+                .transform-wrap
+                    .trans-element.eleven matrix(1.2,0,0.5,1.2,50,0)
+
+
+
+            h2 Точка трансформації <code>transform-origin</code>
+            p Властивість дозволяє змістити центр початку. Дефолтне значення: <code>transform-origin: center center</code> або 50% 50%.
+
+
+            table.table
+                colgroup
+                    col(width='180px')
+                    col
+                    col
+
+                tr
+                    td <code>вісь Х (left, center, right, %)</code>
+                    td Пара значень. Задана за допомогою ключових слів, одиниць довжини <code>px/em/rem...</code> та відсоткових значень. Визначає відносно якої частини елементу буде відбуватись трансформація.
+
+                tr
+                    td <code>вісь Y (top, center, bottom, %)</code>
+
+
+            .origin-wrapper
+                .origin-sample
+                    .animated-origin.element-1 50% 50%
+
+                .origin-sample
+                    .animated-origin.element-2 top left
+
+                .origin-sample
+                    .animated-origin.element-3 110% 110%
+
+                .origin-sample
+                    .animated-origin.element-4 50px 50px
+
+
+
+
+            h2.anim-subtitle СSS переходи <code>transition</code>
+            p СSS переходи дозволяють анімувати значення основні на інші, за заданий проміжок часу.
+            p Зміна властивостей відбувється при якому-небудь івенті. Найчастіше спрацьовує псевдоклас :hover.
+            p Переходи застосовуються до всых елементыв, включно з псевдоелементами :before :after.
+
+
+            table.table
+                colgroup
+                    col(width='180px')
+                    col
+                    col
+
+                tr
+                    td <code>вісь Х (left, center, right, %)</code>
+                    td Пара значень. Задана за допомогою ключових слів, одиниць довжини <code>px/em/rem...</code> та відсоткових значень. Визначає відносно якої частини елементу буде відбуватись трансформація.
+
+                tr
+                    td <code>вісь Y (top, center, bottom, %)</code>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
