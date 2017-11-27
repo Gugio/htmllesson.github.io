@@ -393,11 +393,11 @@ main.main-content
                 | }
                 |
                 | &emsp;.child {
-                | &emsp; tracnsform: <span class="orange">rotateX(50deg)</span><span class="orange">;</span>
+                | &emsp; transform: <span class="orange">rotateX(50deg)</span><span class="orange">;</span>
                 | }
                 |
                 | &emsp;.child:hover {
-                | &emsp; tracnsform: <span class="orange">perspective(900px)</span><span class="orange"> <span class="orange">rotate3d(180,-45,0,-135deg)</span><span class="orange">;</span>
+                | &emsp; transform: <span class="orange">perspective(900px)</span><span class="orange"> <span class="orange">rotate3d(180,-45,0,-135deg)</span><span class="orange">;</span>
                 | }
 
             .perspective-container-1
@@ -415,7 +415,7 @@ main.main-content
                     | }
                     |
                     | &emsp;.child {
-                    | &emsp; tracnsform: <span class="orange">rotateX(50deg)</span><span class="orange">;</span>
+                    | &emsp; transform: <span class="orange">rotateX(50deg)</span><span class="orange">;</span>
                     | }
                     |
 
@@ -445,7 +445,7 @@ main.main-content
 
 
 
-            h2  Стиль трансформації<code>transform-style</code>
+            h2  Стиль трансформації <code>transform-style</code>
             p Властивість визначає, як вкладені елементи промальовуються у трьохвимірному просторі. Властивість повинна використовуватись разом з <code>transform</code>, та задаєтьс тільки для вкладених елементів
 
                 figure.code <span class="nc">.child</span>
@@ -537,6 +537,20 @@ main.main-content
                 tr
                     td <code>perspective(n)</code>
                     td Функція змінює перспективу огляду елементу, створюючи ілюзію глибини. Від'ємні значення не допускаються.
+
+
+
+            .scene
+                .cube-wrapper
+                    .triangle
+
+                    figure.front
+                    figure.back
+                    figure.top
+                    figure.bottom
+                    figure.left
+                    figure.right
+
 
 
 

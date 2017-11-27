@@ -280,3 +280,228 @@
 
   }
 }
+
+
+// EASY TRANSFORMATION ----------------------------------------------------------------------
+
+.transform-samples {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  font-size: 13px;
+  text-align: center;
+  color: $white;
+}
+
+.transform-wrap {
+  margin: 1rem;
+  background: rgba(228, 225, 228, .5);
+
+  .trans-element {
+    width: 170px;
+    height: 100px;
+    line-height: 100px;
+    margin: 0 auto;
+    transition: all 0.5s ease-in-out;
+  }
+}
+
+.one, .four, .seven, .ten {
+  background: rgba(135, 86, 120, .4);
+}
+
+.one:hover {
+  transform: translateX(20px);
+}
+
+.two, .five, .eight, .eleven {
+  background: rgba(0, 228, 246, .4);
+}
+
+.two:hover {
+  transform: translateY(-20px);
+}
+
+.three, .six, .nine {
+  background: rgba(255, 153, 0, .4);
+}
+
+.three:hover {
+  transform: translate(-20px, 20px);
+}
+
+.four:hover {
+  transform: scaleX(-1);
+}
+
+.five:hover {
+  transform: scaleY(1.2);
+}
+
+.six:hover {
+  transform: scale(1.2, 0.5);
+}
+
+.seven:hover {
+  transform: rotate(720deg);
+}
+
+.eight:hover {
+  transform: skewX(20deg);
+}
+
+.nine:hover {
+  transform: skewY(-20deg);
+}
+
+.ten:hover {
+  transform: skew(-20deg, 20deg);
+}
+
+.eleven:hover {
+  transform: matrix(1.2,0,0.5,1.2,50,0);
+}
+
+.origin-sample {
+  width: 120px;
+  height: 120px;
+  background: #E6E0CA;
+  display: inline-block;
+  margin: 130px;
+
+}
+
+.origin-wrapper {
+  width: 80%;
+  margin: auto;
+
+}
+
+@keyframes rotation {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+
+}
+
+.animated-origin {
+  width: 120px;
+  height: 120px;
+  color: white;
+  text-align: center;
+  line-height: 120px;
+  animation: rotation 6s linear infinite;
+
+}
+
+.element-1 {
+  background: #FFCC00;
+
+}
+
+.element-2 {
+  background: #FF9900;
+  transform-origin: top left;
+
+}
+
+.element-3 {
+  background: #875678;
+  transform-origin: 110% 110%;
+
+}
+
+.element-4 {
+  background: #00E4F6;
+  transform-origin: 50px 50px;
+
+}
+
+
+// 3d awesome example --------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------
+
+
+.scene {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  perspective: 1200px;
+  perspective-origin: 50% -100px;
+  width: 50%;
+  height: 300px;
+  margin: auto;
+  padding: 1rem 0;
+
+  @keyframes rotator {
+    0% {transform: rotateY(0deg) rotateX(360deg);}
+    25% {transform: rotateY(90deg) rotateX(270deg);}
+    50% {transform: rotateY(120deg) rotateX(180deg);}
+    75% {transform: rotateY(270deg) rotateX(90deg);}
+    100% {transform: rotateY(360deg) rotateX(0deg);}
+
+  }
+
+  .cube-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    transform-style: preserve-3d;
+    animation: rotator 10s ease-in-out infinite;
+
+    .triangle {
+      position: absolute;
+      top: 75px;
+      margin: auto;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      box-shadow: 0 0 100px 0 rgba(0, 0, 0, .5);
+      background-image: radial-gradient(white 50%, transparent 50%, black 200%);
+      transform: rotateZ(45deg);
+      animation: rotator 5s ease-in-out infinite;
+    }
+
+
+    figure {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      transform-origin: 50% 50% 0;
+      opacity: .5;
+
+
+      &.front {
+        background-color: #bb12ff;
+        transform: translateZ(100px);
+      }
+
+      &.back {
+        background-color: #F0653E;
+        transform: rotateY(180deg) translateZ(100px);
+      }
+
+      &.top {
+        background-color: #2C2D30;
+        transform: rotateX(90deg) translateZ(100px);
+      }
+
+      &.bottom {
+        background-color: #ff8500;
+        transform: rotateX(-90deg) translateZ(100px);
+      }
+
+      &.left {
+        background-color: #006699;
+        transform: rotateY(-90deg) translateZ(100px);
+      }
+
+      &.right {
+        background-color: #f44336;
+        transform: rotateY(90deg) translateZ(100px);
+      }
+    }
+  }
+  
+}
+
