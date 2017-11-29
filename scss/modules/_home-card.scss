@@ -2,7 +2,7 @@
   width: 25rem;
   height: 21rem;
   padding: 2rem;
-  box-shadow: $box-shadow;
+  box-shadow: $box-shadow-black;
   border-radius: 2px;
 
   .theme-list {
@@ -12,6 +12,11 @@
     overflow: auto;
   }
 
+  &_wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 7rem 2rem;
+  }
 }
 
 .card-title {
@@ -32,12 +37,4 @@
     border-radius: 20%;
 
   }
-}
-
-.row {
-  display: flex;
-  justify-content: space-around;
-}
-.col {
-  display: inline-block;
 }

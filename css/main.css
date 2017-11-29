@@ -372,13 +372,13 @@ td:first-child {
   left: 0;
   bottom: 0;
   width: 2.5rem;
-  overflow-y: hidden;
+  overflow: hidden;
   background-color: #fff;
   box-shadow: 3px 8px 29px -6px rgba(0, 0, 0, 0.5);
   transition: width 250ms ease-in-out;
   z-index: 10000; }
   .nav-menu:hover {
-    width: 22%; }
+    width: 20%; }
     .nav-menu:hover .nav-block {
       overflow-y: auto; }
 
@@ -1335,8 +1335,8 @@ table.measure-table tr:last-child td {
   .anim-delay-wrapper span {
     display: block;
     position: absolute;
-    width: 40%;
-    height: 40%;
+    width: 75px;
+    height: 75px;
     border-radius: 50%;
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
     animation: run 3s infinite ease-in-out; }
@@ -1557,6 +1557,10 @@ table.measure-table tr:last-child td {
     padding-bottom: 5rem;
     display: block;
     overflow: auto; }
+  .home-card_wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 7rem 2rem; }
 
 .card-title {
   position: relative;
@@ -1573,13 +1577,6 @@ table.measure-table tr:last-child td {
     height: 110%;
     background-color: #08c;
     border-radius: 20%; }
-
-.row {
-  display: flex;
-  justify-content: space-around; }
-
-.col {
-  display: inline-block; }
 
 .title {
   color: #4d4d52;

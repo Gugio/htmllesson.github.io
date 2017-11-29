@@ -4,14 +4,14 @@
   left: 0;
   bottom: 0;
   width: 2.5rem;
-  overflow-y: hidden;
+  overflow: hidden;
   background-color: $white;
-  box-shadow: $box-shadow;
+  box-shadow: $box-shadow-black;
   transition: width 250ms ease-in-out;
   z-index: 10000;
 
   &:hover {
-    width: 22%;
+    width: 20%;
 
     .nav-block {
       overflow-y: auto;
