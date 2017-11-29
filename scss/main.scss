@@ -1,3 +1,11 @@
+
+// utitlities
+@import "utilities/color";
+@import "utilities/fonts_var";
+@import "utilities/variables";
+//@import "utilities/mixins";
+//@import "utilities/placeholder";
+
 // Base
 @import 'base/fonts';
 @import 'base/normalize';
@@ -8,7 +16,18 @@
 @import 'general/general';
 @import 'general/table';
 
+// Layouts
+//@import "layout/container";
+//@import "layout/grid";
+
 // Modules
 @import 'modules/navigation';
 @import 'modules/selectors';
 @import "modules/easy-animation";
+@import "modules/home-card";
+@import "modules/titles";
+
+// State
+//@import "state/state";
+
+

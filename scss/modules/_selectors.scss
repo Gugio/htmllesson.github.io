@@ -792,6 +792,43 @@ table.measure-table {
 //------------------------------------------------------------------------------
 //flexbox module -------------------------------------------------------------------------
 
+@mixin flex-toggler {
+  display: flex;
+  justify-content: space-around;
+  font-size: 15px;
+
+  a {
+    color: #3f00ff;
+  }
+
+  a:focus, a:active {
+    color: #00e892;
+    text-decoration: underline;
+  }
+
+}
+
+.flex-toggler {
+  @include flex-toggler;
+
+  &Grow-1 {
+    @include flex-toggler;
+    a {color: #fff;}
+  }
+
+  &Grow-2 {
+    @include flex-toggler;
+    a {color: #fff;}
+  }
+
+  &Grow-3 {
+    @include flex-toggler;
+    a {color: #fff;}
+  }
+
+}
+
+
 .flexible {
   max-width: 1000px;
   margin: auto;
@@ -802,65 +839,13 @@ table.measure-table {
   width: 80%;
   display: flex;
   margin: 2rem auto;
-  padding: 1rem;
+  padding: .3rem;
   border-radius: 7px;
   background-color: rgba(200, 200, 200, .3);
+  box-shadow: 0 0 10px 0 rgba(200, 200, 200, .3);
 
   &.unsized {
     width: auto;
-  }
-
-
-
-// justify-content ---------------------------------------------------------------------------
-// -------------------------------------------------------------------------------------------
-  &.start {
-    justify-content: flex-start;
-  }
-
-
-  &.end {
-    justify-content: flex-end;
-  }
-
-  &.center {
-    justify-content: center;
-  }
-
-  &.space-b {
-    justify-content: space-between;
-  }
-
-  &.space-a {
-    justify-content: space-around;
-  }
-
-// align-items ---------------------------------------------------------------------------
-// -------------------------------------------------------------------------------------------
-
-  &.a-stretch {
-    height: 130px;
-    align-items: stretch;
-  }
-
-  &.align-start {
-    height: 130px;
-    align-items: flex-start;
-  }
-
-  &.align-center {
-    height: 130px;
-    align-items: center;
-  }
-
-  &.align-end {
-    height: 130px;
-    align-items: flex-end;
-  }
-
-  &.baseline {
-    height: 130px;
-    align-items: baseline;
   }
 
 // flex-direction ---------------------------------------------------------------------------
@@ -933,11 +918,11 @@ table.measure-table {
 }
 
 .flex-element {
-  font-size: .8rem;
-  margin: 0 1rem;
+  font-size: .7rem;
+  margin: .3rem;
   color: $white;
   font-weight: 700;
-  padding: .5rem;
+  padding: .4rem;
   line-height: 1rem;
   border-radius: 7px;
 
@@ -958,18 +943,6 @@ table.measure-table {
 
   &.wide {
     flex-basis: 400px;
-  }
-
-  &.grow-1 {
-    flex-grow: 1;
-  }
-
-  &.grow-3 {
-    flex-grow: 3;
-  }
-
-  &.grow-5 {
-    flex-grow: 5;
   }
 
   &.shrink-1 {
