@@ -1,0 +1,58 @@
+figure.code {
+  display: block;
+  text-shadow: 1px 1px 0 black;
+  background-color: #333333;
+  background-image: linear-gradient(to bottom, #333333, #000000);
+  color: white;
+  padding: 1em;
+  border-color: rgba(255, 255, 255, 0.3);
+  border-width: 3px;
+  border-style: solid;
+  border-radius: 10px;
+  white-space: pre;
+  margin-bottom: 40px;
+
+  &::before {
+    content: "css";
+    float: right;
+    color: $black;
+    text-shadow: -1px 1px 0 $base-text;
+    font-size: 1.7em;
+  }
+
+  .nc {
+    color: #FFD357;
+  }
+
+  .p {
+    color: #ffffff;
+  }
+
+  .nl {
+    color: #ffffff;
+  }
+
+  .nb {
+    color: #ABEBD9;
+  }
+
+  .com {
+    color: silver;
+  }
+
+  .orange {
+    color: #de7300;
+  }
+
+  .green {
+    color: #6CAA4F;
+  }
+
+  .brown {
+    color: #89472d;
+  }
+
+  .blue {
+    color: #006699;
+  }
+}

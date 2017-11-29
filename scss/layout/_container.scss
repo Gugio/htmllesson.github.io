@@ -34,6 +34,7 @@
   @extend %clearfix;
   margin-left: ($gutter-width / -2);
   margin-right: ($gutter-width / -2);
+
 }
 
 .col {
@@ -44,6 +45,7 @@
   box-sizing: border-box;
   padding-left: ($gutter-width / 2);
   padding-right: ($gutter-width / 2);
+
 }
 
 @media (max-width: $small-screen-down) {
