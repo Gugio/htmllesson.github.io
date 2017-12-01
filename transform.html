@@ -6,8 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
     <title>CSS</title>
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./js/libs/highlight/styles/monokai-sublime.css">
+    <script type="text/javascript" src="./js/libs/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/libs/jquery/jquery.mousewheel.min.js"></script>
+    <script type="text/javascript" src="./js/scripts/slickcustomscroll.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
+    <!--script(type='text/javascript' src='./js/libs/scripts/scroll.js')-->
+    <script type="text/javascript" src="./js/libs/highlight/highlight.pack.js"></script>
   </head>
-  <body>
+  <body rel="slickScroll">
     <nav class="nav-menu"><a class="home-link" href="index.html">home</a>
       <ol class="nav-list">
         <li><a class="nav-link" href="selectors.html">Селектори, Псевдокласи, Каскадність, Псевдоелементи</a></li>
@@ -20,22 +27,22 @@
         <li><a class="nav-link" href="transform.html">Трансформація</a></li>
         <li><a class="nav-link" href="animations.html">Анімація (2D, 3D)</a></li>
         <li><a class="nav-link" href="flexbox.html">Flex-box</a></li>
-        <li><a class="nav-link" href="">Display</a></li>
-        <li><a class="nav-link" href="">Префікси</a></li>
-        <li><a class="nav-link" href="">SVG</a></li>
-        <li><a class="nav-link" href="">Спрайти</a></li>
+        <li><a class="nav-link" href="#">Display</a></li>
+        <li><a class="nav-link" href="#">Префікси</a></li>
+        <li><a class="nav-link" href="#">SVG</a></li>
+        <li><a class="nav-link" href="#">Спрайти</a></li>
       </ol>
     </nav>
     <main class="main-content">
       <div class="container">
         <div class="transform">
-          <h1 class="main-title"><code>transform</code></h1>
+          <h1 class="title"><code>transform</code></h1>
           <p>CSS трансформації. Змінюють розмір, форму та положення елементів на сторінці.</p>
           <p>Трансформуються елементи зі значенням <code color="green">display: block;, inline-block;</code> а також <code color="green">table-row, table-row-group, table-header-group, table-footer-group, table-cell, table-caption</code></p>
           <p>Існує два види трансформації: 2D і 3D.</p>
           <h2>Функція трансформації <code>transform</code></h2>
           <p>Властивітьзадає вид трансформації елементу. Властивість описується за допомогою функцій трансформації. Які зміщують його положення стосовно його теперішнього положення.</p>
-          <table class="table">
+          <table class="table striped">
             <colgroup>
               <col width="180px">
               <col>
@@ -125,9 +132,9 @@
               <div class="trans-element eleven">matrix(1.2,0,0.5,1.2,50,0)</div>
             </div>
           </div>
-          <h2>Точка трансформації <code>transform-origin</code></h2>
+          <h2 class="subtitle">Точка трансформації <code>transform-origin</code></h2>
           <p>Властивість дозволяє змістити центр початку. Дефолтне значення: <code>transform-origin: center center</code> або 50% 50%.</p>
-          <table class="table">
+          <table class="table striped">
             <colgroup>
               <col width="180px">
               <col>
@@ -159,7 +166,7 @@
           <p>СSS переходи дозволяють анімувати значення основні на інші, за заданий проміжок часу.</p>
           <p>Зміна властивостей відбувється при якому-небудь івенті. Найчастіше спрацьовує псевдоклас :hover.</p>
           <p>Переходи застосовуються до всых елементыв, включно з псевдоелементами :before :after.</p>
-          <table class="table">
+          <table class="table striped">
             <colgroup>
               <col width="180px">
               <col>

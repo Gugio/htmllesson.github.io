@@ -1,16 +1,18 @@
 figure.code {
   display: block;
-  text-shadow: 1px 1px 0 black;
+  margin: 1rem auto;
   background-color: #333333;
   background-image: linear-gradient(to bottom, #333333, #000000);
-  color: white;
-  padding: 1em;
+  padding: 1em 1em 2em 4em;
   border-color: rgba(255, 255, 255, 0.3);
-  border-width: 3px;
+  border-width: 2px;
   border-style: solid;
   border-radius: 10px;
   white-space: pre;
   margin-bottom: 40px;
+  box-shadow: $box-shadow-black;
+  transition: box-shadow 200ms ease-in-out;
+  cursor: pointer;
 
   &::before {
     content: "css";
@@ -20,39 +22,8 @@ figure.code {
     font-size: 1.7em;
   }
 
-  .nc {
-    color: #FFD357;
+  &:hover {
+    box-shadow: 0 0 0 0;
   }
 
-  .p {
-    color: #ffffff;
-  }
-
-  .nl {
-    color: #ffffff;
-  }
-
-  .nb {
-    color: #ABEBD9;
-  }
-
-  .com {
-    color: silver;
-  }
-
-  .orange {
-    color: #de7300;
-  }
-
-  .green {
-    color: #6CAA4F;
-  }
-
-  .brown {
-    color: #89472d;
-  }
-
-  .blue {
-    color: #006699;
-  }
 }

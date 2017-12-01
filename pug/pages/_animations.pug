@@ -9,7 +9,7 @@ main.main-content
                     span
 
 
-            h1.main-title <code>CSS animations</code>
+            h1.title <code>CSS animations</code>
             p CSS анімація надає динамічності сайтам. На відміну від СSS переходів, створення анімацій базується на ключових кадрах, які автоматично запускають і повторюють ефекти на протязі заданого часу, а також дозволяють зупинити анімацію всередині циклу
             p CSS анімація може застосовуватись майже до всіх html-елементів, а також до псевдоелементів <code>:before, :after</code>.
 
@@ -43,7 +43,7 @@ main.main-content
             h2 Назва анімації <code>animation-name</code>
             p Ім'я анімації задається у правилі <code>@keyframes</code>
 
-            table.table
+            table.table.striped
                 colgroup
                     col(width='180px')
                     col
@@ -75,7 +75,7 @@ main.main-content
             h2 <code>animation-duration</code>
             p Властивість визначає, як довго анімація буде відтворюватись. Задається в секундах, або мілісекундах. Якщо для елементу задано більше однієї анімації, можна встановити для них різний час перерахувавши значення через кому.
 
-            table.table
+            table.table.striped
                 colgroup
                     col(width='180px')
                     col
@@ -102,7 +102,7 @@ main.main-content
             h2 <code>animation-timing-function</code>
             p  Властивість визначає прискорення/сповільнення анімації, за допомогою часових функцій. Задається за допомогою ключових слів або кривої Базье <code>cubic-bezier(x1, y1, x2, y2)</code>.
 
-            table.table
+            table.table.striped
                 colgroup
                     col(width='180px')
                     col
@@ -175,7 +175,7 @@ main.main-content
             p Властивість ігнорує заданий час, що надає можливість окремо запустити кожну анімацію. Від'ємна затримка, починає анімацію з певного моменту всередині її циклу, тобто з часу, який вказаний у затримці. Це дозволяє застосовувати анімацію до кількох елементів з сувом фази, змінюючи тільки час затримки.
             p Щоб анімація почалась з середини, потрібно задати від'єнму затримку, рівну половині часу, який встановлений у <code>animation-duration</code>
 
-            table.table
+            table.table.striped
                 colgroup
                     col(width='180px')
                     col
@@ -208,7 +208,7 @@ main.main-content
                     | &emsp; animation-iteration-count: <span class="green">3</span><span class="orange">;</span>
                     | }
 
-            table.table
+            table.table.striped
                 colgroup
                     col(width='180px')
                     col
@@ -238,7 +238,7 @@ main.main-content
                     | &emsp; animation-direction: <span class="green">alternate</span><span class="orange">;</span>
                     | }
 
-            table.table
+            table.table.striped
                 colgroup
                     col(width='180px')
                     col
@@ -271,14 +271,12 @@ main.main-content
 
             h2 Короткий запис <code>animation</code>
             p Всі параметри анімування можна об'єднати у одній властивості <code>animation</code>, перерахувавши їх через пробіл.
-                figure.code <span class="nc">.selector</span>
+                figure.code .selector
                     | &emsp;{
-                    | &emsp; animation: <span class="green">animation-name animation-duration
-                    | &emsp; &emsp; &emsp; &emsp; animation-delay animation-timing-function animation-iteration-count animation-direction</span><span class="orange">;</span>
+                    | &emsp; animation: animation-name animation-duration animation-delay animation-timing-function animation-iteration-count animation-direction;
                     | }
 
             p Для початку анімації достатньо вказати тільки дві властивості: <code>animation-name</code> та <code>animation-duration</code>, всі наступні, приймуть дефолтне значення. Порядок об'явлення значень не є важливим, єдине це - animation-duration повинно бути перед animation-delay
-
 
 
             h2 <code>animation-play-state</code>
@@ -288,7 +286,7 @@ main.main-content
                     | &emsp; animation-play-state: <span class="green">paused</span><span class="orange">;</span>
                     | }
 
-            table.table
+            table.table.striped
                 colgroup
                     col(width='180px')
                     col
@@ -326,7 +324,7 @@ main.main-content
                     | &emsp; animation-fill-mode: <span class="green">forwards</span><span class="orange">;</span>
                     | }
 
-            table.table
+            table.table.striped
                 colgroup
                     col(width='180px')
                     col
@@ -363,7 +361,7 @@ main.main-content
             p Властивість <code>perspective</code> і функція <code>perspective()</code>, додають глибину елементу, збільшуючи його розмір по осі Z. Чим менше значення, тим ближче Z-простір до користувача.
             p Якщо прспектива задається за допомогою функції <code>perspective()</code>, 3d простір активується тільки для одного елементу. Властивість <code>perspective</code> активує простір всередині елементу, який має в собі дочірні трансформовані елементи да застосовується до них.
 
-            table.table
+            table.table.striped
                 colgroup
                     col(width='180px')
                     col
@@ -425,7 +423,7 @@ main.main-content
                 .perspective-example
                 .perspective-example
 
-            table.table
+            table.table.striped
                 colgroup
                     col(width='180px')
                     col
@@ -455,7 +453,7 @@ main.main-content
                     | }
                     |
 
-            table.table
+            table.table.striped
                 colgroup
                     col(width='180px')
                     col
@@ -479,7 +477,7 @@ main.main-content
                     | }
                     |
 
-            table.table
+            table.table.striped
                 colgroup
                     col(width='180px')
                     col
@@ -499,7 +497,7 @@ main.main-content
             h2 Функції 3d трансформації <code>transform</code>
             p Властивість визначає, чи буде видно зворотню сторону елементу.
 
-            table.table
+            table.table.striped
                 colgroup
                     col(width='180px')
                     col

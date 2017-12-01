@@ -61,3 +61,7 @@ $vars : (
   @warn "Unknown `#{$type}` in `#{$var}`.";
   @return null;
 }
+
+// project variables ----------------------------
+
+$title-size: 45px;

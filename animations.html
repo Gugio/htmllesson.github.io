@@ -6,8 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
     <title>CSS</title>
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./js/libs/highlight/styles/monokai-sublime.css">
+    <script type="text/javascript" src="./js/libs/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/libs/jquery/jquery.mousewheel.min.js"></script>
+    <script type="text/javascript" src="./js/scripts/slickcustomscroll.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
+    <!--script(type='text/javascript' src='./js/libs/scripts/scroll.js')-->
+    <script type="text/javascript" src="./js/libs/highlight/highlight.pack.js"></script>
   </head>
-  <body>
+  <body rel="slickScroll">
     <nav class="nav-menu"><a class="home-link" href="index.html">home</a>
       <ol class="nav-list">
         <li><a class="nav-link" href="selectors.html">Селектори, Псевдокласи, Каскадність, Псевдоелементи</a></li>
@@ -20,10 +27,10 @@
         <li><a class="nav-link" href="transform.html">Трансформація</a></li>
         <li><a class="nav-link" href="animations.html">Анімація (2D, 3D)</a></li>
         <li><a class="nav-link" href="flexbox.html">Flex-box</a></li>
-        <li><a class="nav-link" href="">Display</a></li>
-        <li><a class="nav-link" href="">Префікси</a></li>
-        <li><a class="nav-link" href="">SVG</a></li>
-        <li><a class="nav-link" href="">Спрайти</a></li>
+        <li><a class="nav-link" href="#">Display</a></li>
+        <li><a class="nav-link" href="#">Префікси</a></li>
+        <li><a class="nav-link" href="#">SVG</a></li>
+        <li><a class="nav-link" href="#">Спрайти</a></li>
       </ol>
     </nav>
     <main class="main-content">
@@ -32,7 +39,7 @@
           <div class="animation-sample">
             <div class="sample"><span></span><span></span><span></span><span></span></div>
           </div>
-          <h1 class="main-title"><code>CSS animations</code></h1>
+          <h1 class="title"><code>CSS animations</code></h1>
           <p>CSS анімація надає динамічності сайтам. На відміну від СSS переходів, створення анімацій базується на ключових кадрах, які автоматично запускають і повторюють ефекти на протязі заданого часу, а також дозволяють зупинити анімацію всередині циклу</p>
           <p>CSS анімація може застосовуватись майже до всіх html-елементів, а також до псевдоелементів <code>:before, :after</code>.</p>
           <h2><code>@keyframes</code></h2>
@@ -67,7 +74,7 @@
           </p>
           <h2>Назва анімації <code>animation-name</code></h2>
           <p>Ім'я анімації задається у правилі <code>@keyframes</code></p>
-          <table class="table">
+          <table class="table striped">
             <colgroup>
               <col width="180px">
               <col>
@@ -97,7 +104,7 @@
           </figure>
           <h2><code>animation-duration</code></h2>
           <p>Властивість визначає, як довго анімація буде відтворюватись. Задається в секундах, або мілісекундах. Якщо для елементу задано більше однієї анімації, можна встановити для них різний час перерахувавши значення через кому.</p>
-          <table class="table">
+          <table class="table striped">
             <colgroup>
               <col width="180px">
               <col>
@@ -123,7 +130,7 @@
           </figure>
           <h2><code>animation-timing-function</code></h2>
           <p> Властивість визначає прискорення/сповільнення анімації, за допомогою часових функцій. Задається за допомогою ключових слів або кривої Базье <code>cubic-bezier(x1, y1, x2, y2)</code>.</p>
-          <table class="table">
+          <table class="table striped">
             <colgroup>
               <col width="180px">
               <col>
@@ -185,7 +192,7 @@
           <h2><code>animation-delay</code></h2>
           <p>Властивість ігнорує заданий час, що надає можливість окремо запустити кожну анімацію. Від'ємна затримка, починає анімацію з певного моменту всередині її циклу, тобто з часу, який вказаний у затримці. Це дозволяє застосовувати анімацію до кількох елементів з сувом фази, змінюючи тільки час затримки.</p>
           <p>Щоб анімація почалась з середини, потрібно задати від'єнму затримку, рівну половині часу, який встановлений у <code>animation-duration</code></p>
-          <table class="table">
+          <table class="table striped">
             <colgroup>
               <col width="180px">
               <col>
@@ -213,7 +220,7 @@
               }
             </figure>
           </p>
-          <table class="table">
+          <table class="table striped">
             <colgroup>
               <col width="180px">
               <col>
@@ -244,7 +251,7 @@
               }
             </figure>
           </p>
-          <table class="table">
+          <table class="table striped">
             <colgroup>
               <col width="180px">
               <col>
@@ -278,9 +285,8 @@
           <h2>Короткий запис <code>animation</code></h2>
           <p>Всі параметри анімування можна об'єднати у одній властивості <code>animation</code>, перерахувавши їх через пробіл.
             <figure class="code">
-              <span class="nc">.selector</span>&emsp;{
-              &emsp; animation: <span class="green">animation-name animation-duration
-              &emsp; &emsp; &emsp; &emsp; animation-delay animation-timing-function animation-iteration-count animation-direction</span><span class="orange">;</span>
+              .selector&emsp;{
+              &emsp; animation: animation-name animation-duration animation-delay animation-timing-function animation-iteration-count animation-direction;
               }
             </figure>
           </p>
@@ -293,7 +299,7 @@
               }
             </figure>
           </p>
-          <table class="table">
+          <table class="table striped">
             <colgroup>
               <col width="180px">
               <col>
@@ -327,7 +333,7 @@
               }
             </figure>
           </p>
-          <table class="table">
+          <table class="table striped">
             <colgroup>
               <col width="180px">
               <col>
@@ -360,7 +366,7 @@
           </p>
           <p>Властивість <code>perspective</code> і функція <code>perspective()</code>, додають глибину елементу, збільшуючи його розмір по осі Z. Чим менше значення, тим ближче Z-простір до користувача.</p>
           <p>Якщо прспектива задається за допомогою функції <code>perspective()</code>, 3d простір активується тільки для одного елементу. Властивість <code>perspective</code> активує простір всередині елементу, який має в собі дочірні трансформовані елементи да застосовується до них.</p>
-          <table class="table">
+          <table class="table striped">
             <colgroup>
               <col width="180px">
               <col>
@@ -420,7 +426,7 @@
             <div class="perspective-example"></div>
             <div class="perspective-example"></div>
           </div>
-          <table class="table">
+          <table class="table striped">
             <colgroup>
               <col width="180px">
               <col>
@@ -449,7 +455,7 @@
               
             </figure>
           </p>
-          <table class="table">
+          <table class="table striped">
             <colgroup>
               <col width="180px">
               <col>
@@ -473,7 +479,7 @@
               
             </figure>
           </p>
-          <table class="table">
+          <table class="table striped">
             <colgroup>
               <col width="180px">
               <col>
@@ -490,7 +496,7 @@
           </table>
           <h2>Функції 3d трансформації <code>transform</code></h2>
           <p>Властивість визначає, чи буде видно зворотню сторону елементу.</p>
-          <table class="table">
+          <table class="table striped">
             <colgroup>
               <col width="180px">
               <col>

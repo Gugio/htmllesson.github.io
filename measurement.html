@@ -6,8 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
     <title>CSS</title>
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./js/libs/highlight/styles/monokai-sublime.css">
+    <script type="text/javascript" src="./js/libs/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/libs/jquery/jquery.mousewheel.min.js"></script>
+    <script type="text/javascript" src="./js/scripts/slickcustomscroll.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
+    <!--script(type='text/javascript' src='./js/libs/scripts/scroll.js')-->
+    <script type="text/javascript" src="./js/libs/highlight/highlight.pack.js"></script>
   </head>
-  <body>
+  <body rel="slickScroll">
     <nav class="nav-menu"><a class="home-link" href="index.html">home</a>
       <ol class="nav-list">
         <li><a class="nav-link" href="selectors.html">Селектори, Псевдокласи, Каскадність, Псевдоелементи</a></li>
@@ -20,17 +27,17 @@
         <li><a class="nav-link" href="transform.html">Трансформація</a></li>
         <li><a class="nav-link" href="animations.html">Анімація (2D, 3D)</a></li>
         <li><a class="nav-link" href="flexbox.html">Flex-box</a></li>
-        <li><a class="nav-link" href="">Display</a></li>
-        <li><a class="nav-link" href="">Префікси</a></li>
-        <li><a class="nav-link" href="">SVG</a></li>
-        <li><a class="nav-link" href="">Спрайти</a></li>
+        <li><a class="nav-link" href="#">Display</a></li>
+        <li><a class="nav-link" href="#">Префікси</a></li>
+        <li><a class="nav-link" href="#">SVG</a></li>
+        <li><a class="nav-link" href="#">Спрайти</a></li>
       </ol>
     </nav>
     <main class="main-content">
       <div class="container">
         <div class="measure-wrap">
           <h1 class="main-title">Одиниці виміру</h1>
-          <table class="table measure-table">
+          <table class="table striped measure-table">
             <colgroup>
               <col width="25%">
               <col width="25%">
@@ -65,19 +72,19 @@
           <h2>Відносно екрану:</h2>
           <p>Їх основна перевага - в тому, що будь-які розміри, які в них задані, автоматично масштабуються при зміні розмірів вікна браузера</p>
           <ul>
-            <li><span class='orange-text'>vw</span> – 1% ширини вікна</li>
-            <li><span class='orange-text'>vh</span> – 1% висоти вікна</li>
-            <li><span class='orange-text'>vmin</span> – майменше з (vw, vh), в IE9 визначається як vm</li>
-            <li><span class='orange-text'>vmax</span> – найбільше з (vw, vh)</li>
+            <li><span class='orange'>vw</span> – 1% ширини вікна</li>
+            <li><span class='orange'>vh</span> – 1% висоти вікна</li>
+            <li><span class='orange'>vmin</span> – майменше з (vw, vh), в IE9 визначається як vm</li>
+            <li><span class='orange'>vmax</span> – найбільше з (vw, vh)</li>
           </ul>
           <h2>Для друку:</h2>
           <p>Використовуються для редагування шрифтів для друку (динозаври яких можна зустріти)</p>
           <ul>
-            <li><span class='orange-text'>1mm</span> (мм) = 3.8px</li>
-            <li><span class='orange-text'>1cm</span> (см) = 38px</li>
-            <li><span class='orange-text'>1pt</span> (типографский пункт) = 4/3 px (1.33333333px)</li>
-            <li><span class='orange-text'>1pc</span> (типографская пика) = 16px</li>
-            <li><span class='orange-text'>1in</span> (дюйми) = 2.54cm = 25.4mm = 72pt = 6pc = 96px</li>
+            <li><span class='orange'>1mm</span> (мм) = 3.8px</li>
+            <li><span class='orange'>1cm</span> (см) = 38px</li>
+            <li><span class='orange'>1pt</span> (типографский пункт) = 4/3 px (1.33333333px)</li>
+            <li><span class='orange'>1pc</span> (типографская пика) = 16px</li>
+            <li><span class='orange'>1in</span> (дюйми) = 2.54cm = 25.4mm = 72pt = 6pc = 96px</li>
           </ul>
         </div>
       </div>

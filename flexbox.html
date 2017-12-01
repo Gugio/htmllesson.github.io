@@ -6,8 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
     <title>CSS</title>
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./js/libs/highlight/styles/monokai-sublime.css">
+    <script type="text/javascript" src="./js/libs/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/libs/jquery/jquery.mousewheel.min.js"></script>
+    <script type="text/javascript" src="./js/scripts/slickcustomscroll.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
+    <!--script(type='text/javascript' src='./js/libs/scripts/scroll.js')-->
+    <script type="text/javascript" src="./js/libs/highlight/highlight.pack.js"></script>
   </head>
-  <body>
+  <body rel="slickScroll">
     <nav class="nav-menu"><a class="home-link" href="index.html">home</a>
       <ol class="nav-list">
         <li><a class="nav-link" href="selectors.html">Селектори, Псевдокласи, Каскадність, Псевдоелементи</a></li>
@@ -20,10 +27,10 @@
         <li><a class="nav-link" href="transform.html">Трансформація</a></li>
         <li><a class="nav-link" href="animations.html">Анімація (2D, 3D)</a></li>
         <li><a class="nav-link" href="flexbox.html">Flex-box</a></li>
-        <li><a class="nav-link" href="">Display</a></li>
-        <li><a class="nav-link" href="">Префікси</a></li>
-        <li><a class="nav-link" href="">SVG</a></li>
-        <li><a class="nav-link" href="">Спрайти</a></li>
+        <li><a class="nav-link" href="#">Display</a></li>
+        <li><a class="nav-link" href="#">Префікси</a></li>
+        <li><a class="nav-link" href="#">SVG</a></li>
+        <li><a class="nav-link" href="#">Спрайти</a></li>
       </ol>
     </nav>
     <main class="main-content">
@@ -63,7 +70,7 @@
             </div>
             <h2>Вирівнювання елементів по горизонталі <code>justify-content</code></h2>
             <p>Властивість вирівнює флекс-елементи по-ширині контейнеру, розділяючи вільний простір між елементами. Для їх вирівнювання по-вертикалі використовують <code>align-content</code>.</p>
-            <table class="table">
+            <table class="table striped">
               <colgroup>
                 <col width="180px">
                 <col>
@@ -119,7 +126,7 @@
             </p>
             <h2>Вирівнювання елементів по вертикалі <code>align-items</code></h2>
             <p>Властивість вирівнює флекс-елементи, в тому числі і анонімні по перендикулярній осі.</p>
-            <table class="table" style="margin: 1rem 0; width: 100%;">
+            <table class="table striped" style="margin: 1rem 0; width: 100%;">
               <colgroup>
                 <col>
                 <col>
@@ -176,7 +183,7 @@
             </p>
             <h2><code>flex-direction</code> напрямок головної осі</h2>
             <p>Властивість визначає, яким чином флекс-елементи вкладаються у флекс-контейнер. Флекс-елементи можуть розташовуватись у двох напрямках: горизонтально, як строки, або вертикально, як колонки.</p>
-            <table class="table">
+            <table class="table striped">
               <colgroup>
                 <col width="180px">
                 <col>
@@ -228,7 +235,7 @@
             </p>
             <h2><code>flex-wrap</code> багатостроковість флекс-елементів</h2>
             <p>Властивість визначає, яким чином флекс-елементи будуть вистраюватись, в одну строку, або переноситись на іншу при не достачі місця. За замовчуванням всі елементи вистраюються в одну строку та заповнюють весь доступний простір контейнеру. У випадку фіксованої ширини контейнеру, флекс-елементи беззсовісно вилазять за його межі.</p>
-            <table class="table">
+            <table class="table striped">
               <colgroup>
                 <col width="180px">
                 <col>
@@ -290,7 +297,7 @@
             </p>
             <h2><code>align-content</code> багатострокове вирівнювання</h2>
             <p>Властивість вирівнює строки по вертикалі у флекс-контейнері, дозволяючи керувати вільним простором. <b color="red">Увага!!!</b> Дана властивість працює тільки в тому випадку, якщо перенос строк дозволений, вказаний напрямок головної осі та задана висота контейнеру.</p>
-            <table class="table">
+            <table class="table striped">
               <colgroup>
                 <col width="180px">
                 <col>
@@ -354,7 +361,7 @@
             <p style="font-size: 24px;"><b>Властивості flex-елементів</b></p>
             <h2><code>order</code> порядок відображення елементів</h2>
             <p>Властивість визначає порядок у якому будуть відображатись флекс-елементи. По дефолту заданий порядок дорівнює: 0.</p>
-            <table class="table">
+            <table class="table striped">
               <colgroup>
                 <col width="180px">
                 <col>
@@ -386,7 +393,7 @@
             </p>
             <h2><code>flex-basis</code> базова ширина елементу</h2>
             <p>Властивість дозволяє задати базову ширину флекс-елементу, відносно якої буде відбуватись його розтягнення <code>flex-grow</code>, або ж його звуження <code>flex-shrink</code>.</p>
-            <table class="table">
+            <table class="table striped">
               <colgroup>
                 <col width="180px">
                 <col>
@@ -424,7 +431,7 @@
             </p>
             <h2><code>flex-grow</code> Розтягання елементів</h2>
             <p>властивість визначає коефіціент збільшення ширини флекс-елементу, відносно інших флекс елементів.</p>
-            <table class="table">
+            <table class="table striped">
               <colgroup>
                 <col width="180px">
                 <col>
@@ -471,7 +478,7 @@
             </p>
             <h2><code>flex-shrink</code> звуження елементів</h2>
             <p>Властивість вказує коефіціент звуження флекс-елементу відносно інших. Працює лише у випадку, якщо для елементу задана ширина <code>flex-basis</code>, або <code>width</code></p>
-            <table class="table">
+            <table class="table striped">
               <colgroup>
                 <col width="180px">
                 <col>
@@ -518,7 +525,7 @@
             </p>
             <h2>Одна властивість для задання базової ширини та трансформації елементу: <code>flex</code></h2>
             <p>Властивість являє собою короткий запис трьох властивостей: <code>flex-grow</code>, <code>flex-shrink</code>, <code>flex-basis</code>. Дефолтне значення <code>flex: 0 1 auto;</code>. Задається числовим значенням або ключовими словами <code>none</code>, <code>auto</code></p>
-            <table class="table">
+            <table class="table striped">
               <colgroup>
                 <col width="180px">
                 <col>
@@ -526,15 +533,15 @@
               </colgroup>
               <tr>
                 <td><code>Перше значення - коефіціент розширення</code></td>
-                <td>Натуральне ціле, або дробне число, яке встановлює коефіціент зменшення флекс-елементу. Дефолтне значення: 1.</td>
+                <td>Натуральне ціле, або дробне число, яке встановлює коефіціент збільшення флекс-елементу. Дефолтне значення: 0.</td>
               </tr>
               <tr>
                 <td><code>Друге значення - коефіціент звуження</code></td>
-                <td>Встановлює значення за замовчуванням</td>
+                <td>Натуральне ціле, або дробне число, яке встановлює коефіціент звуження флекс-елементу. Дефолтне значення: 0.</td>
               </tr>
               <tr>
                 <td><code>Третє значення - базова ширина</code></td>
-                <td>Наслідує від батьківського елементу</td>
+                <td>Приймається у одиницях виміру. Задає за базову ширину елементу, відносно якої буде відбуватись звуження/збільшення</td>
               </tr>
               <tr>
                 <td><code>auto</code></td>

@@ -6,8 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
     <title>CSS</title>
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./js/libs/highlight/styles/monokai-sublime.css">
+    <script type="text/javascript" src="./js/libs/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/libs/jquery/jquery.mousewheel.min.js"></script>
+    <script type="text/javascript" src="./js/scripts/slickcustomscroll.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
+    <!--script(type='text/javascript' src='./js/libs/scripts/scroll.js')-->
+    <script type="text/javascript" src="./js/libs/highlight/highlight.pack.js"></script>
   </head>
-  <body>
+  <body rel="slickScroll">
     <nav class="nav-menu"><a class="home-link" href="index.html">home</a>
       <ol class="nav-list">
         <li><a class="nav-link" href="selectors.html">Селектори, Псевдокласи, Каскадність, Псевдоелементи</a></li>
@@ -20,16 +27,16 @@
         <li><a class="nav-link" href="transform.html">Трансформація</a></li>
         <li><a class="nav-link" href="animations.html">Анімація (2D, 3D)</a></li>
         <li><a class="nav-link" href="flexbox.html">Flex-box</a></li>
-        <li><a class="nav-link" href="">Display</a></li>
-        <li><a class="nav-link" href="">Префікси</a></li>
-        <li><a class="nav-link" href="">SVG</a></li>
-        <li><a class="nav-link" href="">Спрайти</a></li>
+        <li><a class="nav-link" href="#">Display</a></li>
+        <li><a class="nav-link" href="#">Префікси</a></li>
+        <li><a class="nav-link" href="#">SVG</a></li>
+        <li><a class="nav-link" href="#">Спрайти</a></li>
       </ol>
     </nav>
     <main class="main-content">
       <div class="container">
         <div class="media">
-          <h1 class="main-title"><code>@media</code></h1>
+          <h1 class="title"><code>@media</code></h1>
           <p><code>@media</code> запити, застосовуються для визначення типу приладу, для якого будуть застосовані стилі. В залежності від параметрів заданих у запиті, будуть застосовуватись задані для них стилі. Медіа-запити додаються в самому кінці таблиці стилів, для надання їм вищого пріорітету.</p>
           <p></p>
           <figure class="code">
@@ -80,7 +87,7 @@
             }
           </figure>
           <h2>Типи пристроїв</h2>
-          <table class="table">
+          <table class="table striped">
             <colgroup>
               <col width="180px">
               <col>
@@ -109,7 +116,7 @@
           </table>
           <h2>Характеристики пристроїв</h2>
           <p>До характеристик пристроїв відносяться параметри які перевіряється.
-            <table class="table">
+            <table class="table striped">
               <colgroup>
                 <col width="180px">
                 <col>

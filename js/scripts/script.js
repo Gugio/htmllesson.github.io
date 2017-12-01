@@ -95,9 +95,18 @@ function resp() {
 
         });
 
+        var syntaxHighlight = $('figure.code');
+
+        syntaxHighlight.each(function(i, block) {
+            hljs.highlightBlock(block);
+
+        });
+
+
     });
 
 
 })(jQuery);
+
 
 

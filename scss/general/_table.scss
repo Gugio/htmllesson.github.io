@@ -55,61 +55,65 @@ td:first-child {
 
 .table {
   display: table;
-  //width: 100%;
-  //max-width: 1000px;
-  margin: 3rem auto;
+  width: 100%;
+  max-width: 1000px;
+  margin: 3rem 0;
 
   // block formatting
-  &-caption {
-    display: table-caption;
-    padding-top: .8em;
-    padding-bottom: .8em;
-    color: $table-caption;
-    text-align: right;
-  }
-
-  &-row {
-    display: table-row;
-  }
-
-  &-cell {
-    display: table-cell;
-    padding: .8em;
-    border-top: .1rem solid $table-border;
-  }
-
-  &-head {
-    display: table-header-group;
-
-    .table-cell {
-      border: {
-        top: .1rem solid $table-border;
-        bottom: .1rem solid $table-border;
-      };
-      font-weight: 700;
-    }
-  }
-
-  &-body {
-    display: table-row-group;
-  }
-
-  &-foot {
-    display: table-footer-group;
-
-    .table-cell {
-      border: {
-        top: .2rem solid $table-border;
-        bottom: .1rem solid $table-border;
-      };
-      font-weight: 700;
-    }
-  }
+  //&-caption {
+  //  display: table-caption;
+  //  padding-top: .8em;
+  //  padding-bottom: .8em;
+  //  color: $table-caption;
+  //  text-align: right;
+  //}
+  //
+  //&-row {
+  //  display: table-row;
+  //}
+  //
+  //&-cell {
+  //  display: table-cell;
+  //  padding: .8em;
+  //  border-top: .1rem solid $table-border;
+  //}
+  //
+  //&-head {
+  //  display: table-header-group;
+  //
+  //  .table-cell {
+  //    border: {
+  //      top: .1rem solid $table-border;
+  //      bottom: .1rem solid $table-border;
+  //    };
+  //    font-weight: 700;
+  //  }
+  //}
+  //
+  //&-body {
+  //  display: table-row-group;
+  //}
+  //
+  //&-foot {
+  //  display: table-footer-group;
+  //
+  //  .table-cell {
+  //    border: {
+  //      top: .2rem solid $table-border;
+  //      bottom: .1rem solid $table-border;
+  //    };
+  //    font-weight: 700;
+  //  }
+  //}
 
   // table formatting
   &.striped {
     tbody tr:nth-child(2n + 1) td {
       background: $table-bg;
+    }
+
+    th {
+      border-bottom: .1rem solid darken($table-bg, 1);
     }
 
     .table-body .table-row:nth-child(2n + 1) .table-cell {
@@ -166,5 +170,27 @@ td:first-child {
     width: 100%;
     min-height: .01%;
     overflow: auto;
+  }
+}
+
+.table.striped {
+  width: 100% !important;
+  margin: 3rem auto;
+
+  tbody {
+    margin-top: .5rem;
+    width: 100%;
+  }
+
+  th {
+    font-weight: 800;
+    border-bottom: 2px solid $base-border;
+  }
+
+  td {
+    padding-bottom: .5rem;
+    padding-top: .5rem;
+
+
   }
 }

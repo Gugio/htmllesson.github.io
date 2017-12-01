@@ -2,4 +2,11 @@
   color: $title-color;
   font-weight: 400;
   text-align: center;
+  font-size: $title-size;
+  margin: .5rem auto;
+}
+
+.subtitle {
+  @extend .title;
+  font-size: $title-size/1.5;
 }
