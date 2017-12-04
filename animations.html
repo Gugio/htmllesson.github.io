@@ -33,7 +33,20 @@
         <li><a class="nav-link" href="#">Спрайти</a></li>
       </ol>
     </nav>
-    <main class="main-content">
+    <main class="main-content css-tutorial">
+      <section class="aside-bar">
+        <ul class="theme-list">
+          <li><a class="theme-item" href="#animation-name">animation-name</a></li>
+          <li><a class="theme-item" href="#animation-duration">animation-duration</a></li>
+          <li><a class="theme-item" href="#animation-timing">animation-timing</a></li>
+          <li><a class="theme-item" href="#animation-delay">animation-delay</a></li>
+          <li><a class="theme-item" href="#animation-count">animation-count</a></li>
+          <li><a class="theme-item" href="#animation-direction">animation-direction</a></li>
+          <li><a class="theme-item" href="#3danimations">3d-animation</a></li>
+          <li><a class="theme-item" href="#perspective-origin">Topic test</a></li>
+        </ul>
+        <div class="slide-btn"></div>
+      </section>
       <div class="container">
         <div class="animations">
           <div class="animation-sample">
@@ -102,7 +115,7 @@
             &emsp; animation-name: <span class="green">my-animation</span><span class="orange">;</span>
             }
           </figure>
-          <h2><code>animation-duration</code></h2>
+          <h2 id="animation-duration"><code>animation-duration</code></h2>
           <p>Властивість визначає, як довго анімація буде відтворюватись. Задається в секундах, або мілісекундах. Якщо для елементу задано більше однієї анімації, можна встановити для них різний час перерахувавши значення через кому.</p>
           <table class="table striped">
             <colgroup>
@@ -128,7 +141,7 @@
             &emsp; animation-duration: <span class="green">2s</span><span class="orange">;</span>
             }
           </figure>
-          <h2><code>animation-timing-function</code></h2>
+          <h2 id="animation-timing"><code>animation-timing-function</code></h2>
           <p> Властивість визначає прискорення/сповільнення анімації, за допомогою часових функцій. Задається за допомогою ключових слів або кривої Базье <code>cubic-bezier(x1, y1, x2, y2)</code>.</p>
           <table class="table striped">
             <colgroup>
@@ -189,7 +202,7 @@
             <div class="anim-container cubic-bezier-4"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
             <div class="anim-container steps"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
           </div>
-          <h2><code>animation-delay</code></h2>
+          <h2 id="animation-delay"><code>animation-delay</code></h2>
           <p>Властивість ігнорує заданий час, що надає можливість окремо запустити кожну анімацію. Від'ємна затримка, починає анімацію з певного моменту всередині її циклу, тобто з часу, який вказаний у затримці. Це дозволяє застосовувати анімацію до кількох елементів з сувом фази, змінюючи тільки час затримки.</p>
           <p>Щоб анімація почалась з середини, потрібно задати від'єнму затримку, рівну половині часу, який встановлений у <code>animation-duration</code></p>
           <table class="table striped">
@@ -212,7 +225,7 @@
             </tr>
           </table>
           <div class="anim-delay-wrapper"><span class="one"></span><span class="two"></span><span class="three"></span><span class="four"></span></div>
-          <h2><code>animation-iteration-count</code></h2>
+          <h2 id="animation-count"><code>animation-iteration-count</code></h2>
           <p>Властивість, яка дозволяє запустити анімацію кілька разів. Значення 0 або від'ємне число, відміняюь анімацію.
             <figure class="code">
               <span class="nc">.selector</span>&emsp;{
@@ -243,7 +256,7 @@
               <td>Наслідує значення властивості від батьківського елементу</td>
             </tr>
           </table>
-          <h2><code>animation-direction</code></h2>
+          <h2 id="animation-direction"><code>animation-direction</code></h2>
           <p>Властивість задає напрямок повтору анімації. Якщо анімація повторюється тільки один раз, то властивість втрачає сенс.
             <figure class="code">
               <span class="nc">.selector</span>&emsp;{
@@ -356,7 +369,7 @@
               <td>Дозволяє залишити анімований елемент у першому ключовому кадрі до початку анімації, та затримувати їх у такому стані.</td>
             </tr>
           </table>
-          <h2 class="anim-subtitle"><div class="front-card">CSS 3d transformations<div class="back-card">CSS 3d transformations</div></div></h2>
+          <h2 class="anim-subtitle" id="3danimations"><div class="front-card">CSS 3d transformations<div class="back-card">CSS 3d transformations</div></div></h2>
           <p>3d трансформації працюють аналогічно з 2d трансформаціями, різниця в тому, що ою'єкти мають змогу пересуватись по осі Z. Щоб почати створювати 3d трансформацію, потрібно встановити властивість <code>perspective</code> для батьківського контейнеру.
             <figure class="code">
               <span class="nc">.parent</span>&emsp;{

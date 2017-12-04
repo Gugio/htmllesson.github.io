@@ -8,13 +8,17 @@
   background-color: $menu-color;
   box-shadow: $box-shadow-black;
   transition: width 250ms ease-in-out;
-  z-index: 10000;
+  z-index: 1000;
 
   &:hover {
     width: 20%;
 
     .nav-block {
       overflow-y: auto;
+    }
+
+    .nav-link {
+      visibility: visible;
     }
   }
 }
@@ -50,21 +54,13 @@
   max-height: 90%;
   padding: 0 0 0 3rem;
   display: block;
-  overflow-y: hidden;
-  overflow-x: hidden;
+  overflow: hidden;
   list-style: none;
   counter-reset: item-number;
 
   li {
     position: relative;
-
-    &:nth-child(-n+9) {
-
-      &::before {
-        left: -36px;
-      }
-
-    }
+    height: 2.2rem;
 
     &::before {
       counter-increment: item-number;
@@ -72,10 +68,13 @@
       position: absolute;
       top: 6px;
       left: -40px;
-      padding: 3px 5px;
+      width: 25px;
+      height: 22px;
       border-radius: 3px;
       background-color: $blue-1;
       font-size: 12px;
+      text-align: center;
+      line-height: 22px;
       color: $white;
       transition: all 180ms ease;
     }
@@ -85,14 +84,11 @@
     position: relative;
     display: block;
     height: 100%;
-    line-height: 1.5rem;
-    padding: .4rem;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    line-height: 1rem;
+
     font: {
-      size: 14px;
-      weight: 600;
-      variant: small-caps;
+      size: 13px;
+      weight: 400;
     };
     transition: all 180ms ease;
 
@@ -113,6 +109,7 @@
 
       }
     }
+
   }
 }
 
