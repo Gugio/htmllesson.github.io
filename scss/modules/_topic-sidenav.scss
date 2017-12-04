@@ -25,13 +25,21 @@
 .slide-btn {
   position: absolute;
   top: 50%;
-  left: -25px;
-  background-color: #666;
+  left: -35px;
+  background-color: $blue-1;
   height: 8.5rem;
-  width: 25px;
+  width: 35px;
   border-bottom-left-radius: $base-border-radius;
   border-top-left-radius: $base-border-radius;
   transform: translateY(-50%);
   transition: opacity 100ms ease-in-out;
+
+  .fa {
+    display: block;
+    color: $white;
+    line-height: 130px;
+    text-align: center;
+
+  }
 
 }
