@@ -38,6 +38,81 @@
       <div class="container">
         <div class="fonts">
           <h1 class="title">Font</h1>
+          <figure class="code">
+            @font-face {
+                            &emsp;font-family: &apos;MyFontName&apos;;
+                            &emsp;src: url(&apos;../fonts/WebFont.eot&apos;) format(&apos;eot&apos;),
+                            &emsp;&emsp;&emsp;url(&apos;../fonts/WebFont.woff&apos;) format(&apos;woff&apos;),
+                            &emsp;&emsp;&emsp;url(&apos;../fonts/WebFont.ttf&apos;) format(&apos;truetype&apos;),
+                            &emsp;&emsp;&emsp;url(&apos;../fonts/WebFont.svg&apos;) format(&apos;svg&apos;);
+                            &emsp;font-weight: 400;
+                            &emsp;font-style: normal;
+                            }
+            <span>@font-face</span> {
+                            &emsp;<span>font-family</span>: &apos;MyFontName&apos;;
+                            &emsp;<span>src</span>: url(&apos;../fonts/WebFont-Bold.eot&apos;) format(&apos;eot&apos;),
+                            &emsp;&emsp;&emsp;url(&apos;../fonts/WebFont-Bold.woff&apos;) format(&apos;woff&apos;),
+                            &emsp;&emsp;&emsp;url(&apos;../fonts/WebFont-Bold.ttf&apos;) format(&apos;truetype&apos;),
+                            &emsp;&emsp;&emsp;url(&apos;../fonts/WebFont-Bold.svg&apos;) format(&apos;svg&apos;);
+                            &emsp;font-weight: 700;
+                            &emsp;font-style: normal;
+                            }
+                            @font-face {
+                            &emsp;font-family: &apos;MyFontName&apos;;
+                            &emsp;src: url(&apos;../fonts/WebFont-Italic.eot&apos;) format(&apos;eot&apos;),
+                            &emsp;&emsp;&emsp;url(&apos;../fonts/WebFont-Italic.woff&apos;) format(&apos;woff&apos;),
+                            &emsp;&emsp;&emsp;url(&apos;../fonts/WebFont-Italic.ttf&apos;) format(&apos;truetype&apos;),
+                            &emsp;&emsp;&emsp;url(&apos;../fonts/WebFont-Italic.svg&apos;) format(&apos;svg&apos;);
+                            &emsp;font-weight: normal;
+                                font-style: italic;
+                         }
+          </figure>
+          <!--h2 SCSS-->
+          <!---->
+          <!--    figure.code-->
+          <!--        | $base-font-data : (-->
+          <!--        | &apos;font-folder, &apos;font-file-name&apos;, &apos;font-local-1&apos;, &apos;font-local-2&apos;, &apos;font-weight&apos;-->
+          <!--        | 1: (&apos;opensans/&apos;, &apos;open-sans-regular&apos;, &apos;Open Sans&apos;, &apos;Open-Sans-Bold&apos;, 400),-->
+          <!--        | 2: (&apos;opensans/&apos;, &apos;open-sans-bold&apos;, &apos;Open Sans&apos;, &apos;OpenSans-Bold&apos;, 700)-->
+          <!--        | 3: (&apos;opensans/&apos;, &apos;open-sans-italic&apos;, &apos;Open Sans&apos;, &apos;OpenSans-Italic&apos;, 400)-->
+          <!--        | );-->
+          <!--        | @for $i from 1 through length($base-font-data) {-->
+          <!--        | @font-face{-->
+          <!--        | font-family: MyFontName;-->
+          <!--        | font-style: normal;-->
+          <!--        | font-weight: nth(map-get($base-font-data, $i), 5);-->
+          <!--        | src: local(nth(map-get($base-font-data, $i), 3)), local(nth(map-get($base-font-data, $i),-->
+          <!--        | 4)),-->
+          <!--        | url(&apos;{&apos;../fonts/&apos;}#{nth(map-get($base-font-data, $i),-->
+          <!--        | 1)}{nth(map - get($base - font - data, $i), 2)}.woff2&apos;) format(&apos;woff2&apos;),-->
+          <!--        | url(&apos;{&apos;../fonts/&apos;}#{nth(map-get($base-font-data, $i),-->
+          <!--        | 1)}{nth(map - get($base - font - data, $i), 2)}.woff&apos;) format(&apos;woff&apos;);-->
+          <!--        | }-->
+          <!--        | }-->
+          <table class="table striped">
+            <thead></thead>
+            <tr>
+              <th>Формат</th>
+              <th>Поддерживают браузеры</th>
+            </tr>
+            <tbody></tbody>
+            <tr>
+              <td>eot</td>
+              <td><ul class="browserCheck"><li>IE6+</li></ul></td>
+            </tr>
+            <tr>
+              <td>woff</td>
+              <td><ul class="browserCheck"><li>IE9+</li><li class="ff">FF 3.6+</li><li class="opera">11+</li><li class="chrome">Chrome 6+</li><li class="safari">5.1+</li><li style="background: 0">Opera mobile 11+</li></ul></td>
+            </tr>
+            <tr>
+              <td>ttf, otf</td>
+              <td><ul class="browserCheck"><li class="ff">FF 3.5+</li><li class="opera">10+</li><li class="chrome">Chrome 4+</li><li class="safari">3.2+</li><li style="background: 0">Opera mobile 10+</li><li style="background: 0">iOS 4.2+</li><li style="background: 0">Android 2.2+</li></ul></td>
+            </tr>
+            <tr>
+              <td>svg</td>
+              <td><ul class="browserCheck"><li class="opera">9+</li><li class="chrome">Chrome 4+</li><li class="safari">3.2+</li><li style="background: 0">Opera mobile 10+</li><li style="background: 0">iOS</li><li style="background: 0">Android 3</li></ul></td>
+            </tr>
+          </table>
           <h2 class="subtitle">Властивості шрифту</h2>
           <p style="text-indent: 3rem;">Шрифт змінюється за допомоогою властивостей:<span class="blue">font</span>;<span class="blue">font-family</span>;<span class="blue">font-style</span>;<span class="blue">font-variant</span>;<span class="blue">font-weight</span>;<span class="blue">font-size</span>які описан докладніше нижче в таблиці</p>
           <p><b><span class="orange">font</span>: italic small-caps bold 16px/1.5 Arial, sans-serif;</b></p>

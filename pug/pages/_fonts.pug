@@ -3,7 +3,97 @@ main.main-content.css-tutorial
 
     .container
         .fonts
+
             h1.title Font
+
+            figure.code
+                | @font-face {
+                |                 &emsp;font-family: &apos;MyFontName&apos;;
+                |                 &emsp;src: url(&apos;../fonts/WebFont.eot&apos;) format(&apos;eot&apos;),
+                |                 &emsp;&emsp;&emsp;url(&apos;../fonts/WebFont.woff&apos;) format(&apos;woff&apos;),
+                |                 &emsp;&emsp;&emsp;url(&apos;../fonts/WebFont.ttf&apos;) format(&apos;truetype&apos;),
+                |                 &emsp;&emsp;&emsp;url(&apos;../fonts/WebFont.svg&apos;) format(&apos;svg&apos;);
+                |                 &emsp;font-weight: 400;
+                |                 &emsp;font-style: normal;
+                |                 }
+                |
+                span @font-face
+                |  {
+                |                 &emsp;
+                span font-family
+                | : &apos;MyFontName&apos;;
+                |                 &emsp;
+                span src
+                | : url(&apos;../fonts/WebFont-Bold.eot&apos;) format(&apos;eot&apos;),
+                |                 &emsp;&emsp;&emsp;url(&apos;../fonts/WebFont-Bold.woff&apos;) format(&apos;woff&apos;),
+                |                 &emsp;&emsp;&emsp;url(&apos;../fonts/WebFont-Bold.ttf&apos;) format(&apos;truetype&apos;),
+                |                 &emsp;&emsp;&emsp;url(&apos;../fonts/WebFont-Bold.svg&apos;) format(&apos;svg&apos;);
+                |                 &emsp;font-weight: 700;
+                |                 &emsp;font-style: normal;
+                |                 }
+                |                 @font-face {
+                |                 &emsp;font-family: &apos;MyFontName&apos;;
+                |                 &emsp;src: url(&apos;../fonts/WebFont-Italic.eot&apos;) format(&apos;eot&apos;),
+                |                 &emsp;&emsp;&emsp;url(&apos;../fonts/WebFont-Italic.woff&apos;) format(&apos;woff&apos;),
+                |                 &emsp;&emsp;&emsp;url(&apos;../fonts/WebFont-Italic.ttf&apos;) format(&apos;truetype&apos;),
+                |                 &emsp;&emsp;&emsp;url(&apos;../fonts/WebFont-Italic.svg&apos;) format(&apos;svg&apos;);
+                |                 &emsp;font-weight: normal;
+                |                     font-style: italic;
+                |              }
+
+
+            //h2 SCSS
+            //
+            //    figure.code
+            //        | $base-font-data : (
+            //        | &apos;font-folder, &apos;font-file-name&apos;, &apos;font-local-1&apos;, &apos;font-local-2&apos;, &apos;font-weight&apos;
+            //        | 1: (&apos;opensans/&apos;, &apos;open-sans-regular&apos;, &apos;Open Sans&apos;, &apos;Open-Sans-Bold&apos;, 400),
+            //        | 2: (&apos;opensans/&apos;, &apos;open-sans-bold&apos;, &apos;Open Sans&apos;, &apos;OpenSans-Bold&apos;, 700)
+            //        | 3: (&apos;opensans/&apos;, &apos;open-sans-italic&apos;, &apos;Open Sans&apos;, &apos;OpenSans-Italic&apos;, 400)
+            //        | );
+            //        | @for $i from 1 through length($base-font-data) {
+            //        | @font-face{
+            //        | font-family: MyFontName;
+            //        | font-style: normal;
+            //        | font-weight: nth(map-get($base-font-data, $i), 5);
+            //        | src: local(nth(map-get($base-font-data, $i), 3)), local(nth(map-get($base-font-data, $i),
+            //        | 4)),
+            //        | url(&apos;{&apos;../fonts/&apos;}#{nth(map-get($base-font-data, $i),
+            //        | 1)}{nth(map - get($base - font - data, $i), 2)}.woff2&apos;) format(&apos;woff2&apos;),
+            //        | url(&apos;{&apos;../fonts/&apos;}#{nth(map-get($base-font-data, $i),
+            //        | 1)}{nth(map - get($base - font - data, $i), 2)}.woff&apos;) format(&apos;woff&apos;);
+            //        | }
+            //        | }
+
+
+            table.table.striped
+                thead
+                tr
+                    th Формат
+                    th Поддерживают браузеры
+
+
+                tbody
+                tr
+                    td eot
+                    td <ul class="browserCheck"><li>IE6+</li></ul>
+
+                tr
+                    td woff
+                    td <ul class="browserCheck"><li>IE9+</li><li class="ff">FF 3.6+</li><li class="opera">11+</li><li class="chrome">Chrome 6+</li><li class="safari">5.1+</li><li style="background: 0">Opera mobile 11+</li></ul>
+
+                tr
+                    td ttf, otf
+                    td <ul class="browserCheck"><li class="ff">FF 3.5+</li><li class="opera">10+</li><li class="chrome">Chrome 4+</li><li class="safari">3.2+</li><li style="background: 0">Opera mobile 10+</li><li style="background: 0">iOS 4.2+</li><li style="background: 0">Android 2.2+</li></ul>
+
+                tr
+                    td svg
+                    td <ul class="browserCheck"><li class="opera">9+</li><li class="chrome">Chrome 4+</li><li class="safari">3.2+</li><li style="background: 0">Opera mobile 10+</li><li style="background: 0">iOS</li><li style="background: 0">Android 3</li></ul>
+
+
+
+
+
             h2.subtitle Властивості шрифту
             p(style="text-indent: 3rem;")
                 | Шрифт змінюється за допомоогою властивостей:
