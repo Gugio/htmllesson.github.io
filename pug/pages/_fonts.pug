@@ -1,792 +1,820 @@
+main.main-content.css-tutorial
 
 
-.container
-    .fonts
-        h1.title Font
-        h2.subtitle Властивості шрифту
-        p(style="text-indent: 3rem;")
-            | Шрифт змінюється за допомоогою властивостей:
-            span.blue font
-            | ;
-            span.blue font-family
-            | ;
-            span.blue font-style
-            | ;
-            span.blue font-variant
-            | ;
-            span.blue font-weight
-            | ;
-            span.blue font-size
-            | які описан докладніше нижче в таблиці
-        p
-            b
-                span.orange font
-                | : italic small-caps bold 16px/1.5 Arial, sans-serif;
-        table.table.striped
-            colgroup
-                col
-                col
-                col
-                col(width="270px")
-            thead
-                tr.table-heading
-                    th Властивість
-                    th Значення
-                    th Опис
-                    th Приклад
-            tbody
-                tr
-                    td
-                        span.blue font
-                    td
-                        | Параметр який дозволяє задати одноасно кілька характеристик для тексту, шрифту (
-                        span.green font
-                        |  групує такі властивості, саме у такому порядку):
-                    td
-                        | font-style
-                        br
-                        | font-variant
-                        br
-                        | font-weight
-                        br
-                        | font-size
-                        br
-                        | line-height
-                        br
-                        | font-family
-                        br
-                    td
+    .container
+        .fonts
+            h1.title Font
+            h2.subtitle Властивості шрифту
+            p(style="text-indent: 3rem;")
+                | Шрифт змінюється за допомоогою властивостей:
+                span.blue font
+                | ;
+                span.blue font-family
+                | ;
+                span.blue font-style
+                | ;
+                span.blue font-variant
+                | ;
+                span.blue font-weight
+                | ;
+                span.blue font-size
+                | які описан докладніше нижче в таблиці
+            p
+                b
+                    span.orange font
+                    | : italic small-caps bold 16px/1.5 Arial, sans-serif;
 
-                tr
-                    td
-                        span.blue font-family
-                    td
-                        ul
-                            li
-                                span.green serif
-                                | -
-                                span(style="font-family: serif") шрифти з засічками, типу Times
-                            |
-                            li
-                                span.green sans-serif
-                                | -
-                                span(style="font-family: sans-serif") рублені шрифти, типу Arial
-                            |
-                            li
-                                span.green cursive
-                                | -
-                                span(style="font-family: cursive") курсивні шрифти
-                            |
-                            li
-                                span.green fantasy
-                                | -
-                                span(style="font-family: fantasy") декоративні шрифти
-                            |
-                            li
-                                span.green monospace
-                                | -
-                                span(style="font-family: monospace") моноширні шрифти (ширина кожного символу - однакова)
-                    |
-                    td Задає список використовуваних шрифтів
-                    |
-                    td
-                        | .selector {
-                        br
-                        |  font-family: "FontName", serif;
-                        br
-                        | }
-                |
-                tr
-                    td
-                        span.blue font-style
-                    |
-                    td
-                        ul
-                            li
-                                span.green normal
-                                | -
-                                span(style="font-style: normal") звичайне начертання
-                            |
-                            li
-                                span.green italic
-                                | -
-                                span(style="font-style: italic") курсивні начертання
-                            |
-                            li
-                                span.green oblique
-                                | -
-                                span(style="font-style: oblique") нахилене начертання
-                            |
-                            li
-                                span.green inherit
-                                | -
-                                span(style="font-style: inherit") успадковує значення від батьківського елементу
-                    |
-                    td Нормальний шрифт, Курсив, Наклонний шрифт
-                    |
-                    td
-                        | .selector {
-                        br
-                        |  font-style: italic;
-                        br
-                        | }
-                |
-                tr
-                    td
-                        span.blue font-variant
-                    |
-                    td
-                        ul
-                            li
-                                span.green normal
-                                | -
-                                span(style="font-variant: normal") Без змін
-                            |
-                            li
-                                span.green small-caps
-                                | -
-                                span(style="font-variant: small-caps") Модифікує всі строкові символи, як заглавні без зміни розміру
-                            |
-                            li
-                                span.green inherit
-                                | -
-                                span(style="font-variant: inherit") успадковується від батька
-                    |
-                    td Задає начертання літер
-                    |
-                    td
-                        | .selector {
-                        br
-                        |  font-variant: normal;
-                        br
-                        | }
-                |
-                tr
-                    td
-                        span.blue font-weight
-                    |
-                    td
-                        ul
-                            li
-                                span.green normal
-                                | -
-                                span(style="font-weight: normal") значення дорівнює - 400
-                            |
-                            li
-                                span.green bold
-                                | -
-                                span(style="font-weight: bold") напівжирне начертання
-                            |
-                            li
-                                span.green bolder
-                                | -
-                                span(style="font-weight: bolder") змінює насиченість відносно батьківського
-                            |
-                            li
-                                span.green lighter
-                                | -
-                                span(style="font-weight: lighter") змінює насиченість відносно батьківського
-                            |
-                            li
-                                span.green 100-900 (встановлено: 500)
-                                | -
-                                span(style="font-weight: 500") використовуються умовні одиниці
-                            |
-                            li(style="white-space: pre")
-                                span(style="font-weight: 100") 100	Thin (Hairline)
+            table.table.striped
+                colgroup
+                    col
+                    col
+                    col
+                    col(width="270px")
+                thead
+                    tr.table-heading
+                        th Властивість
+                        th Значення
+                        th Опис
+                        th Приклад
+                tbody
+                    tr
+                        td
+                            span.blue font
+                        td
+                            | Параметр який дозволяє задати одноасно кілька характеристик для тексту, шрифту (
+                            span.green font
+                            |  групує такі властивості, саме у такому порядку):
+                        td
+                            | font-style
+                            br
+                            | font-variant
+                            br
+                            | font-weight
+                            br
+                            | font-size
+                            br
+                            | line-height
+                            br
+                            | font-family
+                            br
+                        td
+
+                    tr
+                        td
+                            span.blue font-family
+                        td
+                            ul
+                                li
+                                    span.green serif
+                                    | -
+                                    span(style="font-family: serif") шрифти з засічками, типу Times
                                 |
-                                span(style="font-weight: 200") 200	Extra Light (Ultra Light)
+                                li
+                                    span.green sans-serif
+                                    | -
+                                    span(style="font-family: sans-serif") рублені шрифти, типу Arial
                                 |
-                                span(style="font-weight: 300") 300	Light
+                                li
+                                    span.green cursive
+                                    | -
+                                    span(style="font-family: cursive") курсивні шрифти
                                 |
-                                span(style="font-weight: 400") 400	Normal
+                                li
+                                    span.green fantasy
+                                    | -
+                                    span(style="font-family: fantasy") декоративні шрифти
                                 |
-                                span(style="font-weight: 500") 500	Medium
-                                |
-                                span(style="font-weight: 600") 600	Semi Bold (Demi Bold)
-                                |
-                                span(style="font-weight: 700") 700	Bold
-                                |
-                                span(style="font-weight: 800") 800	Extra Bold (Ultra Bold)
-                                |
-                                span(style="font-weight: 900") 900	Black (Heavy)
-                    |
-                    td Задає начертання шрифта
-                    |
-                    td
-                        | .selector {
-                        br
-                        |  font-weight: bold;
-                        br
-                        | }
-                |
-                tr
-                    td
-                        span.blue font-size
-                    |
-                    td
-                        img(src="../../img/font.png")
+                                li
+                                    span.green monospace
+                                    | -
+                                    span(style="font-family: monospace") моноширні шрифти (ширина кожного символу - однакова)
                         |
-                        ul
-                            li
-                                span.green(style="font-size: xx-small") xx-small
-                            |
-                            li
-                                span.green(style="font-size: x-small") x-small
-                            |
-                            li
-                                span.green(style="font-size: small") small
-                            |
-                            li
-                                span.green(style="font-size: medium") medium
-                            |
-                            li
-                                span.green(style="font-size: large") large
-                            |
-                            li
-                                span.green(style="font-size: x-large") x-large
-                            |
-                            li
-                                span.green(style="font-size: xx-large") xx-large
+                        td Задає список використовуваних шрифтів
+                        |
+                        td
+                            | .selector {
+                            br
+                            |  font-family: "FontName", serif;
+                            br
+                            | }
                     |
-                    td
-                        | Задається у можливих значеннях:
-                        span.green(style="word-spacing: 1rem") px rem em pt %
+                    tr
+                        td
+                            span.blue font-style
+                        |
+                        td
+                            ul
+                                li
+                                    span.green normal
+                                    | -
+                                    span(style="font-style: normal") звичайне начертання
+                                |
+                                li
+                                    span.green italic
+                                    | -
+                                    span(style="font-style: italic") курсивні начертання
+                                |
+                                li
+                                    span.green oblique
+                                    | -
+                                    span(style="font-style: oblique") нахилене начертання
+                                |
+                                li
+                                    span.green inherit
+                                    | -
+                                    span(style="font-style: inherit") успадковує значення від батьківського елементу
+                        |
+                        td Нормальний шрифт, Курсив, Наклонний шрифт
+                        |
+                        td
+                            | .selector {
+                            br
+                            |  font-style: italic;
+                            br
+                            | }
                     |
-                    td
-                        | .selector {
-                        br
-                        |  font-size: 18px;
-                        br
-                        | }
-                |
-                tr
-                    td
-                        span.blue font-stretch
+                    tr
+                        td
+                            span.blue font-variant
+                        |
+                        td
+                            ul
+                                li
+                                    span.green normal
+                                    | -
+                                    span(style="font-variant: normal") Без змін
+                                |
+                                li
+                                    span.green small-caps
+                                    | -
+                                    span(style="font-variant: small-caps") Модифікує всі строкові символи, як заглавні без зміни розміру
+                                |
+                                li
+                                    span.green inherit
+                                    | -
+                                    span(style="font-variant: inherit") успадковується від батька
+                        |
+                        td Задає начертання літер
+                        |
+                        td
+                            | .selector {
+                            br
+                            |  font-variant: normal;
+                            br
+                            | }
                     |
-                    td
-                        ul
-                            li
-                                span.green condensed (ultra-, extra-, semi- )
-                                | -
-                                span(style="font-stretch: condensed;") guba karo mate senom
+                    tr
+                        td
+                            span.blue font-weight
+                        |
+                        td
+                            ul
+                                li
+                                    span.green normal
+                                    | -
+                                    span(style="font-weight: normal") значення дорівнює - 400
+                                |
+                                li
+                                    span.green bold
+                                    | -
+                                    span(style="font-weight: bold") напівжирне начертання
+                                |
+                                li
+                                    span.green bolder
+                                    | -
+                                    span(style="font-weight: bolder") змінює насиченість відносно батьківського
+                                |
+                                li
+                                    span.green lighter
+                                    | -
+                                    span(style="font-weight: lighter") змінює насиченість відносно батьківського
+                                |
+                                li
+                                    span.green 100-900 (встановлено: 500)
+                                    | -
+                                    span(style="font-weight: 500") використовуються умовні одиниці
+                                |
+                                li(style='display: flex; flex-flow: column;')
+                                    span(style="font-weight: 100") 100	Thin (Hairline)
+                                    |
+                                    span(style="font-weight: 200") 200	Extra Light (Ultra Light)
+                                    |
+                                    span(style="font-weight: 300") 300	Light
+                                    |
+                                    span(style="font-weight: 400") 400	Normal
+                                    |
+                                    span(style="font-weight: 500") 500	Medium
+                                    |
+                                    span(style="font-weight: 600") 600	Semi Bold (Demi Bold)
+                                    |
+                                    span(style="font-weight: 700") 700	Bold
+                                    |
+                                    span(style="font-weight: 800") 800	Extra Bold (Ultra Bold)
+                                    |
+                                    span(style="font-weight: 900") 900	Black (Heavy)
+                        |
+                        td Задає начертання шрифта
+                        |
+                        td
+                            | .selector {
+                            br
+                            |  font-weight: bold;
+                            br
+                            | }
+                    |
+                    tr
+                        td
+                            span.blue font-size
+                        |
+                        td
+                            img(src="../../img/font.png")
                             |
-                            li
-                                span.green normal
-                                | -
-                                span(style="font-stretch: condensed;") guba karo mate senom
-                            |
-                            li
-                                span.green expanded (ultra-, extra-, semi- )
-                                | -
-                                span(style="font-stretch: expanded") guba karo mate senom
+                            ul
+                                li
+                                    span.green(style="font-size: xx-small") xx-small
+                                |
+                                li
+                                    span.green(style="font-size: x-small") x-small
+                                |
+                                li
+                                    span.green(style="font-size: small") small
+                                |
+                                li
+                                    span.green(style="font-size: medium") medium
+                                |
+                                li
+                                    span.green(style="font-size: large") large
+                                |
+                                li
+                                    span.green(style="font-size: x-large") x-large
+                                |
+                                li
+                                    span.green(style="font-size: xx-large") xx-large
+                        |
+                        td
+                            | Задається у можливих значеннях:
+                            span.green(style="word-spacing: 1rem") px rem em pt %
+                        |
+                        td
+                            | .selector {
+                            br
+                            |  font-size: 18px;
+                            br
+                            | }
                     |
-                    td хрень неробоча
-                    |
-                    td
-        |
-        h2.title Властивості тексту
-        |
-        p(style="text-indent: 3rem;")
-            | Крім змін параметру шрифтів, можливо керувати і властивостями всього тексту.
-        |
-        table.table.striped
-            colgroup
-                col
-                |
-                col
-                |
-                col(width="200px")
-                |
-                col(width="260px")
+                    tr
+                        td
+                            span.blue font-stretch
+                        |
+                        td
+                            ul
+                                li
+                                    span.green condensed (ultra-, extra-, semi- )
+                                    | -
+                                    span(style="font-stretch: condensed;") guba karo mate senom
+                                |
+                                li
+                                    span.green normal
+                                    | -
+                                    span(style="font-stretch: condensed;") guba karo mate senom
+                                |
+                                li
+                                    span.green expanded (ultra-, extra-, semi- )
+                                    | -
+                                    span(style="font-stretch: expanded") guba karo mate senom
+                        |
+                        td хрень неробоча
+                        |
+                        td
             |
-            thead
-                tr.table-heading
-                    th Властивість
-                    |
-                    th Значення
-                    |
-                    th Опис
-                    |
-                    th Приклад
+            h2.title Властивості тексту
             |
-            tbody
-                tr
-                    td
-                        span.blue line-height
+            p(style="text-indent: 3rem;")
+                | Крім змін параметру шрифтів, можливо керувати і властивостями всього тексту.
+            |
+            table.table.striped
+                colgroup
+                    col
                     |
-                    td
-                        | Задається у можливих значеннях:
-                        span.green(style="word-spacing: 1rem") px rem em pt %
+                    col
                     |
-                    td
-                        span(style="line-height: 40px") Міжстроковий інтервал, задає висоту для кожної строки тексту
+                    col(width="200px")
                     |
-                    td
-                        | .selector {
-                        br
-                        |  line-height: 1.2;
-                        br
-                        | }
+                    col(width="260px")
                 |
-                tr
-                    td
-                        span.blue text-decoration
+                thead
+                    tr.table-heading
+                        th Властивість
+                        |
+                        th Значення
+                        |
+                        th Опис
+                        |
+                        th Приклад
+                |
+                tbody
+                    tr
+                        td
+                            span.blue line-height
+                        |
+                        td
+                            | Задається у можливих значеннях:
+                            span.green(style="word-spacing: 1rem") px rem em pt %
+                        |
+                        td
+                            span(style="line-height: 40px") Міжстроковий інтервал, задає висоту для кожної строки тексту
+                        |
+                        td
+                            | .selector {
+                            br
+                            |  line-height: 1.2;
+                            br
+                            | }
                     |
-                    td
-                        ul.text-decor
-                            li
-                                span.green line-through
-                                | -
-                                span(style="text-decoration: line-through") створює зачеркнутий текст
+                    tr
+                        td
+                            span.blue text-decoration
+                        |
+                        td
+                            ul.text-decor
+                                li
+                                    span.green line-through
+                                    | -
+                                    span(style="text-decoration: line-through") створює зачеркнутий текст
+                                |
+                                li
+                                    span.green overline
+                                    | -
+                                    span(style="text-decoration: overline") створює лінію над текстом
+                                |
+                                li
+                                    span.green underline
+                                    | -
+                                    span(style="text-decoration: underline") створює лінію під текстом
+                                |
+                                li
+                                    span.green none
+                                    | -
+                                    span(style="text-decoration: none") без декорацій тексту
+                                |
+                                li
+                                    span.green inherit
+                                    | -
+                                    span(style="text-decoration: inherit") наслідує значення батьківського елементу
+                        |
+                        td Задає декорацію для тексту
+                        |
+                        td
+                            | .selector {
+                            br
+                            |  text-decoration: underline;
+                            br
+                            | }
+                    |
+                    tr
+                        td
+                            span.blue text-transform
+                        |
+                        td
+                            ul
+                                li
+                                    span.green capitalize
+                                    span(style="text-transform: capitalize") - перший символ кожного слова буде заглавним
+                                |
+                                li
+                                    span.green lowercase
+                                    span(style="text-transform: lowercase") - всі символи в нижньому реєстрі
+                                |
+                                li
+                                    span.green uppercase
+                                    span(style="text-transform: uppercase") - всі символи у верхньому реєстрі
+                                |
+                                li
+                                    span.green none
+                                    span(style="text-transform: none") - не змінює символи
+                                |
+                                li
+                                    span.green inherit
+                                    span(style="text-transform: inherit") - успатковується від бадька
+                        |
+                        td Задає трансформацію для тексту
+                        |
+                        td
+                            | .selector {
+                            br
+                            |  text-transform: uppercase;
+                            br
+                            | }
+                    |
+                    tr
+                        td(style="vertical-align: top;")
+                            span.blue text-align
+                            | - визначається для
+                            |                         батьківського елементу з текстом.
+                        |
+                        td
+                            div(style="width: 50%; margin: 1rem; padding: 1rem; text-align: center; font-size: small; border: 1px solid #ededed;")
+                                span.green center
+                                |  - вирівнює весь текст по центру батьківського
+                                |                             елементу.
                             |
-                            li
-                                span.green overline
-                                | -
-                                span(style="text-decoration: overline") створює лінію над текстом
+                            div(style="width: 50%; margin: 1rem; padding: 1rem; text-align: justify; font-size: small; border: 1px solid #ededed;")
+                                span.green justify
+                                |  - вирівнювання тексту по ширині, одночасно по правому
+                                |                             та лівому краю. (додаються пробіли між словами).
                             |
-                            li
-                                span.green underline
-                                | -
-                                span(style="text-decoration: underline") створює лінію під текстом
+                            div(style="width: 50%; margin: 1rem; padding: 1rem; text-align: left; font-size: small; border: 1px solid #ededed;")
+                                span.green left
+                                |  - вирівнювання по лівому краю.
                             |
-                            li
+                            div(style="width: 50%; margin: 1rem; padding: 1rem; text-align: right; font-size: small; border: 1px solid #ededed;")
+                                span.green right
+                                |  - вирівнювання по правому краю.
+                            |
+                            div(style="width: 50%; margin: 1rem; padding: 1rem; text-align: inherit; font-size: small; border: 1px solid #ededed;")
+                                span.green inherit
+                                |  - успатковується від батьківського елементу
+                            |
+                            div(style="width: 50%; margin: 1rem; padding: 1rem; text-align: start; font-size: small; border: 1px solid #ededed;")
+                                span.green start
+                                |  - аналог
+                                span.green left
+                                | , якщо текст -
+                                |                             зліва направо і
+                                span.green right
+                                | , якщо зправа наліво.
+                            |
+                            div(style="width: 50%; margin: 1rem; padding: 1rem; text-align: end; font-size: small; border: 1px solid #ededed;")
+                                span.green end
+                                |  - аналог для
+                                span.green right
+                                | , якщо текст
+                                |                             зліва направо і
+                                span.green left
+                                | , якщо текст - зправа наліво.
+                        |
+                        td(style="vertical-align: top;") Вирівнювання тексту
+                        |
+                        td(style="vertical-align: top;")
+                            | .selector {
+                            br
+                            |  text-align: justify;
+                            br
+                            | }
+                    |
+                    tr
+                        td
+                            span.blue text-indent
+                        |
+                        td
+                            | Задається у можливих значеннях:
+                            span.green(style="word-spacing: 1rem") px rem em pt %
+                            |
+                            div(style="width: 70%; margin: 1rem; padding: 1rem; text-indent: 3rem; font-size: small; border: 1px solid #ededed;")
+                                | Lorem ipsum dolor sit amet, cum an diam everti civibus, ut nam clita fuisset interesset.
+                                | Reque postulant quaerendum te mea, quo cu affert lobortis comprehensam. Ut usu praesent
+                                | efficiantur, ludus placerat invenire eu mea.
+                        |
+                        td відступ пешої строки
+                        |
+                        td
+                            | .selector {
+                            br
+                            |  text-indent: 3rem;
+                            br
+                            | }
+                    |
+                    tr
+                        td
+                            span.blue text-overflow
+                        |
+                        td
+                            span.green(style="word-spacing: 1rem") clip
+                            |
+                            div(style="width: 300px; margin: 1rem; padding: 1rem; overflow: hidden; white-space: nowrap; text-overflow: clip; font-size: small; border: 1px solid #ededed;")
+                                | Lorem ipsum dolor sit amet, cum an diam everti civibus, ut nam clita fuisset interesset.
+                                | Reque postulant quaerendum te mea, quo cu affert lobortis comprehensam. Ut usu praesent
+                                | efficiantur, ludus placerat invenire eu mea. Ea has homero propriae liberavisse, et falli
+                                | cotidieque vix, nobis essent vituperata eu mel. No mea recteque disputando reformidans.
+                            |
+                            span.green(style="word-spacing: 1rem") ellipsis
+                            |
+                            div(style="width: 300px; margin: 1rem; padding: 1rem; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-size: small; border: 1px solid #ededed;")
+                                | Lorem ipsum dolor sit amet, cum an diam everti civibus, ut nam clita fuisset interesset.
+                                | Reque postulant quaerendum te mea, quo cu affert lobortis comprehensam. Ut usu praesent
+                                | efficiantur, ludus placerat invenire eu mea. Ea has homero propriae liberavisse, et falli
+                                | cotidieque vix, nobis essent vituperata eu mel. No mea recteque disputando reformidans.
+                        |
+                        td
+                            | текст обрізається за розміром області
+                            br
+                            |                         текс обрізається в кінці додаються три крапки
+                        |
+                        td
+                            | .selector {
+                            br
+                            |  text-overflow: 666px;
+                            br
+                            | }
+                    |
+                    tr
+                        td
+                            span.blue text-shadow
+                        |
+                        td
+                            p
+                                | горизонтальне зміщення
+                                br
+                                |                             вертикальне зміщення
+                                br
+                                |                             радіус розмиття тіні
+                            |
+                            p
+                                | У даному прикладі, для параметру
+                                span.green text-shadow
+                                |  вказано:
+                                |
+                                br
+                                b text-shadow: 2px 2px 5px rgba(100, 0, 255, .8);}
+                            |
+                            div(style="width: 300px; margin: 0 1rem; padding: 1rem; border: 1px solid #ededed; font-size: small; text-shadow: 2px 2px 5px rgba(100, 0, 255, .8);")
+                                | Lorem ipsum dolor sit amet, cum an diam everti civibus, ut nam clita fuisset interesset.
+                                | Reque postulant quaerendum te mea, quo cu affert lobortis comprehensam.
+                        |
+                        td
+                            | тінь тексту
+                            br
+                            |                         (px, em, rem)
+                        |
+                        td
+                            | .selector {
+                            br
+                            |  text-shadow: 2px 5px 20px rgba(0, 0, 0, .8);
+                            br
+                            | }
+                    |
+                    tr
+                        td
+                            span.blue color
+                        |
+                        td
+                            p
+                                | У даному прикладі, для параметру
+                                span.green color
+                                |  вказано:
+                                br
+                                |
+                                b color: rgba(100, 0, 255, .8);
+                            |
+                            div(style=" margin: 0 1rem; padding: 1rem; border: 1px solid #ededed; font-size: small; color: rgba(255,0,250,0.8);")
+                                | Lorem ipsum dolor sit amet, cum an diam everti civibus, ut nam clita fuisset interesset.
+                        |
+                        td задає колір тексту у будь якій вказаній формі для кольору
+                        |
+                        td
+                            | .selector {
+                            br
+                            |  color: #666666;
+                            br
+                            | }
+                    |
+                    tr
+                        td
+                            span.blue letter-spacing
+                        |
+                        td
+                            | Задається у можливих значеннях:
+                            span.green(style="word-spacing: 1rem") px rem em pt
+                            br
+                            |                         Для тексту нижче задано:
+                            span.green 0.5rem
+                            |
+                            div(style="margin: 1rem; padding: 1rem; border: 1px solid #ededed; letter-spacing: 0.5rem;")
+                                | Lorem ipsum dolor sit amet, cum an diam everti civibus, ut nam clita fuisset interesset.
+                        |
+                        td Визначає відстань між кожним символом
+                        |
+                        td
+                            | .selector {
+                            br
+                            |  letter-spacing: 0.5rem;
+                            br
+                            | }
+                    |
+                    tr
+                        td
+                            span.blue word-spacing
+                        |
+                        td
+                            | Задається у можливих значеннях:
+                            span.green(style="word-spacing: 1rem") px rem em pt
+                            br
+                            |                         Для тексту нижче задано:
+                            span.green 1rem
+                            |
+                            div(style="margin: 1rem; padding: 1rem; border: 1px solid #ededed; word-spacing: 1rem;")
+                                | Lorem ipsum dolor sit amet, cum an diam everti civibus, ut nam clita fuisset interesset.
+                        |
+                        td Задає інтервал між словами
+                        |
+                        td
+                            | .selector {
+                            br
+                            |  word-spacing: 0.5rem;
+                            br
+                            | }
+                    |
+                    tr
+                        td
+                            span.blue white-space
+                        |
+                        td
+                            span.green pre
+                            |  - текст відображається таким чином як
+                            |                         написано у документі, з урахуванням усіх пробілів.
+                            |
+                            div(style="width: 30%; margin: 1rem; padding: 1rem; border: 1px solid #ededed; font-size: small; white-space: pre;")
+                                | Lorem ipsum dolor sit
+                                | amet, cum an diam everti
+                                | civibus,
+                                | ut nam clita fuisset
+                                | interesset.
+                                | Reque post
+                            |
+                            span.green pre-wrap
+                            |  так само як і
+                            span.green pre
+                            |                         але переносить текст якщо той не поміщається у контейнер
+                            |
+                            div(style="width: 30%; margin: 1rem; padding: 1rem; border: 1px solid #ededed; font-size: small; white-space: pre-wrap;")
+                                | Lorem ipsum
+                                | dolor sit a m et, cum an diam everti civibus,
+                                | ut nam clita fuisset interesset. Reque postulant quae
+                            |
+                            span.green nowrap
+                            |  - пробіли виставляються автоматично та
+                            |                         текст не переноситься
+                            |
+                            div(style="width: 300px; margin: 1rem; padding: 1rem; border: 1px solid #ededed; font-size: small; white-space: nowrap;")
+                                | Lorem ipsum dolor sit amet,
+                                | cum an diam everti civibus, ut nam.
+                        |
+                        td Визначає як відображати пробіли
+                        |
+                        td
+                            | .selector {
+                            br
+                            |  white-space: normal;
+                            br
+                            | }
+                    |
+                    tr
+                        td
+                            span.blue user-select
+                        |
+                        td
+                            span(style="user-select: all")
+                                span.green all
+                                |  - виділення всього вмісту
+                            br
+                            |
+                            span.green auto
+                            |  - дефолтний стан
+                            br
+                            |
+                            span(style="user-select: none")
                                 span.green none
-                                | -
-                                span(style="text-decoration: none") без декорацій тексту
-                            |
-                            li
-                                span.green inherit
-                                | -
-                                span(style="text-decoration: inherit") наслідує значення батьківського елементу
-                    |
-                    td Задає декорацію для тексту
-                    |
-                    td
-                        | .selector {
-                        br
-                        |  text-decoration: underline;
-                        br
-                        | }
-                |
-                tr
-                    td
-                        span.blue text-transform
-                    |
-                    td
-                        ul
-                            li
-                                span.green capitalize
-                                span(style="text-transform: capitalize") - перший символ кожного слова буде заглавним
-                            |
-                            li
-                                span.green lowercase
-                                span(style="text-transform: lowercase") - всі символи в нижньому реєстрі
-                            |
-                            li
-                                span.green uppercase
-                                span(style="text-transform: uppercase") - всі символи у верхньому реєстрі
-                            |
-                            li
-                                span.green none
-                                span(style="text-transform: none") - не змінює символи
-                            |
-                            li
-                                span.green inherit
-                                span(style="text-transform: inherit") - успатковується від бадька
-                    |
-                    td Задає трансформацію для тексту
-                    |
-                    td
-                        | .selector {
-                        br
-                        |  text-transform: uppercase;
-                        br
-                        | }
-                |
-                tr
-                    td(style="vertical-align: top;")
-                        span.blue text-align
-                        | - визначається для
-                        |                         батьківського елементу з текстом.
-                    |
-                    td
-                        div(style="width: 50%; margin: 1rem; padding: 1rem; text-align: center; font-size: small; border: 1px solid #ededed;")
-                            span.green center
-                            |  - вирівнює весь текст по центру батьківського
-                            |                             елементу.
-                        |
-                        div(style="width: 50%; margin: 1rem; padding: 1rem; text-align: justify; font-size: small; border: 1px solid #ededed;")
-                            span.green justify
-                            |  - вирівнювання тексту по ширині, одночасно по правому
-                            |                             та лівому краю. (додаються пробіли між словами).
-                        |
-                        div(style="width: 50%; margin: 1rem; padding: 1rem; text-align: left; font-size: small; border: 1px solid #ededed;")
-                            span.green left
-                            |  - вирівнювання по лівому краю.
-                        |
-                        div(style="width: 50%; margin: 1rem; padding: 1rem; text-align: right; font-size: small; border: 1px solid #ededed;")
-                            span.green right
-                            |  - вирівнювання по правому краю.
-                        |
-                        div(style="width: 50%; margin: 1rem; padding: 1rem; text-align: inherit; font-size: small; border: 1px solid #ededed;")
-                            span.green inherit
-                            |  - успатковується від батьківського елементу
-                        |
-                        div(style="width: 50%; margin: 1rem; padding: 1rem; text-align: start; font-size: small; border: 1px solid #ededed;")
-                            span.green start
-                            |  - аналог
-                            span.green left
-                            | , якщо текст -
-                            |                             зліва направо і
-                            span.green right
-                            | , якщо зправа наліво.
-                        |
-                        div(style="width: 50%; margin: 1rem; padding: 1rem; text-align: end; font-size: small; border: 1px solid #ededed;")
-                            span.green end
-                            |  - аналог для
-                            span.green right
-                            | , якщо текст
-                            |                             зліва направо і
-                            span.green left
-                            | , якщо текст - зправа наліво.
-                    |
-                    td(style="vertical-align: top;") Вирівнювання тексту
-                    |
-                    td(style="vertical-align: top;")
-                        | .selector {
-                        br
-                        |  text-align: justify;
-                        br
-                        | }
-                |
-                tr
-                    td
-                        span.blue text-indent
-                    |
-                    td
-                        | Задається у можливих значеннях:
-                        span.green(style="word-spacing: 1rem") px rem em pt %
-                        |
-                        div(style="width: 70%; margin: 1rem; padding: 1rem; text-indent: 3rem; font-size: small; border: 1px solid #ededed;")
-                            | Lorem ipsum dolor sit amet, cum an diam everti civibus, ut nam clita fuisset interesset.
-                            | Reque postulant quaerendum te mea, quo cu affert lobortis comprehensam. Ut usu praesent
-                            | efficiantur, ludus placerat invenire eu mea.
-                    |
-                    td відступ пешої строки
-                    |
-                    td
-                        | .selector {
-                        br
-                        |  text-indent: 3rem;
-                        br
-                        | }
-                |
-                tr
-                    td
-                        span.blue text-overflow
-                    |
-                    td
-                        span.green(style="word-spacing: 1rem") clip
-                        |
-                        div(style="width: 300px; margin: 1rem; padding: 1rem; overflow: hidden; white-space: nowrap; text-overflow: clip; font-size: small; border: 1px solid #ededed;")
-                            | Lorem ipsum dolor sit amet, cum an diam everti civibus, ut nam clita fuisset interesset.
-                            | Reque postulant quaerendum te mea, quo cu affert lobortis comprehensam. Ut usu praesent
-                            | efficiantur, ludus placerat invenire eu mea. Ea has homero propriae liberavisse, et falli
-                            | cotidieque vix, nobis essent vituperata eu mel. No mea recteque disputando reformidans.
-                        |
-                        span.green(style="word-spacing: 1rem") ellipsis
-                        |
-                        div(style="width: 300px; margin: 1rem; padding: 1rem; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-size: small; border: 1px solid #ededed;")
-                            | Lorem ipsum dolor sit amet, cum an diam everti civibus, ut nam clita fuisset interesset.
-                            | Reque postulant quaerendum te mea, quo cu affert lobortis comprehensam. Ut usu praesent
-                            | efficiantur, ludus placerat invenire eu mea. Ea has homero propriae liberavisse, et falli
-                            | cotidieque vix, nobis essent vituperata eu mel. No mea recteque disputando reformidans.
-                    |
-                    td
-                        | текст обрізається за розміром області
-                        br
-                        |                         текс обрізається в кінці додаються три крапки
-                    |
-                    td
-                        | .selector {
-                        br
-                        |  text-overflow: 666px;
-                        br
-                        | }
-                |
-                tr
-                    td
-                        span.blue text-shadow
-                    |
-                    td
-                        p
-                            | горизонтальне зміщення
-                            br
-                            |                             вертикальне зміщення
-                            br
-                            |                             радіус розмиття тіні
-                        |
-                        p
-                            | У даному прикладі, для параметру
-                            span.green text-shadow
-                            |  вказано:
-                            |
-                            br
-                            b text-shadow: 2px 2px 5px rgba(100, 0, 255, .8);}
-                        |
-                        div(style="width: 300px; margin: 0 1rem; padding: 1rem; border: 1px solid #ededed; font-size: small; text-shadow: 2px 2px 5px rgba(100, 0, 255, .8);")
-                            | Lorem ipsum dolor sit amet, cum an diam everti civibus, ut nam clita fuisset interesset.
-                            | Reque postulant quaerendum te mea, quo cu affert lobortis comprehensam.
-                    |
-                    td
-                        | тінь тексту
-                        br
-                        |                         (px, em, rem)
-                    |
-                    td
-                        | .selector {
-                        br
-                        |  text-shadow: 2px 5px 20px rgba(0, 0, 0, .8);
-                        br
-                        | }
-                |
-                tr
-                    td
-                        span.blue color
-                    |
-                    td
-                        p
-                            | У даному прикладі, для параметру
-                            span.green color
-                            |  вказано:
+                                |  - забороняє виділення
                             br
                             |
-                            b color: rgba(100, 0, 255, .8);
+                            span(style="user-select: text")
+                                span.green text
+                                |  - виділення тільки тексту
                         |
-                        div(style=" margin: 0 1rem; padding: 1rem; border: 1px solid #ededed; font-size: small; color: rgba(255,0,250,0.8);")
-                            | Lorem ipsum dolor sit amet, cum an diam everti civibus, ut nam clita fuisset interesset.
-                    |
-                    td задає колір тексту у будь якій вказаній формі для кольору
-                    |
-                    td
-                        | .selector {
-                        br
-                        |  color: #666666;
-                        br
-                        | }
-                |
-                tr
-                    td
-                        span.blue letter-spacing
-                    |
-                    td
-                        | Задається у можливих значеннях:
-                        span.green(style="word-spacing: 1rem") px rem em pt
-                        br
-                        |                         Для тексту нижче задано:
-                        span.green 0.5rem
+                        td
                         |
-                        div(style="margin: 1rem; padding: 1rem; border: 1px solid #ededed; letter-spacing: 0.5rem;")
-                            | Lorem ipsum dolor sit amet, cum an diam everti civibus, ut nam clita fuisset interesset.
-                    |
-                    td Визначає відстань між кожним символом
-                    |
-                    td
-                        | .selector {
-                        br
-                        |  letter-spacing: 0.5rem;
-                        br
-                        | }
-                |
-                tr
-                    td
-                        span.blue word-spacing
-                    |
-                    td
-                        | Задається у можливих значеннях:
-                        span.green(style="word-spacing: 1rem") px rem em pt
-                        br
-                        |                         Для тексту нижче задано:
-                        span.green 1rem
-                        |
-                        div(style="margin: 1rem; padding: 1rem; border: 1px solid #ededed; word-spacing: 1rem;")
-                            | Lorem ipsum dolor sit amet, cum an diam everti civibus, ut nam clita fuisset interesset.
-                    |
-                    td Задає інтервал між словами
-                    |
-                    td
-                        | .selector {
-                        br
-                        |  word-spacing: 0.5rem;
-                        br
-                        | }
-                |
-                tr
-                    td
-                        span.blue white-space
-                    |
-                    td
-                        span.green pre
-                        |  - текст відображається таким чином як
-                        |                         написано у документі, з урахуванням усіх пробілів.
-                        |
-                        div(style="width: 30%; margin: 1rem; padding: 1rem; border: 1px solid #ededed; font-size: small; white-space: pre;")
-                            | Lorem ipsum dolor sit
-                            | amet, cum an diam everti
-                            | civibus,
-                            | ut nam clita fuisset
-                            | interesset.
-                            | Reque post
-                        |
-                        span.green pre-wrap
-                        |  так само як і
-                        span.green pre
-                        |                         але переносить текст якщо той не поміщається у контейнер
-                        |
-                        div(style="width: 30%; margin: 1rem; padding: 1rem; border: 1px solid #ededed; font-size: small; white-space: pre-wrap;")
-                            | Lorem ipsum
-                            | dolor sit a m et, cum an diam everti civibus,
-                            | ut nam clita fuisset interesset. Reque postulant quae
-                        |
-                        span.green nowrap
-                        |  - пробіли виставляються автоматично та
-                        |                         текст не переноситься
-                        |
-                        div(style="width: 300px; margin: 1rem; padding: 1rem; border: 1px solid #ededed; font-size: small; white-space: nowrap;")
-                            | Lorem ipsum dolor sit amet,
-                            | cum an diam everti civibus, ut nam.
-                    |
-                    td Визначає як відображати пробіли
-                    |
-                    td
-                        | .selector {
-                        br
-                        |  white-space: normal;
-                        br
-                        | }
-                |
-                tr
-                    td
-                        span.blue user-select
-                    |
-                    td
-                        span(style="user-select: all")
-                            span.green all
-                            |  - виділення всього вмісту
-                        br
-                        |
-                        span.green auto
-                        |  - дефолтний стан
-                        br
-                        |
-                        span(style="user-select: none")
-                            span.green none
-                            |  - забороняє виділення
-                        br
-                        |
-                        span(style="user-select: text")
-                            span.green text
-                            |  - виділення тільки тексту
-                    |
-                    td
-                    |
-                    td
-                        | .selector {
-                        br
-                        |  user-select: none;
-                        br
-                        | }
-        |
-        h2.title Колір
-        |
-        img(src="../../img/color1.png")
-        |
-        img(style="margin: auto", src="../../img/color.png")
-        |
-        p
-            | Колір використовується для зміни кольору тексту, фону, градіентів, тіней, границь та ін. Є кілька
-            | основних методів для задання кольору у CSS:
-            br
+                        td
+                            | .selector {
+                            br
+                            |  user-select: none;
+                            br
+                            | }
             |
-            span.blue
-                | Назва кольору (red, green, blue ...)
+            h2.title Колір
+            |
+            img(src="../../img/color1.png")
+            |
+            img(style="margin: auto", src="../../img/color.png")
+            |
+            p
+                | Колір використовується для зміни кольору тексту, фону, градіентів, тіней, границь та ін. Є кілька
+                | основних методів для задання кольору у CSS:
                 br
-                |                    Шістнадцяткова система (#ffffff, #000000, #db4e44 ...), (#fff, #000 ...)
-                br
-                |                    'Функція' rgb(255, 255, 255) і rgba(255, 255, 255, 1)
-        |
-        ul
-            li
-                span.blue Колір
                 |
-                div(style="width: 70%; margin: 1rem; padding: 1rem; border: 1px solid #ededed;")
-                    b CSS
-                    |  визначає 145 назв кольорів. Від самих простих (red, green, blue, yellow...) і до
-                    |                         спецефічних (lawngeen, orchid, crimson ...)
+                span.blue
+                    | Назва кольору (red, green, blue ...)
+                    br
+                    |                    Шістнадцяткова система (#ffffff, #000000, #db4e44 ...), (#fff, #000 ...)
+                    br
+                    |                    'Функція' rgb(255, 255, 255) і rgba(255, 255, 255, 1)
             |
-            li
-                span.blue #66cc00 (шістнадцятирічний колір)
-                |
-                div(style="width: 70%; margin: 1rem; padding: 1rem; border: 1px solid #ededed;")
-                    | Являє собою код кольору з шести символів, які починаються після знаку
-                    span(style="color: orange; font-size: 22px") #
+            ul
+                li
+                    span.blue Колір
                     |
-                    p
-                        | Кожна пара символів представляє номер, від 0 до 255. Перші два - (red), наступні два -
-                        | (green), остання пара - (blue)
-                        br
-                        |  Для блоку нижче встановлено:
-                        span.green .selector { background-color: #bb12ff; }
+                    div(style="width: 70%; margin: 1rem; padding: 1rem; border: 1px solid #ededed;")
+                        b CSS
+                        |  визначає 145 назв кольорів. Від самих простих (red, green, blue, yellow...) і до
+                        |                         спецефічних (lawngeen, orchid, crimson ...)
                 |
-                div(style="width: 55%; height: 50px; margin: 2rem auto; background-color: #bb12ff;")
-            |
-            li
-                span.blue rgb()
+                li
+                    span.blue #66cc00 (шістнадцятирічний колір)
+                    |
+                    div(style="width: 70%; margin: 1rem; padding: 1rem; border: 1px solid #ededed;")
+                        | Являє собою код кольору з шести символів, які починаються після знаку
+                        span(style="color: orange; font-size: 22px") #
+                        |
+                        p
+                            | Кожна пара символів представляє номер, від 0 до 255. Перші два - (red), наступні два -
+                            | (green), остання пара - (blue)
+                            br
+                            |  Для блоку нижче встановлено:
+                            span.green .selector { background-color: #bb12ff; }
+                    |
+                    div(style="width: 55%; height: 50px; margin: 2rem auto; background-color: #bb12ff;")
                 |
-                div(style="width: 70%; margin: 1rem; padding: 1rem; border: 1px solid #ededed;")
-                    | Система rgb() використовує 3 числа, які описують відносну к-сть червоно, зеленого, синього
-                    | кольорів які у поєднанні можуть вивести будь-який колір. Числове значення кольору варіюється від
-                    | 0 до 255.
-                    p
-                        | Наприклад для блоку нижче задано:
-                        span.green .selector { background-color: rgb(205, 50, 255); }
+                li
+                    span.blue rgb()
+                    |
+                    div(style="width: 70%; margin: 1rem; padding: 1rem; border: 1px solid #ededed;")
+                        | Система rgb() використовує 3 числа, які описують відносну к-сть червоно, зеленого, синього
+                        | кольорів які у поєднанні можуть вивести будь-який колір. Числове значення кольору варіюється від
+                        | 0 до 255.
+                        p
+                            | Наприклад для блоку нижче задано:
+                            span.green .selector { background-color: rgb(205, 50, 255); }
+                    |
+                    div(style="width: 55%; height: 50px; margin: 2rem auto; background-color: rgb(205, 50, 255);")
                 |
-                div(style="width: 55%; height: 50px; margin: 2rem auto; background-color: rgb(205, 50, 255);")
-            |
-            li
-                span.blue rgba()
+                li
+                    span.blue rgba()
+                    |
+                    div(style="width: 70%; margin: 1rem; padding: 1rem; border: 1px solid #ededed;")
+                        | Система rgba() ще одне значення - прозорість. Значення останнього варіюється від 0 до 1.
+                        | Значення у 0.5 зробить колір напівпрозорим. Буква
+                        span.green a
+                        |  - означає альфа-канал
+                        p
+                            | Для блоку нижче задано колір з прозорістю:
+                            span.green .selector { background-color: rgba(205, 50, 255, 0.5); }
+                    |
+                    div(style="width: 55%; height: 50px; margin: 2rem auto; background-color: rgba(205, 50, 255, 0.5);")
                 |
-                div(style="width: 70%; margin: 1rem; padding: 1rem; border: 1px solid #ededed;")
-                    | Система rgba() ще одне значення - прозорість. Значення останнього варіюється від 0 до 1.
-                    | Значення у 0.5 зробить колір напівпрозорим. Буква
-                    span.green a
-                    |  - означає альфа-канал
-                    p
-                        | Для блоку нижче задано колір з прозорістю:
-                        span.green .selector { background-color: rgba(205, 50, 255, 0.5); }
-                |
-                div(style="width: 55%; height: 50px; margin: 2rem auto; background-color: rgba(205, 50, 255, 0.5);")
-            |
-            li
-                span.blue hsl()
+                li
+                    span.blue hsl()
 
-                div
-                    img(src="../../img/color2.jpg")
+                    div
+                        img(src="../../img/color2.jpg")
 
-                div(style="width: 70%; margin: 1rem; padding: 1rem; border: 1px solid #ededed;")
-                    p
-                        | Наприклад для блоку нижче задано:
-                        span.green .selector { background-color: hsl(285, 100%, 60%); }
+                    div(style="width: 70%; margin: 1rem; padding: 1rem; border: 1px solid #ededed;")
+                        p
+                            | Наприклад для блоку нижче задано:
+                            span.green .selector { background-color: hsl(285, 100%, 60%); }
 
-                div(style="width: 55%; height: 50px; margin: 2rem auto; background-color: hsl(285, 100%, 60%);")
+                    div(style="width: 55%; height: 50px; margin: 2rem auto; background-color: hsl(285, 100%, 60%);")
 
-            li
-                span.blue hsla()
+                li
+                    span.blue hsla()
 
-                div(style="width: 70%; margin: 1rem; padding: 1rem; border: 1px solid #ededed;")
-                    p
-                        | Для блоку нижче задано колір з прозорістю:
-                        span.green .selector { background-color: hsla(285, 100%, 60%, 0.5); }
-                |
-                div(style="width: 55%; height: 50px; margin: 2rem auto; background-color: hsla(285, 100%, 60%, 0.5);")
+                    div(style="width: 70%; margin: 1rem; padding: 1rem; border: 1px solid #ededed;")
+                        p
+                            | Для блоку нижче задано колір з прозорістю:
+                            span.green .selector { background-color: hsla(285, 100%, 60%, 0.5); }
+                    |
+                    div(style="width: 55%; height: 50px; margin: 2rem auto; background-color: hsla(285, 100%, 60%, 0.5);")
+
+
+
+    section.aside-bar
+        ul.theme-list
+            li.theme-item
+                a(href='#animation-name') animation-name
+            li.theme-item
+                a(href='#animation-duration') animation-duration
+            li.theme-item
+                a(href='#animation-timing') animation-timing
+            li.theme-item
+                a(href='#animation-delay') animation-delay
+            li.theme-item
+                a(href='#animation-count') animation-count
+            li.theme-item
+                a(href='#animation-direction') animation-direction
+            li.theme-item
+                a(href='#3danimations') 3d-animation
+
+        .slide-btn
+            span.fa.fa-arrow-left
+
+
+
+

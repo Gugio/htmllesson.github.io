@@ -1,4 +1,5 @@
 main.main-content.css-tutorial
+
     .container
         .flex-layout
             h1.main-title <code>flexbox</code>
@@ -29,7 +30,7 @@ main.main-content.css-tutorial
                 div.flex-element 1
 
             .description
-                h2 Ідея <code>flexbox</code>
+                h2#idea-of_flexbox Ідея <code>flexbox</code>
                 p В основі ідеї <code>flexbox</code>, лежить ідея осей:
 
                 img.flex-image(src="img/flexbox.png")
@@ -42,7 +43,7 @@ main.main-content.css-tutorial
                     div.flex-element thin
                     div.flex-element 1
 
-                h2 Вирівнювання елементів по горизонталі <code>justify-content</code>
+                h2#justify-content Вирівнювання елементів по горизонталі <code>justify-content</code>
                 p Властивість вирівнює флекс-елементи по-ширині контейнеру, розділяючи вільний простір між елементами. Для їх вирівнювання по-вертикалі використовують <code>align-content</code>.
 
                 table.table.striped
@@ -96,7 +97,7 @@ main.main-content.css-tutorial
                         | }
 
 
-                h2 Вирівнювання елементів по вертикалі <code>align-items</code>
+                h2#align-items Вирівнювання елементів по вертикалі <code>align-items</code>
                 p Властивість вирівнює флекс-елементи, в тому числі і анонімні по перендикулярній осі.
 
                 table.table.striped(style="margin: 1rem 0; width: 100%;")
@@ -153,7 +154,7 @@ main.main-content.css-tutorial
 
 
 
-                h2 <code>flex-direction</code> напрямок головної осі
+                h2#flex-direction <code>flex-direction</code> напрямок головної осі
                 p Властивість визначає, яким чином флекс-елементи вкладаються у флекс-контейнер. Флекс-елементи можуть розташовуватись у двох напрямках: горизонтально, як строки, або вертикально, як колонки.
 
                 table.table.striped
@@ -204,7 +205,7 @@ main.main-content.css-tutorial
                         | }
 
 
-                h2 <code>flex-wrap</code> багатостроковість флекс-елементів
+                h2#flex-wrapping <code>flex-wrap</code> багатостроковість флекс-елементів
                 p Властивість визначає, яким чином флекс-елементи будуть вистраюватись, в одну строку, або переноситись на іншу при не достачі місця. За замовчуванням всі елементи вистраюються в одну строку та заповнюють весь доступний простір контейнеру. У випадку фіксованої ширини контейнеру, флекс-елементи беззсовісно вилазять за його межі.
 
                 table.table.striped
@@ -256,7 +257,7 @@ main.main-content.css-tutorial
                         | }
 
 
-                h2 <code>flex-flow</code> - це короткий запис для напрямку осі та багатостроковості флекс-контейнеру
+                h2#flex-flow <code>flex-flow</code> - це короткий запис для напрямку осі та багатостроковості флекс-контейнеру
                 p Перше значення цієї властивості визначає напрямок осі, а друге перенос елементів.
 
                 p Синтаксис:
@@ -266,7 +267,7 @@ main.main-content.css-tutorial
                         | &emsp; <span class="nb">flex-flow</span>: <span class="green">row nowrap</span><span class="orange">;</span>
                         | }
 
-                h2 <code>align-content</code> багатострокове вирівнювання
+                h2#align-content <code>align-content</code> багатострокове вирівнювання
                 p Властивість вирівнює строки по вертикалі у флекс-контейнері, дозволяючи керувати вільним простором. <b color="red">Увага!!!</b> Дана властивість працює тільки в тому випадку, якщо перенос строк дозволений, вказаний напрямок головної осі та задана висота контейнеру.
 
                 table.table.striped
@@ -330,7 +331,7 @@ main.main-content.css-tutorial
 
                 p(style="font-size: 24px;") <b>Властивості flex-елементів</b>
 
-                h2 <code>order</code> порядок відображення елементів
+                h2#ordering <code>order</code> порядок відображення елементів
                 p Властивість визначає порядок у якому будуть відображатись флекс-елементи. По дефолту заданий порядок дорівнює: 0.
 
                 table.table.striped
@@ -362,7 +363,7 @@ main.main-content.css-tutorial
                         | }
 
 
-                h2 <code>flex-basis</code> базова ширина елементу
+                h2#flex-basis <code>flex-basis</code> базова ширина елементу
                 p Властивість дозволяє задати базову ширину флекс-елементу, відносно якої буде відбуватись його розтягнення <code>flex-grow</code>, або ж його звуження <code>flex-shrink</code>.
 
                 table.table.striped
@@ -403,7 +404,7 @@ main.main-content.css-tutorial
 
 
 
-                h2 <code>flex-grow</code> Розтягання елементів
+                h2#flex-grow <code>flex-grow</code> Розтягання елементів
                 p властивість визначає коефіціент збільшення ширини флекс-елементу, відносно інших флекс елементів.
 
                 table.table.striped
@@ -424,17 +425,16 @@ main.main-content.css-tutorial
                         td <code>inherit</code>
                         td Наслідує від батьківського елементу
 
-                    tr
-                        td(colspan=100)
-                                div.flex-container.unsized
-                                    .flex-element.sized.thin#flex-grow-1 grow:
-                                        p.flex-togglerGrow-1 <a href="javascript:;" data-value="3">3</a> <a href="javascript:;" data-value="5">5</a> <a href="javascript:;" data-value="10">10</a>  <a href="javascript:;" data-value="8">8</a> <a href="javascript:;" data-value="initial">initial</a>
 
-                                    .flex-element.sized.thin#flex-grow-2 grow:
-                                        p.flex-togglerGrow-2 <a href="javascript:;" data-value="3">3</a> <a href="javascript:;" data-value="5">5</a> <a href="javascript:;" data-value="10">10</a>  <a href="javascript:;" data-value="8">8</a> <a href="javascript:;" data-value="initial">initial</a>
+                div.flex-container.unsized
+                    .flex-element.sized.thin#flex-grow-1 grow:
+                        p.flex-togglerGrow-1 <a href="javascript:;" data-value="3">3</a> <a href="javascript:;" data-value="5">5</a> <a href="javascript:;" data-value="10">10</a>  <a href="javascript:;" data-value="8">8</a> <a href="javascript:;" data-value="initial">initial</a>
 
-                                    .flex-element.sized.thin#flex-grow-3 grow:
-                                        p.flex-togglerGrow-3 <a href="javascript:;" data-value="3">3</a> <a href="javascript:;" data-value="5">5</a> <a href="javascript:;" data-value="10">10</a>  <a href="javascript:;" data-value="8">8</a> <a href="javascript:;" data-value="initial">initial</a>
+                    .flex-element.sized.thin#flex-grow-2 grow:
+                        p.flex-togglerGrow-2 <a href="javascript:;" data-value="3">3</a> <a href="javascript:;" data-value="5">5</a> <a href="javascript:;" data-value="10">10</a>  <a href="javascript:;" data-value="8">8</a> <a href="javascript:;" data-value="initial">initial</a>
+
+                    .flex-element.sized.thin#flex-grow-3 grow:
+                        p.flex-togglerGrow-3 <a href="javascript:;" data-value="3">3</a> <a href="javascript:;" data-value="5">5</a> <a href="javascript:;" data-value="10">10</a>  <a href="javascript:;" data-value="8">8</a> <a href="javascript:;" data-value="initial">initial</a>
 
 
                 p Синтаксис:
@@ -448,7 +448,7 @@ main.main-content.css-tutorial
                         | }
 
 
-                h2 <code>flex-shrink</code> звуження елементів
+                h2#flex-shrink <code>flex-shrink</code> звуження елементів
                 p Властивість вказує коефіціент звуження флекс-елементу відносно інших. Працює лише у випадку, якщо для елементу задана ширина <code>flex-basis</code>, або <code>width</code>
 
                 table.table.striped
@@ -469,17 +469,16 @@ main.main-content.css-tutorial
                         td <code>inherit</code>
                         td Наслідує від батьківського елементу
 
-                    tr
-                        td(colspan=100)
-                            div.flex-container.unsized
-                                .flex-element.sized.wide#flex-shrink-1 shrink:
-                                    p.flex-togglerGrow-1 <a href="javascript:;" data-value="3">3</a> <a href="javascript:;" data-value="5">5</a> <a href="javascript:;" data-value="10">10</a>  <a href="javascript:;" data-value="8">8</a> <a href="javascript:;" data-value="initial">initial</a>
 
-                                .flex-element.sized.wide#flex-shrink-2 shrink:
-                                    p.flex-togglerGrow-2 <a href="javascript:;" data-value="3">3</a> <a href="javascript:;" data-value="5">5</a> <a href="javascript:;" data-value="10">10</a>  <a href="javascript:;" data-value="8">8</a> <a href="javascript:;" data-value="initial">initial</a>
+                div.flex-container.unsized
+                    .flex-element.sized.wide#flex-shrink-1 shrink:
+                        p.flex-togglerGrow-1 <a href="javascript:;" data-value="3">3</a> <a href="javascript:;" data-value="5">5</a> <a href="javascript:;" data-value="10">10</a>  <a href="javascript:;" data-value="8">8</a> <a href="javascript:;" data-value="initial">initial</a>
 
-                                .flex-element.sized.wide#flex-shrink-3 shrink:
-                                    p.flex-togglerGrow-3 <a href="javascript:;" data-value="3">3</a> <a href="javascript:;" data-value="5">5</a> <a href="javascript:;" data-value="10">10</a>  <a href="javascript:;" data-value="8">8</a> <a href="javascript:;" data-value="initial">initial</a>
+                    .flex-element.sized.wide#flex-shrink-2 shrink:
+                        p.flex-togglerGrow-2 <a href="javascript:;" data-value="3">3</a> <a href="javascript:;" data-value="5">5</a> <a href="javascript:;" data-value="10">10</a>  <a href="javascript:;" data-value="8">8</a> <a href="javascript:;" data-value="initial">initial</a>
+
+                    .flex-element.sized.wide#flex-shrink-3 shrink:
+                        p.flex-togglerGrow-3 <a href="javascript:;" data-value="3">3</a> <a href="javascript:;" data-value="5">5</a> <a href="javascript:;" data-value="10">10</a>  <a href="javascript:;" data-value="8">8</a> <a href="javascript:;" data-value="initial">initial</a>
 
 
                 p Синтаксис:
@@ -493,7 +492,7 @@ main.main-content.css-tutorial
                         | }
 
 
-                h2 Одна властивість для задання базової ширини та трансформації елементу: <code>flex</code>
+                h2#flex Одна властивість для задання базової ширини та трансформації елементу: <code>flex</code>
                 p Властивість являє собою короткий запис трьох властивостей: <code>flex-grow</code>, <code>flex-shrink</code>, <code>flex-basis</code>. Дефолтне значення <code>flex: 0 1 auto;</code>. Задається числовим значенням або ключовими словами <code>none</code>, <code>auto</code>
 
                 table.table.striped
@@ -534,3 +533,32 @@ main.main-content.css-tutorial
 
 
 
+    section.aside-bar
+        ul.theme-list
+            li.theme-item
+                a(href='#idea-of_flexbox') Ідея flexbox
+            li.theme-item
+                a(href='#justify-content') justify-content
+            li.theme-item
+                a(href='#align-items') align-items
+            li.theme-item
+                a(href='#flex-direction') flex-direction
+            li.theme-item
+                a(href='#flex-wrapping') flex-wrap
+            li.theme-item
+                a(href='#flex-flow') flex-flow
+            li.theme-item
+                a(href='#align-content') align-content
+            li.theme-item
+                a(href='#ordering') order
+            li.theme-item
+                a(href='#flex-basis') flex-basis
+            li.theme-item
+                a(href='#flex-grow') flex-grow
+            li.theme-item
+                a(href='#flex-shrink ') flex-shrink
+            li.theme-item
+                a(href='#flex') flex
+
+        .slide-btn
+            span.fa.fa-arrow-left

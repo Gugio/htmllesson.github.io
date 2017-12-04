@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
     <title>CSS</title>
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
     <link rel="stylesheet" href="./js/libs/highlight/styles/monokai-sublime.css">
     <script type="text/javascript" src="./js/libs/jquery/jquery.min.js"></script>
     <script type="text/javascript" src="./js/libs/jquery/jquery.mousewheel.min.js"></script>
@@ -132,7 +133,7 @@
               <div class="trans-element eleven">matrix(1.2,0,0.5,1.2,50,0)</div>
             </div>
           </div>
-          <h2 class="subtitle">Точка трансформації <code>transform-origin</code></h2>
+          <h2 class="subtitle" id="transform-origin">Точка трансформації <code>transform-origin</code></h2>
           <p>Властивість дозволяє змістити центр початку. Дефолтне значення: <code>transform-origin: center center</code> або 50% 50%.</p>
           <table class="table striped">
             <colgroup>
@@ -162,7 +163,7 @@
               <div class="animated-origin element-4">50px 50px</div>
             </div>
           </div>
-          <h2 class="anim-subtitle">СSS переходи <code>transition</code></h2>
+          <h2 class="anim-subtitle" id="transition">СSS переходи <code>transition</code></h2>
           <p>СSS переходи дозволяють анімувати значення основні на інші, за заданий проміжок часу.</p>
           <p>Зміна властивостей відбувється при якому-небудь івенті. Найчастіше спрацьовує псевдоклас :hover.</p>
           <p>Переходи застосовуються до всых елементыв, включно з псевдоелементами :before :after.</p>
@@ -182,6 +183,13 @@
           </table>
         </div>
       </div>
+      <section class="aside-bar">
+        <ul class="theme-list">
+          <li class="theme-item"><a href="#transform-origin">transform-origin</a></li>
+          <li class="theme-item"><a href="#transition">transition</a></li>
+        </ul>
+        <div class="slide-btn"><span class="fa fa-arrow-left"></span></div>
+      </section>
     </main>
     <script src="./js/libs/jquery/jquery.min.js"></script>
     <script src="./js/main.js"></script>

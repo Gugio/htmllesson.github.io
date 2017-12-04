@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
     <title>CSS</title>
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
     <link rel="stylesheet" href="./js/libs/highlight/styles/monokai-sublime.css">
     <script type="text/javascript" src="./js/libs/jquery/jquery.min.js"></script>
     <script type="text/javascript" src="./js/libs/jquery/jquery.mousewheel.min.js"></script>
@@ -50,7 +51,7 @@
             <h2>Що таке <code>@media</code> запити?</h2>
             <p><code>@media</code> запит складаться з ключового слова, яке описує тип пристрою та виразу. З поміж усіх виразів частіше використовуються <code style="">min-width</code> та <code>max-width</code>. Медіа запит, це логічний вираз який повертає <code>true</code> або <code>false</code></p>
           </div>
-          <h2>Логічні опеатори</h2>
+          <h2 id="operators">Логічні опеатори</h2>
           <p>За допомогою логічних операторів можливо задати комбіновані медіа-запити, у яких буде перевірятись відповідність декільком умовам</p>
           <h3>Оператор <code>and</code> пов'язує різні умови:</h3>
           <figure class="code">
@@ -86,7 +87,7 @@
               &emsp;<span class="brown">/* CSS-стилі */</span>
             }
           </figure>
-          <h2>Типи пристроїв</h2>
+          <h2 id="device-types">Типи пристроїв</h2>
           <table class="table striped">
             <colgroup>
               <col width="180px">
@@ -114,7 +115,7 @@
               <td>Використовується для синтезаторів голосу</td>
             </tr>
           </table>
-          <h2>Характеристики пристроїв</h2>
+          <h2 id="device-options">Характеристики пристроїв</h2>
           <p>До характеристик пристроїв відносяться параметри які перевіряється.
             <table class="table striped">
               <colgroup>
@@ -180,6 +181,14 @@
           </p>
         </div>
       </div>
+      <section class="aside-bar">
+        <ul class="theme-list">
+          <li class="theme-item"><a href="#operators">Оператори</a></li>
+          <li class="theme-item"><a href="#device-types">Типи пристроїв</a></li>
+          <li class="theme-item"><a href="#device-options">Характеристіки прістроїв</a></li>
+        </ul>
+        <div class="slide-btn"></div>
+      </section>
     </main>
     <script src="./js/libs/jquery/jquery.min.js"></script>
     <script src="./js/main.js"></script>

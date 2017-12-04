@@ -1,4 +1,5 @@
 main.main-content.css-tutorial
+
     .container
         .media
             h1.title <code>@media</code>
@@ -17,7 +18,7 @@ main.main-content.css-tutorial
                 h2 Що таке <code>@media</code> запити?
                 p <code>@media</code> запит складаться з ключового слова, яке описує тип пристрою та виразу. З поміж усіх виразів частіше використовуються <code style="">min-width</code> та <code>max-width</code>. Медіа запит, це логічний вираз який повертає <code>true</code> або <code>false</code>
 
-            h2 Логічні опеатори
+            h2#operators Логічні опеатори
             p За допомогою логічних операторів можливо задати комбіновані медіа-запити, у яких буде перевірятись відповідність декільком умовам
 
 
@@ -63,7 +64,7 @@ main.main-content.css-tutorial
                 |   &emsp;<span class="brown">/* CSS-стилі */</span>
                 | }
 
-            h2 Типи пристроїв
+            h2#device-types Типи пристроїв
 
             table.table.striped
                 colgroup
@@ -87,7 +88,7 @@ main.main-content.css-tutorial
                     td speech
                     td Використовується для синтезаторів голосу
 
-            h2 Характеристики пристроїв
+            h2#device-options Характеристики пристроїв
 
             p До характеристик пристроїв відносяться параметри які перевіряється.
 
@@ -138,3 +139,16 @@ main.main-content.css-tutorial
                             |
                             | <code>max-color</code> Максимальна Максимальна к-сть біт
                             | <code>min-color</code> Мінімальна к-сть біт
+
+
+
+    section.aside-bar
+        ul.theme-list
+            li.theme-item
+                a(href='#operators') Оператори
+            li.theme-item
+                a(href='#device-types') Типи пристроїв
+            li.theme-item
+                a(href='#device-options') Характеристіки прістроїв
+
+        .slide-btn

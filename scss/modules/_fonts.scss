@@ -1,0 +1,60 @@
+//fonts -------------------------------------------------------------------------
+
+
+.fonts {
+
+  .blue {
+    color: rgba(20, 130, 255, .9);
+  }
+
+  .green {
+    color: rgb(60, 150, 50);
+  }
+
+  .blue, .green {
+    cursor: pointer;
+    white-space: nowrap;
+    font-weight: 600;
+  }
+
+  .title {
+    text-align: center;
+  }
+
+  table {
+    margin: 3rem auto;
+    border: 1px solid rgba(220, 220, 220, .6);
+    border-collapse: collapse;
+  }
+
+  table td {
+    padding: .6rem;
+    border-left: 1px solid rgba(220, 220, 220, .6);
+    border-bottom: 1px solid rgba(220, 220, 220, .6);
+  }
+
+  .table-heading {
+    background-color: rgba(100, 100, 100, .3);
+    text-align: center;
+  }
+
+  .table-heading th {
+    padding: .6rem 0;
+    border-left: 1px solid rgba(220, 220, 220, .6);
+  }
+
+  li .blue {
+    font-size: 22px;
+  }
+
+  .text-decor li {
+    padding: .4rem 0;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+}

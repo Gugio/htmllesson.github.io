@@ -1,11 +1,12 @@
 main.main-content.css-tutorial
+
     .container
         .position
             h1.title Властивість <code>position</code>
             p Властивість <code>position</code> визначає тип методу позиціонування для елемента (<code>static</code>, <code>relative</code>, <code>fixed</code>, <code>absolute</code>).
 
 
-            h2 static
+            h2#static.title static
             figure.code <pre><code><span class="nc">.static</span> <span class="p">{</span><br>&emsp;&emsp;&emsp;<span class="nl">position</span><span class="p">: </span><span class="nb">static</span><span class="p">;</span><br><span class="p">}</span></code></pre>
             .visual
                 span.label &lt;div class="static"&gt;
@@ -13,7 +14,7 @@ main.main-content.css-tutorial
                 span.label &lt;/div&gt;
 
 
-            h2 relative
+            h2#relative.title relative
             figure.code <pre><code><span class="nc">.relative1</span> <span class="p">{</span><br>&emsp;&emsp;&emsp;<span class="nl">position</span><span class="p">:</span> <span class="nb">relative</span><span class="p">;</span><br><span class="p">}</span><br><br><span class="nc">.relative2</span> <span class="p">{</span><br>&emsp;&emsp;&emsp;<span class="nl">position</span><span class="p">:</span> <span class="nb">relative</span><span class="p">;</span><br>&emsp;&emsp;&emsp;<span class="nl">top</span><span class="p">:</span> <span class="m">-20px</span><span class="p">;</span><br>&emsp;&emsp;&emsp;<span class="nl">left</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span><span class="nl"><br><span class="p">}</span></code></pre>
 
             .visual
@@ -31,7 +32,7 @@ main.main-content.css-tutorial
                 p наступний блок
                 span.label &lt;/div&gt;
 
-            h2 fixed
+            h2#fixed.title fixed
             p Фіксоване позиціювання елемента щодо вікна браузера. Елемент завжди займає одне і теж місце навіть при прокручуванні сторінки, немов він приклеєний до екрану. Також як і для <code>relative</code>, додаткові властивості <code>top</code>, <code>right</code>, <code>bottom</code>, и <code>left</code> для даного позиціонування працюватимуть.
             figure.code <pre><code class="language-css" data-lang="css"><span class="nc">.fixed</span> <span class="p">{</span><br>&emsp;&emsp;&emsp;<span class="nl">position</span><span class="p">:</span> <span class="nb">fixed</span><span class="p">;</span><br>&emsp;&emsp;&emsp;<span class="nl">bottom</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span><br>&emsp;&emsp;&emsp;<span class="nl">right</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span><br>&emsp;&emsp;&emsp;<span class="nl">background-color</span><span class="p">:</span> <span class="no">green</span><span class="p">;</span><br><span class="p">}</span></code></pre>
             p Фіксований елемент не залишає за собою вільний простір на сторінці, де він був розташований.
@@ -51,7 +52,7 @@ main.main-content.css-tutorial
                 p В нього тепер своє життя
                 span.label &lt;/div&gt;
 
-            h2 absolute
+            h2#absolute.title absolute
             p <code>absolute</code> поводиться як <code>fixed</code> за винятком того, що позиціювання відраховується щодо найближчого розташованого, <b>позиціонованого</b> батька а не щодо вікна браузера. Якщо елемент абсолютно позиціонується і не має батька, то він використовує тіло документа і продовжує рухатись разом з усією сторінкою при скролінгу. Пам'ятайте, що "позиціонований" елемент - це елемент з будь-яким значенням властивості <code>position</code> крім значення <code>static</code>.
             figure.code <pre><code class="language-css" data-lang="css"><span class="nc">.relative</span> <span class="p">{</span><br>&emsp;&emsp;&emsp;<span class="nl">position</span><span class="p">:</span> <span class="nb">relative</span><span class="p">;</span><br><span class="p">}</span><span class="nc"><br><br>.absolute</span> <span class="p">{<br>&emsp;&emsp;&emsp;</span><span class="nl">position</span><span class="p">:</span> <span class="nb">absolute</span><span class="p">;</span><br>&emsp;&emsp;&emsp;<span class="nl">top</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span><br>&emsp;&emsp;&emsp;<span class="nl">right</span><span class="p">:</span> <span class="m">100px</span><span class="p">;</span><br><span class="p">}</span></code></pre>
 
@@ -80,7 +81,7 @@ main.main-content.css-tutorial
                         .z.z3
                         .z.z4
 
-            h2.title Вертикальне / горизонтальне вирівнювання.
+            h2#alignment.title Вертикальне / горизонтальне вирівнювання.
             p В CSS є всього кілька технік центрування елементів. Якщо їх знати, то більшість завдань вирішуються просто.
 
             h2 Горизонтальне вирівнювання
@@ -112,7 +113,7 @@ main.main-content.css-tutorial
                     span.label &lt;/div&gt;
                 span.label &lt;/div&gt;
 
-            h2 Вертикальне вирівнювання
+            h2#vertical-alignment.title Вертикальне вирівнювання
             p Вертикальне вирівнювання з початку не було передбачено в специфікації CSS і донині викликає ряд проблем.
 
             h3 вирівнювання з position: absolute;
@@ -175,7 +176,7 @@ main.main-content.css-tutorial
 
 
 
-            h2 Вирівнювання в тексті
+            h2#text-alignment.title Вирівнювання в тексті
             p Для інлайнових елементів <code>display: inline / inline-block</code>, включаючи картинки, властивість vertical-align центрує сам інлайн-елемент в навколишньому його тексті, <code>inline</code> i <code>inline-block</code> елементах.
 
             p.vertical-text <code>baseline</code> (за замовчуванням) <span class='vimg' style='vertical-align:baseline'></span><br><code>top</code> зверху <span class='vimg' style='vertical-align:top'></span><br><code>bottom</code> знизу <span class='vimg' style='vertical-align:bottom'></span><br> <code>middle</code> (по середині) <span class='vimg' style='vertical-align:middle'></span><br><code>sub</code> на рівні <sub>саб елемент</sub> <span class='vimg' style='vertical-align:sub'></span><br> <code>super</code> на рівні <sup>саб елемент</sup> <span class='vimg' style='vertical-align:super'></span><br> <code>text-top</code> (верхня границя на рівні з текстоМ) <span class='vimg' style='vertical-align:text-top'></span><br> <code>text-bottom</code> (нижня границя на рівні з текстоМ) <span class='vimg' style='vertical-align:text-bottom'></span>
@@ -186,7 +187,7 @@ main.main-content.css-tutorial
                     li Ну а якщо вам пощастило настільки, що не потрібно підтримувати старі версії браузера IE, то, звичайно, краще використовувати <code>Flexbox</code>.
 
 
-            h2.title Float
+            h2#float.title Float
             p <span class='orange-text'>float</span>: left | right | none | inherit;
             p При застосуванні цієї властивості відбувається наступне:
                 ol
@@ -227,3 +228,24 @@ main.main-content.css-tutorial
                 .blocks
 
 
+    section.aside-bar
+        ul.theme-list
+            li.theme-item
+                a(href='#static') static
+            li.theme-item
+                a(href='#relative') relative
+            li.theme-item
+                a(href='#fixed') fixed
+            li.theme-item
+                a(href='#absolute') absolute
+            li.theme-item
+                a(href='#alignment') Горізонтальне/Вертикальне вірівнювання
+            li.theme-item
+                a(href='#vertical-alignment') Вертикальне виривнювання
+            li.theme-item
+                a(href='#text-alignment') Виривнювання тексту
+            li.theme-item
+                a(href='#float') float
+
+        .slide-btn
+            span.fa.fa-arrow-left

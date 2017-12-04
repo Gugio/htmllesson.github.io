@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
     <title>CSS</title>
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
     <link rel="stylesheet" href="./js/libs/highlight/styles/monokai-sublime.css">
     <script type="text/javascript" src="./js/libs/jquery/jquery.min.js"></script>
     <script type="text/javascript" src="./js/libs/jquery/jquery.mousewheel.min.js"></script>
@@ -34,461 +35,472 @@
       </ol>
     </nav>
     <main class="main-content css-tutorial">
-      <div class="selectors">
-        <h1 class="title">Селектори</h1>
-        <div class="selector-example"><span>.class {<br>&emsp;color: red;<br>&emsp;font-size: 18px;<br>}</span><span>p.class {<br>&emsp;color: green;<br>&emsp;font-size: 16px;<br>}</span></div>
-        <table class="table striped">
-          <colgroup>
-            <col width="180px">
-            <col>
-            <col>
-          </colgroup>
-          <tr>
-            <th>Селектор</th>
-            <th>Значення</th>
-          </tr>
-          <tr>
-            <td>*</td>
-            <td>всі елементи</td>
-          </tr>
-          <tr>
-            <td>p</td>
-            <td>елемент з таким тегом</td>
-          </tr>
-          <tr>
-            <td>.class</td>
-            <td>елемент з таким класом</td>
-          </tr>
-          <tr>
-            <td>#id</td>
-            <td>елемент з таким id</td>
-          </tr>
-        </table>
-        <table class="table striped">
-          <tbody>
+      <div class="container">
+        <div class="selectors">
+          <h1 class="title">Селектори</h1>
+          <div class="selector-example"><span>.class {<br>&emsp;color: red;<br>&emsp;font-size: 18px;<br>}</span><span>p.class {<br>&emsp;color: green;<br>&emsp;font-size: 16px;<br>}</span></div>
+          <table class="table striped">
+            <colgroup>
+              <col width="180px">
+              <col>
+              <col>
+            </colgroup>
             <tr>
-              <th colspan="2">Селектори по атрибуту</th>
+              <th>Селектор</th>
+              <th>Значення</th>
             </tr>
             <tr>
-              <td>[attr]</td>
-              <td>селектор по атрибуту</td>
+              <td>*</td>
+              <td>всі елементи</td>
             </tr>
             <tr>
-              <td>[attr="value"]</td>
-              <td>атрибут строго дорівнює value</td>
+              <td>p</td>
+              <td>елемент з таким тегом</td>
             </tr>
             <tr>
-              <td>[attr^="val"]</td>
-              <td>починається з val, наприклад "value"</td>
+              <td>.class</td>
+              <td>елемент з таким класом</td>
             </tr>
             <tr>
-              <td>[attr|="val"]</td>
-              <td>рівний val або починається з val-, наприклад рівний "val-1"</td>
+              <td>#id</td>
+              <td>елемент з таким id</td>
+            </tr>
+          </table>
+          <table class="table striped" id="attr-selectors">
+            <tbody>
+              <tr>
+                <th colspan="2">Селектори по атрибуту</th>
+              </tr>
+              <tr>
+                <td>[attr]</td>
+                <td>селектор по атрибуту</td>
+              </tr>
+              <tr>
+                <td>[attr="value"]</td>
+                <td>атрибут строго дорівнює value</td>
+              </tr>
+              <tr>
+                <td>[attr^="val"]</td>
+                <td>починається з val, наприклад "value"</td>
+              </tr>
+              <tr>
+                <td>[attr|="val"]</td>
+                <td>рівний val або починається з val-, наприклад рівний "val-1"</td>
+              </tr>
+              <tr>
+                <td>[attr*="val"]</td>
+                <td>містить підстроку val, наприклад рівний "myvalue"</td>
+              </tr>
+              <tr>
+                <td>[attr~="val"]</td>
+                <td>містить val як одно із значень через пробіл, наприклад "edit val"</td>
+              </tr>
+              <tr>
+                <td>[attr$="val"]</td>
+                <td>закінчується на val, наприклад рівний "myval".</td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table striped" id="pseudo-classes">
+            <colgroup>
+              <col width="150px">
+              <col>
+              <col>
+            </colgroup>
+            <tbody>
+              <tr>
+                <th colspan="3">Псевдокласи</th>
+              </tr>
+              <tr>
+                <td>:hover</td>
+                <td>визначає стиль елементу при наведенні на нього курсора миші</td>
+                <td><span class='for-hover'>Hover me!</span></td>
+              </tr>
+              <tr>
+                <td>:active</td>
+                <td>визначає стиль активного елементу. Це такий стан елемента, який відбувається між клацанням і відпуском кнопки миші</td>
+                <td><span class='for-active'>Activate me!</span></td>
+              </tr>
+              <tr>
+                <th colspan="3">При виборі елемента можна вказати його місце серед сусідів.</th>
+              </tr>
+              <tr>
+                <td>:first-child</td>
+                <td>перший нащадок свого батька</td>
+                <td>
+                  <ul class="child child-first">
+                    <li>Перший</li>
+                    <li>Другий</li>
+                    <li>Третій</li>
+                    <li>Четвертий</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>:last-child</td>
+                <td>останній нащадок свого батька</td>
+                <td>
+                  <ul class="child child-last">
+                    <li>Перший</li>
+                    <li>Другий</li>
+                    <li>Третій</li>
+                    <li>Четвертий</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>:only-child</td>
+                <td>єдиний нащадок свого батька, сусідніх елементів немає</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>:nth-child(a)</td>
+                <td>нащадок номер a свого батька, наприклад: nth-child(2) - другий нащадок. Нумерація починається з 1.</td>
+                <td>
+                  <ul class="child child-num">
+                    <li>Перший</li>
+                    <li>Другий</li>
+                    <li>Третій</li>
+                    <li>Четвертий</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>:nth-child(an+b)<br>:nth-child(odd)<br>:nth-child(even)</td>
+                <td>розширення попереднього селектора через зазначення номера нащадка формулою, де a, b - константи, а під n мається на увазі ціле число від 1 до &infin;. Цей псевдоклас буде фільтрувати всі елементи, які потрапляють під формулу при будь-якому n. Наприклад: - :nth-child(2n) дасть елементи номер 2, 4, 6 ..., тобто парні. :nth-child(2n + 1) дасть елементи номер 1, 3 ..., тобто непарні. :nth-child(3n + 2) дасть елементи номер 2, 5, 8 і так далі.<br>odd - не парні<br>even - парні</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>:nth-last-child(a)</td>
+                <td>нащадок номер a свого батька з кінця, наприклад: nth-last-child(2) - другий нащадок починаючи з кінця (тобто перед-останній)</td>
+                <td>
+                  <ul class="child child-num-last">
+                    <li>Перший</li>
+                    <li>Другий</li>
+                    <li>Третій</li>
+                    <li>Четвертий</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th colspan="3">Є аналогічні псевдокласи, які враховують не всіх сусідів, а тільки з тим же тегом:</th>
+              </tr>
+              <tr>
+                <td>:first-of-type</td>
+                <td>перший нащадок свого батька по типу тега</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>:last-of-type</td>
+                <td>останній нащадок свого батька по типу тега</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>:only-of-type</td>
+                <td>єдиний нащадок свого батька по типу тега, сусідніх елементів з таким типом тега немає</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>:nth-of-type(a)</td>
+                <td>нащадок номер a свого батька по типу тега, наприклад: nth-child(2) - другий нащадок не враховуючи нащадків інших типів. Нумерація починається з 1.</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>:nth-last-of-type(a)</td>
+                <td>нащадок номер a свого батька по типу з кінця, наприклад: nth-child(2) - другий нащадок починаючи з кінця (тобто перед-останній по типу тега). Нумерація починається з 1.</td>
+                <td></td>
+              </tr>
+              <tr>
+                <th colspan="3">Специфічні псевдокласи</th>
+              </tr>
+              <tr>
+                <td>:not()</td>
+                <td>задає правила стилів для елементів, які не містять вказаний селектор. Наприклад li:not(:last-child) - всі теги li крім останього. Не можна використовувати :not(:not(...))</td>
+                <td>
+                  <ul class="child child-not">
+                    <li>Перший</li>
+                    <li>Другий</li>
+                    <li>Третій</li>
+                    <li>Четвертий</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>:empty</td>
+                <td>представляє порожні елементи такі, які не містять дочірніх елементів, тексту або пробілів. Наприклад, &lt;p&gt;&lt;/p&gt; є порожнім елементом, а &lt;p&gt; &nbsp; &lt;p&gt; або &lt;p&gt; еге &lt;/p&gt; вже ні.</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>:lang(en)</td>
+                <td>можна задавати певні стилі, характерні для різних мов, наприклад, вид лапок в цитатах.</td>
+                <td>
+                  <ul class="child child-lang">
+                    <li lang="en">English</li>
+                    <li lang="ua">Український</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th colspan="3">Для ссилок</th>
+              </tr>
+              <tr>
+                <td>:link</td>
+                <td>застосовується до посилань, які ще не відвідувалися користувачем, і задає для них стильове оформлення.</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>:visited</td>
+                <td>застосовується до посилань, вже відвідані користувачем, і задає для них стильове оформлення.</td>
+                <td></td>
+              </tr>
+              <tr>
+                <th colspan="3">Для input, select, textarea, button</th>
+              </tr>
+              <tr>
+                <td>:checked</td>
+                <td>застосовується до checkbox, radio і пункти списку option, коли вони знаходяться в положенні «включено». Перемикання елементів в такий стан відбувається за допомогою атрибута checked елемента &lt;input&gt; або користувачем.</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>:disabled</td>
+                <td>застосування стилю до заблокованих елементів форм. Такі елементи не можуть отримати фокус, бути натисненими або активовані, в текстових полях не можна набирати текст.</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>:enabled</td>
+                <td>застосування стилю до доступних (не заблокованих) елементів. За замовчуванням, всі елементи форм є доступними, якщо в коді HTML до них не додається атрибут disabled.</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>:in-range</td>
+                <td>застосовується до елементів форм, у яких введене користувачем значення знаходиться в заздалегідь заданому діапазоні. Сам діапазон встановлюється за допомогою атрибутів min і max, вони, відповідно, ставлять мінімальне і максимальне значення.</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>:optional</td>
+                <td>застосовує стильові правила до елементу &lt;input&gt;, у якого не заданий атрибут required. Таким чином: optional застосовується до необов'язкових полів форми.</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>:out-of-range</td>
+                <td>застосовується до полів форм, у яких введене користувачем значення виходить із заданого діапазону. Псевдоклас працює тільки для тих полів, де користувач може сам ввести значення, навіть не дивлячись на обмеження накладені атрибутами min і max.</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>:read-only</td>
+                <td>застосовується до полів форми, у яких заданий атрибут readonly. Таке поле не може бути модифіковано і отримати фокус.</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>:read-write</td>
+                <td>застосовується до полів форми, доступних для зміни. Псевдоклас: read-write є протилежним за своєю дією: readonly</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>:required</td>
+                <td>застосовує стильові правила до елементу, у якого встановлений атрибут required</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>:target</td>
+                <td>Для переходу до вибраного фрагменту документа, в адресі пишеться символ # і вказується ім'я ідентифікатора. Наприклад, в адресі http://www.w3.org/TR/css3-selectors/#target-pseudo відбувається перехід до елементу, атрибут id якого заданий як target-pseudo. Такий запис адреси називається «цільовий елемент». Псевдоклас: target застосовується до цільового елементу, іншими словами, до ідентифікатора, який вказаний в адресному рядку браузера.<br><a href='#target'>To target</a></td>
+                <td><span id='target'>Target</span></td>
+              </tr>
+              <tr>
+                <td>:valid</td>
+                <td>Застосовується до полів форми, вміст яких проходить перевірку в браузері на відповідність зазначеного типу. Наприклад, для type = "number" вводиться число, а не букви, для type = "email" коректну адресу електронної пошти.</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>:indeterminate</td>
+                <td>Псевдоклас: indeterminate задає стиль для перемикачів, коли вони знаходяться в невизначеному стані. Наприклад, якщо жоден перемикач НЕ позначений, то вони знаходяться в не визначеному стані. У реальності, стиль застосовується тільки до елементів, у яких DOM-атрибут: indeterminate через JavaScript встановлений в значення true. Також цей псевдоклас використовується деякими браузерами для елемента progress.</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>:invalid</td>
+                <td>Застосовується до полів форми, вміст яких не відповідає вказаним типом. Наприклад, для type = "number" має бути введені число, а не букви, для type = "email" коректну адресу електронної пошти.</td>
+                <td></td>
+              </tr>
+              <tr>
+                <th colspan="3">Комбінації селекторів</th>
+              </tr>
+              <tr>
+                <td>.class1.class2</td>
+                <td>До будь-якого елементу одночасно можна додати кілька класів, перераховуючи їх в атрибуті class через пробіл. В цьому випадку до елементу застосовується стиль, описаний в правилах для кожного класу. Оскільки при додаванні декількох класів вони можуть містити однакові стильові властивості, але з різними значеннями, то береться значення у класу, який описаний в коді нижче.</td>
+                <td>.c3{color: blue;} .c2 {color: red;}<br>.c1 {color: green;}   <span style='white-space: nowrap;'>&lt;p class='c1 c2 c3&gt;</span><br>&emsp;<span style='color: green;'>Test</span><br> &lt;/p&gt;</td>
+              </tr>
+              <tr>
+                <td>A &emsp; B</td>
+                <td>задати стиль для B тільки коли він розташовується всередині контейнера A. Таким чином можна встановити стиль для елемента, який знаходиться всередині іншого.</td>
+              </tr>
+              <tr>
+                <td>A > B</td>
+                <td>Стиль застосовується до елементу B, тільки коли він є дочірнім для елемента A.</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>A + B</td>
+                <td>стиль застосовується до елемента B який йде безпосереднь після елементу А на одному рівні вкладеності</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>A ~ B</td>
+                <td>стиль застосовується до всіх елементів B які йдуть після елементу А на одному рівні вкладеності</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <h2 class="title" id="cascade">Каскадність (приорітет селекторів)</h2>
+          <table class="table striped">
+            <tr>
+              <th>Селектор</th>
+              <th>Приорітет</th>
+              <th></th>
             </tr>
             <tr>
-              <td>[attr*="val"]</td>
-              <td>містить підстроку val, наприклад рівний "myvalue"</td>
+              <td>*</td>
+              <td>0/0/0/0/0.5</td>
+              <td></td>
             </tr>
             <tr>
-              <td>[attr~="val"]</td>
-              <td>містить val як одно із значень через пробіл, наприклад "edit val"</td>
+              <td>тег</td>
+              <td>0/0/0/0/1</td>
+              <td>div p = 0/0/0/0/2</td>
             </tr>
             <tr>
-              <td>[attr$="val"]</td>
-              <td>закінчується на val, наприклад рівний "myval".</td>
-            </tr>
-          </tbody>
-        </table>
-        <table class="table striped">
-          <colgroup>
-            <col width="150px">
-            <col>
-            <col>
-          </colgroup>
-          <tbody>
-            <tr>
-              <th colspan="3">Псевдокласи</th>
+              <td>клас, псевдоклас</td>
+              <td>0/0/0/1/0</td>
+              <td>.class:first-child = 0/0/0/2/0<br>p:first-child = 0/0/0/1/1<br>.class1 &gt; .class2 = 0/0/0/2/0</td>
             </tr>
             <tr>
-              <td>:hover</td>
-              <td>визначає стиль елементу при наведенні на нього курсора миші</td>
-              <td><span class='for-hover'>Hover me!</span></td>
+              <td>id</td>
+              <td>0/0/1/0/0</td>
+              <td>id .class = 0/0/1/1/0</td>
             </tr>
             <tr>
-              <td>:active</td>
-              <td>визначає стиль активного елементу. Це такий стан елемента, який відбувається між клацанням і відпуском кнопки миші</td>
-              <td><span class='for-active'>Activate me!</span></td>
+              <td>атрибут style</td>
+              <td>0/1/0/0/0</td>
+              <td></td>
             </tr>
             <tr>
-              <th colspan="3">При виборі елемента можна вказати його місце серед сусідів.</th>
+              <td>!important</td>
+              <td>1/0/0/0/0</td>
+              <td></td>
+            </tr>
+          </table>
+          <h2 class="title" id="pseudo-elements">Псевдоелементи</h2>
+          <ul>
+            <li>::before</li>
+            <li>::after</li>
+            <li>::first-letter</li>
+            <li>::first-line</li>
+            <li>::selection</li>
+          </ul>
+          <h2>::before & ::after</h2>
+          <p>Псевдоелементи: before та: after дозволяють додавати вміст (стилі) до і після елемента, до якого були застосовані.</p>
+          <figure>
+            div::before {<br>&emsp;content: "Що це за хрень";<br>
+            }<br><br>
+            div::after {<br>
+            &emsp;content: "Івріт походу";<br>
+            }
+          </figure>
+          <div class="iverit"><span>ארמית עתיקה במובן הצר היא השפה שקיימה לפני היווצרות הפרנק השוויצרי הסהר הפורה. לפני העלייה הגרנדיוזית שלו, הארמית היתה רק שפתן של מדינות-עיר של הארמים בסוריה: דמשק, חמה, ארפדתל רפעת הנוכח</span></div>
+          <p>Обовязкова властивість <span class='orange-text'>content</span>: ""; може приймати деякі параметри:<br></p>
+          <table class="table striped">
+            <colgroup>
+              <col width="150px">
+              <col>
+              <col>
+            </colgroup>
+            <tr>
+              <td>normal</td>
+              <td>значення за замовчуванням. Встановлює вміст, якщо вказано, до нормального, який за замовчуванням "" (пусто)</td>
+              <td></td>
             </tr>
             <tr>
-              <td>:first-child</td>
-              <td>перший нащадок свого батька</td>
+              <td>none</td>
+              <td>встановлює вміст, якщо він вказаний, на "нічого"</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>counter(myIndex)</td>
+              <td>встановлює вміст як лічильник</td>
               <td>
-                <ul class="child child-first">
-                  <li>Перший</li>
-                  <li>Другий</li>
-                  <li>Третій</li>
-                  <li>Четвертий</li>
-                </ul>
+                <p class="el-count">mamont</p>
+                <p class="el-count">mamont</p>
+                <p class="el-count">mamont</p>
+                <p class="el-count">mamont</p>
               </td>
             </tr>
             <tr>
-              <td>:last-child</td>
-              <td>останній нащадок свого батька</td>
+              <td>attr(attribute)</td>
+              <td>встановлює вміст як один із атрибутів селектора</td>
+              <td><span class='el-data' data-content='Ты чо такой дерзкий!!!'>Якщо на мене навести я вам дещо скажу :)</span></td>
+            </tr>
+            <tr>
+              <td>open-quote</td>
+              <td>встановлює вміст як відкриту цитату</td>
+              <td class="el-quote"></td>
+            </tr>
+            <tr>
+              <td>close-quote</td>
+              <td>встановлює вміст як закриту цитату</td>
+              <td class="el-quote-close"></td>
+            </tr>
+            <tr>
+              <td>no-open-quote</td>
+              <td>видаляє початкову цитату з вмісту, якщо вона вказана</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>no-close-quote</td>
+              <td>видаляє кінцеву цитату з вмісту, якщо вона вказана</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>url("url")</td>
+              <td>задає вмісту (зображення).</td>
               <td>
-                <ul class="child child-last">
-                  <li>Перший</li>
-                  <li>Другий</li>
-                  <li>Третій</li>
-                  <li>Четвертий</li>
-                </ul>
+                <div class="el-url"></div>
               </td>
             </tr>
             <tr>
-              <td>:only-child</td>
-              <td>єдиний нащадок свого батька, сусідніх елементів немає</td>
+              <td></td>
+              <td></td>
               <td></td>
             </tr>
-            <tr>
-              <td>:nth-child(a)</td>
-              <td>нащадок номер a свого батька, наприклад: nth-child(2) - другий нащадок. Нумерація починається з 1.</td>
-              <td>
-                <ul class="child child-num">
-                  <li>Перший</li>
-                  <li>Другий</li>
-                  <li>Третій</li>
-                  <li>Четвертий</li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <td>:nth-child(an+b)<br>:nth-child(odd)<br>:nth-child(even)</td>
-              <td>розширення попереднього селектора через зазначення номера нащадка формулою, де a, b - константи, а під n мається на увазі ціле число від 1 до &infin;. Цей псевдоклас буде фільтрувати всі елементи, які потрапляють під формулу при будь-якому n. Наприклад: - :nth-child(2n) дасть елементи номер 2, 4, 6 ..., тобто парні. :nth-child(2n + 1) дасть елементи номер 1, 3 ..., тобто непарні. :nth-child(3n + 2) дасть елементи номер 2, 5, 8 і так далі.<br>odd - не парні<br>even - парні</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>:nth-last-child(a)</td>
-              <td>нащадок номер a свого батька з кінця, наприклад: nth-last-child(2) - другий нащадок починаючи з кінця (тобто перед-останній)</td>
-              <td>
-                <ul class="child child-num-last">
-                  <li>Перший</li>
-                  <li>Другий</li>
-                  <li>Третій</li>
-                  <li>Четвертий</li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <th colspan="3">Є аналогічні псевдокласи, які враховують не всіх сусідів, а тільки з тим же тегом:</th>
-            </tr>
-            <tr>
-              <td>:first-of-type</td>
-              <td>перший нащадок свого батька по типу тега</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>:last-of-type</td>
-              <td>останній нащадок свого батька по типу тега</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>:only-of-type</td>
-              <td>єдиний нащадок свого батька по типу тега, сусідніх елементів з таким типом тега немає</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>:nth-of-type(a)</td>
-              <td>нащадок номер a свого батька по типу тега, наприклад: nth-child(2) - другий нащадок не враховуючи нащадків інших типів. Нумерація починається з 1.</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>:nth-last-of-type(a)</td>
-              <td>нащадок номер a свого батька по типу з кінця, наприклад: nth-child(2) - другий нащадок починаючи з кінця (тобто перед-останній по типу тега). Нумерація починається з 1.</td>
-              <td></td>
-            </tr>
-            <tr>
-              <th colspan="3">Специфічні псевдокласи</th>
-            </tr>
-            <tr>
-              <td>:not()</td>
-              <td>задає правила стилів для елементів, які не містять вказаний селектор. Наприклад li:not(:last-child) - всі теги li крім останього. Не можна використовувати :not(:not(...))</td>
-              <td>
-                <ul class="child child-not">
-                  <li>Перший</li>
-                  <li>Другий</li>
-                  <li>Третій</li>
-                  <li>Четвертий</li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <td>:empty</td>
-              <td>представляє порожні елементи такі, які не містять дочірніх елементів, тексту або пробілів. Наприклад, &lt;p&gt;&lt;/p&gt; є порожнім елементом, а &lt;p&gt; &nbsp; &lt;p&gt; або &lt;p&gt; еге &lt;/p&gt; вже ні.</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>:lang(en)</td>
-              <td>можна задавати певні стилі, характерні для різних мов, наприклад, вид лапок в цитатах.</td>
-              <td>
-                <ul class="child child-lang">
-                  <li lang="en">English</li>
-                  <li lang="ua">Український</li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <th colspan="3">Для ссилок</th>
-            </tr>
-            <tr>
-              <td>:link</td>
-              <td>застосовується до посилань, які ще не відвідувалися користувачем, і задає для них стильове оформлення.</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>:visited</td>
-              <td>застосовується до посилань, вже відвідані користувачем, і задає для них стильове оформлення.</td>
-              <td></td>
-            </tr>
-            <tr>
-              <th colspan="3">Для input, select, textarea, button</th>
-            </tr>
-            <tr>
-              <td>:checked</td>
-              <td>застосовується до checkbox, radio і пункти списку option, коли вони знаходяться в положенні «включено». Перемикання елементів в такий стан відбувається за допомогою атрибута checked елемента &lt;input&gt; або користувачем.</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>:disabled</td>
-              <td>застосування стилю до заблокованих елементів форм. Такі елементи не можуть отримати фокус, бути натисненими або активовані, в текстових полях не можна набирати текст.</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>:enabled</td>
-              <td>застосування стилю до доступних (не заблокованих) елементів. За замовчуванням, всі елементи форм є доступними, якщо в коді HTML до них не додається атрибут disabled.</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>:in-range</td>
-              <td>застосовується до елементів форм, у яких введене користувачем значення знаходиться в заздалегідь заданому діапазоні. Сам діапазон встановлюється за допомогою атрибутів min і max, вони, відповідно, ставлять мінімальне і максимальне значення.</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>:optional</td>
-              <td>застосовує стильові правила до елементу &lt;input&gt;, у якого не заданий атрибут required. Таким чином: optional застосовується до необов'язкових полів форми.</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>:out-of-range</td>
-              <td>застосовується до полів форм, у яких введене користувачем значення виходить із заданого діапазону. Псевдоклас працює тільки для тих полів, де користувач може сам ввести значення, навіть не дивлячись на обмеження накладені атрибутами min і max.</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>:read-only</td>
-              <td>застосовується до полів форми, у яких заданий атрибут readonly. Таке поле не може бути модифіковано і отримати фокус.</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>:read-write</td>
-              <td>застосовується до полів форми, доступних для зміни. Псевдоклас: read-write є протилежним за своєю дією: readonly</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>:required</td>
-              <td>застосовує стильові правила до елементу, у якого встановлений атрибут required</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>:target</td>
-              <td>Для переходу до вибраного фрагменту документа, в адресі пишеться символ # і вказується ім'я ідентифікатора. Наприклад, в адресі http://www.w3.org/TR/css3-selectors/#target-pseudo відбувається перехід до елементу, атрибут id якого заданий як target-pseudo. Такий запис адреси називається «цільовий елемент». Псевдоклас: target застосовується до цільового елементу, іншими словами, до ідентифікатора, який вказаний в адресному рядку браузера.<br><a href='#target'>To target</a></td>
-              <td><span id='target'>Target</span></td>
-            </tr>
-            <tr>
-              <td>:valid</td>
-              <td>Застосовується до полів форми, вміст яких проходить перевірку в браузері на відповідність зазначеного типу. Наприклад, для type = "number" вводиться число, а не букви, для type = "email" коректну адресу електронної пошти.</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>:indeterminate</td>
-              <td>Псевдоклас: indeterminate задає стиль для перемикачів, коли вони знаходяться в невизначеному стані. Наприклад, якщо жоден перемикач НЕ позначений, то вони знаходяться в не визначеному стані. У реальності, стиль застосовується тільки до елементів, у яких DOM-атрибут: indeterminate через JavaScript встановлений в значення true. Також цей псевдоклас використовується деякими браузерами для елемента progress.</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>:invalid</td>
-              <td>Застосовується до полів форми, вміст яких не відповідає вказаним типом. Наприклад, для type = "number" має бути введені число, а не букви, для type = "email" коректну адресу електронної пошти.</td>
-              <td></td>
-            </tr>
-            <tr>
-              <th colspan="3">Комбінації селекторів</th>
-            </tr>
-            <tr>
-              <td>.class1.class2</td>
-              <td>До будь-якого елементу одночасно можна додати кілька класів, перераховуючи їх в атрибуті class через пробіл. В цьому випадку до елементу застосовується стиль, описаний в правилах для кожного класу. Оскільки при додаванні декількох класів вони можуть містити однакові стильові властивості, але з різними значеннями, то береться значення у класу, який описаний в коді нижче.</td>
-              <td>.c3{color: blue;} .c2 {color: red;}<br>.c1 {color: green;}   <span style='white-space: nowrap;'>&lt;p class='c1 c2 c3&gt;</span><br>&emsp;<span style='color: green;'>Test</span><br> &lt;/p&gt;</td>
-            </tr>
-            <tr>
-              <td>A &emsp; B</td>
-              <td>задати стиль для B тільки коли він розташовується всередині контейнера A. Таким чином можна встановити стиль для елемента, який знаходиться всередині іншого.</td>
-            </tr>
-            <tr>
-              <td>A > B</td>
-              <td>Стиль застосовується до елементу B, тільки коли він є дочірнім для елемента A.</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>A + B</td>
-              <td>стиль застосовується до елемента B який йде безпосереднь після елементу А на одному рівні вкладеності</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>A ~ B</td>
-              <td>стиль застосовується до всіх елементів B які йдуть після елементу А на одному рівні вкладеності</td>
-              <td></td>
-            </tr>
-          </tbody>
-        </table>
-        <h2 class="title">Каскадність (приорітет селекторів)</h2>
-        <table class="table striped">
-          <tr>
-            <th>Селектор</th>
-            <th>Приорітет</th>
-            <th></th>
-          </tr>
-          <tr>
-            <td>*</td>
-            <td>0/0/0/0/0.5</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>тег</td>
-            <td>0/0/0/0/1</td>
-            <td>div p = 0/0/0/0/2</td>
-          </tr>
-          <tr>
-            <td>клас, псевдоклас</td>
-            <td>0/0/0/1/0</td>
-            <td>.class:first-child = 0/0/0/2/0<br>p:first-child = 0/0/0/1/1<br>.class1 &gt; .class2 = 0/0/0/2/0</td>
-          </tr>
-          <tr>
-            <td>id</td>
-            <td>0/0/1/0/0</td>
-            <td>id .class = 0/0/1/1/0</td>
-          </tr>
-          <tr>
-            <td>атрибут style</td>
-            <td>0/1/0/0/0</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>!important</td>
-            <td>1/0/0/0/0</td>
-            <td></td>
-          </tr>
-        </table>
-        <h2 class="title">Псевдоелементи</h2>
-        <ul>
-          <li>::before</li>
-          <li>::after</li>
-          <li>::first-letter</li>
-          <li>::first-line</li>
-          <li>::selection</li>
-        </ul>
-        <h2>::before & ::after</h2>
-        <p>Псевдоелементи: before та: after дозволяють додавати вміст (стилі) до і після елемента, до якого були застосовані.</p>
-        <figure>
-          div::before {<br>&emsp;content: "Що це за хрень";<br>
-          }<br><br>
-          div::after {<br>
-          &emsp;content: "Івріт походу";<br>
-          }
-        </figure>
-        <div class="iverit"><span>ארמית עתיקה במובן הצר היא השפה שקיימה לפני היווצרות הפרנק השוויצרי הסהר הפורה. לפני העלייה הגרנדיוזית שלו, הארמית היתה רק שפתן של מדינות-עיר של הארמים בסוריה: דמשק, חמה, ארפדתל רפעת הנוכח</span></div>
-        <p>Обовязкова властивість <span class='orange-text'>content</span>: ""; може приймати деякі параметри:<br></p>
-        <table class="table striped">
-          <colgroup>
-            <col width="150px">
-            <col>
-            <col>
-          </colgroup>
-          <tr>
-            <td>normal</td>
-            <td>значення за замовчуванням. Встановлює вміст, якщо вказано, до нормального, який за замовчуванням "" (пусто)</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>none</td>
-            <td>встановлює вміст, якщо він вказаний, на "нічого"</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>counter(myIndex)</td>
-            <td>встановлює вміст як лічильник</td>
-            <td>
-              <p class="el-count">mamont</p>
-              <p class="el-count">mamont</p>
-              <p class="el-count">mamont</p>
-              <p class="el-count">mamont</p>
-            </td>
-          </tr>
-          <tr>
-            <td>attr(attribute)</td>
-            <td>встановлює вміст як один із атрибутів селектора</td>
-            <td><span class='el-data' data-content='Ты чо такой дерзкий!!!'>Якщо на мене навести я вам дещо скажу :)</span></td>
-          </tr>
-          <tr>
-            <td>open-quote</td>
-            <td>встановлює вміст як відкриту цитату</td>
-            <td class="el-quote"></td>
-          </tr>
-          <tr>
-            <td>close-quote</td>
-            <td>встановлює вміст як закриту цитату</td>
-            <td class="el-quote-close"></td>
-          </tr>
-          <tr>
-            <td>no-open-quote</td>
-            <td>видаляє початкову цитату з вмісту, якщо вона вказана</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>no-close-quote</td>
-            <td>видаляє кінцеву цитату з вмісту, якщо вона вказана</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>url("url")</td>
-            <td>задає вмісту (зображення).</td>
-            <td>
-              <div class="el-url"></div>
-            </td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-        </table>
-        <div><img src="img/p1.jpg"><img src="img/p2.jpg"><img src="img/p3.jpg"><img src="img/p4.jpg"></div>
-        <h2>::first-letter</h2>
-        <p>Визначає стиль першого символу в тексті елемента, до якого додається.</p>
-        <p class="first-letter">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.</p>
-        <p class="first-letter">-The beginning of a special punctuation mark.</p>
-        <p class="first-letter">_The beginning of a special punctuation mark.</p>
-        <p class="first-letter">*The beginning of a special punctuation mark.</p>
-        <p class="first-letter">"The beginning of a special punctuation mark.</p>
-        <p class="first-letter">'The beginning of a special punctuation mark.</p>
-        <p class="first-letter">&The beginning of a special punctuation mark.</p>
-        <p class="first-letter">5The beginning of a special punctuation mark.</p>
-        <p class="first-letter">/The beginning of a special punctuation mark.</p>
-        <p class="first-letter">+The beginning of a special punctuation mark.</p>
-        <h2>::first-line</h2>
-        <p>Визначає стиль першого текстового рядка.</p>
-        <p class="first-line">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.</p>
-        <h2>::selection</h2>
-        <p>Визначає стиль виділення тексту юзером.</p>
-        <p>Тільки деякі властивості CSS можна використовувати з цим псевдоелементом:<br> (color, background-color, и text-shadow. )</p>
-        <p class="select">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.</p>
+          </table>
+          <div><img src="img/p1.jpg"><img src="img/p2.jpg"><img src="img/p3.jpg"><img src="img/p4.jpg"></div>
+          <h2>::first-letter</h2>
+          <p>Визначає стиль першого символу в тексті елемента, до якого додається.</p>
+          <p class="first-letter">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.</p>
+          <p class="first-letter">-The beginning of a special punctuation mark.</p>
+          <p class="first-letter">_The beginning of a special punctuation mark.</p>
+          <p class="first-letter">*The beginning of a special punctuation mark.</p>
+          <p class="first-letter">"The beginning of a special punctuation mark.</p>
+          <p class="first-letter">'The beginning of a special punctuation mark.</p>
+          <p class="first-letter">&The beginning of a special punctuation mark.</p>
+          <p class="first-letter">5The beginning of a special punctuation mark.</p>
+          <p class="first-letter">/The beginning of a special punctuation mark.</p>
+          <p class="first-letter">+The beginning of a special punctuation mark.</p>
+          <h2>::first-line</h2>
+          <p>Визначає стиль першого текстового рядка.</p>
+          <p class="first-line">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.</p>
+          <h2>::selection</h2>
+          <p>Визначає стиль виділення тексту юзером.</p>
+          <p>Тільки деякі властивості CSS можна використовувати з цим псевдоелементом:<br> (color, background-color, и text-shadow. )</p>
+          <p class="select">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.</p>
+        </div>
+        <section class="aside-bar">
+          <ul class="theme-list">
+            <li class="theme-item"><a href="#attr-selectors">Селектори по атрибуту</a></li>
+            <li class="theme-item"><a href="#pseudo-classes">Псевдо-класи</a></li>
+            <li class="theme-item"><a href="#cascade">Каскаднисть</a></li>
+            <li class="theme-item"><a href="#pseudo-elements">Псевдо-елементи</a></li>
+          </ul>
+          <div class="slide-btn"><span class="fa fa-arrow-left"></span></div>
+        </section>
       </div>
     </main>
     <script src="./js/libs/jquery/jquery.min.js"></script>
