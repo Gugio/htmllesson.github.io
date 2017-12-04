@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+    <title>CSS</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" href="./js/libs/highlight/styles/monokai-sublime.css">
+    <script type="text/javascript" src="./js/libs/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/libs/jquery/jquery.mousewheel.min.js"></script>
+    <script type="text/javascript" src="./js/scripts/slickcustomscroll.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
+    <!--script(type='text/javascript' src='./js/libs/scripts/scroll.js')-->
+    <script type="text/javascript" src="./js/libs/highlight/highlight.pack.js"></script>
+  </head>
+  <body rel="slickScroll">
+    <nav class="nav-menu"><a class="home-link" href="index.html">home</a>
+      <ol class="nav-list">
+        <li><a class="nav-link" href="selectors.html"><span>Селектори, Псевдокласи, Каскадність, Псевдоелементи</span></a></li>
+        <li><a class="nav-link" href="css_boxmodel.html"><span>СSS Box model</span></a></li>
+        <li><a class="nav-link" href="measurement.html"><span>Одиниці виміру</span></a></li>
+        <li><a class="nav-link" href="position.html"><span>Позиціонування</span></a></li>
+        <li><a class="nav-link" href="fonts.html"><span>Стилізація тексту</span></a></li>
+        <li><a class="nav-link" href="block_style.html"><span>Стилізація елементів</span></a></li>
+        <li><a class="nav-link" href="media.html"><span>@media</span></a></li>
+        <li><a class="nav-link" href="transform.html"><span>Трансформація</span></a></li>
+        <li><a class="nav-link" href="animations.html"><span>Анімація (2D, 3D)</span></a></li>
+        <li><a class="nav-link" href="flexbox.html"><span>Flex-box</span></a></li>
+        <li><a class="nav-link" href="#"><span>Display</span></a></li>
+        <li><a class="nav-link" href="#"><span>Префікси</span></a></li>
+        <li><a class="nav-link" href="#"><span>SVG</span></a></li>
+        <li><a class="nav-link" href="#"><span>Спрайти</span></a></li>
+      </ol>
+    </nav>
+    <main class="main-content">
+      <div class="container hyperlinks">
+        <h1 class="title">Teг &lta&gt, &ltmap&gt &ltarea&gt &ltmap&gt</h1>
+        <div style="text-align: center;">
+          <h3 style="text-align: center; margin-bottom: 50px;">
+            &lta href="URL" target="параметр" title="опис
+            (підказка)" &gtназва ссилки
+            (елемент)&lt/a&gt
+          </h3>
+          <div style="display: inline-block; margin: auto;text-align: left;">
+            <table style="margin: 0 0 50px;">
+              <tbody>
+                <tr>
+                  <td rowspan="4" valign="top"><span style="color: #009121; font-size: 22px;">href =</span></td>
+                  <td>https://thinkmobiles.com/player-360/</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>src/public/index.html</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>#someID (https://thinkmobiles.com#someID) або (index.html#someID)</td>
+                  <td><a href="../index.html#someID" target="_blank">Go to id</a></td>
+                </tr>
+                <tr>
+                  <td>#someName (tags.html#someName</td>
+                  <td><a href="tags.html#someName" target="_blank">Go to name</a></td>
+                </tr>
+              </tbody>
+            </table>
+            <table style="margin: 0 0 50px; ;">
+              <tbody>
+                <tr>
+                  <td rowspan="4" valign="top"><span style="color: #009121; font-size: 22px;">target =</span></td>
+                  <td><span class="spanOrange">_blank</span></td>
+                  <td>Загружає сторінку в новій вкладці або вікні браузера.</td>
+                </tr>
+                <tr>
+                  <td><span class="spanOrange">_self</span></td>
+                  <td>Загружає сторінку в ційже вкладці або вікні.</td>
+                </tr>
+                <tr>
+                  <td><span class="spanOrange">_parent</span></td>
+                  <td>Загружає сторінку в батьківському фреймі, якщо фрейма нема то значення робить як _self.</td>
+                </tr>
+                <tr>
+                  <td><span class="spanOrange">_top</span></td>
+                  <td>
+                    Відміняє всі фрейми і загружає сторінку в повному вікні браузера, якщо фрейма нема то
+                    значення робить як _self.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <p>По номеру телефона:<a href="tel:+38055555555"><span class="spanOrange">&lta href="tel:+38055555555"&gt</span>+380-55-555-55-55<span class="spanOrange">&lt/a&gt</span></a></p>
+            <p>Скайп:<a href="skype:sviatoslav.pr"><span class="spanOrange">&lta href="skype:sviatoslav.pr"&gt</span>Skype: sviatoslav.pr<span class="spanOrange">&lt/a&gt</span></a></p>
+            <p><a href="../img/image.jpg" title="Download" download=""><img src="./img/image.jpg" width="100px" style="vertical-align: middle; margin-right: 15px;"></a>                    &lta href="image.jpg" title="Download"<span class="spanOrange">download</span>&gt&ltimg
+                                  src="image.jpg" width="100px" height="50px"&gt&lt/a&gt
+            </p>
+            <div style="display: flex; align-items: center;">
+              <div style="margin-right: 25px;"><img style="border: none;" src="./img/minions.jpg" width="400" height="auto" alt="minions" usemap="#minions"><map name="minions">
+                  <area shape="poly" coords="49,116,69,78,118,76,138,105,136,143,148,166,147,194,128,217,120,220,125,236,89,237,60,238,70,222,47,203,42,178,2,178,2,138,47,147,47,139" href="./img/m1.png" target="_blank" alt="Minion1" title="Minion">
+                  <area shape="poly" coords="164,142,167,32,198,28,185,-3,235,2,216,28,252,54,248,110,253,151,261,205,237,223,241,240,235,234,177,240,181,219,144,215,153,185" href="./img/m2.png" target="_blank" alt="Minion2" title="Minion">
+                  <area shape="poly" coords="270,119,308,97,348,115,360,154,362,173,384,149,389,154,387,196,361,203,337,222,342,243,274,243,252,235,264,200" href="./img/m3.jpg" target="_blank" alt="Minion3" title="Minion"></map></div>
+              <p>&ltmap name="minions"&gt<br>                         &ltarea shape="rect" coords="0,0,82,126" href="article1.htm" alt="Minion"&gt<br>                         &ltarea shape="circle" coords="90,58,3" href="article2.htm" alt="Minion"&gt<br>                         &ltarea shape="poly" coords="124,58,8,124,58,8" href="article3.htm" alt="Minion"&gt<br>                        &lt/map&gt<br><a href="http://maschek.hu/imagemap/imgmap/" target="_blank" title="Map Creator" style="font-size: 18px; color: darkblue; display: inline-block; margin: 20px;">Map Editor</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="./js/libs/jquery/jquery.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

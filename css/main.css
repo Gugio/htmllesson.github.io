@@ -400,6 +400,16 @@ td:first-child {
     padding-bottom: .5rem;
     padding-top: .5rem; }
 
+.title, .subtitle {
+  color: #4d4d52;
+  font-weight: 400;
+  text-align: center;
+  font-size: 45px;
+  margin: .5rem auto; }
+
+.subtitle {
+  font-size: 30px; }
+
 .xs-1 {
   width: 8.33333%; }
 
@@ -962,8 +972,6 @@ td:first-child {
     width: 20%; }
     .nav-menu:hover .nav-block {
       overflow-y: auto; }
-    .nav-menu:hover .nav-link {
-      visibility: visible; }
 
 .home-link {
   position: relative;
@@ -987,15 +995,16 @@ td:first-child {
     background-repeat: no-repeat; }
 
 .nav-list {
-  max-height: 90%;
   padding: 0 0 0 3rem;
   display: block;
-  overflow: hidden;
+  overflow-x: hidden;
   list-style: none;
   counter-reset: item-number; }
   .nav-list li {
+    display: flex;
     position: relative;
-    height: 2.2rem; }
+    height: 2.2rem;
+    line-height: 2.2rem; }
     .nav-list li::before {
       counter-increment: item-number;
       content: counter(item-number);
@@ -1011,17 +1020,11 @@ td:first-child {
       line-height: 22px;
       color: #fff;
       transition: all 180ms ease; }
-  .nav-list .nav-link {
-    position: relative;
-    display: block;
-    height: 100%;
-    line-height: 1rem;
-    font-size: 13px;
-    font-weight: 400;
-    transition: all 180ms ease; }
-    .nav-list .nav-link:hover {
+    .nav-list li:first-child {
+      line-height: 1rem; }
+    .nav-list li:hover {
       color: #000; }
-      .nav-list .nav-link:hover::after {
+      .nav-list li:hover::after {
         content: "";
         position: absolute;
         top: 0;
@@ -1032,6 +1035,11 @@ td:first-child {
         background-color: #009BD9;
         border-radius: 20%;
         transition: all 180ms ease; }
+  .nav-list .nav-link {
+    font-size: 12px;
+    display: inline-block;
+    width: 100%;
+    height: 100%; }
 
 .selector-example {
   margin-bottom: 40px;
@@ -1617,16 +1625,6 @@ span:target {
     width: 100%;
     height: auto;
     text-align: left; }
-
-.title, .subtitle {
-  color: #4d4d52;
-  font-weight: 400;
-  text-align: center;
-  font-size: 45px;
-  margin: .5rem auto; }
-
-.subtitle {
-  font-size: 30px; }
 
 figure.code {
   display: block;
