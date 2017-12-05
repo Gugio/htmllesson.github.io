@@ -41,6 +41,7 @@ function resp() {
     var flexShrink1 = $('#flex-shrink-1');
     var flexShrink2 = $('#flex-shrink-2');
     var flexShrink3 = $('#flex-shrink-3');
+    var smoothScroll = $('.smoothLink');
 
 
     $(document).ready(function () {
@@ -100,6 +101,13 @@ function resp() {
         syntaxHighlight.each(function(i, block) {
             hljs.highlightBlock(block);
 
+        });
+        
+        smoothScroll.click(function (e) {
+            e.preventDefault();
+            $('body, html').animate({
+                scrollTop: $(this.hash).offset().top
+            }, 750);
         });
 
 

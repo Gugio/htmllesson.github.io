@@ -94,7 +94,7 @@ main.main-content.css-tutorial
 
 
 
-            h2.subtitle Властивості шрифту
+            h2#font-properties.subtitle Властивості шрифту
             p(style="text-indent: 3rem;")
                 | Шрифт змінюється за допомоогою властивостей:
                 span.blue font
@@ -377,7 +377,7 @@ main.main-content.css-tutorial
                         |
                         td
             |
-            h2.title Властивості тексту
+            h2#text-properties.title Властивості тексту
             |
             p(style="text-indent: 3rem;")
                 | Крім змін параметру шрифтів, можливо керувати і властивостями всього тексту.
@@ -790,7 +790,7 @@ main.main-content.css-tutorial
                             br
                             | }
             |
-            h2.title Колір
+            h2#color.title Колір
             |
             img(src="../../img/color1.png")
             |
@@ -888,19 +888,11 @@ main.main-content.css-tutorial
     section.aside-bar
         ul.theme-list
             li.theme-item
-                a(href='#animation-name') animation-name
+                a.smoothLink(href='#font-properties') Шрифт
             li.theme-item
-                a(href='#animation-duration') animation-duration
+                a.smoothLink(href='#text-properties') Текст
             li.theme-item
-                a(href='#animation-timing') animation-timing
-            li.theme-item
-                a(href='#animation-delay') animation-delay
-            li.theme-item
-                a(href='#animation-count') animation-count
-            li.theme-item
-                a(href='#animation-direction') animation-direction
-            li.theme-item
-                a(href='#3danimations') 3d-animation
+                a.smoothLink(href='#color') Колір
 
         .slide-btn
             span.fa.fa-arrow-left
