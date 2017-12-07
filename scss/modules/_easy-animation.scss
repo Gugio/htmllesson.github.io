@@ -10,14 +10,12 @@
   0% {transform:rotate(-45deg)}
   50% {transform:rotate(-135deg)}
   100%  {transform:rotate(-225deg)}
-
 }
 
 @keyframes span-1 {
   0% {transform:translate(0);}
   50% {transform:translate(-50px, 0); border-color:#EE4D68;}
   100%  {transform:translate(0);}
-
 }
 
 @keyframes span-2 {
