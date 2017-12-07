@@ -16,7 +16,8 @@ main.main-content.css-tutorial
                 tbody
                     tr
                         td overflow<br> overflow-x<br> overflow-y
-                        td Управляє відображенням змісту блокового елемента, якщо воно цілком не поміщається і виходить за область заданих розмірів.<div class='radioRepeat'>
+                        td Управляє відображенням змісту блокового елемента, якщо воно цілком не поміщається і виходить за область заданих розмірів.
+                            div.radioRepeat
                             | <a href='javascript:;' class='radio-repeat' data-content='visible'>visible</a> - відображає весь вміст елемента, навіть за межами встановленої висоти і ширини.<br>
                             | <a href='javascript:;' class='radio-repeat' data-content='hidden'>hidden</a> - відображає лише область всередині елемента, інше буде приховано.<br>
                             | <a href='javascript:;' class='radio-repeat' data-content='scroll'>scroll</a> - завжди додаються смуги прокрутки.<br>
@@ -95,8 +96,9 @@ main.main-content.css-tutorial
                         td
                     tr
                         td border-style
-                        td(colspan='2') Задає вигляд бордера<div class='brepetRO'>
-                            | <a href='javascript:;' class='radio-repeat' data-content='local'>
+                        td(colspan='2') Задає вигляд бордера
+                            div#brepetRO
+                                a(href='javascript:;' class='radio-repeat' data-content='local')
                             | <div class='border-s' style='border-style:dotted'>dotted</div>
                             | <div class='border-s' style='border-style:dashed'>dashed</div>
                             | <div class='border-s' style='border-style:solid'>solid</div>

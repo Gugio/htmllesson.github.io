@@ -982,6 +982,10 @@ td:first-child {
   .xl-offset-0 {
     margin-left: 0; } }
 
+.scroll-wrap {
+  margin-top: 2rem;
+  height: 80vh; }
+
 .nav-menu {
   position: fixed;
   top: 0;
@@ -993,15 +997,11 @@ td:first-child {
   transition: width 250ms ease-in-out;
   z-index: 1000; }
   .nav-menu:hover {
-    width: 20%; }
+    width: 320px; }
     .nav-menu:hover .home-link span {
       opacity: 1; }
     .nav-menu:hover .home-link:before {
-      right: 2rem; }
-
-.scroll-wrap {
-  margin-top: 2rem;
-  height: 70vh; }
+      right: 0; }
 
 .home-link {
   position: relative;
@@ -1030,14 +1030,16 @@ td:first-child {
 
 .nav-list {
   position: relative;
-  padding: 0 0 0 3rem;
+  top: 0;
+  bottom: 1rem;
+  padding: 0 0 1rem 3rem;
   display: block;
   list-style: none;
   counter-reset: item-number; }
   .nav-list li {
-    display: flex;
     position: relative;
     height: 2.2rem;
+    width: 270px;
     line-height: 1rem; }
     .nav-list li::before {
       counter-increment: item-number;
@@ -1054,20 +1056,12 @@ td:first-child {
       text-align: center;
       line-height: 22px;
       color: #fff;
-      transition: all 180ms ease; }
+      transition: background-color 220ms ease-out; }
     .nav-list li:hover {
       color: #000; }
-      .nav-list li:hover::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 2px;
-        display: block;
-        width: 3px;
-        height: 110%;
-        background-color: #009BD9;
-        border-radius: 10%;
-        transition: all 180ms ease; }
+      .nav-list li:hover::before {
+        background-color: #FF6421;
+        box-shadow: 5px 2px 15px 0 rgba(255, 100, 33, 0.5); }
   .nav-list .nav-link {
     font-size: 12px;
     display: inline-block;
@@ -1094,7 +1088,8 @@ figure.code {
   margin-bottom: 40px;
   box-shadow: 3px 8px 29px -6px rgba(0, 0, 0, 0.5);
   transition: box-shadow 200ms ease-in-out;
-  cursor: pointer; }
+  cursor: pointer;
+  outline: none; }
   figure.code::before {
     content: "css";
     float: right;
@@ -1792,11 +1787,6 @@ span:target {
     line-height: 130px;
     text-align: center; }
 
-.animations {
-  max-width: 1000px;
-  margin: auto;
-  margin-bottom: 100px; }
-
 .anim-subtitle {
   perspective: 300px;
   width: 300px;
@@ -1860,16 +1850,16 @@ span:target {
     display: block; }
 
 #brepet {
-  background-image: url("../img/s1.png");
+  background-image: url("./img/s1.png");
   width: 250px; }
 
 #bsize {
-  background-image: url("../img/s1.png");
+  background-image: url("./img/s1.png");
   background-repeat: no-repeat;
   width: 250px; }
 
 #battach {
-  background: #00a19b url("../img/b.png") no-repeat;
+  background: #00a19b url("./img/b.png") no-repeat;
   color: red;
   overflow: auto;
   background-size: cover; }
@@ -1879,18 +1869,18 @@ span:target {
 
 #bclip {
   padding: 20px;
-  background: url("../img/b2.png") no-repeat;
+  background: url("./img/b2.png") no-repeat;
   font-size: 13px;
   border: 10px solid rgba(0, 0, 0, 0.5); }
 
 #borig {
   padding: 20px;
-  background: url("../img/b2.png") no-repeat;
+  background: url("./img/b2.png") no-repeat;
   font-size: 13px;
   border: 10px solid rgba(0, 0, 0, 0.5); }
 
 #opa {
-  background: url("../img/b2.png") no-repeat;
+  background: url("./img/b2.png") no-repeat;
   padding: 50px 0; }
 
 .bgradient {
@@ -2079,13 +2069,14 @@ span:target {
     .float-blocks .blocks.large {
       height: 120px; }
 
-.box-model_image {
-  width: 50%;
+.box-model_image img {
+  display: block;
   margin: auto; }
 
 .box-wrap {
-  background-color: #fecc90;
-  position: relative; }
+  position: relative;
+  margin: 1rem auto;
+  background-color: #fecc90; }
   .box-wrap::before, .box-wrap::after {
     content: '';
     display: block;

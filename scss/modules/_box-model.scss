@@ -1,12 +1,16 @@
 
 .box-model_image {
-  width: 50%;
-  margin: auto;
+  img {
+    display: block;
+    margin: auto;
+  }
 }
 
 .box-wrap {
-  background-color: #fecc90;
   position: relative;
+  margin: 1rem auto;
+  background-color: #fecc90;
+
 
   &::before, &::after {
     content: '';

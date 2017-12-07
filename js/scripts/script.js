@@ -115,6 +115,9 @@ function resp() {
 
         });
 
+        syntaxHighlight.attr('contenteditable', 'true');
+
+
         // ---- Malihu scroll ----
         scrollElement.mCustomScrollbar({
             scrollBarPosition: 'outside',

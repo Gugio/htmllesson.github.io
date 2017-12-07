@@ -19,7 +19,7 @@ var sass = require('gulp-sass');
 
 // postcss variables
 var postcss = require('gulp-postcss');
-var sourcemaps = require('gulp-sourcemaps');
+// var sourcemaps = require('gulp-sourcemaps');
 var autoprefixer = require('autoprefixer');
 var cssnano = require('gulp-cssnano');
 
@@ -81,9 +81,9 @@ gulp.task('server', function () {
     ui: false
   });
 
-  // gulp.watch(paths.pugWatch, ['pug']);
-  // gulp.watch(paths.scss, ['scss']);
-  // gulp.watch(paths.jsWatch, ['js']);
+  // watch(paths.pugWatch, ['pug']);
+  // watch(paths.scss, ['scss']);
+  // watch(paths.jsWatch, ['js']);
   // gulp.watch('*.html').on("change", browserSync.reload);
 
   // gulp.watch("**").on("change", browserSync.reload);
