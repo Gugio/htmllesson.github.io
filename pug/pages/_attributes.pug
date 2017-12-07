@@ -1,0 +1,123 @@
+.main-content
+    .container
+        h1.title Глобальні атрибути:
+        |
+        table.table.striped
+            tbody
+                tr
+                    th(style="width:25%") Атрибут
+                    |
+                    th Властивість
+                |
+                tr
+                    td
+                        | accesskey="s"
+                        br
+                        | (цифра (0-9) або латинська буква (a-z))
+                    |
+                    td
+                        | Перехід до елемента з допомогою комбінації клавіш.
+                        br
+                        |                     Internet Explorer: Alt + S / Chrome: Alt + S / Opera: Shift + Esc, S / Safari: Alt + S / Firefox:
+                        |                     Shift + Alt + S (використовується тільки для
+                        span.spanOrange <a>, <area>, <button>, <input>, <label>, <legend>, <textarea>
+                        | )
+                |
+                tr
+                    td class = "my-super-class another-class"
+                    |
+                    td Атрибут класу вказує один або кілька імен класів для елемента.
+                |
+                tr
+                    td.h5-icon contenteditable = "false / true"
+                    |
+                    td
+                        | <span>
+                        span(tabindex="2", contenteditable="true") Вказує, чи змінюється вміст елемента чи ні.
+                        |  <span>
+                |
+                tr
+                    td.h5-icon data-*
+                    |
+                    td
+                        | Використовується для зберігання спеціальних даних, приватних для сторінки або програми.
+                |
+                tr
+                    td dir = "ltr / rtl"
+                    |
+                    td
+                        | <span dir="ltr">
+                        span(dir="ltr") Вказує напрямок тексту для вмісту елемента.
+                        | </span>
+                        br
+                        |                     <span dir="rtl">
+                        span(dir="rtl") Вказує напрямок тексту для вмісту елемента.
+                        | </span>
+                        br
+                        |                     <span dir="rtl" style="unicode-bidi: bidi-override;">
+                        span(dir="rtl", style="unicode-bidi: bidi-override;") Вказує напрямок тексту для вмісту елемента.
+                        | </span>
+                |
+                tr
+                    td.h5-icon
+                        span(draggable="true") draggable="true / false"
+                    |
+                    td
+                        span(draggable="true") Вказує, чи елемент можна перетягнути чи ні.
+                |
+                tr
+                    td.h5-icon
+                        span(dropzone="copy") dropzone="copy / move / link"
+                    |
+                    td
+                        | Визначає, що робити з перетягувати користувачем даними - скопіювати їх, перетягнути або зв'язати - в
+                        | момент, коли дані кидаються на елемент.
+                        br
+                        |
+                        span.spanOrange copy
+                        |  - після зняття даних буде отримана копія перетягнутих даних.
+                        |
+                        br
+                        span.spanOrange move
+                        |  - перетягнутий обєкт переміститься в нове місце.
+                        br
+                        |
+                        span.spanOrange link
+                        |  -
+                        |                     після переміщеня обєкта буде отримана ссилка на нього.
+                |
+                tr
+                    td.h5-icon hidden
+                    |
+                    td Приховує елемент (властивість display: none;).
+                |
+                tr
+                    td id = "my-id"
+                    |
+                    td Задає ідентифікатор елементу.
+                |
+                tr
+                    td lang = "en"
+                    |
+                    td Визначає мову вмісту елемента для кодування.
+                |
+                tr
+                    td.h5-icon spellcheck = "false / true"
+                    |
+                    td
+                        span(spellcheck="true") Вказує браузеру, чи перевіряти правопис і громатику чи ні.
+                |
+                tr
+                    td style = "color: orang; font-size:18px;"
+                    |
+                    td Використовується для задання стилю елеманту з допомогою правил CSS.
+                |
+                tr
+                    td(tabindex="1") tabindex = "ціле позитивне число"
+                    |
+                    td Задає порядок отримання фокуса при переході між елементами з допомогою Tab
+                |
+                tr
+                    td title = "додаткова інфа"
+                    |
+                    td Вказує додаткову інформацію про елемент, у вигляді спливаючої підказки.

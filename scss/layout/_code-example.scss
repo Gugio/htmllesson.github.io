@@ -1,0 +1,52 @@
+figure.code {
+  display: block;
+  margin: 1rem auto;
+  background-color: #333333;
+  background-image: linear-gradient(to bottom, #333333, #000000);
+  padding: 1em 1em 2em 4em;
+  border-color: rgba(255, 255, 255, 0.3);
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 10px;
+  white-space: pre;
+  line-height: 1.6rem;
+  margin-bottom: 40px;
+  box-shadow: $box-shadow-black;
+  transition: box-shadow 200ms ease-in-out;
+  cursor: pointer;
+
+  &::before {
+    content: "css";
+    float: right;
+    color: $black;
+    text-shadow: -1px 1px 0 $base-text;
+    font-size: 1.7em;
+  }
+
+  &:hover {
+    box-shadow: 0 0 0 0;
+  }
+
+}
+
+
+.for-hover {
+  display: inline-block;
+  border: 2px solid black;
+  padding: 10px;
+  cursor: pointer;
+
+  &:hover {
+    border-color: green;
+    color: green;
+  }
+}
+
+.for-active {
+  @extend .for-hover;
+
+  &:active {
+    border-color: red;
+    color: red;
+  }
+}

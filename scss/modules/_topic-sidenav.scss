@@ -1,0 +1,50 @@
+.aside-bar {
+  position: fixed;
+  top: 20%;
+  right: -200px;
+  width: 200px;
+  height: 400px;
+  padding: 1rem;
+  box-shadow: $box-shadow-black;
+  border-radius: $base-border-radius;
+  background-color: $menu-color;
+  transition: right 200ms ease-out;
+  cursor: pointer;
+  font-size: 13px;
+
+  &:hover {
+    right: -10px;
+
+    .slide-btn {
+      opacity: 0;
+    }
+  }
+
+}
+
+.sidenav-scroll {
+  height: 300px;
+}
+
+
+.slide-btn {
+  position: absolute;
+  top: 50%;
+  left: -35px;
+  background-color: $blue-1;
+  height: 8.5rem;
+  width: 35px;
+  border-bottom-left-radius: $base-border-radius;
+  border-top-left-radius: $base-border-radius;
+  transform: translateY(-50%);
+  transition: opacity 100ms ease-in-out;
+
+  .fa {
+    display: block;
+    color: $white;
+    line-height: 130px;
+    text-align: center;
+
+  }
+
+}

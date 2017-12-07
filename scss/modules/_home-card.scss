@@ -1,0 +1,75 @@
+.home-card {
+  width: 30rem;
+  height: 21rem;
+  padding: 2rem;
+  box-shadow: $box-shadow-black;
+  background-color: $white;
+  border-radius: 2px;
+
+  &_wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem 0;
+
+  }
+
+}
+
+.home-image {
+  width: 30%;
+  margin: auto 1rem;
+}
+
+
+.theme-list {
+  list-style: none;
+  padding: 0;
+  height: 80%;
+  display: block;
+
+}
+
+.theme-item {
+  position: relative;
+  width: 100%;
+  margin-bottom: 5px;
+  line-height: 2rem;
+  border-bottom: 2px solid transparentize($black, .9);
+
+
+  &::before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    bottom: -2px;
+    width: 0;
+    transition: width 120ms ease-in-out;
+    height: 2px;
+    background: $orange-1;
+  }
+
+
+  &:hover {
+    color: $black;
+
+    &::before {
+      width: 100%;
+
+    }
+  }
+
+  a {
+    display: block;
+    width: 100%;
+    height: auto;
+    text-align: left;
+  }
+
+}
+
+.home-scroll {
+  height: 210px;
+}
+
+

@@ -16,3 +16,15 @@
     }
   }
 }
+
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('#{$fonts-path}font-awesome/FontAwesome.otf') format('opentype');
+  src: url('#{$fonts-path}font-awesome/fontawesome-webfont.eot') format('embedded-opentype'),
+  url('#{$fonts-path}font-awesome/fontawesome-webfont.woff2') format('woff2'),
+  url('#{$fonts-path}font-awesome/fontawesome-webfont.woff') format('woff'),
+  url('#{$fonts-path}font-awesome/fontawesome-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

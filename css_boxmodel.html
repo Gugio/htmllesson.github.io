@@ -6,92 +6,106 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
     <title>CSS</title>
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/styles/atom-one-dark.css">
+    <link rel="stylesheet" href="./css/jquery.mCustomScrollbar.css">
   </head>
-  <body>
-    <nav class="main-nav"><a class="to-home" href="index.html">< Home</a>
-      <div class="nav-block"><a class="nav-link" href="selectors.html"><span class='nav-link-num'>1</span> Селектори, Псевдокласи, Каскадність, Псевдоелементи</a><a class="nav-link" href="css_boxmodel.html"><span class='nav-link-num'>2</span> СSS Box model</a><a class="nav-link" href="measurement.html"><span class='nav-link-num'>3</span> Одиниці виміру</a><a class="nav-link" href="position.html"><span class='nav-link-num'>4</span> Позиціонування</a><a class="nav-link" href="fonts.html"><span class='nav-link-num'>5</span> Стилізація тексту</a><a class="nav-link" href="block_style.html"><span class='nav-link-num'>6</span> Стилізація елементів</a><a class="nav-link" href="media.html"><span class='nav-link-num'>7</span> @media</a><a class="nav-link" href="transform.html"><span class='nav-link-num'>9</span> Трансформація</a><a class="nav-link" href="animations.html"><span class='nav-link-num'>8</span> Анімація (2D, 3D)</a><a class="nav-link" href="flexbox.html"><span class='nav-link-num'>9</span> Flex-box</a><a class="nav-link" href=""><span class='nav-link-num'>10</span> Display</a><a class="nav-link" href=""><span class='nav-link-num'>11</span> Префікси</a><a class="nav-link" href=""><span class='nav-link-num'>12</span> SVG</a><a class="nav-link" href=""><span class='nav-link-num'>13</span> Спрайти</a></div>
-      <div class="decorate"></div>
-    </nav>
-    <main class="main-content">
-      <div class="container">
-        <div class="item-content">
-          <h1 class="main-title">Css Box model</h1>
-          <section class="box-model">
-            <div><img src="../img/box-model.png" alt="box-model" width="400" height="350"></div>
-            <div class="flex">
-              <div>
-                <p><span class="orange-text">box-sizing:</span> content-box;<br><span class="orange-text">width:</span> 200px;<br><span class="orange-text">margin:</span> 40px;<br><span class="orange-text">padding:</span> 30px;<br><span class="orange-text">border:</span> 5px solid green;</p>
-                <div class="box-wrap first">
-                  <div class="box content-box"><span>content-box</span></div>
-                </div>
-              </div>
-              <div>
-                <p><span class="orange-text">box-sizing:</span> border-box;<br><span class="orange-text">width:</span> 270px;<br><span class="orange-text">margin:</span> 40px;<br><span class="orange-text">padding:</span> 30px;<br><span class="orange-text">border:</span> 5px solid green;</p>
-                <div class="box-wrap">
-                  <div class="box border-box"><span>border-box</span></div>
-                </div>
-              </div>
-            </div><img src="../img/margin-collapse.png" alt="margin collapse">
-            <div class="box-wrap text-left inline"><span class="inline-box"><span>inline element</span></span><span class="bordred"></span><span class="inline-box"><span>inline element</span></span></div>
-            <div class="box-wrap text-left width-low"><span class="inline-box"><span>inline element</span></span><span class="inline-box"><span>inline element</span></span></div>
-            <table class="table" style="margin-top:50px;">
-              <colgroup>
-                <col width="200px">
-                <col width="275px">
-                <col>
-              </colgroup>
-              <tr>
-                <td>display:</td>
-                <td>inline;</td>
-                <td>не відображає width i height</td>
-              </tr>
-              <tr>
-                <td>display:</td>
-                <td>block;<br>inline-block;</td>
-                <td>відображає всі властивості</td>
-              </tr>
-              <tr>
-                <th colspan="2">Зв'язані властивості</th>
-              </tr>
-              <tr>
-                <td>box-sizing:</td>
-                <td>content-box; <br> border-box;</td>
-                <td>Властивість box-sizing використовується для зміни блочної моделі CSS застосовуваної за замовчуванням, за допомогою якої обчислюються ширина і висота елементів.<br><span class='orange-text'>border-box</span> - розмір задається враховуючи контент, padding i border-width<br><span class='orange-text'>content-box</span> - ширина задається враховуючи тільки контент.</td>
-              </tr>
-              <tr>
-                <td>background-clip:</td>
-                <td>border-box;<br>padding-box;<br>content-box;</td>
-                <td>вказує, як поширюється фон елемента, колір або зображення:<br><span class='orange-text'>border-box</span> - фон займає весть прості враховуючи ширину бордера і відображається під бордером.<br><span class='orange-text'>padding-box</span> - фон займає простір контенту і padding.<br><span class='orange-text'>content-box</span> - фон відображається тільки під контентом</td>
-              </tr>
-              <tr>
-                <td colspan="2">height: 50px;<br>min-height: 50px;<br>max-height: 100px;</td>
-                <td>задає висоту елементу.<br><span class='orange-text'>min-height</span> - мінімальна висота.<br><span class='orange-text'>max-height</span> - максимальна висота.</td>
-              </tr>
-              <tr>
-                <td colspan="2">width: 100px;<br>min-width: 100px;<br>max-width: 300px;</td>
-                <td>задає ширину елементу.<br><span class='orange-text'>min-width</span> - мінімальна ширина.<br><span class='orange-text'>max-width</span> - максимальна ширина.</td>
-              </tr>
-              <tr>
-                <td>padding: 20px;</td>
-                <td>padding-left:<br>padding-right:<br>padding-top:<br>padding-bottom:<br>padding: 20px 30px;<br>padding: 20px 30px 10px;<br>padding: 20px 30px 40px 50px;</td>
-                <td>встановлює відступи з усіх сторін елемента. Область відступів це простір між вмістом елемента і його бордером. Негативні значення не допускаються.</td>
-              </tr>
-              <tr>
-                <td>margin: 20px;</td>
-                <td>margin-left:<br>margin-right:<br>margin-top:<br>margin-bottom:<br>margin: 20px 30px;<br>margin: 20px 30px 10px;<br>margin: 20px 30px 40px 50px;</td>
-                <td>встановлює відступи з усіх сторін елемента. Область відступів це простір між бордером елемента і його сусідами.</td>
-              </tr>
-              <tr>
-                <td>border-width</td>
-                <td>border-top-width: thin;(2px)<br>border-right-width: medium;(4px)<br>border-bottom-width: thick;(6px)<br>border-left-width: 5px;<br></td>
-                <td>задає товщину бордера елемента</td>
-              </tr>
-            </table>
-          </section>
+  <nav class="nav-menu"><a class="home-link" href="index.html"><span>home</span></a>
+    <div class="scroll-wrap scrollBar">
+      <ol class="nav-list">
+        <li><a class="nav-link" href="selectors.html"><span>Селектори, Псевдокласи, Каскадність, Псевдоелементи</span></a></li>
+        <li><a class="nav-link" href="css_boxmodel.html"><span>СSS Box model</span></a></li>
+        <li><a class="nav-link" href="measurement.html"><span>Одиниці виміру</span></a></li>
+        <li><a class="nav-link" href="position.html"><span>Позиціонування</span></a></li>
+        <li><a class="nav-link" href="fonts.html"><span>Стилізація тексту</span></a></li>
+        <li><a class="nav-link" href="block_style.html"><span>Стилізація елементів</span></a></li>
+        <li><a class="nav-link" href="media.html"><span>@media</span></a></li>
+        <li><a class="nav-link" href="transform.html"><span>Трансформація</span></a></li>
+        <li><a class="nav-link" href="animations.html"><span>Анімація (2D, 3D)</span></a></li>
+        <li><a class="nav-link" href="flexbox.html"><span>Flex-box</span></a></li>
+        <li><a class="nav-link" href="#"><span>Display</span></a></li>
+        <li><a class="nav-link" href="#"><span>Префікси</span></a></li>
+        <li><a class="nav-link" href="#"><span>SVG</span></a></li>
+        <li><a class="nav-link" href="#"><span>Спрайти</span></a></li>
+      </ol>
+    </div>
+  </nav>
+  <main class="main-content css-tutorial">
+    <div class="container">
+      <div class="box-model">
+        <h1 class="title">Css Box model</h1>
+        <div class="box-model_image"><img src="../img/box-model.png" alt="box-model"></div>
+        <p class="topic-content"><span class="orange-text">box-sizing:</span> content-box;<br><span class="orange-text">width:</span> 200px;<br><span class="orange-text">margin:</span> 40px;<br><span class="orange-text">padding:</span> 30px;<br><span class="orange-text">border:</span> 5px solid green;</p>
+        <div class="box-wrap first">
+          <div class="content-box"><span>content-box</span></div>
         </div>
+        <p class="topic-content"><span class="orange-text">box-sizing:</span> border-box;<br><span class="orange-text">width:</span> 270px;<br><span class="orange-text">margin:</span> 40px;<br><span class="orange-text">padding:</span> 30px;<br><span class="orange-text">border:</span> 5px solid green;</p>
+        <div class="box-wrap">
+          <div class="border-box"><span>border-box</span></div>
+        </div>
+        <div class="box-model_image"><img src="../img/margin-collapse.png" alt="margin collapse"></div>
+        <div class="box-wrap text-left inline"><span class="inline-box"><span>inline element</span></span><span class="bordred"></span><span class="inline-box"><span>inline element</span></span></div>
+        <table class="table striped">
+          <colgroup>
+            <col width="200px">
+            <col width="275px">
+            <col>
+          </colgroup>
+          <tr>
+            <td>display:</td>
+            <td>inline;</td>
+            <td>не відображає width i height</td>
+          </tr>
+          <tr>
+            <td>display:</td>
+            <td>block;<br>inline-block;</td>
+            <td>відображає всі властивості</td>
+          </tr>
+          <tr>
+            <th colspan="3">Зв'язані властивості</th>
+          </tr>
+          <tr>
+            <td>box-sizing:</td>
+            <td>content-box; <br> border-box;</td>
+            <td>Властивість box-sizing використовується для зміни блочної моделі CSS застосовуваної за замовчуванням, за допомогою якої обчислюються ширина і висота елементів.<br><span class='orange-text'>border-box</span> - розмір задається враховуючи контент, padding i border-width<br><span class='orange-text'>content-box</span> - ширина задається враховуючи тільки контент.</td>
+          </tr>
+          <tr>
+            <td>background-clip:</td>
+            <td>border-box;<br>padding-box;<br>content-box;</td>
+            <td>вказує, як поширюється фон елемента, колір або зображення:<br><span class='orange-text'>border-box</span> - фон займає весть прості враховуючи ширину бордера і відображається під бордером.<br><span class='orange-text'>padding-box</span> - фон займає простір контенту і padding.<br><span class='orange-text'>content-box</span> - фон відображається тільки під контентом</td>
+          </tr>
+          <tr>
+            <td colspan="2">height: 50px;<br>min-height: 50px;<br>max-height: 100px;</td>
+            <td>задає висоту елементу.<br><span class='orange-text'>min-height</span> - мінімальна висота.<br><span class='orange-text'>max-height</span> - максимальна висота.</td>
+          </tr>
+          <tr>
+            <td colspan="2">width: 100px;<br>min-width: 100px;<br>max-width: 300px;</td>
+            <td>задає ширину елементу.<br><span class='orange-text'>min-width</span> - мінімальна ширина.<br><span class='orange-text'>max-width</span> - максимальна ширина.</td>
+          </tr>
+          <tr>
+            <td>padding: 20px;</td>
+            <td>padding-left:<br>padding-right:<br>padding-top:<br>padding-bottom:<br>padding: 20px 30px;<br>padding: 20px 30px 10px;<br>padding: 20px 30px 40px 50px;</td>
+            <td>встановлює відступи з усіх сторін елемента. Область відступів це простір між вмістом елемента і його бордером. Негативні значення не допускаються.</td>
+          </tr>
+          <tr>
+            <td>margin: 20px;</td>
+            <td>margin-left:<br>margin-right:<br>margin-top:<br>margin-bottom:<br>margin: 20px 30px;<br>margin: 20px 30px 10px;<br>margin: 20px 30px 40px 50px;</td>
+            <td>встановлює відступи з усіх сторін елемента. Область відступів це простір між бордером елемента і його сусідами.</td>
+          </tr>
+          <tr>
+            <td>border-width</td>
+            <td>border-top-width: thin;(2px)<br>border-right-width: medium;(4px)<br>border-bottom-width: thick;(6px)<br>border-left-width: 5px;<br></td>
+            <td>задає товщину бордера елемента</td>
+          </tr>
+        </table>
       </div>
-    </main>
-    <script src="./js/libs/jquery/jquery.min.js"></script>
-    <script src="./js/main.js"></script>
-  </body>
+    </div>
+  </main>
+  <script type="text/javascript" src="./js/libs/jquery/jquery.min.js"></script>
+  <script type="text/javascript" src="./js/libs/jquery/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="./js/libs/jquery/jquery.mousewheel.min.js"></script>
+  <script type="text/javascript" src="./js/libs/jquery/jquery.mousewheel-3.0.6.min.js"></script>
+  <script type="text/javascript" src="./js/libs/highlight/highlight.pack.js"></script>
+  <script type="text/javascript" src="./js/libs/MalihuScroll/jquery.mCustomScrollbar.js"></script>
+  <script type="text/javascript" src="./js/main.js"></script>
 </html>

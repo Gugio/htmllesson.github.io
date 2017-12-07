@@ -1,54 +1,56 @@
-main.main-content
+main.main-content.css-tutorial
+
     .container
-        div.measure-wrap
+        .measure-wrap
             h1.main-title Одиниці виміру
 
-            table.table.measure-table
+            table.table.striped.measure-table
                 colgroup
                     col(width='25%')
                     col(width='25%')
                     col(width='25%')
                     col(width='25%')
+
                 tr
                     th px
                     th em
                     th %
                     th rem
+
                 tr
                     td &lt;p style="font-size: 24px"&gt;<br>&emsp;<span class='font-size-24'>Олені</span><br>&emsp;&lt;span style="font-size: 24px"&gt;<br><span class='font-size-24'>Не тільки в лісі</span><br>&emsp;&lt;/span&gt;<br>&lt;/p&gt;
                     td <span class='font-size-1-5em'><span style='font-size: 16px;'>&lt;p style="font-size: 1.5em"&gt;</span><br>&emsp;Олені<br>&emsp;<span style='font-size: 16px;'>&lt;span style="font-size: 1.5em"&gt;</span><br><span style='font-size:1.5em;'>Не тільки в лісі</span><br>&ensp;<span style='font-size: 16px;'>&lt;/span&gt;<br>&lt;/p&gt;</span></span>
                     td(style='font-size:150%;') <span style='font-size: 16px;'>&lt;p style="font-size: 150%"&gt;</span><br>&emsp;Олені<br>&emsp;<span style='font-size: 16px;'>&lt;span style="font-size: 150%"&gt;</span><br><span style='font-size:150%;'>Не тільки в лісі</span><br><span style='font-size: 16px;'>&emsp; &lt;/span&gt;<br>&lt;/p&gt;</span>
                     td &lt;p style="font-size: 1.5rem"&gt;<br>&emsp;<span class='font-size-24'>Олені</span><br>&emsp;&lt;span style="font-size: 1.5rem"&gt;<br><span class='font-size-24'>Не тільки в лісі</span><br>&emsp;&lt;/span&gt;<br>&lt;/p&gt;
+
                 tr
                     td желізобетонна базова, абсолютна і остаточна одиниця виміру, як написав так і є<br>&emsp;Пікселі можуть бути дробовими, наприклад розмір можна задати в 16.5px. Це абсолютно нормально, браузер сам використовує дробові пікселі для внутрішніх обчислень.
                     td відносна одиниця. Завжди бере значення від розміру шрифта (font-size наслідується). Можна брати будь-які пропорції від поточного шрифту: 2.3em, 0.5em ...
                     td Як правило, відсоток буде від значення властивості батька з тією ж назвою, але не завжди.<br> font-size від font-size<br>line-height від font-size<br>margin/padding від ширини батьківського блока<br> width/height відсоток від width/height батька, алe при position: fixed; від вікна браузера
                     td відносна одиниця. Відносно властивості font-size html. Наприклад, значення font-size за замовчуванням 16px, виходить 1rem = 16px. Але якщо перевизначити font-size html, ми тим самим перевизначаєм rem. (якщо задати html font-size: 62.5%; (100/16*10) тоді 1rem = 10px)
+
                 tr
                     td
                     td
                     td
                     td
 
-            h2 Відносно екрану:
-            p Їх основна перевага - в тому, що будь-які розміри, які в них задані, автоматично масштабуються при зміні розмірів вікна браузера
+            h2.title Відносно екрану:
+            p.topic-content Їх основна перевага - в тому, що будь-які розміри, які в них задані, автоматично масштабуються при зміні розмірів вікна браузера
 
             ul
-                li <span class='orange-text'>vw</span> – 1% ширини вікна
-                li <span class='orange-text'>vh</span> – 1% висоти вікна
-                li <span class='orange-text'>vmin</span> – майменше з (vw, vh), в IE9 визначається як vm
-                li <span class='orange-text'>vmax</span> – найбільше з (vw, vh)
+                li <span class='orange'>vw</span> – 1% ширини вікна
+                li <span class='orange'>vh</span> – 1% висоти вікна
+                li <span class='orange'>vmin</span> – майменше з (vw, vh), в IE9 визначається як vm
+                li <span class='orange'>vmax</span> – найбільше з (vw, vh)
 
-            h2 Для друку:
-            p Використовуються для редагування шрифтів для друку (динозаври яких можна зустріти)
+            h2.title Для друку:
+            p.topic-content Використовуються для редагування шрифтів для друку (динозаври яких можна зустріти)
 
             ul
-                li <span class='orange-text'>1mm</span> (мм) = 3.8px
-                li <span class='orange-text'>1cm</span> (см) = 38px
-                li <span class='orange-text'>1pt</span> (типографский пункт) = 4/3 px (1.33333333px)
-                li <span class='orange-text'>1pc</span> (типографская пика) = 16px
-                li <span class='orange-text'>1in</span> (дюйми) = 2.54cm = 25.4mm = 72pt = 6pc = 96px
-
-
-
+                li <span class='orange'>1mm</span> (мм) = 3.8px
+                li <span class='orange'>1cm</span> (см) = 38px
+                li <span class='orange'>1pt</span> (типографский пункт) = 4/3 px (1.33333333px)
+                li <span class='orange'>1pc</span> (типографская пика) = 16px
+                li <span class='orange'>1in</span> (дюйми) = 2.54cm = 25.4mm = 72pt = 6pc = 96px
 

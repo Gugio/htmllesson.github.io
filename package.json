@@ -19,5 +19,8 @@
     "gulp-uglify": "^3.0.0",
     "gulp-watch": "^4.3.11",
     "jshint": "^2.9.4"
+  },
+  "dependencies": {
+    "highlight.js": "^9.12.0"
   }
 }

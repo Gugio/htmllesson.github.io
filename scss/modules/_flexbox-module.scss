@@ -1,0 +1,66 @@
+//----------------------------------------------------------------------------------------
+//flexbox module -------------------------------------------------------------------------
+
+.flex-toggler {
+  @include flex-toggler;
+
+  &Grow-1 {
+    @include flex-toggler;
+    color: $white;
+  }
+
+  &Grow-2 {
+    @include flex-toggler;
+    color: $white;
+  }
+
+  &Grow-3 {
+    @include flex-toggler;
+    color: $white;
+  }
+
+}
+
+//.flex-layout {
+//  max-width: 1000px;
+//  margin: auto;
+//  margin-bottom: 10rem;
+//}
+
+.flex-container {
+  width: 80%;
+  display: flex;
+  margin: 2.5rem auto;
+  padding: .3rem;
+  border-radius: 7px;
+  background-color: rgba(200, 200, 200, .3);
+  box-shadow: $box-shadow-black;
+
+
+}
+
+.flex-element {
+  font-size: .7rem;
+  //margin: .3rem;
+  color: $white;
+  font-weight: 700;
+  padding: .3rem;
+  line-height: 1rem;
+  border-radius: 7px;
+
+  &:nth-child(2n) {
+    background-color: $flex-elem_bg-1;
+  }
+
+  &:nth-child(2n-1) {
+    background-color: $flex-elem_bg-2;
+  }
+
+
+// ---- setting flex basis for flex shrink ----
+
+  &.sized {
+    flex-basis: 100%;
+  }
+
+}

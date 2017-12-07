@@ -1,17 +1,18 @@
-main.main-content
+main.main-content.css-tutorial
+
     .container
         .transform
 
-            h1.main-title <code>transform</code>
+            h1.title <code>transform</code>
             p CSS трансформації. Змінюють розмір, форму та положення елементів на сторінці.
             p Трансформуються елементи зі значенням <code color="green">display: block;, inline-block;</code> а також <code color="green">table-row, table-row-group, table-header-group, table-footer-group, table-cell, table-caption</code>
             p Існує два види трансформації: 2D і 3D.
 
-            h2 Функція трансформації <code>transform</code>
-            p Властивітьзадає вид трансформації елементу. Властивість описується за допомогою функцій трансформації. Які зміщують його положення стосовно його теперішнього положення.
+            h2.subtitle Функція трансформації <code>transform</code>
+            p.topic-content Властивітьзадає вид трансформації елементу. Властивість описується за допомогою функцій трансформації. Які зміщують його положення стосовно його теперішнього положення.
 
 
-            table.table
+            table.table.striped
                 colgroup
                     col(width='180px')
                     col
@@ -103,11 +104,11 @@ main.main-content
 
 
 
-            h2 Точка трансформації <code>transform-origin</code>
-            p Властивість дозволяє змістити центр початку. Дефолтне значення: <code>transform-origin: center center</code> або 50% 50%.
+            h2.subtitle#transform-origin Точка трансформації <code>transform-origin</code>
+            p.topic-content Властивість дозволяє змістити центр початку. Дефолтне значення: <code>transform-origin: center center</code> або 50% 50%.
 
 
-            table.table
+            table.table.striped
                 colgroup
                     col(width='180px')
                     col
@@ -137,13 +138,13 @@ main.main-content
 
 
 
-            h2.anim-subtitle СSS переходи <code>transition</code>
-            p СSS переходи дозволяють анімувати значення основні на інші, за заданий проміжок часу.
-            p Зміна властивостей відбувється при якому-небудь івенті. Найчастіше спрацьовує псевдоклас :hover.
-            p Переходи застосовуються до всых елементыв, включно з псевдоелементами :before :after.
+            h2.subtitle#transition СSS переходи <code>transition</code>
+            p.topic-content СSS переходи дозволяють анімувати значення основні на інші, за заданий проміжок часу.
+            p.topic-content Зміна властивостей відбувється при якому-небудь івенті. Найчастіше спрацьовує псевдоклас :hover.
+            p.topic-content Переходи застосовуються до всых елементыв, включно з псевдоелементами :before :after.
 
 
-            table.table
+            table.table.striped
                 colgroup
                     col(width='180px')
                     col
@@ -159,7 +160,16 @@ main.main-content
 
 
 
+    section.aside-bar
+        .scroll-wrap.sidenav-scroll.scrollBar
+            ul.theme-list
+                li.theme-item
+                    a.smoothLink(href='#transform-origin') transform-origin
+                li.theme-item
+                    a.smoothLink(href='#transition') transition
 
+        .slide-btn
+            span.fa.fa-arrow-left
 
 
 

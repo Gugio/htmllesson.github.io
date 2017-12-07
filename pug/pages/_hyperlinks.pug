@@ -1,0 +1,117 @@
+main.main-content
+    .container.hyperlinks
+        h1.title Teг &lta&gt, &ltmap&gt &ltarea&gt &ltmap&gt
+        |
+        div(style="text-align: center")
+            h3(style="text-align: center; margin-bottom: 50px;")
+                | &lta href="URL" target="параметр" title="опис
+                | (підказка)" &gtназва ссилки
+                | (елемент)&lt/a&gt
+            |
+            div(style="display: inline-block; margin: auto;text-align: left")
+                table(style="margin: 0 0 50px;")
+                    tbody
+                        tr
+                            td(rowspan="4", valign="top")
+                                span(style="color: #009121; font-size: 22px;") href =
+                            |
+                            td https://thinkmobiles.com/player-360/
+                            |
+                            td
+                        |
+                        tr
+                            td src/public/index.html
+                            |
+                            td
+                        |
+                        tr
+                            td #someID (https://thinkmobiles.com#someID) або (index.html#someID)
+                            |
+                            td
+                                a(href="../index.html#someID", target="_blank") Go to id
+                        |
+                        tr
+                            td #someName (tags.html#someName
+                            |
+                            td
+                                a(href="tags.html#someName", target="_blank") Go to name
+                |
+                table(style="margin: 0 0 50px; ")
+                    tbody
+                        tr
+                            td(rowspan="4", valign="top")
+                                span(style="color: #009121; font-size: 22px;") target =
+                            |
+                            td
+                                span.spanOrange _blank
+                            |
+                            td Загружає сторінку в новій вкладці або вікні браузера.
+                        |
+                        tr
+                            td
+                                span.spanOrange _self
+                            |
+                            td
+                                | Загружає сторінку в ційже вкладці або вікні.
+                        |
+                        tr
+                            td
+                                span.spanOrange _parent
+                            |
+                            td
+                                | Загружає сторінку в батьківському фреймі, якщо фрейма нема то значення робить як _self.
+                        |
+                        tr
+                            td
+                                span.spanOrange _top
+                            |
+                            td
+                                | Відміняє всі фрейми і загружає сторінку в повному вікні браузера, якщо фрейма нема то
+                                | значення робить як _self.
+                |
+                p
+                    | По номеру телефона:
+                    a(href="tel:+38055555555")
+                        span.spanOrange &lta href="tel:+38055555555"&gt
+                        | +380-55-555-55-55
+                        span.spanOrange &lt/a&gt
+                |
+                p
+                    | Скайп:
+                    a(href="skype:sviatoslav.pr")
+                        span.spanOrange &lta href="skype:sviatoslav.pr"&gt
+                        | Skype: sviatoslav.pr
+                        span.spanOrange &lt/a&gt
+                |
+                p
+                    a(href="../img/image.jpg", title="Download", download="")
+                        img(src="./img/image.jpg", width="100px", style="vertical-align: middle; margin-right: 15px;")
+                    |                     &lta href="image.jpg" title="Download"
+                    span.spanOrange download
+                    | &gt&ltimg
+                    |                     src="image.jpg" width="100px" height="50px"&gt&lt/a&gt
+                |
+                div(style="display: flex; align-items: center")
+                    div(style="margin-right: 25px;")
+                        img(style="border: none;", src="./img/minions.jpg", width="400", height="auto", alt="minions", usemap="#minions")
+                        |
+                        map(name="minions")
+                            area(shape="poly", coords="49,116,69,78,118,76,138,105,136,143,148,166,147,194,128,217,120,220,125,236,89,237,60,238,70,222,47,203,42,178,2,178,2,138,47,147,47,139", href="./img/m1.png", target="_blank", alt="Minion1", title="Minion")
+                            |
+                            area(shape="poly", coords="164,142,167,32,198,28,185,-3,235,2,216,28,252,54,248,110,253,151,261,205,237,223,241,240,235,234,177,240,181,219,144,215,153,185", href="./img/m2.png", target="_blank", alt="Minion2", title="Minion")
+                            |
+                            area(shape="poly", coords="270,119,308,97,348,115,360,154,362,173,384,149,389,154,387,196,361,203,337,222,342,243,274,243,252,235,264,200", href="./img/m3.jpg", target="_blank", alt="Minion3", title="Minion")
+                    |
+                    p
+                        | &ltmap name="minions"&gt
+                        br
+                        |                          &ltarea shape="rect" coords="0,0,82,126" href="article1.htm" alt="Minion"&gt
+                        br
+                        |                          &ltarea shape="circle" coords="90,58,3" href="article2.htm" alt="Minion"&gt
+                        br
+                        |                          &ltarea shape="poly" coords="124,58,8,124,58,8" href="article3.htm" alt="Minion"&gt
+                        br
+                        |                         &lt/map&gt
+                        br
+                        |
+                        a(href="http://maschek.hu/imagemap/imgmap/", target="_blank", title="Map Creator", style="font-size: 18px; color: darkblue; display: inline-block; margin: 20px;") Map Editor
