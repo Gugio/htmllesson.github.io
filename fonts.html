@@ -16,6 +16,92 @@
     <div class="container">
         <div class="fonts">
             <h1 class="title">Font</h1>
+            <h2>Підключення шрифту CSS</h2>
+            <p>
+                <span class="r-text">@font-face</span> {<br>
+                &emsp;<span class="y-text">font-family:</span> 'MyFontName';<br>
+                &emsp;<span class="y-text">src</span>: url('../fonts/WebFont.eot') format('eot'),<br>
+                &emsp;&emsp;&emsp;url('../fonts/WebFont.woff') format('woff'),<br>
+                &emsp;&emsp;&emsp;url('../fonts/WebFont.ttf') format('truetype'),<br>
+                &emsp;&emsp;&emsp;url('../fonts/WebFont.svg') format('svg');<br>
+                &emsp;<span class="y-text">font-weight</span>: 400;<br>
+                &emsp;<span class="y-text">font-style</span>: normal;<br>
+                }<br><br>
+
+                <span class="r-text">@font-face</span> {<br>
+                &emsp;<span class="y-text">font-family</span>: 'MyFontName';<br>
+                &emsp;<span class="y-text">src</span>: url('../fonts/WebFont-Bold.eot') format('eot'),<br>
+                &emsp;&emsp;&emsp;url('../fonts/WebFont-Bold.woff') format('woff'),<br>
+                &emsp;&emsp;&emsp;url('../fonts/WebFont-Bold.ttf') format('truetype'),<br>
+                &emsp;&emsp;&emsp;url('../fonts/WebFont-Bold.svg') format('svg');<br>
+                &emsp;<span class="y-text">font-weight</span>: 700;<br>
+                &emsp;<span class="y-text">font-style</span>: normal;<br>
+                }<br><br>
+
+                <span class="r-text">@font-face</span> {<br>
+                &emsp;<span class="y-text">font-family</span>: 'MyFontName';<br>
+                &emsp;<span class="y-text">src</span>: url('../fonts/WebFont-Italic.eot') format('eot'),<br>
+                &emsp;&emsp;&emsp;url('../fonts/WebFont-Italic.woff') format('woff'),<br>
+                &emsp;&emsp;&emsp;url('../fonts/WebFont-Italic.ttf') format('truetype'),<br>
+                &emsp;&emsp;&emsp;url('../fonts/WebFont-Italic.svg') format('svg');<br>
+                &emsp;<span class="y-text">font-weight</span>: normal;<br>
+                &emsp;<span class="y-text">font-style</span>: italic;<br>
+                }
+            </p>
+            <h2>Підключення шрифту SCSS</h2>
+            <p>
+                <span class="y-text">$base-font-data</span> : (<br>
+                &emsp;&emsp;'<span class="b-text">font-folder</span>', '<span class="b-text">font-file-name</span>', '<span class="b-text">font-local-1</span>', '<span class="b-text">font-local-2</span>', '<span class="b-text">font-weight</span>'<br>
+                &emsp;1: ('opensans/', 'open-sans-regular', 'Open Sans', 'Open-Sans-Bold', 400),<br>
+                &emsp;2: ('opensans/', 'open-sans-bold', 'Open Sans', 'OpenSans-Bold', 700)<br>
+                &emsp;3: ('opensans/', 'open-sans-italic', 'Open Sans', 'OpenSans-Italic', 400)<br>
+                );<br><br>
+
+                <span class="y-text">@for</span> <span class="b-text">$i</span> from 1 through length(<span class="b-text">$base-font-data</span>) {<br>
+                &emsp;<span class="y-text">@font-face</span> {<br>
+                &emsp;&emsp;<span class="y-text">font-family</span>: <span class="b-text">MyFontName</span>;<br>
+                &emsp;&emsp;<span class="y-text">font-style:</span> normal;<br>
+                &emsp;&emsp;<span class="y-text">font-weight:</span> nth(map-get(<span class="b-text">$base-font-data</span>, <span class="b-text">$i</span>), 5);<br>
+                &emsp;&emsp;<span class="y-text">src</span>: local(nth(map-get(<span class="b-text">$base-font-data</span>, <span class="b-text">$i</span>), 3)), local(nth(map-get(<span class="b-text">$base-font-data</span>, <span class="b-text">$i</span>),
+                4)),<br>
+                &emsp;&emsp;&emsp;&emsp;url('#{'../fonts/'}#{nth(map-get(<span class="b-text">$base-font-data</span>, <span class="b-text">$i</span>),
+                1)}#{nth(map-get(<span class="b-text">$base-font-data</span>, <span class="b-text">$i</span>), 2)}.woff2') format('woff2'),<br>
+                &emsp;&emsp;&emsp;&emsp;url('#{'../fonts/'}#{nth(map-get(<span class="b-text">$base-font-data</span>, <span class="b-text">$i</span>),
+                1)}#{nth(map-get(<span class="b-text">$base-font-data</span>, <span class="b-text">$i</span>), 2)}.woff') format('woff');<br>
+                &emsp;}<br>
+                }
+            </p>
+
+            <table>
+                <thead>
+                <tr>
+                    <th>Формат</th>
+                    <th>Поддерживают браузеры</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>eot</td>
+                    <td><ul class="browserCheck"><li>IE6+</li></ul></td>
+                </tr>
+                <tr>
+                    <td>woff</td>
+                    <td><ul class="browserCheck"><li>IE9+</li><li class="ff">FF 3.6+</li><li class="opera">11+</li><li class="chrome">Chrome 6+</li><li class="safari">5.1+</li><li style="background: 0">Opera mobile 11+</li></ul></td>
+                </tr>
+                <tr>
+                    <td>ttf, otf</td>
+                    <td><ul class="browserCheck"><li class="ff">FF 3.5+</li><li class="opera">10+</li><li class="chrome">Chrome 4+</li><li class="safari">3.2+</li><li style="background: 0">Opera mobile 10+</li><li style="background: 0">iOS 4.2+</li><li style="background: 0">Android 2.2+</li></ul></td>
+                </tr>
+                <tr>
+                    <td>svg</td>
+                    <td><ul class="browserCheck"><li class="opera">9+</li><li class="chrome">Chrome 4+</li><li class="safari">3.2+</li><li style="background: 0">Opera mobile 10+</li><li style="background: 0">iOS</li><li style="background: 0">Android 3</li></ul></td>
+                </tr>
+                </tbody>
+            </table>
+
+
+
+
 
             <h2 class="title">Властивості шрифту</h2>
             <p style="text-indent: 3rem;">Шрифт змінюється за допомоогою властивостей:
