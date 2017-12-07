@@ -11,13 +11,13 @@ main.main-content.css-tutorial
 
 
             h1.title <code>CSS animations</code>
-            p CSS анімація надає динамічності сайтам. На відміну від СSS переходів, створення анімацій базується на ключових кадрах, які автоматично запускають і повторюють ефекти на протязі заданого часу, а також дозволяють зупинити анімацію всередині циклу
-            p CSS анімація може застосовуватись майже до всіх html-елементів, а також до псевдоелементів <code>:before, :after</code>.
+            p.topic-content CSS анімація надає динамічності сайтам. На відміну від СSS переходів, створення анімацій базується на ключових кадрах, які автоматично запускають і повторюють ефекти на протязі заданого часу, а також дозволяють зупинити анімацію всередині циклу
+            p.topic-content CSS анімація може застосовуватись майже до всіх html-елементів, а також до псевдоелементів <code>:before, :after</code>.
 
 
-            h2 <code>@keyframes</code>
-            p Перше з чим слід ознайомитись - це правило <code>@keyframes</code>.
-            p Створення анімації починається зі встановлення ключових кадрів праввила <code>@keyframes</code>. Кадри визначають , які властивості на якому кроці будуть анімуватись. Кожен кадр може включати в себе одразу кілька властивостей зі значеннями.
+            h2.subtitle <code>@keyframes</code>
+            p.topic-content Перше з чим слід ознайомитись - це правило <code>@keyframes</code>.
+            p.topic-content Створення анімації починається зі встановлення ключових кадрів праввила <code>@keyframes</code>. Кадри визначають , які властивості на якому кроці будуть анімуватись. Кожен кадр може включати в себе одразу кілька властивостей зі значеннями.
                 p Наприклад:
                     figure.code <span class="nc">@keyframes</span> <span class="green">shadow</span>
                         | &emsp;{
@@ -26,7 +26,7 @@ main.main-content.css-tutorial
                         | &emsp; <span class="nb">to</span> {<span class="nc">text-shadow</span>: 0 0 3px <span class="blue">$black</span>;}
                         | }
 
-            p Ключові кадри задаються за допомогою ключових значень <code>from</code>, <code>to</code> (еквівалентно значенням 0%, 100%), або за допомогою відсоткових значень. Можна комбінувати ключові слова з відсотками. Якщо кадри мають однакові властивості їх можна поєднати:
+            p.topic-content Ключові кадри задаються за допомогою ключових значень <code>from</code>, <code>to</code> (еквівалентно значенням 0%, 100%), або за допомогою відсоткових значень. Можна комбінувати ключові слова з відсотками. Якщо кадри мають однакові властивості їх можна поєднати:
                 figure.code <span class="nc">@keyframes</span> <span class="green">move</span>
                     | &emsp;{
                     | &emsp; <span class="nb">from, to</span> {<span class="nc">top</span>: 0; <span class="nc">left</span>: 0;}
@@ -34,15 +34,15 @@ main.main-content.css-tutorial
                     | &emsp; <span class="nc">50%</span> {<span class="nc">top</span>: 50%;}
                     | }
 
-            p Після об'явлення правила <code>@keyframes</code>, можна посилатись на його назву у властивості <code>animation</code>
+            p.topic-content Після об'явлення правила <code>@keyframes</code>, можна посилатись на його назву у властивості <code>animation</code>
                 figure.code <span class="nc">.selector</span>
                     | &emsp;{
                     | &emsp; color: <span class="blue">$red</span><span class="orange">;</span>
                     | &emsp; animation: <span class="green">shadow</span> <span class="nb">infinite</span> <span class="nb">ease-in-out</span><span class="orange">;</span>
                     | }
 
-            h2 Назва анімації <code>animation-name</code>
-            p Ім'я анімації задається у правилі <code>@keyframes</code>
+            h2.subtitle#animation-name Назва анімації <code>animation-name</code>
+            p.topic-content Ім'я анімації задається у правилі <code>@keyframes</code>
 
             table.table.striped
                 colgroup
@@ -73,8 +73,8 @@ main.main-content.css-tutorial
                 | }
 
 
-            h2#animation-duration <code>animation-duration</code>
-            p Властивість визначає, як довго анімація буде відтворюватись. Задається в секундах, або мілісекундах. Якщо для елементу задано більше однієї анімації, можна встановити для них різний час перерахувавши значення через кому.
+            h2.subtitle#animation-duration <code>animation-duration</code>
+            p.topic-content Властивість визначає, як довго анімація буде відтворюватись. Задається в секундах, або мілісекундах. Якщо для елементу задано більше однієї анімації, можна встановити для них різний час перерахувавши значення через кому.
 
             table.table.striped
                 colgroup
@@ -100,8 +100,8 @@ main.main-content.css-tutorial
                 | }
 
 
-            h2#animation-timing <code>animation-timing-function</code>
-            p  Властивість визначає прискорення/сповільнення анімації, за допомогою часових функцій. Задається за допомогою ключових слів або кривої Базье <code>cubic-bezier(x1, y1, x2, y2)</code>.
+            h2.subtitle#animation-timing <code>animation-timing-function</code>
+            p.topic-content  Властивість визначає прискорення/сповільнення анімації, за допомогою часових функцій. Задається за допомогою ключових слів або кривої Базье <code>cubic-bezier(x1, y1, x2, y2)</code>.
 
             table.table.striped
                 colgroup
@@ -172,9 +172,9 @@ main.main-content.css-tutorial
                 .anim-container.steps <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
 
 
-            h2#animation-delay <code>animation-delay</code>
-            p Властивість ігнорує заданий час, що надає можливість окремо запустити кожну анімацію. Від'ємна затримка, починає анімацію з певного моменту всередині її циклу, тобто з часу, який вказаний у затримці. Це дозволяє застосовувати анімацію до кількох елементів з сувом фази, змінюючи тільки час затримки.
-            p Щоб анімація почалась з середини, потрібно задати від'єнму затримку, рівну половині часу, який встановлений у <code>animation-duration</code>
+            h2.subtitle#animation-delay <code>animation-delay</code>
+            p.topic-content Властивість ігнорує заданий час, що надає можливість окремо запустити кожну анімацію. Від'ємна затримка, починає анімацію з певного моменту всередині її циклу, тобто з часу, який вказаний у затримці. Це дозволяє застосовувати анімацію до кількох елементів з сувом фази, змінюючи тільки час затримки.
+            p.topic-content Щоб анімація почалась з середини, потрібно задати від'єнму затримку, рівну половині часу, який встановлений у <code>animation-duration</code>
 
             table.table.striped
                 colgroup
@@ -202,8 +202,8 @@ main.main-content.css-tutorial
                 span.four
 
 
-            h2#animation-count <code>animation-iteration-count</code>
-            p Властивість, яка дозволяє запустити анімацію кілька разів. Значення 0 або від'ємне число, відміняюь анімацію.
+            h2.subtitle#animation-count <code>animation-iteration-count</code>
+            p.topic-content Властивість, яка дозволяє запустити анімацію кілька разів. Значення 0 або від'ємне число, відміняюь анімацію.
                 figure.code <span class="nc">.selector</span>
                     | &emsp;{
                     | &emsp; animation-iteration-count: <span class="green">3</span><span class="orange">;</span>
@@ -232,8 +232,8 @@ main.main-content.css-tutorial
                     td Наслідує значення властивості від батьківського елементу
 
 
-            h2#animation-direction <code>animation-direction</code>
-            p Властивість задає напрямок повтору анімації. Якщо анімація повторюється тільки один раз, то властивість втрачає сенс.
+            h2.subtitle#animation-direction <code>animation-direction</code>
+            p.topic-content Властивість задає напрямок повтору анімації. Якщо анімація повторюється тільки один раз, то властивість втрачає сенс.
                 figure.code <span class="nc">.selector</span>
                     | &emsp;{
                     | &emsp; animation-direction: <span class="green">alternate</span><span class="orange">;</span>
@@ -270,8 +270,8 @@ main.main-content.css-tutorial
                     td Наслідує значення властивості від батьківського елементу
 
 
-            h2 Короткий запис <code>animation</code>
-            p Всі параметри анімування можна об'єднати у одній властивості <code>animation</code>, перерахувавши їх через пробіл.
+            h2.subtitle Короткий запис <code>animation</code>
+            p.topic-content Всі параметри анімування можна об'єднати у одній властивості <code>animation</code>, перерахувавши їх через пробіл.
                 figure.code .selector
                     | &emsp;{
                     | &emsp; animation: animation-name animation-duration animation-delay animation-timing-function animation-iteration-count animation-direction;
@@ -280,8 +280,8 @@ main.main-content.css-tutorial
             p Для початку анімації достатньо вказати тільки дві властивості: <code>animation-name</code> та <code>animation-duration</code>, всі наступні, приймуть дефолтне значення. Порядок об'явлення значень не є важливим, єдине це - animation-duration повинно бути перед animation-delay
 
 
-            h2 <code>animation-play-state</code>
-            p Властивість керує зупинкою та стартом анімації. Зупинка анімації всередині циклу можливо через використання цієї властивості у JavaScript. Також можна зупинити анімацію при додаванні до анімованого елементу псевдо-класу стану як: <code>:hover :active</code>
+            h2.subtitle <code>animation-play-state</code>
+            p.topic-content Властивість керує зупинкою та стартом анімації. Зупинка анімації всередині циклу можливо через використання цієї властивості у JavaScript. Також можна зупинити анімацію при додаванні до анімованого елементу псевдо-класу стану як: <code>:hover :active</code>
                 figure.code <span class="nc">.selector</span>
                     | &emsp;{
                     | &emsp; animation-play-state: <span class="green">paused</span><span class="orange">;</span>
@@ -313,13 +313,13 @@ main.main-content.css-tutorial
 
 
             .catch-animation-wrap
-                h2.title(align="center") Catch it!
+                h2.subtitle Catch it!
                 span.catch-ellips
 
 
 
-            h2 <code>animation-fill-mode</code>
-            p Властивість визначає порядок застосування зазначених у <code>@keyframes</code> стилів до об'єкту
+            h2.subtitle <code>animation-fill-mode</code>
+            p.topic-content Властивість визначає порядок застосування зазначених у <code>@keyframes</code> стилів до об'єкту
                 figure.code <span class="nc">.selector</span>
                     | &emsp;{
                     | &emsp; animation-fill-mode: <span class="green">forwards</span><span class="orange">;</span>
@@ -352,15 +352,15 @@ main.main-content.css-tutorial
 
 
 
-            h2#3danimations.anim-subtitle <div class="front-card">CSS 3d transformations<div class="back-card">CSS 3d transformations</div></div>
-            p 3d трансформації працюють аналогічно з 2d трансформаціями, різниця в тому, що ою'єкти мають змогу пересуватись по осі Z. Щоб почати створювати 3d трансформацію, потрібно встановити властивість <code>perspective</code> для батьківського контейнеру.
+            h2.subtitle#3danimations.anim-subtitle <div class="front-card">CSS 3d transformations<div class="back-card">CSS 3d transformations</div></div>
+            p.topic-content 3d трансформації працюють аналогічно з 2d трансформаціями, різниця в тому, що ою'єкти мають змогу пересуватись по осі Z. Щоб почати створювати 3d трансформацію, потрібно встановити властивість <code>perspective</code> для батьківського контейнеру.
                 figure.code <span class="nc">.parent</span>
                     | &emsp;{
                     | &emsp; perspective: <span class="green">666px</span><span class="orange">;</span>
                     | }
 
-            p Властивість <code>perspective</code> і функція <code>perspective()</code>, додають глибину елементу, збільшуючи його розмір по осі Z. Чим менше значення, тим ближче Z-простір до користувача.
-            p Якщо прспектива задається за допомогою функції <code>perspective()</code>, 3d простір активується тільки для одного елементу. Властивість <code>perspective</code> активує простір всередині елементу, який має в собі дочірні трансформовані елементи да застосовується до них.
+            p.topic-content Властивість <code>perspective</code> і функція <code>perspective()</code>, додають глибину елементу, збільшуючи його розмір по осі Z. Чим менше значення, тим ближче Z-простір до користувача.
+            p.topic-content Якщо прспектива задається за допомогою функції <code>perspective()</code>, 3d простір активується тільки для одного елементу. Властивість <code>perspective</code> активує простір всередині елементу, який має в собі дочірні трансформовані елементи да застосовується до них.
 
             table.table.striped
                 colgroup
@@ -404,8 +404,8 @@ main.main-content.css-tutorial
                 .perspective-example
                 .perspective-example
 
-            h2 Задання точки трансформації для 3d елементу <code>perspective-origin</code>
-            p Встановлює точку початку координат для властивості <code>perspective</code>. Дефолтне значення: <code>perspective-origin: 50% 50%;</code>. Дозволяє змінювати напрямок трансформації дочірнього елементу. Властивість повинна використовуватись разом з <code>perspective</code> для контейнеру та <code>transform</code> для дочірнього елементу.
+            h2.subtitle Задання точки трансформації для 3d елементу <code>perspective-origin</code>
+            p.topic-content Встановлює точку початку координат для властивості <code>perspective</code>. Дефолтне значення: <code>perspective-origin: 50% 50%;</code>. Дозволяє змінювати напрямок трансформації дочірнього елементу. Властивість повинна використовуватись разом з <code>perspective</code> для контейнеру та <code>transform</code> для дочірнього елементу.
 
                 figure.code <span class="nc">.parent</span>
                     | &emsp;{
@@ -444,8 +444,8 @@ main.main-content.css-tutorial
 
 
 
-            h2  Стиль трансформації <code>transform-style</code>
-            p Властивість визначає, як вкладені елементи промальовуються у трьохвимірному просторі. Властивість повинна використовуватись разом з <code>transform</code>, та задаєтьс тільки для вкладених елементів
+            h2.subtitle  Стиль трансформації <code>transform-style</code>
+            p.topic-content Властивість визначає, як вкладені елементи промальовуються у трьохвимірному просторі. Властивість повинна використовуватись разом з <code>transform</code>, та задаєтьс тільки для вкладених елементів
 
                 figure.code <span class="nc">.child</span>
                     | &emsp;{
@@ -469,8 +469,8 @@ main.main-content.css-tutorial
                     td Розташовує елементи у тривимірному просторі
 
 
-            h2 Видимість зворотньої сторони елементу <code>backface-visibility</code>
-            p Властивість визначає, чи буде видно зворотню сторону елементу.
+            h2.subtitle Видимість зворотньої сторони елементу <code>backface-visibility</code>
+            p.topic-content Властивість визначає, чи буде видно зворотню сторону елементу.
 
                 figure.code <span class="nc">.selector</span>
                     | &emsp;{
@@ -495,8 +495,8 @@ main.main-content.css-tutorial
 
 
 
-            h2 Функції 3d трансформації <code>transform</code>
-            p Властивість визначає, чи буде видно зворотню сторону елементу.
+            h2.subtitle Функції 3d трансформації <code>transform</code>
+            p.topic-content Властивість визначає, чи буде видно зворотню сторону елементу.
 
             table.table.striped
                 colgroup
@@ -551,21 +551,22 @@ main.main-content.css-tutorial
 
 
     section.aside-bar
-        ul.theme-list
-            li.theme-item
-                a.smoothLink(href='#animation-name') animation-name
-            li.theme-item
-                a.smoothLink(href='#animation-duration') animation-duration
-            li.theme-item
-                a.smoothLink(href='#animation-timing') animation-timing
-            li.theme-item
-                a.smoothLink(href='#animation-delay') animation-delay
-            li.theme-item
-                a.smoothLink(href='#animation-count') animation-count
-            li.theme-item
-                a.smoothLink(href='#animation-direction') animation-direction
-            li.theme-item
-                a.smoothLink(href='#3danimations') 3d-animation
+        .scroll-wrap.sidenav-scroll.scrollBar
+            ul.theme-list
+                li.theme-item
+                    a.smoothLink(href='#animation-name') animation-name
+                li.theme-item
+                    a.smoothLink(href='#animation-duration') animation-duration
+                li.theme-item
+                    a.smoothLink(href='#animation-timing') animation-timing
+                li.theme-item
+                    a.smoothLink(href='#animation-delay') animation-delay
+                li.theme-item
+                    a.smoothLink(href='#animation-count') animation-count
+                li.theme-item
+                    a.smoothLink(href='#animation-direction') animation-direction
+                li.theme-item
+                    a.smoothLink(href='#3danimations') 3d-animation
 
         .slide-btn
             span.fa.fa-arrow-left

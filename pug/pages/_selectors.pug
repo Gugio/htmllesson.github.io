@@ -258,7 +258,7 @@ main.main-content.css-tutorial
                         td стиль застосовується до всіх елементів B які йдуть після елементу А на одному рівні вкладеності
                         td
 
-            h2.title#cascade Каскадність (приорітет селекторів)
+            h2.subtitle#cascade Каскадність (приорітет селекторів)
 
             table.table.striped
                 tr
@@ -292,7 +292,7 @@ main.main-content.css-tutorial
 
 
 
-            h2.title#pseudo-elements Псевдоелементи
+            h2.subtitle#pseudo-elements Псевдоелементи
             ul
                 li ::before
                 li ::after
@@ -300,8 +300,8 @@ main.main-content.css-tutorial
                 li ::first-line
                 li ::selection
 
-            h2 ::before & ::after
-            p Псевдоелементи: before та: after дозволяють додавати вміст (стилі) до і після елемента, до якого були застосовані.
+            h2.subtitle ::before & ::after
+            p.topic-content Псевдоелементи: before та: after дозволяють додавати вміст (стилі) до і після елемента, до якого були застосовані.
 
             figure div::before {<br>
                 | &emsp;content: "Що це за хрень";<br>
@@ -313,7 +313,7 @@ main.main-content.css-tutorial
             .iverit
                 span ארמית עתיקה במובן הצר היא השפה שקיימה לפני היווצרות הפרנק השוויצרי הסהר הפורה. לפני העלייה הגרנדיוזית שלו, הארמית היתה רק שפתן של מדינות-עיר של הארמים בסוריה: דמשק, חמה, ארפדתל רפעת הנוכח
 
-            p Обовязкова властивість <span class='orange-text'>content</span>: ""; може приймати деякі параметри:<br>
+            p.topic-content Обовязкова властивість <span class='orange-text'>content</span>: ""; може приймати деякі параметри:<br>
 
             table.table.striped
                 colgroup
@@ -374,8 +374,8 @@ main.main-content.css-tutorial
                 img(src='img/p3.jpg')
                 img(src='img/p4.jpg')
 
-            h2 ::first-letter
-            p Визначає стиль першого символу в тексті елемента, до якого додається.
+            h2.subtitle ::first-letter
+            p.topic-content Визначає стиль першого символу в тексті елемента, до якого додається.
 
             p.first-letter Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.
             p.first-letter -The beginning of a special punctuation mark.
@@ -388,12 +388,12 @@ main.main-content.css-tutorial
             p.first-letter /The beginning of a special punctuation mark.
             p.first-letter +The beginning of a special punctuation mark.
 
-            h2 ::first-line
+            h2.subtitle ::first-line
             p Визначає стиль першого текстового рядка.
 
             p.first-line Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.
 
-            h2 ::selection
+            h2.subtitle ::selection
             p Визначає стиль виділення тексту юзером.
 
             p Тільки деякі властивості CSS можна використовувати з цим псевдоелементом:<br> (color, background-color, и text-shadow. )
@@ -401,15 +401,16 @@ main.main-content.css-tutorial
 
 
         section.aside-bar
-            ul.theme-list
-                li.theme-item
-                    a.smoothLink(href='#attr-selectors') Селектори по атрибуту
-                li.theme-item
-                    a.smoothLink(href='#pseudo-classes') Псевдо-класи
-                li.theme-item
-                    a.smoothLink(href='#cascade') Каскаднисть
-                li.theme-item
-                    a.smoothLink(href='#pseudo-elements') Псевдо-елементи
+            .scroll-wrap.sidenav-scroll.scrollBar
+                ul.theme-list
+                    li.theme-item
+                        a.smoothLink(href='#attr-selectors') Селектори по атрибуту
+                    li.theme-item
+                        a.smoothLink(href='#pseudo-classes') Псевдо-класи
+                    li.theme-item
+                        a.smoothLink(href='#cascade') Каскаднисть
+                    li.theme-item
+                        a.smoothLink(href='#pseudo-elements') Псевдо-елементи
 
             .slide-btn
                 span.fa.fa-arrow-left

@@ -1,12 +1,7 @@
-.box-model {
-  text-align: center;
-  max-width: 1000px;
-  margin: auto;
-}
 
-.flex {
-  display: inline-flex;
-  text-align: left;
+.box-model_image {
+  width: 50%;
+  margin: auto;
 }
 
 .box-wrap {
@@ -21,7 +16,7 @@
   }
 
   &.first {
-    border-right: 1px solid grey;
+    border-right: 1px solid $grey-1;
   }
 
   &.inline {
@@ -35,12 +30,12 @@
 }
 
 .box {
-  background-color: #9cd0f4;
+  background-color: $blue-1;
   border: 5px solid #6db12b;
   padding: 30px;
   margin: 40px;
-  //width: 200px;
-  //background-clip: content-box;
+  width: 200px;
+  background-clip: content-box;
 
   span {
     background-color: white;
@@ -51,15 +46,19 @@
 .content-box {
   box-sizing: content-box;
   width: 200px;
+  margin: 40px;
+  padding: 30px;
+  border: 5px solid $base-bg;
 }
 
 .border-box {
   box-sizing: border-box;
-  width: 270px;
+  width: 200px;
+  @extend .content-box;
 }
 
 .inline-box {
-  background-color: #9cd0f4;
+  background-color: $blue-1;
   border: 5px solid red;
   padding: 20px;
   margin: 40px;
@@ -86,5 +85,5 @@
   top: 0;
   left: 50%;
   width: 1px;
-  background-color: grey;
+  background-color: $grey-1;
 }

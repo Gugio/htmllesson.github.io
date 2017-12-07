@@ -3,27 +3,26 @@ main.main-content.css-tutorial
     .container
         .box-model
             h1.title Css Box model
-            div
-                img(src='../img/box-model.png' alt='box-model' width='400' height='350')
+            div.box-model_image
+                img(src='../img/box-model.png' alt='box-model')
 
-            div.flex
-                div
-                    p <span class="orange-text">box-sizing:</span> content-box;<br><span class="orange-text">width:</span> 200px;<br><span class="orange-text">margin:</span> 40px;<br><span class="orange-text">padding:</span> 30px;<br><span class="orange-text">border:</span> 5px solid green;
-                    div.box-wrap.first
-                        div.box.content-box <span>content-box</span>
-                div
-                    p <span class="orange-text">box-sizing:</span> border-box;<br><span class="orange-text">width:</span> 270px;<br><span class="orange-text">margin:</span> 40px;<br><span class="orange-text">padding:</span> 30px;<br><span class="orange-text">border:</span> 5px solid green;
-                    div.box-wrap
-                        div.box.border-box <span>border-box</span>
+            p.topic-content <span class="orange-text">box-sizing:</span> content-box;<br><span class="orange-text">width:</span> 200px;<br><span class="orange-text">margin:</span> 40px;<br><span class="orange-text">padding:</span> 30px;<br><span class="orange-text">border:</span> 5px solid green;
+            div.box-wrap.first
+                div.content-box <span>content-box</span>
 
-            img(src="../img/margin-collapse.png" alt='margin collapse')
+            p.topic-content <span class="orange-text">box-sizing:</span> border-box;<br><span class="orange-text">width:</span> 270px;<br><span class="orange-text">margin:</span> 40px;<br><span class="orange-text">padding:</span> 30px;<br><span class="orange-text">border:</span> 5px solid green;
+            div.box-wrap
+                div.border-box <span>border-box</span>
+
+            div.box-model_image
+                img(src="../img/margin-collapse.png" alt='margin collapse')
 
             div.box-wrap.text-left.inline
                 span.inline-box <span>inline element</span>
                 span.bordred
                 span.inline-box <span>inline element</span>
 
-
+                
             table.table.striped
                 colgroup
                     col(width='200px')

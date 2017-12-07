@@ -6,13 +6,15 @@ main.main-content.css-tutorial
 
             h1.title Font
 
+
+            h2 Підключення шрифту CSS
             figure.code
                 | @font-face {
-                |                 &emsp;font-family: &apos;MyFontName&apos;;
-                |                 &emsp;src: url(&apos;../fonts/WebFont.eot&apos;) format(&apos;eot&apos;),
-                |                 &emsp;&emsp;&emsp;url(&apos;../fonts/WebFont.woff&apos;) format(&apos;woff&apos;),
-                |                 &emsp;&emsp;&emsp;url(&apos;../fonts/WebFont.ttf&apos;) format(&apos;truetype&apos;),
-                |                 &emsp;&emsp;&emsp;url(&apos;../fonts/WebFont.svg&apos;) format(&apos;svg&apos;);
+                |                 &emsp;font-family: 'MyFontName';
+                |                 &emsp;src: url('../fonts/WebFont.eot') format('eot'),
+                |                 &emsp;&emsp;&emsp;url('../fonts/WebFont.woff') format('woff'),
+                |                 &emsp;&emsp;&emsp;url('../fonts/WebFont.ttf') format('truetype'),
+                |                 &emsp;&emsp;&emsp;url('../fonts/WebFont.svg') format('svg');
                 |                 &emsp;font-weight: 400;
                 |                 &emsp;font-style: normal;
                 |                 }
@@ -21,49 +23,56 @@ main.main-content.css-tutorial
                 |  {
                 |                 &emsp;
                 span font-family
-                | : &apos;MyFontName&apos;;
+                | : 'MyFontName';
                 |                 &emsp;
                 span src
-                | : url(&apos;../fonts/WebFont-Bold.eot&apos;) format(&apos;eot&apos;),
-                |                 &emsp;&emsp;&emsp;url(&apos;../fonts/WebFont-Bold.woff&apos;) format(&apos;woff&apos;),
-                |                 &emsp;&emsp;&emsp;url(&apos;../fonts/WebFont-Bold.ttf&apos;) format(&apos;truetype&apos;),
-                |                 &emsp;&emsp;&emsp;url(&apos;../fonts/WebFont-Bold.svg&apos;) format(&apos;svg&apos;);
+                | : url('../fonts/WebFont-Bold.eot') format('eot'),
+                |                 &emsp;&emsp;&emsp;url('../fonts/WebFont-Bold.woff') format('woff'),
+                |                 &emsp;&emsp;&emsp;url('../fonts/WebFont-Bold.ttf') format('truetype'),
+                |                 &emsp;&emsp;&emsp;url('../fonts/WebFont-Bold.svg') format('svg');
                 |                 &emsp;font-weight: 700;
                 |                 &emsp;font-style: normal;
                 |                 }
-                |                 @font-face {
-                |                 &emsp;font-family: &apos;MyFontName&apos;;
-                |                 &emsp;src: url(&apos;../fonts/WebFont-Italic.eot&apos;) format(&apos;eot&apos;),
-                |                 &emsp;&emsp;&emsp;url(&apos;../fonts/WebFont-Italic.woff&apos;) format(&apos;woff&apos;),
-                |                 &emsp;&emsp;&emsp;url(&apos;../fonts/WebFont-Italic.ttf&apos;) format(&apos;truetype&apos;),
-                |                 &emsp;&emsp;&emsp;url(&apos;../fonts/WebFont-Italic.svg&apos;) format(&apos;svg&apos;);
+                |
+                span @font-face
+                |  {
+                |                 &emsp;
+                span font-family:
+                |   'MyFontName';
+                |                 &emsp;src: url('../fonts/WebFont-Italic.eot') format('eot'),
+                |                 &emsp;&emsp;&emsp;url('../fonts/WebFont-Italic.woff') format('woff'),
+                |                 &emsp;&emsp;&emsp;url('../fonts/WebFont-Italic.ttf') format('truetype'),
+                |                 &emsp;&emsp;&emsp;url('../fonts/WebFont-Italic.svg') format('svg');
                 |                 &emsp;font-weight: normal;
                 |                     font-style: italic;
                 |              }
 
 
-            //h2 SCSS
-            //
-            //    figure.code
-            //        | $base-font-data : (
-            //        | &apos;font-folder, &apos;font-file-name&apos;, &apos;font-local-1&apos;, &apos;font-local-2&apos;, &apos;font-weight&apos;
-            //        | 1: (&apos;opensans/&apos;, &apos;open-sans-regular&apos;, &apos;Open Sans&apos;, &apos;Open-Sans-Bold&apos;, 400),
-            //        | 2: (&apos;opensans/&apos;, &apos;open-sans-bold&apos;, &apos;Open Sans&apos;, &apos;OpenSans-Bold&apos;, 700)
-            //        | 3: (&apos;opensans/&apos;, &apos;open-sans-italic&apos;, &apos;Open Sans&apos;, &apos;OpenSans-Italic&apos;, 400)
-            //        | );
-            //        | @for $i from 1 through length($base-font-data) {
-            //        | @font-face{
-            //        | font-family: MyFontName;
-            //        | font-style: normal;
-            //        | font-weight: nth(map-get($base-font-data, $i), 5);
-            //        | src: local(nth(map-get($base-font-data, $i), 3)), local(nth(map-get($base-font-data, $i),
-            //        | 4)),
-            //        | url(&apos;{&apos;../fonts/&apos;}#{nth(map-get($base-font-data, $i),
-            //        | 1)}{nth(map - get($base - font - data, $i), 2)}.woff2&apos;) format(&apos;woff2&apos;),
-            //        | url(&apos;{&apos;../fonts/&apos;}#{nth(map-get($base-font-data, $i),
-            //        | 1)}{nth(map - get($base - font - data, $i), 2)}.woff&apos;) format(&apos;woff&apos;);
-            //        | }
-            //        | }
+            h2 Підключення шрифту SCSS
+
+            figure.code
+                | $base-font-data : ( 'font-folder', 'font-file-name', 'font-local-1', 'font-local-2', 'font-weight';
+                | 1: ('opensans/', 'open-sans-regular', 'Open Sans', 'Open-Sans-Bold', 400),
+                | 2: ('opensans/', 'open-sans-bold', 'Open Sans', 'OpenSans-Bold', 700)
+                | 3: ('opensans/', 'open-sans-italic', 'Open Sans', 'OpenSans-Italic', 400)
+                | );
+                |
+                |   @for $i from 1 through length($base-font-data) {
+                |       @font-face {
+                |       font-family: MyFontName;
+                |       font-style: normal;
+                |       font-weight: nth(map-get($base-font-data, $i), 5);
+                |       local(nth(map-get($base-font-data, ), 3)),
+                |       local(nth(map-get($base-font-data, $i), 4)),
+                |       url('&#x23;{'../fonts/'} &#x23;{nth(map-get($base-font-data, $i),
+                |        1)} &#x23;{nth(map-get($base-font-data, $i),
+                |        2)}.woff2') format('woff2'),
+                |       url('&#x23;{'../fonts/'} &#x23;{nth(map-get($base-font-data, $i),
+                |        1)}&#x23;{nth(map-get($base-font-data, $i),
+                |        2)}.woff') format('woff');
+                |     }
+                | }
+
 
 
             table.table.striped
@@ -886,13 +895,14 @@ main.main-content.css-tutorial
 
 
     section.aside-bar
-        ul.theme-list
-            li.theme-item
-                a.smoothLink(href='#font-properties') Шрифт
-            li.theme-item
-                a.smoothLink(href='#text-properties') Текст
-            li.theme-item
-                a.smoothLink(href='#color') Колір
+        .scroll-wrap.sidenav-scroll.scrollBar
+            ul.theme-list
+                li.theme-item
+                    a.smoothLink(href='#font-properties') Шрифт
+                li.theme-item
+                    a.smoothLink(href='#text-properties') Текст
+                li.theme-item
+                    a.smoothLink(href='#color') Колір
 
         .slide-btn
             span.fa.fa-arrow-left

@@ -126,3 +126,22 @@ $base-font-size: 16;
     }
   }
 }
+
+
+// ---- flex-toggler mixin ----
+
+@mixin flex-toggler {
+  display: flex;
+  justify-content: space-around;
+  font-size: 15px;
+
+  a {
+    color: blue;
+  }
+
+  a:focus, a:active {
+    color: #00e892;
+    text-decoration: underline;
+  }
+
+}

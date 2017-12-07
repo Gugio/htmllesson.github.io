@@ -1,14 +1,14 @@
 .aside-bar {
   position: fixed;
   top: 20%;
-  right: -172px;
-  width: 170px;
+  right: -200px;
+  width: 200px;
   height: 400px;
   padding: 1rem;
   box-shadow: $box-shadow-black;
   border-radius: $base-border-radius;
   background-color: $menu-color;
-  transition: right 200ms linear;
+  transition: right 200ms ease-out;
   cursor: pointer;
   font-size: 13px;
 
@@ -21,6 +21,11 @@
   }
 
 }
+
+.sidenav-scroll {
+  height: 300px;
+}
+
 
 .slide-btn {
   position: absolute;

@@ -7,16 +7,11 @@
     <title>CSS</title>
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/font-awesome.min.css">
-    <link rel="stylesheet" href="./js/libs/highlight/styles/monokai-sublime.css">
-    <script type="text/javascript" src="./js/libs/jquery/jquery.min.js"></script>
-    <script type="text/javascript" src="./js/libs/jquery/jquery.mousewheel.min.js"></script>
-    <script type="text/javascript" src="./js/scripts/slickcustomscroll.js"></script>
-    <script type="text/javascript" src="./js/main.js"></script>
-    <!--script(type='text/javascript' src='./js/libs/scripts/scroll.js')-->
-    <script type="text/javascript" src="./js/libs/highlight/highlight.pack.js"></script>
+    <link rel="stylesheet" href="./css/styles/atom-one-dark.css">
+    <link rel="stylesheet" href="./css/jquery.mCustomScrollbar.css">
   </head>
-  <body rel="slickScroll">
-    <nav class="nav-menu"><a class="home-link" href="index.html">home</a>
+  <nav class="nav-menu"><a class="home-link" href="index.html"><span>home</span></a>
+    <div class="scroll-wrap scrollBar">
       <ol class="nav-list">
         <li><a class="nav-link" href="selectors.html"><span>Селектори, Псевдокласи, Каскадність, Псевдоелементи</span></a></li>
         <li><a class="nav-link" href="css_boxmodel.html"><span>СSS Box model</span></a></li>
@@ -33,442 +28,452 @@
         <li><a class="nav-link" href="#"><span>SVG</span></a></li>
         <li><a class="nav-link" href="#"><span>Спрайти</span></a></li>
       </ol>
-    </nav>
-    <main class="main-content css-tutorial">
-      <div class="container">
-        <div class="fonts">
-          <h1 class="title">Font</h1>
-          <figure class="code">
-            @font-face {
-                            &emsp;font-family: &apos;MyFontName&apos;;
-                            &emsp;src: url(&apos;../fonts/WebFont.eot&apos;) format(&apos;eot&apos;),
-                            &emsp;&emsp;&emsp;url(&apos;../fonts/WebFont.woff&apos;) format(&apos;woff&apos;),
-                            &emsp;&emsp;&emsp;url(&apos;../fonts/WebFont.ttf&apos;) format(&apos;truetype&apos;),
-                            &emsp;&emsp;&emsp;url(&apos;../fonts/WebFont.svg&apos;) format(&apos;svg&apos;);
-                            &emsp;font-weight: 400;
-                            &emsp;font-style: normal;
-                            }
-            <span>@font-face</span> {
-                            &emsp;<span>font-family</span>: &apos;MyFontName&apos;;
-                            &emsp;<span>src</span>: url(&apos;../fonts/WebFont-Bold.eot&apos;) format(&apos;eot&apos;),
-                            &emsp;&emsp;&emsp;url(&apos;../fonts/WebFont-Bold.woff&apos;) format(&apos;woff&apos;),
-                            &emsp;&emsp;&emsp;url(&apos;../fonts/WebFont-Bold.ttf&apos;) format(&apos;truetype&apos;),
-                            &emsp;&emsp;&emsp;url(&apos;../fonts/WebFont-Bold.svg&apos;) format(&apos;svg&apos;);
-                            &emsp;font-weight: 700;
-                            &emsp;font-style: normal;
-                            }
-                            @font-face {
-                            &emsp;font-family: &apos;MyFontName&apos;;
-                            &emsp;src: url(&apos;../fonts/WebFont-Italic.eot&apos;) format(&apos;eot&apos;),
-                            &emsp;&emsp;&emsp;url(&apos;../fonts/WebFont-Italic.woff&apos;) format(&apos;woff&apos;),
-                            &emsp;&emsp;&emsp;url(&apos;../fonts/WebFont-Italic.ttf&apos;) format(&apos;truetype&apos;),
-                            &emsp;&emsp;&emsp;url(&apos;../fonts/WebFont-Italic.svg&apos;) format(&apos;svg&apos;);
-                            &emsp;font-weight: normal;
-                                font-style: italic;
-                         }
-          </figure>
-          <!--h2 SCSS-->
-          <!---->
-          <!--    figure.code-->
-          <!--        | $base-font-data : (-->
-          <!--        | &apos;font-folder, &apos;font-file-name&apos;, &apos;font-local-1&apos;, &apos;font-local-2&apos;, &apos;font-weight&apos;-->
-          <!--        | 1: (&apos;opensans/&apos;, &apos;open-sans-regular&apos;, &apos;Open Sans&apos;, &apos;Open-Sans-Bold&apos;, 400),-->
-          <!--        | 2: (&apos;opensans/&apos;, &apos;open-sans-bold&apos;, &apos;Open Sans&apos;, &apos;OpenSans-Bold&apos;, 700)-->
-          <!--        | 3: (&apos;opensans/&apos;, &apos;open-sans-italic&apos;, &apos;Open Sans&apos;, &apos;OpenSans-Italic&apos;, 400)-->
-          <!--        | );-->
-          <!--        | @for $i from 1 through length($base-font-data) {-->
-          <!--        | @font-face{-->
-          <!--        | font-family: MyFontName;-->
-          <!--        | font-style: normal;-->
-          <!--        | font-weight: nth(map-get($base-font-data, $i), 5);-->
-          <!--        | src: local(nth(map-get($base-font-data, $i), 3)), local(nth(map-get($base-font-data, $i),-->
-          <!--        | 4)),-->
-          <!--        | url(&apos;{&apos;../fonts/&apos;}#{nth(map-get($base-font-data, $i),-->
-          <!--        | 1)}{nth(map - get($base - font - data, $i), 2)}.woff2&apos;) format(&apos;woff2&apos;),-->
-          <!--        | url(&apos;{&apos;../fonts/&apos;}#{nth(map-get($base-font-data, $i),-->
-          <!--        | 1)}{nth(map - get($base - font - data, $i), 2)}.woff&apos;) format(&apos;woff&apos;);-->
-          <!--        | }-->
-          <!--        | }-->
-          <table class="table striped">
-            <thead></thead>
-            <tr>
-              <th>Формат</th>
-              <th>Поддерживают браузеры</th>
+    </div>
+  </nav>
+  <main class="main-content css-tutorial">
+    <div class="container">
+      <div class="fonts">
+        <h1 class="title">Font</h1>
+        <h2>Підключення шрифту CSS</h2>
+        <figure class="code">
+          @font-face {
+                          &emsp;font-family: 'MyFontName';
+                          &emsp;src: url('../fonts/WebFont.eot') format('eot'),
+                          &emsp;&emsp;&emsp;url('../fonts/WebFont.woff') format('woff'),
+                          &emsp;&emsp;&emsp;url('../fonts/WebFont.ttf') format('truetype'),
+                          &emsp;&emsp;&emsp;url('../fonts/WebFont.svg') format('svg');
+                          &emsp;font-weight: 400;
+                          &emsp;font-style: normal;
+                          }
+          <span>@font-face</span> {
+                          &emsp;<span>font-family</span>: 'MyFontName';
+                          &emsp;<span>src</span>: url('../fonts/WebFont-Bold.eot') format('eot'),
+                          &emsp;&emsp;&emsp;url('../fonts/WebFont-Bold.woff') format('woff'),
+                          &emsp;&emsp;&emsp;url('../fonts/WebFont-Bold.ttf') format('truetype'),
+                          &emsp;&emsp;&emsp;url('../fonts/WebFont-Bold.svg') format('svg');
+                          &emsp;font-weight: 700;
+                          &emsp;font-style: normal;
+                          }
+          <span>@font-face</span> {
+                          &emsp;<span>font-family:</span>  'MyFontName';
+                          &emsp;src: url('../fonts/WebFont-Italic.eot') format('eot'),
+                          &emsp;&emsp;&emsp;url('../fonts/WebFont-Italic.woff') format('woff'),
+                          &emsp;&emsp;&emsp;url('../fonts/WebFont-Italic.ttf') format('truetype'),
+                          &emsp;&emsp;&emsp;url('../fonts/WebFont-Italic.svg') format('svg');
+                          &emsp;font-weight: normal;
+                              font-style: italic;
+                       }
+        </figure>
+        <h2>Підключення шрифту SCSS</h2>
+        <figure class="code">
+          $base-font-data : ( 'font-folder', 'font-file-name', 'font-local-1', 'font-local-2', 'font-weight';
+          1: ('opensans/', 'open-sans-regular', 'Open Sans', 'Open-Sans-Bold', 400),
+          2: ('opensans/', 'open-sans-bold', 'Open Sans', 'OpenSans-Bold', 700)
+          3: ('opensans/', 'open-sans-italic', 'Open Sans', 'OpenSans-Italic', 400)
+          );
+          
+            @for $i from 1 through length($base-font-data) {
+                @font-face {
+                font-family: MyFontName;
+                font-style: normal;
+                font-weight: nth(map-get($base-font-data, $i), 5);
+                local(nth(map-get($base-font-data, ), 3)),
+                local(nth(map-get($base-font-data, $i), 4)),
+                url('&#x23;{'../fonts/'} &#x23;{nth(map-get($base-font-data, $i),
+                 1)} &#x23;{nth(map-get($base-font-data, $i),
+                 2)}.woff2') format('woff2'),
+                url('&#x23;{'../fonts/'} &#x23;{nth(map-get($base-font-data, $i),
+                 1)}&#x23;{nth(map-get($base-font-data, $i),
+                 2)}.woff') format('woff');
+              }
+          }
+        </figure>
+        <table class="table striped">
+          <thead></thead>
+          <tr>
+            <th>Формат</th>
+            <th>Поддерживают браузеры</th>
+          </tr>
+          <tbody></tbody>
+          <tr>
+            <td>eot</td>
+            <td><ul class="browserCheck"><li>IE6+</li></ul></td>
+          </tr>
+          <tr>
+            <td>woff</td>
+            <td><ul class="browserCheck"><li>IE9+</li><li class="ff">FF 3.6+</li><li class="opera">11+</li><li class="chrome">Chrome 6+</li><li class="safari">5.1+</li><li style="background: 0">Opera mobile 11+</li></ul></td>
+          </tr>
+          <tr>
+            <td>ttf, otf</td>
+            <td><ul class="browserCheck"><li class="ff">FF 3.5+</li><li class="opera">10+</li><li class="chrome">Chrome 4+</li><li class="safari">3.2+</li><li style="background: 0">Opera mobile 10+</li><li style="background: 0">iOS 4.2+</li><li style="background: 0">Android 2.2+</li></ul></td>
+          </tr>
+          <tr>
+            <td>svg</td>
+            <td><ul class="browserCheck"><li class="opera">9+</li><li class="chrome">Chrome 4+</li><li class="safari">3.2+</li><li style="background: 0">Opera mobile 10+</li><li style="background: 0">iOS</li><li style="background: 0">Android 3</li></ul></td>
+          </tr>
+        </table>
+        <h2 class="subtitle" id="font-properties">Властивості шрифту</h2>
+        <p style="text-indent: 3rem;">Шрифт змінюється за допомоогою властивостей:<span class="blue">font</span>;<span class="blue">font-family</span>;<span class="blue">font-style</span>;<span class="blue">font-variant</span>;<span class="blue">font-weight</span>;<span class="blue">font-size</span>які описан докладніше нижче в таблиці</p>
+        <p><b><span class="orange">font</span>: italic small-caps bold 16px/1.5 Arial, sans-serif;</b></p>
+        <table class="table striped">
+          <colgroup>
+            <col>
+            <col>
+            <col>
+            <col width="270px">
+          </colgroup>
+          <thead>
+            <tr class="table-heading">
+              <th>Властивість</th>
+              <th>Значення</th>
+              <th>Опис</th>
+              <th>Приклад</th>
             </tr>
-            <tbody></tbody>
+          </thead>
+          <tbody>
             <tr>
-              <td>eot</td>
-              <td><ul class="browserCheck"><li>IE6+</li></ul></td>
+              <td><span class="blue">font</span></td>
+              <td>Параметр який дозволяє задати одноасно кілька характеристик для тексту, шрифту (<span class="green">font</span> групує такі властивості, саме у такому порядку):</td>
+              <td>font-style<br>font-variant<br>font-weight<br>font-size<br>line-height<br>font-family<br></td>
+              <td></td>
             </tr>
             <tr>
-              <td>woff</td>
-              <td><ul class="browserCheck"><li>IE9+</li><li class="ff">FF 3.6+</li><li class="opera">11+</li><li class="chrome">Chrome 6+</li><li class="safari">5.1+</li><li style="background: 0">Opera mobile 11+</li></ul></td>
+              <td><span class="blue">font-family</span></td>
+              <td>
+                <ul>
+                  <li><span class="green">serif</span>-<span style="font-family: serif;">шрифти з засічками, типу Times</span></li>
+                  <li><span class="green">sans-serif</span>-<span style="font-family: sans-serif;">рублені шрифти, типу Arial</span></li>
+                  <li><span class="green">cursive</span>-<span style="font-family: cursive;">курсивні шрифти</span></li>
+                  <li><span class="green">fantasy</span>-<span style="font-family: fantasy;">декоративні шрифти</span></li>
+                  <li><span class="green">monospace</span>-<span style="font-family: monospace;">моноширні шрифти (ширина кожного символу - однакова)</span></li>
+                </ul>
+              </td>
+              <td>Задає список використовуваних шрифтів</td>
+              <td>.selector {<br> font-family: "FontName", serif;<br>}</td>
             </tr>
             <tr>
-              <td>ttf, otf</td>
-              <td><ul class="browserCheck"><li class="ff">FF 3.5+</li><li class="opera">10+</li><li class="chrome">Chrome 4+</li><li class="safari">3.2+</li><li style="background: 0">Opera mobile 10+</li><li style="background: 0">iOS 4.2+</li><li style="background: 0">Android 2.2+</li></ul></td>
+              <td><span class="blue">font-style</span></td>
+              <td>
+                <ul>
+                  <li><span class="green">normal</span>-<span style="font-style: normal;">звичайне начертання</span></li>
+                  <li><span class="green">italic</span>-<span style="font-style: italic;">курсивні начертання</span></li>
+                  <li><span class="green">oblique</span>-<span style="font-style: oblique;">нахилене начертання</span></li>
+                  <li><span class="green">inherit</span>-<span style="font-style: inherit;">успадковує значення від батьківського елементу</span></li>
+                </ul>
+              </td>
+              <td>Нормальний шрифт, Курсив, Наклонний шрифт</td>
+              <td>.selector {<br> font-style: italic;<br>}</td>
             </tr>
             <tr>
-              <td>svg</td>
-              <td><ul class="browserCheck"><li class="opera">9+</li><li class="chrome">Chrome 4+</li><li class="safari">3.2+</li><li style="background: 0">Opera mobile 10+</li><li style="background: 0">iOS</li><li style="background: 0">Android 3</li></ul></td>
+              <td><span class="blue">font-variant</span></td>
+              <td>
+                <ul>
+                  <li><span class="green">normal</span>-<span style="font-variant: normal;">Без змін</span></li>
+                  <li><span class="green">small-caps</span>-<span style="font-variant: small-caps;">Модифікує всі строкові символи, як заглавні без зміни розміру</span></li>
+                  <li><span class="green">inherit</span>-<span style="font-variant: inherit;">успадковується від батька</span></li>
+                </ul>
+              </td>
+              <td>Задає начертання літер</td>
+              <td>.selector {<br> font-variant: normal;<br>}</td>
             </tr>
-          </table>
-          <h2 class="subtitle" id="font-properties">Властивості шрифту</h2>
-          <p style="text-indent: 3rem;">Шрифт змінюється за допомоогою властивостей:<span class="blue">font</span>;<span class="blue">font-family</span>;<span class="blue">font-style</span>;<span class="blue">font-variant</span>;<span class="blue">font-weight</span>;<span class="blue">font-size</span>які описан докладніше нижче в таблиці</p>
-          <p><b><span class="orange">font</span>: italic small-caps bold 16px/1.5 Arial, sans-serif;</b></p>
-          <table class="table striped">
-            <colgroup>
-              <col>
-              <col>
-              <col>
-              <col width="270px">
-            </colgroup>
-            <thead>
-              <tr class="table-heading">
-                <th>Властивість</th>
-                <th>Значення</th>
-                <th>Опис</th>
-                <th>Приклад</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><span class="blue">font</span></td>
-                <td>Параметр який дозволяє задати одноасно кілька характеристик для тексту, шрифту (<span class="green">font</span> групує такі властивості, саме у такому порядку):</td>
-                <td>font-style<br>font-variant<br>font-weight<br>font-size<br>line-height<br>font-family<br></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td><span class="blue">font-family</span></td>
-                <td>
-                  <ul>
-                    <li><span class="green">serif</span>-<span style="font-family: serif;">шрифти з засічками, типу Times</span></li>
-                    <li><span class="green">sans-serif</span>-<span style="font-family: sans-serif;">рублені шрифти, типу Arial</span></li>
-                    <li><span class="green">cursive</span>-<span style="font-family: cursive;">курсивні шрифти</span></li>
-                    <li><span class="green">fantasy</span>-<span style="font-family: fantasy;">декоративні шрифти</span></li>
-                    <li><span class="green">monospace</span>-<span style="font-family: monospace;">моноширні шрифти (ширина кожного символу - однакова)</span></li>
-                  </ul>
-                </td>
-                <td>Задає список використовуваних шрифтів</td>
-                <td>.selector {<br> font-family: "FontName", serif;<br>}</td>
-              </tr>
-              <tr>
-                <td><span class="blue">font-style</span></td>
-                <td>
-                  <ul>
-                    <li><span class="green">normal</span>-<span style="font-style: normal;">звичайне начертання</span></li>
-                    <li><span class="green">italic</span>-<span style="font-style: italic;">курсивні начертання</span></li>
-                    <li><span class="green">oblique</span>-<span style="font-style: oblique;">нахилене начертання</span></li>
-                    <li><span class="green">inherit</span>-<span style="font-style: inherit;">успадковує значення від батьківського елементу</span></li>
-                  </ul>
-                </td>
-                <td>Нормальний шрифт, Курсив, Наклонний шрифт</td>
-                <td>.selector {<br> font-style: italic;<br>}</td>
-              </tr>
-              <tr>
-                <td><span class="blue">font-variant</span></td>
-                <td>
-                  <ul>
-                    <li><span class="green">normal</span>-<span style="font-variant: normal;">Без змін</span></li>
-                    <li><span class="green">small-caps</span>-<span style="font-variant: small-caps;">Модифікує всі строкові символи, як заглавні без зміни розміру</span></li>
-                    <li><span class="green">inherit</span>-<span style="font-variant: inherit;">успадковується від батька</span></li>
-                  </ul>
-                </td>
-                <td>Задає начертання літер</td>
-                <td>.selector {<br> font-variant: normal;<br>}</td>
-              </tr>
-              <tr>
-                <td><span class="blue">font-weight</span></td>
-                <td>
-                  <ul>
-                    <li><span class="green">normal</span>-<span style="font-weight: normal;">значення дорівнює - 400</span></li>
-                    <li><span class="green">bold</span>-<span style="font-weight: bold;">напівжирне начертання</span></li>
-                    <li><span class="green">bolder</span>-<span style="font-weight: bolder;">змінює насиченість відносно батьківського</span></li>
-                    <li><span class="green">lighter</span>-<span style="font-weight: lighter;">змінює насиченість відносно батьківського</span></li>
-                    <li><span class="green">100-900 (встановлено: 500)</span>-<span style="font-weight: 500;">використовуються умовні одиниці</span></li>
-                    <li style="display: flex; flex-flow: column;"><span style="font-weight: 100;">100	Thin (Hairline)</span><span style="font-weight: 200;">200	Extra Light (Ultra Light)</span><span style="font-weight: 300;">300	Light</span><span style="font-weight: 400;">400	Normal</span><span style="font-weight: 500;">500	Medium</span><span style="font-weight: 600;">600	Semi Bold (Demi Bold)</span><span style="font-weight: 700;">700	Bold</span><span style="font-weight: 800;">800	Extra Bold (Ultra Bold)</span><span style="font-weight: 900;">900	Black (Heavy)</span></li>
-                  </ul>
-                </td>
-                <td>Задає начертання шрифта</td>
-                <td>.selector {<br> font-weight: bold;<br>}</td>
-              </tr>
-              <tr>
-                <td><span class="blue">font-size</span></td>
-                <td><img src="../../img/font.png">
-                  <ul>
-                    <li><span class="green" style="font-size: xx-small;">xx-small</span></li>
-                    <li><span class="green" style="font-size: x-small;">x-small</span></li>
-                    <li><span class="green" style="font-size: small;">small</span></li>
-                    <li><span class="green" style="font-size: medium;">medium</span></li>
-                    <li><span class="green" style="font-size: large;">large</span></li>
-                    <li><span class="green" style="font-size: x-large;">x-large</span></li>
-                    <li><span class="green" style="font-size: xx-large;">xx-large</span></li>
-                  </ul>
-                </td>
-                <td>Задається у можливих значеннях:<span class="green" style="word-spacing: 1rem;">px rem em pt %</span></td>
-                <td>.selector {<br> font-size: 18px;<br>}</td>
-              </tr>
-              <tr>
-                <td><span class="blue">font-stretch</span></td>
-                <td>
-                  <ul>
-                    <li><span class="green">condensed (ultra-, extra-, semi- )</span>-<span style="font-stretch: condensed;">guba karo mate senom</span></li>
-                    <li><span class="green">normal</span>-<span style="font-stretch: condensed;">guba karo mate senom</span></li>
-                    <li><span class="green">expanded (ultra-, extra-, semi- )</span>-<span style="font-stretch: expanded;">guba karo mate senom</span></li>
-                  </ul>
-                </td>
-                <td>хрень неробоча</td>
-                <td></td>
-              </tr>
-            </tbody>
-          </table>
-          <h2 class="title" id="text-properties">Властивості тексту</h2>
-          <p style="text-indent: 3rem;">Крім змін параметру шрифтів, можливо керувати і властивостями всього тексту.</p>
-          <table class="table striped">
-            <colgroup>
-              <col>
-              <col>
-              <col width="200px">
-              <col width="260px">
-            </colgroup>
-            <thead>
-              <tr class="table-heading">
-                <th>Властивість</th>
-                <th>Значення</th>
-                <th>Опис</th>
-                <th>Приклад</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><span class="blue">line-height</span></td>
-                <td>Задається у можливих значеннях:<span class="green" style="word-spacing: 1rem;">px rem em pt %</span></td>
-                <td><span style="line-height: 40px;">Міжстроковий інтервал, задає висоту для кожної строки тексту</span></td>
-                <td>.selector {<br> line-height: 1.2;<br>}</td>
-              </tr>
-              <tr>
-                <td><span class="blue">text-decoration</span></td>
-                <td>
-                  <ul class="text-decor">
-                    <li><span class="green">line-through</span>-<span style="text-decoration: line-through;">створює зачеркнутий текст</span></li>
-                    <li><span class="green">overline</span>-<span style="text-decoration: overline;">створює лінію над текстом</span></li>
-                    <li><span class="green">underline</span>-<span style="text-decoration: underline;">створює лінію під текстом</span></li>
-                    <li><span class="green">none</span>-<span style="text-decoration: none;">без декорацій тексту</span></li>
-                    <li><span class="green">inherit</span>-<span style="text-decoration: inherit;">наслідує значення батьківського елементу</span></li>
-                  </ul>
-                </td>
-                <td>Задає декорацію для тексту</td>
-                <td>.selector {<br> text-decoration: underline;<br>}</td>
-              </tr>
-              <tr>
-                <td><span class="blue">text-transform</span></td>
-                <td>
-                  <ul>
-                    <li><span class="green">capitalize</span><span style="text-transform: capitalize;">- перший символ кожного слова буде заглавним</span></li>
-                    <li><span class="green">lowercase</span><span style="text-transform: lowercase;">- всі символи в нижньому реєстрі</span></li>
-                    <li><span class="green">uppercase</span><span style="text-transform: uppercase;">- всі символи у верхньому реєстрі</span></li>
-                    <li><span class="green">none</span><span style="text-transform: none;">- не змінює символи</span></li>
-                    <li><span class="green">inherit</span><span style="text-transform: inherit;">- успатковується від бадька</span></li>
-                  </ul>
-                </td>
-                <td>Задає трансформацію для тексту</td>
-                <td>.selector {<br> text-transform: uppercase;<br>}</td>
-              </tr>
-              <tr>
-                <td style="vertical-align: top;"><span class="blue">text-align</span>- визначається для
-                                          батьківського елементу з текстом.
-                </td>
-                <td>
-                  <div style="width: 50%; margin: 1rem; padding: 1rem; text-align: center; font-size: small; border: 1px solid #ededed;"><span class="green">center</span> - вирівнює весь текст по центру батьківського
-                                                елементу.
-                  </div>
-                  <div style="width: 50%; margin: 1rem; padding: 1rem; text-align: justify; font-size: small; border: 1px solid #ededed;"><span class="green">justify</span> - вирівнювання тексту по ширині, одночасно по правому
-                                                та лівому краю. (додаються пробіли між словами).
-                  </div>
-                  <div style="width: 50%; margin: 1rem; padding: 1rem; text-align: left; font-size: small; border: 1px solid #ededed;"><span class="green">left</span> - вирівнювання по лівому краю.</div>
-                  <div style="width: 50%; margin: 1rem; padding: 1rem; text-align: right; font-size: small; border: 1px solid #ededed;"><span class="green">right</span> - вирівнювання по правому краю.</div>
-                  <div style="width: 50%; margin: 1rem; padding: 1rem; text-align: inherit; font-size: small; border: 1px solid #ededed;"><span class="green">inherit</span> - успатковується від батьківського елементу</div>
-                  <div style="width: 50%; margin: 1rem; padding: 1rem; text-align: start; font-size: small; border: 1px solid #ededed;"><span class="green">start</span> - аналог<span class="green">left</span>, якщо текст -
-                                                зліва направо і<span class="green">right</span>, якщо зправа наліво.
-                  </div>
-                  <div style="width: 50%; margin: 1rem; padding: 1rem; text-align: end; font-size: small; border: 1px solid #ededed;"><span class="green">end</span> - аналог для<span class="green">right</span>, якщо текст
-                                                зліва направо і<span class="green">left</span>, якщо текст - зправа наліво.
-                  </div>
-                </td>
-                <td style="vertical-align: top;">Вирівнювання тексту</td>
-                <td style="vertical-align: top;">.selector {<br> text-align: justify;<br>}</td>
-              </tr>
-              <tr>
-                <td><span class="blue">text-indent</span></td>
-                <td>Задається у можливих значеннях:<span class="green" style="word-spacing: 1rem;">px rem em pt %</span>
-                  <div style="width: 70%; margin: 1rem; padding: 1rem; text-indent: 3rem; font-size: small; border: 1px solid #ededed;">
-                    Lorem ipsum dolor sit amet, cum an diam everti civibus, ut nam clita fuisset interesset.
-                    Reque postulant quaerendum te mea, quo cu affert lobortis comprehensam. Ut usu praesent
-                    efficiantur, ludus placerat invenire eu mea.
-                  </div>
-                </td>
-                <td>відступ пешої строки</td>
-                <td>.selector {<br> text-indent: 3rem;<br>}</td>
-              </tr>
-              <tr>
-                <td><span class="blue">text-overflow</span></td>
-                <td><span class="green" style="word-spacing: 1rem;">clip</span>
-                  <div style="width: 300px; margin: 1rem; padding: 1rem; overflow: hidden; white-space: nowrap; text-overflow: clip; font-size: small; border: 1px solid #ededed;">
-                    Lorem ipsum dolor sit amet, cum an diam everti civibus, ut nam clita fuisset interesset.
-                    Reque postulant quaerendum te mea, quo cu affert lobortis comprehensam. Ut usu praesent
-                    efficiantur, ludus placerat invenire eu mea. Ea has homero propriae liberavisse, et falli
-                    cotidieque vix, nobis essent vituperata eu mel. No mea recteque disputando reformidans.
-                  </div><span class="green" style="word-spacing: 1rem;">ellipsis</span>
-                  <div style="width: 300px; margin: 1rem; padding: 1rem; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-size: small; border: 1px solid #ededed;">
-                    Lorem ipsum dolor sit amet, cum an diam everti civibus, ut nam clita fuisset interesset.
-                    Reque postulant quaerendum te mea, quo cu affert lobortis comprehensam. Ut usu praesent
-                    efficiantur, ludus placerat invenire eu mea. Ea has homero propriae liberavisse, et falli
-                    cotidieque vix, nobis essent vituperata eu mel. No mea recteque disputando reformidans.
-                  </div>
-                </td>
-                <td>текст обрізається за розміром області<br>                        текс обрізається в кінці додаються три крапки</td>
-                <td>.selector {<br> text-overflow: 666px;<br>}</td>
-              </tr>
-              <tr>
-                <td><span class="blue">text-shadow</span></td>
-                <td>
-                  <p>горизонтальне зміщення<br>                            вертикальне зміщення<br>                            радіус розмиття тіні</p>
-                  <p>У даному прикладі, для параметру<span class="green">text-shadow</span> вказано:
-                    <br><b>text-shadow: 2px 2px 5px rgba(100, 0, 255, .8);}</b>
-                  </p>
-                  <div style="width: 300px; margin: 0 1rem; padding: 1rem; border: 1px solid #ededed; font-size: small; text-shadow: 2px 2px 5px rgba(100, 0, 255, .8);">
-                    Lorem ipsum dolor sit amet, cum an diam everti civibus, ut nam clita fuisset interesset.
-                    Reque postulant quaerendum te mea, quo cu affert lobortis comprehensam.
-                  </div>
-                </td>
-                <td>тінь тексту<br>                        (px, em, rem)</td>
-                <td>.selector {<br> text-shadow: 2px 5px 20px rgba(0, 0, 0, .8);<br>}</td>
-              </tr>
-              <tr>
-                <td><span class="blue">color</span></td>
-                <td>
-                  <p>У даному прикладі, для параметру<span class="green">color</span> вказано:<br><b>color: rgba(100, 0, 255, .8);</b></p>
-                  <div style=" margin: 0 1rem; padding: 1rem; border: 1px solid #ededed; font-size: small; color: rgba(255,0,250,0.8);">Lorem ipsum dolor sit amet, cum an diam everti civibus, ut nam clita fuisset interesset.</div>
-                </td>
-                <td>задає колір тексту у будь якій вказаній формі для кольору</td>
-                <td>.selector {<br> color: #666666;<br>}</td>
-              </tr>
-              <tr>
-                <td><span class="blue">letter-spacing</span></td>
-                <td>Задається у можливих значеннях:<span class="green" style="word-spacing: 1rem;">px rem em pt</span><br>                        Для тексту нижче задано:<span class="green">0.5rem</span>
-                  <div style="margin: 1rem; padding: 1rem; border: 1px solid #ededed; letter-spacing: 0.5rem;">Lorem ipsum dolor sit amet, cum an diam everti civibus, ut nam clita fuisset interesset.</div>
-                </td>
-                <td>Визначає відстань між кожним символом</td>
-                <td>.selector {<br> letter-spacing: 0.5rem;<br>}</td>
-              </tr>
-              <tr>
-                <td><span class="blue">word-spacing</span></td>
-                <td>Задається у можливих значеннях:<span class="green" style="word-spacing: 1rem;">px rem em pt</span><br>                        Для тексту нижче задано:<span class="green">1rem</span>
-                  <div style="margin: 1rem; padding: 1rem; border: 1px solid #ededed; word-spacing: 1rem;">Lorem ipsum dolor sit amet, cum an diam everti civibus, ut nam clita fuisset interesset.</div>
-                </td>
-                <td>Задає інтервал між словами</td>
-                <td>.selector {<br> word-spacing: 0.5rem;<br>}</td>
-              </tr>
-              <tr>
-                <td><span class="blue">white-space</span></td>
-                <td><span class="green">pre</span> - текст відображається таким чином як
-                                          написано у документі, з урахуванням усіх пробілів.
-                  
-                  <div style="width: 30%; margin: 1rem; padding: 1rem; border: 1px solid #ededed; font-size: small; white-space: pre;">
-                    Lorem ipsum dolor sit
-                    amet, cum an diam everti
-                    civibus,
-                    ut nam clita fuisset
-                    interesset.
-                    Reque post
-                  </div><span class="green">pre-wrap</span> так само як і<span class="green">pre</span>                        але переносить текст якщо той не поміщається у контейнер
-                  
-                  <div style="width: 30%; margin: 1rem; padding: 1rem; border: 1px solid #ededed; font-size: small; white-space: pre-wrap;">
-                    Lorem ipsum
-                    dolor sit a m et, cum an diam everti civibus,
-                    ut nam clita fuisset interesset. Reque postulant quae
-                  </div><span class="green">nowrap</span> - пробіли виставляються автоматично та
-                                          текст не переноситься
-                  
-                  <div style="width: 300px; margin: 1rem; padding: 1rem; border: 1px solid #ededed; font-size: small; white-space: nowrap;">
-                    Lorem ipsum dolor sit amet,
-                    cum an diam everti civibus, ut nam.
-                  </div>
-                </td>
-                <td>Визначає як відображати пробіли</td>
-                <td>.selector {<br> white-space: normal;<br>}</td>
-              </tr>
-              <tr>
-                <td><span class="blue">user-select</span></td>
-                <td><span style="user-select: all;"><span class="green">all</span> - виділення всього вмісту</span><br><span class="green">auto</span> - дефолтний стан<br><span style="user-select: none;"><span class="green">none</span> - забороняє виділення</span><br><span style="user-select: text;"><span class="green">text</span> - виділення тільки тексту</span></td>
-                <td></td>
-                <td>.selector {<br> user-select: none;<br>}</td>
-              </tr>
-            </tbody>
-          </table>
-          <h2 class="title" id="color">Колір</h2><img src="../../img/color1.png"><img style="margin: auto;" src="../../img/color.png">
-          <p>
-            Колір використовується для зміни кольору тексту, фону, градіентів, тіней, границь та ін. Є кілька
-            основних методів для задання кольору у CSS:<br><span class="blue">Назва кольору (red, green, blue ...)<br>                   Шістнадцяткова система (#ffffff, #000000, #db4e44 ...), (#fff, #000 ...)<br>                   'Функція' rgb(255, 255, 255) і rgba(255, 255, 255, 1)</span>
-          </p>
-          <ul>
-            <li><span class="blue">Колір</span>
-              <div style="width: 70%; margin: 1rem; padding: 1rem; border: 1px solid #ededed;"><b>CSS</b> визначає 145 назв кольорів. Від самих простих (red, green, blue, yellow...) і до
-                                        спецефічних (lawngeen, orchid, crimson ...)
-              </div>
-            </li>
-            <li><span class="blue">#66cc00 (шістнадцятирічний колір)</span>
-              <div style="width: 70%; margin: 1rem; padding: 1rem; border: 1px solid #ededed;">Являє собою код кольору з шести символів, які починаються після знаку<span style="color: orange; font-size: 22px;">#</span>
-                <p>
-                  Кожна пара символів представляє номер, від 0 до 255. Перші два - (red), наступні два -
-                  (green), остання пара - (blue)<br> Для блоку нижче встановлено:<span class="green">.selector { background-color: #bb12ff; }</span>
+            <tr>
+              <td><span class="blue">font-weight</span></td>
+              <td>
+                <ul>
+                  <li><span class="green">normal</span>-<span style="font-weight: normal;">значення дорівнює - 400</span></li>
+                  <li><span class="green">bold</span>-<span style="font-weight: bold;">напівжирне начертання</span></li>
+                  <li><span class="green">bolder</span>-<span style="font-weight: bolder;">змінює насиченість відносно батьківського</span></li>
+                  <li><span class="green">lighter</span>-<span style="font-weight: lighter;">змінює насиченість відносно батьківського</span></li>
+                  <li><span class="green">100-900 (встановлено: 500)</span>-<span style="font-weight: 500;">використовуються умовні одиниці</span></li>
+                  <li style="display: flex; flex-flow: column;"><span style="font-weight: 100;">100	Thin (Hairline)</span><span style="font-weight: 200;">200	Extra Light (Ultra Light)</span><span style="font-weight: 300;">300	Light</span><span style="font-weight: 400;">400	Normal</span><span style="font-weight: 500;">500	Medium</span><span style="font-weight: 600;">600	Semi Bold (Demi Bold)</span><span style="font-weight: 700;">700	Bold</span><span style="font-weight: 800;">800	Extra Bold (Ultra Bold)</span><span style="font-weight: 900;">900	Black (Heavy)</span></li>
+                </ul>
+              </td>
+              <td>Задає начертання шрифта</td>
+              <td>.selector {<br> font-weight: bold;<br>}</td>
+            </tr>
+            <tr>
+              <td><span class="blue">font-size</span></td>
+              <td><img src="../../img/font.png">
+                <ul>
+                  <li><span class="green" style="font-size: xx-small;">xx-small</span></li>
+                  <li><span class="green" style="font-size: x-small;">x-small</span></li>
+                  <li><span class="green" style="font-size: small;">small</span></li>
+                  <li><span class="green" style="font-size: medium;">medium</span></li>
+                  <li><span class="green" style="font-size: large;">large</span></li>
+                  <li><span class="green" style="font-size: x-large;">x-large</span></li>
+                  <li><span class="green" style="font-size: xx-large;">xx-large</span></li>
+                </ul>
+              </td>
+              <td>Задається у можливих значеннях:<span class="green" style="word-spacing: 1rem;">px rem em pt %</span></td>
+              <td>.selector {<br> font-size: 18px;<br>}</td>
+            </tr>
+            <tr>
+              <td><span class="blue">font-stretch</span></td>
+              <td>
+                <ul>
+                  <li><span class="green">condensed (ultra-, extra-, semi- )</span>-<span style="font-stretch: condensed;">guba karo mate senom</span></li>
+                  <li><span class="green">normal</span>-<span style="font-stretch: condensed;">guba karo mate senom</span></li>
+                  <li><span class="green">expanded (ultra-, extra-, semi- )</span>-<span style="font-stretch: expanded;">guba karo mate senom</span></li>
+                </ul>
+              </td>
+              <td>хрень неробоча</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 class="title" id="text-properties">Властивості тексту</h2>
+        <p style="text-indent: 3rem;">Крім змін параметру шрифтів, можливо керувати і властивостями всього тексту.</p>
+        <table class="table striped">
+          <colgroup>
+            <col>
+            <col>
+            <col width="200px">
+            <col width="260px">
+          </colgroup>
+          <thead>
+            <tr class="table-heading">
+              <th>Властивість</th>
+              <th>Значення</th>
+              <th>Опис</th>
+              <th>Приклад</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="blue">line-height</span></td>
+              <td>Задається у можливих значеннях:<span class="green" style="word-spacing: 1rem;">px rem em pt %</span></td>
+              <td><span style="line-height: 40px;">Міжстроковий інтервал, задає висоту для кожної строки тексту</span></td>
+              <td>.selector {<br> line-height: 1.2;<br>}</td>
+            </tr>
+            <tr>
+              <td><span class="blue">text-decoration</span></td>
+              <td>
+                <ul class="text-decor">
+                  <li><span class="green">line-through</span>-<span style="text-decoration: line-through;">створює зачеркнутий текст</span></li>
+                  <li><span class="green">overline</span>-<span style="text-decoration: overline;">створює лінію над текстом</span></li>
+                  <li><span class="green">underline</span>-<span style="text-decoration: underline;">створює лінію під текстом</span></li>
+                  <li><span class="green">none</span>-<span style="text-decoration: none;">без декорацій тексту</span></li>
+                  <li><span class="green">inherit</span>-<span style="text-decoration: inherit;">наслідує значення батьківського елементу</span></li>
+                </ul>
+              </td>
+              <td>Задає декорацію для тексту</td>
+              <td>.selector {<br> text-decoration: underline;<br>}</td>
+            </tr>
+            <tr>
+              <td><span class="blue">text-transform</span></td>
+              <td>
+                <ul>
+                  <li><span class="green">capitalize</span><span style="text-transform: capitalize;">- перший символ кожного слова буде заглавним</span></li>
+                  <li><span class="green">lowercase</span><span style="text-transform: lowercase;">- всі символи в нижньому реєстрі</span></li>
+                  <li><span class="green">uppercase</span><span style="text-transform: uppercase;">- всі символи у верхньому реєстрі</span></li>
+                  <li><span class="green">none</span><span style="text-transform: none;">- не змінює символи</span></li>
+                  <li><span class="green">inherit</span><span style="text-transform: inherit;">- успатковується від бадька</span></li>
+                </ul>
+              </td>
+              <td>Задає трансформацію для тексту</td>
+              <td>.selector {<br> text-transform: uppercase;<br>}</td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top;"><span class="blue">text-align</span>- визначається для
+                                        батьківського елементу з текстом.
+              </td>
+              <td>
+                <div style="width: 50%; margin: 1rem; padding: 1rem; text-align: center; font-size: small; border: 1px solid #ededed;"><span class="green">center</span> - вирівнює весь текст по центру батьківського
+                                              елементу.
+                </div>
+                <div style="width: 50%; margin: 1rem; padding: 1rem; text-align: justify; font-size: small; border: 1px solid #ededed;"><span class="green">justify</span> - вирівнювання тексту по ширині, одночасно по правому
+                                              та лівому краю. (додаються пробіли між словами).
+                </div>
+                <div style="width: 50%; margin: 1rem; padding: 1rem; text-align: left; font-size: small; border: 1px solid #ededed;"><span class="green">left</span> - вирівнювання по лівому краю.</div>
+                <div style="width: 50%; margin: 1rem; padding: 1rem; text-align: right; font-size: small; border: 1px solid #ededed;"><span class="green">right</span> - вирівнювання по правому краю.</div>
+                <div style="width: 50%; margin: 1rem; padding: 1rem; text-align: inherit; font-size: small; border: 1px solid #ededed;"><span class="green">inherit</span> - успатковується від батьківського елементу</div>
+                <div style="width: 50%; margin: 1rem; padding: 1rem; text-align: start; font-size: small; border: 1px solid #ededed;"><span class="green">start</span> - аналог<span class="green">left</span>, якщо текст -
+                                              зліва направо і<span class="green">right</span>, якщо зправа наліво.
+                </div>
+                <div style="width: 50%; margin: 1rem; padding: 1rem; text-align: end; font-size: small; border: 1px solid #ededed;"><span class="green">end</span> - аналог для<span class="green">right</span>, якщо текст
+                                              зліва направо і<span class="green">left</span>, якщо текст - зправа наліво.
+                </div>
+              </td>
+              <td style="vertical-align: top;">Вирівнювання тексту</td>
+              <td style="vertical-align: top;">.selector {<br> text-align: justify;<br>}</td>
+            </tr>
+            <tr>
+              <td><span class="blue">text-indent</span></td>
+              <td>Задається у можливих значеннях:<span class="green" style="word-spacing: 1rem;">px rem em pt %</span>
+                <div style="width: 70%; margin: 1rem; padding: 1rem; text-indent: 3rem; font-size: small; border: 1px solid #ededed;">
+                  Lorem ipsum dolor sit amet, cum an diam everti civibus, ut nam clita fuisset interesset.
+                  Reque postulant quaerendum te mea, quo cu affert lobortis comprehensam. Ut usu praesent
+                  efficiantur, ludus placerat invenire eu mea.
+                </div>
+              </td>
+              <td>відступ пешої строки</td>
+              <td>.selector {<br> text-indent: 3rem;<br>}</td>
+            </tr>
+            <tr>
+              <td><span class="blue">text-overflow</span></td>
+              <td><span class="green" style="word-spacing: 1rem;">clip</span>
+                <div style="width: 300px; margin: 1rem; padding: 1rem; overflow: hidden; white-space: nowrap; text-overflow: clip; font-size: small; border: 1px solid #ededed;">
+                  Lorem ipsum dolor sit amet, cum an diam everti civibus, ut nam clita fuisset interesset.
+                  Reque postulant quaerendum te mea, quo cu affert lobortis comprehensam. Ut usu praesent
+                  efficiantur, ludus placerat invenire eu mea. Ea has homero propriae liberavisse, et falli
+                  cotidieque vix, nobis essent vituperata eu mel. No mea recteque disputando reformidans.
+                </div><span class="green" style="word-spacing: 1rem;">ellipsis</span>
+                <div style="width: 300px; margin: 1rem; padding: 1rem; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-size: small; border: 1px solid #ededed;">
+                  Lorem ipsum dolor sit amet, cum an diam everti civibus, ut nam clita fuisset interesset.
+                  Reque postulant quaerendum te mea, quo cu affert lobortis comprehensam. Ut usu praesent
+                  efficiantur, ludus placerat invenire eu mea. Ea has homero propriae liberavisse, et falli
+                  cotidieque vix, nobis essent vituperata eu mel. No mea recteque disputando reformidans.
+                </div>
+              </td>
+              <td>текст обрізається за розміром області<br>                        текс обрізається в кінці додаються три крапки</td>
+              <td>.selector {<br> text-overflow: 666px;<br>}</td>
+            </tr>
+            <tr>
+              <td><span class="blue">text-shadow</span></td>
+              <td>
+                <p>горизонтальне зміщення<br>                            вертикальне зміщення<br>                            радіус розмиття тіні</p>
+                <p>У даному прикладі, для параметру<span class="green">text-shadow</span> вказано:
+                  <br><b>text-shadow: 2px 2px 5px rgba(100, 0, 255, .8);}</b>
                 </p>
-              </div>
-              <div style="width: 55%; height: 50px; margin: 2rem auto; background-color: #bb12ff;"></div>
-            </li>
-            <li><span class="blue">rgb()</span>
-              <div style="width: 70%; margin: 1rem; padding: 1rem; border: 1px solid #ededed;">
-                Система rgb() використовує 3 числа, які описують відносну к-сть червоно, зеленого, синього
-                кольорів які у поєднанні можуть вивести будь-який колір. Числове значення кольору варіюється від
-                0 до 255.
-                <p>Наприклад для блоку нижче задано:<span class="green">.selector { background-color: rgb(205, 50, 255); }</span></p>
-              </div>
-              <div style="width: 55%; height: 50px; margin: 2rem auto; background-color: rgb(205, 50, 255);"></div>
-            </li>
-            <li><span class="blue">rgba()</span>
-              <div style="width: 70%; margin: 1rem; padding: 1rem; border: 1px solid #ededed;">
-                Система rgba() ще одне значення - прозорість. Значення останнього варіюється від 0 до 1.
-                Значення у 0.5 зробить колір напівпрозорим. Буква<span class="green">a</span> - означає альфа-канал
-                <p>Для блоку нижче задано колір з прозорістю:<span class="green">.selector { background-color: rgba(205, 50, 255, 0.5); }</span></p>
-              </div>
-              <div style="width: 55%; height: 50px; margin: 2rem auto; background-color: rgba(205, 50, 255, 0.5);"></div>
-            </li>
-            <li><span class="blue">hsl()</span>
-              <div><img src="../../img/color2.jpg"></div>
-              <div style="width: 70%; margin: 1rem; padding: 1rem; border: 1px solid #ededed;">
-                <p>Наприклад для блоку нижче задано:<span class="green">.selector { background-color: hsl(285, 100%, 60%); }</span></p>
-              </div>
-              <div style="width: 55%; height: 50px; margin: 2rem auto; background-color: hsl(285, 100%, 60%);"></div>
-            </li>
-            <li><span class="blue">hsla()</span>
-              <div style="width: 70%; margin: 1rem; padding: 1rem; border: 1px solid #ededed;">
-                <p>Для блоку нижче задано колір з прозорістю:<span class="green">.selector { background-color: hsla(285, 100%, 60%, 0.5); }</span></p>
-              </div>
-              <div style="width: 55%; height: 50px; margin: 2rem auto; background-color: hsla(285, 100%, 60%, 0.5);"></div>
-            </li>
-          </ul>
-        </div>
+                <div style="width: 300px; margin: 0 1rem; padding: 1rem; border: 1px solid #ededed; font-size: small; text-shadow: 2px 2px 5px rgba(100, 0, 255, .8);">
+                  Lorem ipsum dolor sit amet, cum an diam everti civibus, ut nam clita fuisset interesset.
+                  Reque postulant quaerendum te mea, quo cu affert lobortis comprehensam.
+                </div>
+              </td>
+              <td>тінь тексту<br>                        (px, em, rem)</td>
+              <td>.selector {<br> text-shadow: 2px 5px 20px rgba(0, 0, 0, .8);<br>}</td>
+            </tr>
+            <tr>
+              <td><span class="blue">color</span></td>
+              <td>
+                <p>У даному прикладі, для параметру<span class="green">color</span> вказано:<br><b>color: rgba(100, 0, 255, .8);</b></p>
+                <div style=" margin: 0 1rem; padding: 1rem; border: 1px solid #ededed; font-size: small; color: rgba(255,0,250,0.8);">Lorem ipsum dolor sit amet, cum an diam everti civibus, ut nam clita fuisset interesset.</div>
+              </td>
+              <td>задає колір тексту у будь якій вказаній формі для кольору</td>
+              <td>.selector {<br> color: #666666;<br>}</td>
+            </tr>
+            <tr>
+              <td><span class="blue">letter-spacing</span></td>
+              <td>Задається у можливих значеннях:<span class="green" style="word-spacing: 1rem;">px rem em pt</span><br>                        Для тексту нижче задано:<span class="green">0.5rem</span>
+                <div style="margin: 1rem; padding: 1rem; border: 1px solid #ededed; letter-spacing: 0.5rem;">Lorem ipsum dolor sit amet, cum an diam everti civibus, ut nam clita fuisset interesset.</div>
+              </td>
+              <td>Визначає відстань між кожним символом</td>
+              <td>.selector {<br> letter-spacing: 0.5rem;<br>}</td>
+            </tr>
+            <tr>
+              <td><span class="blue">word-spacing</span></td>
+              <td>Задається у можливих значеннях:<span class="green" style="word-spacing: 1rem;">px rem em pt</span><br>                        Для тексту нижче задано:<span class="green">1rem</span>
+                <div style="margin: 1rem; padding: 1rem; border: 1px solid #ededed; word-spacing: 1rem;">Lorem ipsum dolor sit amet, cum an diam everti civibus, ut nam clita fuisset interesset.</div>
+              </td>
+              <td>Задає інтервал між словами</td>
+              <td>.selector {<br> word-spacing: 0.5rem;<br>}</td>
+            </tr>
+            <tr>
+              <td><span class="blue">white-space</span></td>
+              <td><span class="green">pre</span> - текст відображається таким чином як
+                                        написано у документі, з урахуванням усіх пробілів.
+                
+                <div style="width: 30%; margin: 1rem; padding: 1rem; border: 1px solid #ededed; font-size: small; white-space: pre;">
+                  Lorem ipsum dolor sit
+                  amet, cum an diam everti
+                  civibus,
+                  ut nam clita fuisset
+                  interesset.
+                  Reque post
+                </div><span class="green">pre-wrap</span> так само як і<span class="green">pre</span>                        але переносить текст якщо той не поміщається у контейнер
+                
+                <div style="width: 30%; margin: 1rem; padding: 1rem; border: 1px solid #ededed; font-size: small; white-space: pre-wrap;">
+                  Lorem ipsum
+                  dolor sit a m et, cum an diam everti civibus,
+                  ut nam clita fuisset interesset. Reque postulant quae
+                </div><span class="green">nowrap</span> - пробіли виставляються автоматично та
+                                        текст не переноситься
+                
+                <div style="width: 300px; margin: 1rem; padding: 1rem; border: 1px solid #ededed; font-size: small; white-space: nowrap;">
+                  Lorem ipsum dolor sit amet,
+                  cum an diam everti civibus, ut nam.
+                </div>
+              </td>
+              <td>Визначає як відображати пробіли</td>
+              <td>.selector {<br> white-space: normal;<br>}</td>
+            </tr>
+            <tr>
+              <td><span class="blue">user-select</span></td>
+              <td><span style="user-select: all;"><span class="green">all</span> - виділення всього вмісту</span><br><span class="green">auto</span> - дефолтний стан<br><span style="user-select: none;"><span class="green">none</span> - забороняє виділення</span><br><span style="user-select: text;"><span class="green">text</span> - виділення тільки тексту</span></td>
+              <td></td>
+              <td>.selector {<br> user-select: none;<br>}</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 class="title" id="color">Колір</h2><img src="../../img/color1.png"><img style="margin: auto;" src="../../img/color.png">
+        <p>
+          Колір використовується для зміни кольору тексту, фону, градіентів, тіней, границь та ін. Є кілька
+          основних методів для задання кольору у CSS:<br><span class="blue">Назва кольору (red, green, blue ...)<br>                   Шістнадцяткова система (#ffffff, #000000, #db4e44 ...), (#fff, #000 ...)<br>                   'Функція' rgb(255, 255, 255) і rgba(255, 255, 255, 1)</span>
+        </p>
+        <ul>
+          <li><span class="blue">Колір</span>
+            <div style="width: 70%; margin: 1rem; padding: 1rem; border: 1px solid #ededed;"><b>CSS</b> визначає 145 назв кольорів. Від самих простих (red, green, blue, yellow...) і до
+                                      спецефічних (lawngeen, orchid, crimson ...)
+            </div>
+          </li>
+          <li><span class="blue">#66cc00 (шістнадцятирічний колір)</span>
+            <div style="width: 70%; margin: 1rem; padding: 1rem; border: 1px solid #ededed;">Являє собою код кольору з шести символів, які починаються після знаку<span style="color: orange; font-size: 22px;">#</span>
+              <p>
+                Кожна пара символів представляє номер, від 0 до 255. Перші два - (red), наступні два -
+                (green), остання пара - (blue)<br> Для блоку нижче встановлено:<span class="green">.selector { background-color: #bb12ff; }</span>
+              </p>
+            </div>
+            <div style="width: 55%; height: 50px; margin: 2rem auto; background-color: #bb12ff;"></div>
+          </li>
+          <li><span class="blue">rgb()</span>
+            <div style="width: 70%; margin: 1rem; padding: 1rem; border: 1px solid #ededed;">
+              Система rgb() використовує 3 числа, які описують відносну к-сть червоно, зеленого, синього
+              кольорів які у поєднанні можуть вивести будь-який колір. Числове значення кольору варіюється від
+              0 до 255.
+              <p>Наприклад для блоку нижче задано:<span class="green">.selector { background-color: rgb(205, 50, 255); }</span></p>
+            </div>
+            <div style="width: 55%; height: 50px; margin: 2rem auto; background-color: rgb(205, 50, 255);"></div>
+          </li>
+          <li><span class="blue">rgba()</span>
+            <div style="width: 70%; margin: 1rem; padding: 1rem; border: 1px solid #ededed;">
+              Система rgba() ще одне значення - прозорість. Значення останнього варіюється від 0 до 1.
+              Значення у 0.5 зробить колір напівпрозорим. Буква<span class="green">a</span> - означає альфа-канал
+              <p>Для блоку нижче задано колір з прозорістю:<span class="green">.selector { background-color: rgba(205, 50, 255, 0.5); }</span></p>
+            </div>
+            <div style="width: 55%; height: 50px; margin: 2rem auto; background-color: rgba(205, 50, 255, 0.5);"></div>
+          </li>
+          <li><span class="blue">hsl()</span>
+            <div><img src="../../img/color2.jpg"></div>
+            <div style="width: 70%; margin: 1rem; padding: 1rem; border: 1px solid #ededed;">
+              <p>Наприклад для блоку нижче задано:<span class="green">.selector { background-color: hsl(285, 100%, 60%); }</span></p>
+            </div>
+            <div style="width: 55%; height: 50px; margin: 2rem auto; background-color: hsl(285, 100%, 60%);"></div>
+          </li>
+          <li><span class="blue">hsla()</span>
+            <div style="width: 70%; margin: 1rem; padding: 1rem; border: 1px solid #ededed;">
+              <p>Для блоку нижче задано колір з прозорістю:<span class="green">.selector { background-color: hsla(285, 100%, 60%, 0.5); }</span></p>
+            </div>
+            <div style="width: 55%; height: 50px; margin: 2rem auto; background-color: hsla(285, 100%, 60%, 0.5);"></div>
+          </li>
+        </ul>
       </div>
-      <section class="aside-bar">
+    </div>
+    <section class="aside-bar">
+      <div class="scroll-wrap sidenav-scroll scrollBar">
         <ul class="theme-list">
           <li class="theme-item"><a class="smoothLink" href="#font-properties">Шрифт</a></li>
           <li class="theme-item"><a class="smoothLink" href="#text-properties">Текст</a></li>
           <li class="theme-item"><a class="smoothLink" href="#color">Колір</a></li>
         </ul>
-        <div class="slide-btn"><span class="fa fa-arrow-left"></span></div>
-      </section>
-    </main>
-    <script src="./js/libs/jquery/jquery.min.js"></script>
-    <script src="./js/main.js"></script>
-  </body>
+      </div>
+      <div class="slide-btn"><span class="fa fa-arrow-left"></span></div>
+    </section>
+  </main>
+  <script type="text/javascript" src="./js/libs/jquery/jquery.min.js"></script>
+  <script type="text/javascript" src="./js/libs/jquery/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="./js/libs/jquery/jquery.mousewheel.min.js"></script>
+  <script type="text/javascript" src="./js/libs/jquery/jquery.mousewheel-3.0.6.min.js"></script>
+  <script type="text/javascript" src="./js/libs/highlight/highlight.pack.js"></script>
+  <script type="text/javascript" src="./js/libs/MalihuScroll/jquery.mCustomScrollbar.js"></script>
+  <script type="text/javascript" src="./js/main.js"></script>
 </html>

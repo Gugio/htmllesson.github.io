@@ -2,6 +2,7 @@ var respImg = document.getElementById('respImg');
 var respBtn = document.getElementById('respBtn');
 
 function resp() {
+    'use strict';
     if (respImg.hasAttribute('style')) {
         respImg.removeAttribute('style');
         respBtn.innerHTML = 'Add responsive';
@@ -23,13 +24,12 @@ function resp() {
     var brepetR = $('.radioRepeat');
     var brepetRO = $('.brepetRO');
 
-
+    // ---- flex variables ----
     var flexToggler = $('.flex-toggler');
     var toggleGrower1 = $('.flex-togglerGrow-1');
     var toggleGrower2 = $('.flex-togglerGrow-2');
     var toggleGrower3 = $('.flex-togglerGrow-3');
-
-
+    // ---- flex alignment ----
     var justifying = $('#justifying');
     var itemAlign = $('#item-align');
     var flexDir = $('#flex-dir');
@@ -41,10 +41,20 @@ function resp() {
     var flexShrink1 = $('#flex-shrink-1');
     var flexShrink2 = $('#flex-shrink-2');
     var flexShrink3 = $('#flex-shrink-3');
+
+    // ---- syntax highlight ----
+    var syntaxHighlight = $('figure.code');
+
+    // ---- smooth scrolling ----
     var smoothScroll = $('.smoothLink');
+
+    // ---- Malihu scroll ----
+    var scrollElement = $('.scrollBar');
+
 
 
     $(document).ready(function () {
+
         brepetR.on('click', function (e) {
             var target = e.target;
             var datav = target.getAttribute('data-content');
@@ -61,6 +71,8 @@ function resp() {
             borig.css('background-origin', datav);
         });
 
+
+        // ---- flex functions ----
         flexToggler.on('click', function (e) {
             var target = e.target;
             var flexAlign = target.getAttribute('data-value');
@@ -96,13 +108,21 @@ function resp() {
 
         });
 
-        var syntaxHighlight = $('figure.code');
 
+        // ---- syntax highlight ----
         syntaxHighlight.each(function(i, block) {
             hljs.highlightBlock(block);
 
         });
-        
+
+        // ---- Malihu scroll ----
+        scrollElement.mCustomScrollbar({
+            scrollBarPosition: 'outside',
+            mouseWheel:{ preventDefault: true }
+
+        });
+
+        // ---- smooth page navigation ----
         smoothScroll.click(function (e) {
             e.preventDefault();
             $('body, html').animate({
@@ -110,11 +130,7 @@ function resp() {
             }, 750);
         });
 
-
     });
 
 
 })(jQuery);
-
-
-

@@ -7,16 +7,11 @@
     <title>CSS</title>
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/font-awesome.min.css">
-    <link rel="stylesheet" href="./js/libs/highlight/styles/monokai-sublime.css">
-    <script type="text/javascript" src="./js/libs/jquery/jquery.min.js"></script>
-    <script type="text/javascript" src="./js/libs/jquery/jquery.mousewheel.min.js"></script>
-    <script type="text/javascript" src="./js/scripts/slickcustomscroll.js"></script>
-    <script type="text/javascript" src="./js/main.js"></script>
-    <!--script(type='text/javascript' src='./js/libs/scripts/scroll.js')-->
-    <script type="text/javascript" src="./js/libs/highlight/highlight.pack.js"></script>
+    <link rel="stylesheet" href="./css/styles/atom-one-dark.css">
+    <link rel="stylesheet" href="./css/jquery.mCustomScrollbar.css">
   </head>
-  <body rel="slickScroll">
-    <nav class="nav-menu"><a class="home-link" href="index.html">home</a>
+  <nav class="nav-menu"><a class="home-link" href="index.html"><span>home</span></a>
+    <div class="scroll-wrap scrollBar">
       <ol class="nav-list">
         <li><a class="nav-link" href="selectors.html"><span>Селектори, Псевдокласи, Каскадність, Псевдоелементи</span></a></li>
         <li><a class="nav-link" href="css_boxmodel.html"><span>СSS Box model</span></a></li>
@@ -33,513 +28,515 @@
         <li><a class="nav-link" href="#"><span>SVG</span></a></li>
         <li><a class="nav-link" href="#"><span>Спрайти</span></a></li>
       </ol>
-    </nav>
-    <main class="main-content css-tutorial">
-      <div class="container">
-        <div class="flex-layout">
-          <h1 class="main-title"><code>flexbox</code></h1>
-          <p><code>flexbox</code> це порівняно нова технологія, яка підтримується всіма браузерами з середини 2016 року (IE 11 частково).</p>
-          <p>Flexbox надає інструментарій для швидкого створення складних. гнучких макетів, та функцій, які було важко реалізувати традиційними медотами CSS.
-            <p>Наприклад:
-              <ul>
-                <li><strong>Вертикальне вирівнювання дочірнього елементу</strong></li>
-                <li><strong>Розташування елементів, таким чином, щоб вони розділяли між собою всю доступну ширину/висоту, не залежно від ширини/висоти батьківського контейнеру</strong></li>
-                <li><strong>Створення колонок однакової висоти, без залежності від кількості контенту</strong></li>
-              </ul>
-            </p>
+    </div>
+  </nav>
+  <main class="main-content css-tutorial">
+    <div class="container">
+      <div class="flex-layout">
+        <h1 class="title"><code>flexbox</code></h1>
+        <p><code>flexbox</code> це порівняно нова технологія, яка підтримується всіма браузерами з середини 2016 року (IE 11 частково).</p>
+        <p>Flexbox надає інструментарій для швидкого створення складних. гнучких макетів, та функцій, які було важко реалізувати традиційними медотами CSS.
+          <p>Наприклад:
+            <ul>
+              <li><strong>Вертикальне вирівнювання дочірнього елементу</strong></li>
+              <li><strong>Розташування елементів, таким чином, щоб вони розділяли між собою всю доступну ширину/висоту, не залежно від ширини/висоти батьківського контейнеру</strong></li>
+              <li><strong>Створення колонок однакової висоти, без залежності від кількості контенту</strong></li>
+            </ul>
           </p>
-          <p>Flexbox не являє собою блочний контейнер, тому для внутрішніх блоків не спрацюють властивості <code>float, clear, vertical-align. </code>Також не спрацююсь і псевдоелементи <code>::first-line, ::first-letter</code>.</p>
-          <p>Щоб почати використовувати магію <code>flexbox</code>, достатньо визначити правило відображення елементу:</p>
-          <figure class="code">
-            <span class="nc">.selector</span>&emsp;{
-            &emsp; <span class="nb">display</span>: <span class="green">flex</span><span class="orange">;</span>
-            }
-          </figure>
-          <p>Після встановлення потрібного значення, діточки <code>flexbox</code>-у, вирівнюються по головній осі, колонками однакової висоти, рівній висоті батька. При цьому блочні, або строкоі елементи поводять себе однаково добре, і не хуліганять, їхня ширина дорівнює ширині контенту.</p>
-          <div class="flex-container">
-            <div class="flex-element">div wide</div>
-            <div class="flex-element">div wide wider</div><span class="flex-element">this is span!</span>
+        </p>
+        <p>Flexbox не являє собою блочний контейнер, тому для внутрішніх блоків не спрацюють властивості <code>float, clear, vertical-align. </code>Також не спрацююсь і псевдоелементи <code>::first-line, ::first-letter</code>.</p>
+        <p>Щоб почати використовувати магію <code>flexbox</code>, достатньо визначити правило відображення елементу:</p>
+        <figure class="code">
+          <span class="nc">.selector</span>&emsp;{
+          &emsp; <span class="nb">display</span>: <span class="green">flex</span><span class="orange">;</span>
+          }
+        </figure>
+        <p>Після встановлення потрібного значення, діточки <code>flexbox</code>-у, вирівнюються по головній осі, колонками однакової висоти, рівній висоті батька. При цьому блочні, або строкоі елементи поводять себе однаково добре, і не хуліганять, їхня ширина дорівнює ширині контенту.</p>
+        <div class="flex-container">
+          <div class="flex-element">div wide</div>
+          <div class="flex-element">div wide wider</div><span class="flex-element">this is span!</span>
+          <div class="flex-element">1</div>
+        </div>
+        <div class="description">
+          <h2 class="subtitle" id="idea-of_flexbox">Ідея <code>flexbox</code></h2>
+          <p>В основі ідеї <code>flexbox</code>, лежить ідея осей:</p><img class="flex-image" src="img/flexbox.png">
+          <p>Якщо, всередині флекс-контейнеру, знаходиться текст або зображення без обгортки, то такі елементи стають анонімними флекс-елементами. Текст вирівнюється по верхньому краю, а зображення за стає рівним висоті блоку.</p>
+          <div class="flex-container"><img src="img/s2.png">anonymous lupus
+            <div class="flex-element">thin</div>
             <div class="flex-element">1</div>
           </div>
-          <div class="description">
-            <h2 id="idea-of_flexbox">Ідея <code>flexbox</code></h2>
-            <p>В основі ідеї <code>flexbox</code>, лежить ідея осей:</p><img class="flex-image" src="img/flexbox.png">
-            <p>Якщо, всередині флекс-контейнеру, знаходиться текст або зображення без обгортки, то такі елементи стають анонімними флекс-елементами. Текст вирівнюється по верхньому краю, а зображення за стає рівним висоті блоку.</p>
-            <div class="flex-container"><img src="img/s2.png">anonymous lupus
-              <div class="flex-element">thin</div>
+          <h2 class="subtitle" id="justify-content">Вирівнювання елементів по горизонталі <code>justify-content</code></h2>
+          <p>Властивість вирівнює флекс-елементи по-ширині контейнеру, розділяючи вільний простір між елементами. Для їх вирівнювання по-вертикалі використовують <code>align-content</code>.</p>
+          <table class="table striped">
+            <colgroup>
+              <col width="180px">
+              <col>
+              <col>
+            </colgroup>
+            <tr>
+              <td><code>flex-start</code></td>
+              <td>Значення дефолтне. Елементи позиціонуються від початку контейнеру</td>
+            </tr>
+            <tr>
+              <td><code>flex-end</code></td>
+              <td>Елементи позиціонуються відносно правого краю контейнеру</td>
+            </tr>
+            <tr>
+              <td><code>center</code></td>
+              <td>Елементи "піджимаються" до середини та центруються</td>
+            </tr>
+            <tr>
+              <td><code>space-between</code></td>
+              <td>Перший блок розміщується на початку контейнеру, а останній у кінці, блоки між ними, розподіляють залишившийся простір рівномірно між собою.</td>
+            </tr>
+            <tr>
+              <td><code>space-around</code></td>
+              <td>Всі блоки рівномірно розділяють між собою простір флекс-контейнеру</td>
+            </tr>
+            <tr>
+              <td><code>initial</code></td>
+              <td>Встановлює значення за замовчуванням</td>
+            </tr>
+            <tr>
+              <td><code>inherit</code></td>
+              <td>Наслідує від батьківського елементу</td>
+            </tr>
+          </table>
+          <p class="flex-toggler"><a href="javascript:;" data-value="flex-start">flex-start</a> <a href="javascript:;" data-value="flex-end">flex-end</a> <a href="javascript:;" class="" data-value="space-between">space-between</a> <a href="javascript:;" data-value="space-around">space-around</a> <a href="javascript:;" data-value="center">center</a>
+            <div class="flex-container" id="justifying">
+              <div class="flex-element">div wide</div>
+              <div class="flex-element">div wide wider</div><span class="flex-element">this is span!</span>
               <div class="flex-element">1</div>
             </div>
-            <h2 id="justify-content">Вирівнювання елементів по горизонталі <code>justify-content</code></h2>
-            <p>Властивість вирівнює флекс-елементи по-ширині контейнеру, розділяючи вільний простір між елементами. Для їх вирівнювання по-вертикалі використовують <code>align-content</code>.</p>
-            <table class="table striped">
-              <colgroup>
-                <col width="180px">
-                <col>
-                <col>
-              </colgroup>
-              <tr>
-                <td><code>flex-start</code></td>
-                <td>Значення дефолтне. Елементи позиціонуються від початку контейнеру</td>
-              </tr>
-              <tr>
-                <td><code>flex-end</code></td>
-                <td>Елементи позиціонуються відносно правого краю контейнеру</td>
-              </tr>
-              <tr>
-                <td><code>center</code></td>
-                <td>Елементи "піджимаються" до середини та центруються</td>
-              </tr>
-              <tr>
-                <td><code>space-between</code></td>
-                <td>Перший блок розміщується на початку контейнеру, а останній у кінці, блоки між ними, розподіляють залишившийся простір рівномірно між собою.</td>
-              </tr>
-              <tr>
-                <td><code>space-around</code></td>
-                <td>Всі блоки рівномірно розділяють між собою простір флекс-контейнеру</td>
-              </tr>
-              <tr>
-                <td><code>initial</code></td>
-                <td>Встановлює значення за замовчуванням</td>
-              </tr>
-              <tr>
-                <td><code>inherit</code></td>
-                <td>Наслідує від батьківського елементу</td>
-              </tr>
-            </table>
-            <p class="flex-toggler"><a href="javascript:;" data-value="flex-start">flex-start</a> <a href="javascript:;" data-value="flex-end">flex-end</a> <a href="javascript:;" class="" data-value="space-between">space-between</a> <a href="javascript:;" data-value="space-around">space-around</a> <a href="javascript:;" data-value="center">center</a>
-              <div class="flex-container" id="justifying">
-                <div class="flex-element">div wide</div>
-                <div class="flex-element">div wide wider</div><span class="flex-element">this is span!</span>
-                <div class="flex-element">1</div>
-              </div>
-            </p>
-            <p>Синтаксис:
-              <figure class="code">
-                <span class="nc">.selector</span>&emsp;{
-                &emsp; <span class="nb">display</span>: <span class="green">flex</span><span class="orange">;</span>
-                &emsp; <span class="nb">justify-content</span>: <span class="green">flex-start, flex-end, center, space-between, space-around</span><span class="orange">;</span>
-                }
-              </figure>
-            </p>
-            <h2 id="align-items">Вирівнювання елементів по вертикалі <code>align-items</code></h2>
-            <p>Властивість вирівнює флекс-елементи, в тому числі і анонімні по перендикулярній осі.</p>
-            <table class="table striped" style="margin: 1rem 0; width: 100%;">
-              <colgroup>
-                <col>
-                <col>
-                <col width="40%">
-              </colgroup>
-              <tr>
-                <td><code>stretch</code></td>
-                <td>Значення дефолтне. Елементи розтягуються на всю досупну висоту</td>
-              </tr>
-              <tr>
-                <td><code>flex-start</code></td>
-                <td>Елементи вирівнюються по лівому верхньому краю флекс-контейнера</td>
-              </tr>
-              <tr>
-                <td><code>flex-end</code></td>
-                <td>Елементи вирівнюються по лівому нижньому краю флекс-контейнера</td>
-              </tr>
-              <tr>
-                <td><code>center</code></td>
-                <td>Елементи вирівнюються по центру</td>
-              </tr>
-              <tr>
-                <td><code>baseline</code></td>
-                <td>елементи вирівнюються по базовій лініі флекс-контейнеру</td>
-              </tr>
-              <tr>
-                <td><code>initial</code></td>
-                <td>Встановлює значення за замовчуванням</td>
-              </tr>
-              <tr>
-                <td><code>inherit</code></td>
-                <td>Наслідує від батьківського елементу</td>
-              </tr>
-            </table>
-            <p class="flex-toggler"><a href="javascript:;" data-value="stretch">stretch</a> <a href="javascript:;" data-value="baseline">baseline</a>  <a href="javascript:;" data-value="flex-start">flex-start</a> <a href="javascript:;" data-value="flex-end">flex-end</a> <a href="javascript:;" class="" data-value="center">center</a>
-              <div class="flex-container" id="item-align" style="height: 200px;">
-                <div class="flex-element">div wide</div>
-                <div class="flex-element">div wide wider wider wider</div><span class="flex-element">this is span!</span>
-                <div class="flex-element">1</div><span class="flex-element">this is span!</span>
-                <div class="flex-element">div wide</div>
-              </div>
-            </p>
-            <p>Синтаксис:
-              <figure class="code">
-                <span class="nc">.selector</span>&emsp;{
-                &emsp; <span class="nb">display</span>: <span class="green">flex</span><span class="orange">;</span>
-                &emsp; <span class="nb">align-items</span>: <span class="green">stretch, flex-start, flex-end, center, baseline</span><span class="orange">;</span>
-                }
-              </figure>
-            </p>
-            <h2 id="flex-direction"><code>flex-direction</code> напрямок головної осі</h2>
-            <p>Властивість визначає, яким чином флекс-елементи вкладаються у флекс-контейнер. Флекс-елементи можуть розташовуватись у двох напрямках: горизонтально, як строки, або вертикально, як колонки.</p>
-            <table class="table striped">
-              <colgroup>
-                <col width="180px">
-                <col>
-                <col>
-              </colgroup>
-              <tr>
-                <td><code>row</code></td>
-                <td>Значення дефолтне. Елементи розташовуються від краю флекс-контейнеру у одну строку</td>
-              </tr>
-              <tr>
-                <td><code>row-reverse</code></td>
-                <td>Елементи розташовуються від протилежного краю флекс-контейнеру у одну строку, але у зворотньому напрямку. Ніби відзеркалення.</td>
-              </tr>
-              <tr>
-                <td><code>column</code></td>
-                <td>Так як дане значення змінює головну вісь контейнера з горизонтальної на вертикальну, то і флекс-елементи вистраюються один під одним у колонку.</td>
-              </tr>
-              <tr>
-                <td><code>column-reverse</code></td>
-                <td>Елементи вистраюються у колонку один під одним, але у зворотньому напрямку як і у <code>row-reverse</code>, але як колонка. Ну ви поняли ;-)</td>
-              </tr>
-              <tr>
-                <td><code>initial</code></td>
-                <td>Встановлює значення за замовчуванням</td>
-              </tr>
-              <tr>
-                <td><code>inherit</code></td>
-                <td>Наслідує від батьківського елементу</td>
-              </tr>
-            </table>
-            <p class="flex-toggler"><a href="javascript:;" data-value="row">row</a> <a href="javascript:;" data-value="row-reverse">row-reverse</a>  <a href="javascript:;" data-value="column">column</a> <a href="javascript:;" data-value="column-reverse">column-reverse</a>
-              <div class="flex-container" id="flex-dir">
-                <div class="flex-element">1</div>
-                <div class="flex-element">2</div><span class="flex-element">3</span>
-                <div class="flex-element">4</div>
-              </div>
-            </p>
-            <p>Синтаксис:
-              <figure class="code">
-                <span class="nc">.selector</span>&emsp;{
-                &emsp; <span class="nb">display</span>: <span class="green">flex</span><span class="orange">;</span>
-                &emsp; <span class="nb">flex-direction</span>: <span class="green">row</span><span class="orange">;</span>
-                }
-              </figure>
-            </p>
-            <h2 id="flex-wrapping"><code>flex-wrap</code> багатостроковість флекс-елементів</h2>
-            <p>Властивість визначає, яким чином флекс-елементи будуть вистраюватись, в одну строку, або переноситись на іншу при не достачі місця. За замовчуванням всі елементи вистраюються в одну строку та заповнюють весь доступний простір контейнеру. У випадку фіксованої ширини контейнеру, флекс-елементи беззсовісно вилазять за його межі.</p>
-            <table class="table striped">
-              <colgroup>
-                <col width="180px">
-                <col>
-                <col>
-              </colgroup>
-              <tr>
-                <td><code>nowrap</code></td>
-                <td>Значення дефолтне. Флекс-елементи не переносяться, та вистраюються в одну строку</td>
-              </tr>
-              <tr>
-                <td><code>wrap</code></td>
-                <td>Елементи переносяться, розташовуючись у кілька строк, у випадку переповнення контейнеру</td>
-              </tr>
-              <tr>
-                <td><code>wrap-reverse</code></td>
-                <td>Флекс-елементи переносяться, але розташовуються у зворотньому напрямку та пренос відбувається знизу-вверх.</td>
-              </tr>
-              <tr>
-                <td><code>initial</code></td>
-                <td>Встановлює значення за замовчуванням</td>
-              </tr>
-              <tr>
-                <td><code>inherit</code></td>
-                <td>Наслідує від батьківського елементу</td>
-              </tr>
-            </table>
-            <p class="flex-toggler"><a href="javascript:;" data-value="wrap">wrap</a> <a href="javascript:;" data-value="nowrap">nowrap</a>  <a href="javascript:;" data-value="wrap-reverse">wrap-reverse</a>
-              <div class="flex-container" id="flex-wrap"><span class="flex-element">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
-                <div class="flex-element">Morbi molestie, elit eget semper imperdiet, dolor urna porta urna</div>
-                <div class="flex-element">Morbi molestie, elit eget semper imperdiet, dolor urna porta urna</div>
-                <div class="flex-element">Morbi molestie, elit eget semper imperdiet, dolor urna porta urna</div>
-                <div class="flex-element">Morbi molestie, elit eget semper imperdiet, dolor urna porta urna</div>
-                <div class="flex-element">Morbi molestie, elit eget semper imperdiet, dolor urna porta urna</div>
-                <div class="flex-element">Morbi molestie, elit eget semper imperdiet, dolor urna porta urna</div>
-                <div class="flex-element">Morbi molestie, elit eget semper imperdiet, dolor urna porta urna</div>
-              </div>
-            </p>
-            <p>Синтаксис:
-              <figure class="code">
-                <span class="nc">.selector</span>&emsp;{
-                &emsp; <span class="nb">display</span>: <span class="green">flex</span><span class="orange">;</span>
-                &emsp; <span class="nb">flex-wrap</span>: <span class="green">wrap</span><span class="orange">;</span>
-                }
-              </figure>
-            </p>
-            <h2 id="flex-flow"><code>flex-flow</code> - це короткий запис для напрямку осі та багатостроковості флекс-контейнеру</h2>
-            <p>Перше значення цієї властивості визначає напрямок осі, а друге перенос елементів.</p>
-            <p>Синтаксис:
-              <figure class="code">
-                <span class="nc">.selector</span>&emsp;{
-                &emsp; <span class="nb">display</span>: <span class="green">flex</span><span class="orange">;</span>
-                &emsp; <span class="nb">flex-flow</span>: <span class="green">row nowrap</span><span class="orange">;</span>
-                }
-              </figure>
-            </p>
-            <h2 id="align-content"><code>align-content</code> багатострокове вирівнювання</h2>
-            <p>Властивість вирівнює строки по вертикалі у флекс-контейнері, дозволяючи керувати вільним простором. <b color="red">Увага!!!</b> Дана властивість працює тільки в тому випадку, якщо перенос строк дозволений, вказаний напрямок головної осі та задана висота контейнеру.</p>
-            <table class="table striped">
-              <colgroup>
-                <col width="180px">
-                <col>
-                <col>
-              </colgroup>
-              <tr>
-                <td><code>stretch</code></td>
-                <td>Значення дефолтне. Строки розтягуються, заповнюючи весь доступний простір.</td>
-              </tr>
-              <tr>
-                <td><code>flex-start</code></td>
-                <td>Строки флекс-елементів вирівнюються по лівому краю контейнеру, відносно верхньої сторони.</td>
-              </tr>
-              <tr>
-                <td><code>flex-end</code></td>
-                <td>Строки флекс-елементів вирівнюються по лівому краю контейнеру, відносно нижньої сторони.</td>
-              </tr>
-              <tr>
-                <td><code>center</code></td>
-                <td>Строки флекс-елементів вирівнюються по середині та по висоті контейнеру, відносно його лівого краю.</td>
-              </tr>
-              <tr>
-                <td><code>space-between</code></td>
-                <td>Строки флекс-елементів вирівнюються по середині та по висоті, відносно лівого краю контейнеру. Вільний простір розподіляється між елементами. Перший ряд "піджимається" до верху контейнеру, останній до низу.</td>
-              </tr>
-              <tr>
-                <td><code>space-around</code></td>
-                <td>Строки флекс-елементів рівномірно розділяють між собою прстір по висоті, разом з відступом від країв контейнеру</td>
-              </tr>
-              <tr>
-                <td><code>initial</code></td>
-                <td>Встановлює значення за замовчуванням</td>
-              </tr>
-              <tr>
-                <td><code>inherit</code></td>
-                <td>Наслідує від батьківського елементу</td>
-              </tr>
-            </table>
-            <p class="flex-toggler"><a href="javascript:;" data-value="stretch">stretch</a> <a href="javascript:;" data-value="space-around">space-around</a> <a href="javascript:;" data-value="space-between">space-between</a>  <a href="javascript:;" data-value="flex-start">flex-start</a> <a href="javascript:;" data-value="flex-end">flex-end</a> <a href="javascript:;" data-value="center">center</a>
-              <div class="flex-container" id="cont-align" style="height: 270px;  flex-flow: row wrap;"><span class="flex-element">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
-                <div class="flex-element">Morbi molestie, elit eget semper imperdiet, dolor urna porta urna</div>
-                <div class="flex-element">Morbi molestie, elit eget semper imperdiet, dolor urna porta urna</div>
-                <div class="flex-element">Morbi molestie, elit eget semper, dolor urna porta urna</div>
-                <div class="flex-element">Morbi molestie, elit eget semper imperdiet, dolor urna porta urna</div><span class="flex-element">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
-              </div>
-            </p>
-            <p>Синтаксис:
-              <figure class="code">
-                <span class="nc">.selector</span>&emsp;{
-                &emsp; <span class="nb">display</span>: <span class="green">flex</span><span class="orange">;</span>
-                &emsp; <span class="nb">flex-flow</span>: <span class="green">row wrap</span><span class="orange">;</span>
-                &emsp; <span class="nb">align-content</span>: <span class="green">stretch, flex-start, flex-end, center, space-between, space-around</span><span class="orange">;</span>
-                &emsp; <span class="nb">height</span>: <span class="green">130px</span><span class="orange">;</span>
-                }
-              </figure>
-            </p>
-            <p style="font-size: 24px;"><b>Властивості flex-елементів</b></p>
-            <h2 id="ordering"><code>order</code> порядок відображення елементів</h2>
-            <p>Властивість визначає порядок у якому будуть відображатись флекс-елементи. По дефолту заданий порядок дорівнює: 0.</p>
-            <table class="table striped">
-              <colgroup>
-                <col width="180px">
-                <col>
-                <col>
-              </colgroup>
-              <tr>
-                <td><code>Числове значення</code></td>
-                <td>Властивість встановлюється числовим значенням, яке відповідає за порядок відображення. По замовчуванню: 0. Від'ємні значення допускаються</td>
-              </tr>
-              <tr>
-                <td><code>initial</code></td>
-                <td>Встановлює значення за замовчуванням</td>
-              </tr>
-              <tr>
-                <td><code>inherit</code></td>
-                <td>Наслідує від батьківського елементу</td>
-              </tr>
-            </table>
-            <p>Синтаксис:
-              <figure class="code">
-                <span class="nc">.selector</span>&emsp;{
-                &emsp; <span class="nb">display</span>: <span class="green">flex</span><span class="orange">;</span>
-                }
-                
-                <span class="nc">.selector .flex-item</span>  {
-                &emsp; <span class="nb">order</span>: <span class="green">1</span><span class="orange">;</span>
-                }
-              </figure>
-            </p>
-            <h2 id="flex-basis"><code>flex-basis</code> базова ширина елементу</h2>
-            <p>Властивість дозволяє задати базову ширину флекс-елементу, відносно якої буде відбуватись його розтягнення <code>flex-grow</code>, або ж його звуження <code>flex-shrink</code>.</p>
-            <table class="table striped">
-              <colgroup>
-                <col width="180px">
-                <col>
-                <col>
-              </colgroup>
-              <tr>
-                <td><code>auto</code></td>
-                <td>Дефолтне значення. Елемент отримує базову ширину в залежності від його контенту.</td>
-              </tr>
-              <tr>
-                <td><code>Числове значення</code></td>
-                <td>Ширина елементу задається у <code>px</code> <code>rem</code> <code>%</code>, та інших одиницях виміру</td>
-              </tr>
-              <tr>
-                <td><code>initial</code></td>
-                <td>Встановлює значення за замовчуванням</td>
-              </tr>
-              <tr>
-                <td><code>inherit</code></td>
-                <td>Наслідує від батьківського елементу</td>
-              </tr>
-            </table>
-            <p>Синтаксис:
-              <figure class="code">
-                <span class="nc">.selector</span>&emsp;{
-                &emsp; <span class="nb">display</span>: <span class="green">flex</span><span class="orange">;</span>
-                &emsp; <span class="brown">//-- (required)Flex: фосий;</span>
-                }
-                
-                <span class="nc">.selector .flex-item</span>  {
-                &emsp; <span class="nb">flex-basis</span>: <span class="green">666px</span><span class="orange">;</span>
-                &emsp; <span class="brown">//-- (required)Flex: фосий;</span>
-                }
-              </figure>
-            </p>
-            <h2 id="flex-grow"><code>flex-grow</code> Розтягання елементів</h2>
-            <p>властивість визначає коефіціент збільшення ширини флекс-елементу, відносно інших флекс елементів.</p>
-            <table class="table striped">
-              <colgroup>
-                <col width="180px">
-                <col>
-                <col>
-              </colgroup>
-              <tr>
-                <td><code>Числове значення</code></td>
-                <td>Натуральне ціле, або дробне число, яке встановлює коефіціент збільшення флекс-елементу. Дефолтне значення: 0.</td>
-              </tr>
-              <tr>
-                <td><code>initial</code></td>
-                <td>Встановлює значення за замовчуванням</td>
-              </tr>
-              <tr>
-                <td><code>inherit</code></td>
-                <td>Наслідує від батьківського елементу</td>
-              </tr>
-            </table>
-            <div class="flex-container unsized">
-              <div class="flex-element sized thin" id="flex-grow-1">grow:
-                <p class="flex-togglerGrow-1"><a href="javascript:;" data-value="3">3</a> <a href="javascript:;" data-value="5">5</a> <a href="javascript:;" data-value="10">10</a>  <a href="javascript:;" data-value="8">8</a> <a href="javascript:;" data-value="initial">initial</a></p>
-              </div>
-              <div class="flex-element sized thin" id="flex-grow-2">grow:
-                <p class="flex-togglerGrow-2"><a href="javascript:;" data-value="3">3</a> <a href="javascript:;" data-value="5">5</a> <a href="javascript:;" data-value="10">10</a>  <a href="javascript:;" data-value="8">8</a> <a href="javascript:;" data-value="initial">initial</a></p>
-              </div>
-              <div class="flex-element sized thin" id="flex-grow-3">grow:
-                <p class="flex-togglerGrow-3"><a href="javascript:;" data-value="3">3</a> <a href="javascript:;" data-value="5">5</a> <a href="javascript:;" data-value="10">10</a>  <a href="javascript:;" data-value="8">8</a> <a href="javascript:;" data-value="initial">initial</a></p>
-              </div>
+          </p>
+          <p>Синтаксис:
+            <figure class="code">
+              <span class="nc">.selector</span>&emsp;{
+              &emsp; <span class="nb">display</span>: <span class="green">flex</span><span class="orange">;</span>
+              &emsp; <span class="nb">justify-content</span>: <span class="green">flex-start, flex-end, center, space-between, space-around</span><span class="orange">;</span>
+              }
+            </figure>
+          </p>
+          <h2 class="subtitle" id="align-items">Вирівнювання елементів по вертикалі <code>align-items</code></h2>
+          <p>Властивість вирівнює флекс-елементи, в тому числі і анонімні по перендикулярній осі.</p>
+          <table class="table striped" style="margin: 1rem 0; width: 100%;">
+            <colgroup>
+              <col>
+              <col>
+              <col width="40%">
+            </colgroup>
+            <tr>
+              <td><code>stretch</code></td>
+              <td>Значення дефолтне. Елементи розтягуються на всю досупну висоту</td>
+            </tr>
+            <tr>
+              <td><code>flex-start</code></td>
+              <td>Елементи вирівнюються по лівому верхньому краю флекс-контейнера</td>
+            </tr>
+            <tr>
+              <td><code>flex-end</code></td>
+              <td>Елементи вирівнюються по лівому нижньому краю флекс-контейнера</td>
+            </tr>
+            <tr>
+              <td><code>center</code></td>
+              <td>Елементи вирівнюються по центру</td>
+            </tr>
+            <tr>
+              <td><code>baseline</code></td>
+              <td>елементи вирівнюються по базовій лініі флекс-контейнеру</td>
+            </tr>
+            <tr>
+              <td><code>initial</code></td>
+              <td>Встановлює значення за замовчуванням</td>
+            </tr>
+            <tr>
+              <td><code>inherit</code></td>
+              <td>Наслідує від батьківського елементу</td>
+            </tr>
+          </table>
+          <p class="flex-toggler"><a href="javascript:;" data-value="stretch">stretch</a> <a href="javascript:;" data-value="baseline">baseline</a>  <a href="javascript:;" data-value="flex-start">flex-start</a> <a href="javascript:;" data-value="flex-end">flex-end</a> <a href="javascript:;" class="" data-value="center">center</a>
+            <div class="flex-container" id="item-align" style="height: 200px;">
+              <div class="flex-element">div wide</div>
+              <div class="flex-element">div wide wider wider wider</div><span class="flex-element">this is span!</span>
+              <div class="flex-element">1</div><span class="flex-element">this is span!</span>
+              <div class="flex-element">div wide</div>
             </div>
-            <p>Синтаксис:
-              <figure class="code">
-                <span class="nc">.selector</span>&emsp;{
-                &emsp; <span class="nb">display</span>: <span class="green">flex</span><span class="orange">;</span>
-                }
-                
-                <span class="nc">.selector .flex-item</span>  {
-                &emsp; <span class="nb">flex-grow</span>: <span class="green">666.666</span><span class="orange">;</span>
-                }
-              </figure>
-            </p>
-            <h2 id="flex-shrink"><code>flex-shrink</code> звуження елементів</h2>
-            <p>Властивість вказує коефіціент звуження флекс-елементу відносно інших. Працює лише у випадку, якщо для елементу задана ширина <code>flex-basis</code>, або <code>width</code></p>
-            <table class="table striped">
-              <colgroup>
-                <col width="180px">
-                <col>
-                <col>
-              </colgroup>
-              <tr>
-                <td><code>Числове значення</code></td>
-                <td>Натуральне ціле, або дробне число, яке встановлює коефіціент зменшення флекс-елементу. Дефолтне значення: 1.</td>
-              </tr>
-              <tr>
-                <td><code>initial</code></td>
-                <td>Встановлює значення за замовчуванням</td>
-              </tr>
-              <tr>
-                <td><code>inherit</code></td>
-                <td>Наслідує від батьківського елементу</td>
-              </tr>
-            </table>
-            <div class="flex-container unsized">
-              <div class="flex-element sized wide" id="flex-shrink-1">shrink:
-                <p class="flex-togglerGrow-1"><a href="javascript:;" data-value="3">3</a> <a href="javascript:;" data-value="5">5</a> <a href="javascript:;" data-value="10">10</a>  <a href="javascript:;" data-value="8">8</a> <a href="javascript:;" data-value="initial">initial</a></p>
-              </div>
-              <div class="flex-element sized wide" id="flex-shrink-2">shrink:
-                <p class="flex-togglerGrow-2"><a href="javascript:;" data-value="3">3</a> <a href="javascript:;" data-value="5">5</a> <a href="javascript:;" data-value="10">10</a>  <a href="javascript:;" data-value="8">8</a> <a href="javascript:;" data-value="initial">initial</a></p>
-              </div>
-              <div class="flex-element sized wide" id="flex-shrink-3">shrink:
-                <p class="flex-togglerGrow-3"><a href="javascript:;" data-value="3">3</a> <a href="javascript:;" data-value="5">5</a> <a href="javascript:;" data-value="10">10</a>  <a href="javascript:;" data-value="8">8</a> <a href="javascript:;" data-value="initial">initial</a></p>
-              </div>
+          </p>
+          <p>Синтаксис:
+            <figure class="code">
+              <span class="nc">.selector</span>&emsp;{
+              &emsp; <span class="nb">display</span>: <span class="green">flex</span><span class="orange">;</span>
+              &emsp; <span class="nb">align-items</span>: <span class="green">stretch, flex-start, flex-end, center, baseline</span><span class="orange">;</span>
+              }
+            </figure>
+          </p>
+          <h2 class="subtitle" id="flex-direction"><code>flex-direction</code> напрямок головної осі</h2>
+          <p>Властивість визначає, яким чином флекс-елементи вкладаються у флекс-контейнер. Флекс-елементи можуть розташовуватись у двох напрямках: горизонтально, як строки, або вертикально, як колонки.</p>
+          <table class="table striped">
+            <colgroup>
+              <col width="180px">
+              <col>
+              <col>
+            </colgroup>
+            <tr>
+              <td><code>row</code></td>
+              <td>Значення дефолтне. Елементи розташовуються від краю флекс-контейнеру у одну строку</td>
+            </tr>
+            <tr>
+              <td><code>row-reverse</code></td>
+              <td>Елементи розташовуються від протилежного краю флекс-контейнеру у одну строку, але у зворотньому напрямку. Ніби відзеркалення.</td>
+            </tr>
+            <tr>
+              <td><code>column</code></td>
+              <td>Так як дане значення змінює головну вісь контейнера з горизонтальної на вертикальну, то і флекс-елементи вистраюються один під одним у колонку.</td>
+            </tr>
+            <tr>
+              <td><code>column-reverse</code></td>
+              <td>Елементи вистраюються у колонку один під одним, але у зворотньому напрямку як і у <code>row-reverse</code>, але як колонка. Ну ви поняли ;-)</td>
+            </tr>
+            <tr>
+              <td><code>initial</code></td>
+              <td>Встановлює значення за замовчуванням</td>
+            </tr>
+            <tr>
+              <td><code>inherit</code></td>
+              <td>Наслідує від батьківського елементу</td>
+            </tr>
+          </table>
+          <p class="flex-toggler"><a href="javascript:;" data-value="row">row</a> <a href="javascript:;" data-value="row-reverse">row-reverse</a>  <a href="javascript:;" data-value="column">column</a> <a href="javascript:;" data-value="column-reverse">column-reverse</a>
+            <div class="flex-container" id="flex-dir">
+              <div class="flex-element">1</div>
+              <div class="flex-element">2</div><span class="flex-element">3</span>
+              <div class="flex-element">4</div>
             </div>
-            <p>Синтаксис:
-              <figure class="code">
-                <span class="nc">.selector</span>&emsp;{
-                &emsp; <span class="nb">display</span>: <span class="green">flex</span><span class="orange">;</span>
-                }
-                
-                <span class="nc">.selector .flex-item</span>  {
-                &emsp; <span class="nb">flex-shrink</span>: <span class="green">666.666</span><span class="orange">;</span>
-                }
-              </figure>
-            </p>
-            <h2 id="flex">Одна властивість для задання базової ширини та трансформації елементу: <code>flex</code></h2>
-            <p>Властивість являє собою короткий запис трьох властивостей: <code>flex-grow</code>, <code>flex-shrink</code>, <code>flex-basis</code>. Дефолтне значення <code>flex: 0 1 auto;</code>. Задається числовим значенням або ключовими словами <code>none</code>, <code>auto</code></p>
-            <table class="table striped">
-              <colgroup>
-                <col width="180px">
-                <col>
-                <col>
-              </colgroup>
-              <tr>
-                <td><code>Перше значення - коефіціент розширення</code></td>
-                <td>Натуральне ціле, або дробне число, яке встановлює коефіціент збільшення флекс-елементу. Дефолтне значення: 0.</td>
-              </tr>
-              <tr>
-                <td><code>Друге значення - коефіціент звуження</code></td>
-                <td>Натуральне ціле, або дробне число, яке встановлює коефіціент звуження флекс-елементу. Дефолтне значення: 0.</td>
-              </tr>
-              <tr>
-                <td><code>Третє значення - базова ширина</code></td>
-                <td>Приймається у одиницях виміру. Задає за базову ширину елементу, відносно якої буде відбуватись звуження/збільшення</td>
-              </tr>
-              <tr>
-                <td><code>auto</code></td>
-                <td>Еквівалент до <code>flex: 1 1 auto;</code></td>
-              </tr>
-              <tr>
-                <td><code>none</code></td>
-                <td>Еквівалент до <code>flex: 0 0 auto;</code></td>
-              </tr>
-            </table>
-            <p>Синтаксис:
-              <figure class="code">
-                <span class="nc">.selector</span>&emsp;{
-                &emsp; <span class="nb">display</span>: <span class="green">flex</span><span class="orange">;</span>
-                }
-                
-                <span class="nc">.selector .flex-item</span>  {
-                &emsp; <span class="nb">flex</span>: <span class="green">6 6 100px</span><span class="orange">;</span>
-                }
-              </figure>
-            </p>
+          </p>
+          <p>Синтаксис:
+            <figure class="code">
+              <span class="nc">.selector</span>&emsp;{
+              &emsp; <span class="nb">display</span>: <span class="green">flex</span><span class="orange">;</span>
+              &emsp; <span class="nb">flex-direction</span>: <span class="green">row</span><span class="orange">;</span>
+              }
+            </figure>
+          </p>
+          <h2 class="subtitle" id="flex-wrapping"><code>flex-wrap</code> багатостроковість флекс-елементів</h2>
+          <p>Властивість визначає, яким чином флекс-елементи будуть вистраюватись, в одну строку, або переноситись на іншу при не достачі місця. За замовчуванням всі елементи вистраюються в одну строку та заповнюють весь доступний простір контейнеру. У випадку фіксованої ширини контейнеру, флекс-елементи беззсовісно вилазять за його межі.</p>
+          <table class="table striped">
+            <colgroup>
+              <col width="180px">
+              <col>
+              <col>
+            </colgroup>
+            <tr>
+              <td><code>nowrap</code></td>
+              <td>Значення дефолтне. Флекс-елементи не переносяться, та вистраюються в одну строку</td>
+            </tr>
+            <tr>
+              <td><code>wrap</code></td>
+              <td>Елементи переносяться, розташовуючись у кілька строк, у випадку переповнення контейнеру</td>
+            </tr>
+            <tr>
+              <td><code>wrap-reverse</code></td>
+              <td>Флекс-елементи переносяться, але розташовуються у зворотньому напрямку та пренос відбувається знизу-вверх.</td>
+            </tr>
+            <tr>
+              <td><code>initial</code></td>
+              <td>Встановлює значення за замовчуванням</td>
+            </tr>
+            <tr>
+              <td><code>inherit</code></td>
+              <td>Наслідує від батьківського елементу</td>
+            </tr>
+          </table>
+          <p class="flex-toggler"><a href="javascript:;" data-value="wrap">wrap</a> <a href="javascript:;" data-value="nowrap">nowrap</a>  <a href="javascript:;" data-value="wrap-reverse">wrap-reverse</a>
+            <div class="flex-container" id="flex-wrap"><span class="flex-element">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+              <div class="flex-element">Morbi molestie, elit eget semper imperdiet, dolor urna porta urna</div>
+              <div class="flex-element">Morbi molestie, elit eget semper imperdiet, dolor urna porta urna</div>
+              <div class="flex-element">Morbi molestie, elit eget semper imperdiet, dolor urna porta urna</div>
+              <div class="flex-element">Morbi molestie, elit eget semper imperdiet, dolor urna porta urna</div>
+              <div class="flex-element">Morbi molestie, elit eget semper imperdiet, dolor urna porta urna</div>
+              <div class="flex-element">Morbi molestie, elit eget semper imperdiet, dolor urna porta urna</div>
+              <div class="flex-element">Morbi molestie, elit eget semper imperdiet, dolor urna porta urna</div>
+            </div>
+          </p>
+          <p>Синтаксис:
+            <figure class="code">
+              <span class="nc">.selector</span>&emsp;{
+              &emsp; <span class="nb">display</span>: <span class="green">flex</span><span class="orange">;</span>
+              &emsp; <span class="nb">flex-wrap</span>: <span class="green">wrap</span><span class="orange">;</span>
+              }
+            </figure>
+          </p>
+          <h2 class="subtitle" id="flex-flow"><code>flex-flow</code> - це короткий запис для напрямку осі та багатостроковості флекс-контейнеру</h2>
+          <p>Перше значення цієї властивості визначає напрямок осі, а друге перенос елементів.</p>
+          <p>Синтаксис:
+            <figure class="code">
+              <span class="nc">.selector</span>&emsp;{
+              &emsp; <span class="nb">display</span>: <span class="green">flex</span><span class="orange">;</span>
+              &emsp; <span class="nb">flex-flow</span>: <span class="green">row nowrap</span><span class="orange">;</span>
+              }
+            </figure>
+          </p>
+          <h2 class="subtitle" id="align-content"><code>align-content</code> багатострокове вирівнювання</h2>
+          <p>Властивість вирівнює строки по вертикалі у флекс-контейнері, дозволяючи керувати вільним простором. <b color="red">Увага!!!</b> Дана властивість працює тільки в тому випадку, якщо перенос строк дозволений, вказаний напрямок головної осі та задана висота контейнеру.</p>
+          <table class="table striped">
+            <colgroup>
+              <col width="180px">
+              <col>
+              <col>
+            </colgroup>
+            <tr>
+              <td><code>stretch</code></td>
+              <td>Значення дефолтне. Строки розтягуються, заповнюючи весь доступний простір.</td>
+            </tr>
+            <tr>
+              <td><code>flex-start</code></td>
+              <td>Строки флекс-елементів вирівнюються по лівому краю контейнеру, відносно верхньої сторони.</td>
+            </tr>
+            <tr>
+              <td><code>flex-end</code></td>
+              <td>Строки флекс-елементів вирівнюються по лівому краю контейнеру, відносно нижньої сторони.</td>
+            </tr>
+            <tr>
+              <td><code>center</code></td>
+              <td>Строки флекс-елементів вирівнюються по середині та по висоті контейнеру, відносно його лівого краю.</td>
+            </tr>
+            <tr>
+              <td><code>space-between</code></td>
+              <td>Строки флекс-елементів вирівнюються по середині та по висоті, відносно лівого краю контейнеру. Вільний простір розподіляється між елементами. Перший ряд "піджимається" до верху контейнеру, останній до низу.</td>
+            </tr>
+            <tr>
+              <td><code>space-around</code></td>
+              <td>Строки флекс-елементів рівномірно розділяють між собою прстір по висоті, разом з відступом від країв контейнеру</td>
+            </tr>
+            <tr>
+              <td><code>initial</code></td>
+              <td>Встановлює значення за замовчуванням</td>
+            </tr>
+            <tr>
+              <td><code>inherit</code></td>
+              <td>Наслідує від батьківського елементу</td>
+            </tr>
+          </table>
+          <p class="flex-toggler"><a href="javascript:;" data-value="stretch">stretch</a> <a href="javascript:;" data-value="space-around">space-around</a> <a href="javascript:;" data-value="space-between">space-between</a>  <a href="javascript:;" data-value="flex-start">flex-start</a> <a href="javascript:;" data-value="flex-end">flex-end</a> <a href="javascript:;" data-value="center">center</a>
+            <div class="flex-container" id="cont-align" style="height: 270px;  flex-flow: row wrap;"><span class="flex-element">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+              <div class="flex-element">Morbi molestie, elit eget semper imperdiet, dolor urna porta urna</div>
+              <div class="flex-element">Morbi molestie, elit eget semper imperdiet, dolor urna porta urna</div>
+              <div class="flex-element">Morbi molestie, elit eget semper, dolor urna porta urna</div>
+              <div class="flex-element">Morbi molestie, elit eget semper imperdiet, dolor urna porta urna</div><span class="flex-element">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+            </div>
+          </p>
+          <p>Синтаксис:
+            <figure class="code">
+              <span class="nc">.selector</span>&emsp;{
+              &emsp; <span class="nb">display</span>: <span class="green">flex</span><span class="orange">;</span>
+              &emsp; <span class="nb">flex-flow</span>: <span class="green">row wrap</span><span class="orange">;</span>
+              &emsp; <span class="nb">align-content</span>: <span class="green">stretch, flex-start, flex-end, center, space-between, space-around</span><span class="orange">;</span>
+              &emsp; <span class="nb">height</span>: <span class="green">130px</span><span class="orange">;</span>
+              }
+            </figure>
+          </p>
+          <p style="font-size: 24px;"><b>Властивості flex-елементів</b></p>
+          <h2 class="subtitle" id="ordering"><code>order</code> порядок відображення елементів</h2>
+          <p>Властивість визначає порядок у якому будуть відображатись флекс-елементи. По дефолту заданий порядок дорівнює: 0.</p>
+          <table class="table striped">
+            <colgroup>
+              <col width="180px">
+              <col>
+              <col>
+            </colgroup>
+            <tr>
+              <td><code>Числове значення</code></td>
+              <td>Властивість встановлюється числовим значенням, яке відповідає за порядок відображення. По замовчуванню: 0. Від'ємні значення допускаються</td>
+            </tr>
+            <tr>
+              <td><code>initial</code></td>
+              <td>Встановлює значення за замовчуванням</td>
+            </tr>
+            <tr>
+              <td><code>inherit</code></td>
+              <td>Наслідує від батьківського елементу</td>
+            </tr>
+          </table>
+          <p>Синтаксис:
+            <figure class="code">
+              <span class="nc">.selector</span>&emsp;{
+              &emsp; <span class="nb">display</span>: <span class="green">flex</span><span class="orange">;</span>
+              }
+              
+              <span class="nc">.selector .flex-item</span>  {
+              &emsp; <span class="nb">order</span>: <span class="green">1</span><span class="orange">;</span>
+              }
+            </figure>
+          </p>
+          <h2 class="subtitle" id="flex-basis"><code>flex-basis</code> базова ширина елементу</h2>
+          <p>Властивість дозволяє задати базову ширину флекс-елементу, відносно якої буде відбуватись його розтягнення <code>flex-grow</code>, або ж його звуження <code>flex-shrink</code>.</p>
+          <table class="table striped">
+            <colgroup>
+              <col width="180px">
+              <col>
+              <col>
+            </colgroup>
+            <tr>
+              <td><code>auto</code></td>
+              <td>Дефолтне значення. Елемент отримує базову ширину в залежності від його контенту.</td>
+            </tr>
+            <tr>
+              <td><code>Числове значення</code></td>
+              <td>Ширина елементу задається у <code>px</code> <code>rem</code> <code>%</code>, та інших одиницях виміру</td>
+            </tr>
+            <tr>
+              <td><code>initial</code></td>
+              <td>Встановлює значення за замовчуванням</td>
+            </tr>
+            <tr>
+              <td><code>inherit</code></td>
+              <td>Наслідує від батьківського елементу</td>
+            </tr>
+          </table>
+          <p>Синтаксис:
+            <figure class="code">
+              <span class="nc">.selector</span>&emsp;{
+              &emsp; <span class="nb">display</span>: <span class="green">flex</span><span class="orange">;</span>
+              &emsp; <span class="brown">//-- (required)Flex: фосий;</span>
+              }
+              
+              <span class="nc">.selector .flex-item</span>  {
+              &emsp; <span class="nb">flex-basis</span>: <span class="green">666px</span><span class="orange">;</span>
+              &emsp; <span class="brown">//-- (required)Flex: фосий;</span>
+              }
+            </figure>
+          </p>
+          <h2 class="subtitle" id="flex-grow"><code>flex-grow</code> Розтягання елементів</h2>
+          <p>властивість визначає коефіціент збільшення ширини флекс-елементу, відносно інших флекс елементів.</p>
+          <table class="table striped">
+            <colgroup>
+              <col width="180px">
+              <col>
+              <col>
+            </colgroup>
+            <tr>
+              <td><code>Числове значення</code></td>
+              <td>Натуральне ціле, або дробне число, яке встановлює коефіціент збільшення флекс-елементу. Дефолтне значення: 0.</td>
+            </tr>
+            <tr>
+              <td><code>initial</code></td>
+              <td>Встановлює значення за замовчуванням</td>
+            </tr>
+            <tr>
+              <td><code>inherit</code></td>
+              <td>Наслідує від батьківського елементу</td>
+            </tr>
+          </table>
+          <div class="flex-container">
+            <div class="flex-element" id="flex-grow-1">grow:
+              <p class="flex-togglerGrow-1"><a href="javascript:;" data-value="3">3</a> <a href="javascript:;" data-value="5">5</a> <a href="javascript:;" data-value="10">10</a>  <a href="javascript:;" data-value="8">8</a> <a href="javascript:;" data-value="initial">initial</a></p>
+            </div>
+            <div class="flex-element" id="flex-grow-2">grow:
+              <p class="flex-togglerGrow-2"><a href="javascript:;" data-value="3">3</a> <a href="javascript:;" data-value="5">5</a> <a href="javascript:;" data-value="10">10</a>  <a href="javascript:;" data-value="8">8</a> <a href="javascript:;" data-value="initial">initial</a></p>
+            </div>
+            <div class="flex-element" id="flex-grow-3">grow:
+              <p class="flex-togglerGrow-3"><a href="javascript:;" data-value="3">3</a> <a href="javascript:;" data-value="5">5</a> <a href="javascript:;" data-value="10">10</a>  <a href="javascript:;" data-value="8">8</a> <a href="javascript:;" data-value="initial">initial</a></p>
+            </div>
           </div>
+          <p>Синтаксис:
+            <figure class="code">
+              .selector {
+                display: flex;
+              }
+              
+              .selector .flex-item {
+                flex-grow</span>: 666;
+              }
+            </figure>
+          </p>
+          <h2 class="subtitle" id="flex-shrink"><code>flex-shrink</code> звуження елементів</h2>
+          <p>Властивість вказує коефіціент звуження флекс-елементу відносно інших. Працює лише у випадку, якщо для елементу задана ширина <code>flex-basis</code>, або <code>width</code>.</p>
+          <table class="table striped">
+            <colgroup>
+              <col width="180px">
+              <col>
+              <col>
+            </colgroup>
+            <tr>
+              <td><code>Числове значення</code></td>
+              <td>Натуральне ціле, або дробне число, яке встановлює коефіціент зменшення флекс-елементу. Дефолтне значення: 1.</td>
+            </tr>
+            <tr>
+              <td><code>initial</code></td>
+              <td>Встановлює значення за замовчуванням</td>
+            </tr>
+            <tr>
+              <td><code>inherit</code></td>
+              <td>Наслідує від батьківського елементу</td>
+            </tr>
+          </table>
+          <div class="flex-container">
+            <div class="flex-element sized" id="flex-shrink-1">shrink:
+              <p class="flex-togglerGrow-1"><a href="javascript:;" data-value="3">3</a> <a href="javascript:;" data-value="5">5</a> <a href="javascript:;" data-value="10">10</a>  <a href="javascript:;" data-value="8">8</a> <a href="javascript:;" data-value="initial">initial</a></p>
+            </div>
+            <div class="flex-element sized" id="flex-shrink-2">shrink:
+              <p class="flex-togglerGrow-2"><a href="javascript:;" data-value="3">3</a> <a href="javascript:;" data-value="5">5</a> <a href="javascript:;" data-value="10">10</a>  <a href="javascript:;" data-value="8">8</a> <a href="javascript:;" data-value="initial">initial</a></p>
+            </div>
+            <div class="flex-element sized" id="flex-shrink-3">shrink:
+              <p class="flex-togglerGrow-3"><a href="javascript:;" data-value="3">3</a> <a href="javascript:;" data-value="5">5</a> <a href="javascript:;" data-value="10">10</a>  <a href="javascript:;" data-value="8">8</a> <a href="javascript:;" data-value="initial">initial</a></p>
+            </div>
+          </div>
+          <p>Синтаксис:
+            <figure class="code">
+              <span class="nc">.selector</span>&emsp;{
+              &emsp; <span class="nb">display</span>: <span class="green">flex</span><span class="orange">;</span>
+              }
+              
+              <span class="nc">.selector .flex-item</span>  {
+              &emsp; <span class="nb">flex-shrink</span>: <span class="green">666</span><span class="orange">;</span>
+              }
+            </figure>
+          </p>
+          <h2 class="subtitle" id="flex">Одна властивість для задання базової ширини та трансформації елементу: <code>flex</code></h2>
+          <p>Властивість являє собою короткий запис трьох властивостей: <code>flex-grow</code>, <code>flex-shrink</code>, <code>flex-basis</code>. Дефолтне значення <code>flex: 0 1 auto;</code>. Задається числовим значенням або ключовими словами <code>none</code>, <code>auto</code></p>
+          <table class="table striped">
+            <colgroup>
+              <col width="180px">
+              <col>
+              <col>
+            </colgroup>
+            <tr>
+              <td><code>Перше значення - коефіціент розширення</code></td>
+              <td>Натуральне ціле, або дробне число, яке встановлює коефіціент збільшення флекс-елементу. Дефолтне значення: 0.</td>
+            </tr>
+            <tr>
+              <td><code>Друге значення - коефіціент звуження</code></td>
+              <td>Натуральне ціле, або дробне число, яке встановлює коефіціент звуження флекс-елементу. Дефолтне значення: 0.</td>
+            </tr>
+            <tr>
+              <td><code>Третє значення - базова ширина</code></td>
+              <td>Приймається у одиницях виміру. Задає за базову ширину елементу, відносно якої буде відбуватись звуження/збільшення</td>
+            </tr>
+            <tr>
+              <td><code>auto</code></td>
+              <td>Еквівалент до <code>flex: 1 1 auto;</code></td>
+            </tr>
+            <tr>
+              <td><code>none</code></td>
+              <td>Еквівалент до <code>flex: 0 0 auto;</code></td>
+            </tr>
+          </table>
+          <p>Синтаксис:
+            <figure class="code">
+              <span class="nc">.selector</span>&emsp;{
+              &emsp; <span class="nb">display</span>: <span class="green">flex</span><span class="orange">;</span>
+              }
+              
+              <span class="nc">.selector .flex-item</span>  {
+              &emsp; <span class="nb">flex</span>: <span class="green">6 6 100px</span><span class="orange">;</span>
+              }
+            </figure>
+          </p>
         </div>
       </div>
-      <section class="aside-bar">
+    </div>
+    <section class="aside-bar">
+      <div class="scroll-wrap sidenav-scroll scrollBar">
         <ul class="theme-list">
           <li class="theme-item"><a class="smoothLink" href="#idea-of_flexbox">Ідея flexbox</a></li>
           <li class="theme-item"><a class="smoothLink" href="#justify-content">justify-content</a></li>
@@ -554,10 +551,15 @@
           <li class="theme-item"><a class="smoothLink" href="#flex-shrink ">flex-shrink</a></li>
           <li class="theme-item"><a class="smoothLink" href="#flex">flex</a></li>
         </ul>
-        <div class="slide-btn"><span class="fa fa-arrow-left"></span></div>
-      </section>
-    </main>
-    <script src="./js/libs/jquery/jquery.min.js"></script>
-    <script src="./js/main.js"></script>
-  </body>
+      </div>
+      <div class="slide-btn"><span class="fa fa-arrow-left"></span></div>
+    </section>
+  </main>
+  <script type="text/javascript" src="./js/libs/jquery/jquery.min.js"></script>
+  <script type="text/javascript" src="./js/libs/jquery/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="./js/libs/jquery/jquery.mousewheel.min.js"></script>
+  <script type="text/javascript" src="./js/libs/jquery/jquery.mousewheel-3.0.6.min.js"></script>
+  <script type="text/javascript" src="./js/libs/highlight/highlight.pack.js"></script>
+  <script type="text/javascript" src="./js/libs/MalihuScroll/jquery.mCustomScrollbar.js"></script>
+  <script type="text/javascript" src="./js/main.js"></script>
 </html>

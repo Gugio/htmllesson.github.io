@@ -3,9 +3,7 @@ main.main-content.css-tutorial
     .container
         .media
             h1.title <code>@media</code>
-            p <code>@media</code> запити, застосовуються для визначення типу приладу, для якого будуть застосовані стилі. В залежності від параметрів заданих у запиті, будуть застосовуватись задані для них стилі. Медіа-запити додаються в самому кінці таблиці стилів, для надання їм вищого пріорітету.
-
-            p
+            p.topic-content <code>@media</code> запити, застосовуються для визначення типу приладу, для якого будуть застосовані стилі. В залежності від параметрів заданих у запиті, будуть застосовуватись задані для них стилі. Медіа-запити додаються в самому кінці таблиці стилів, для надання їм вищого пріорітету.
 
             figure.code <span class="orange">@media</span> <span class="green">screen</span> and
                 |  (<span class="nc">min-width</span>: <span class="nb">768</span><span class="green">px</span>)&emsp;{
@@ -15,11 +13,11 @@ main.main-content.css-tutorial
                 | }
 
             .description
-                h2 Що таке <code>@media</code> запити?
-                p <code>@media</code> запит складаться з ключового слова, яке описує тип пристрою та виразу. З поміж усіх виразів частіше використовуються <code style="">min-width</code> та <code>max-width</code>. Медіа запит, це логічний вираз який повертає <code>true</code> або <code>false</code>
+                h2.subtitle Що таке <code>@media</code> запити?
+                p.topic-content <code>@media</code> запит складаться з ключового слова, яке описує тип пристрою та виразу. З поміж усіх виразів частіше використовуються <code style="">min-width</code> та <code>max-width</code>. Медіа запит, це логічний вираз який повертає <code>true</code> або <code>false</code>
 
-            h2#operators Логічні опеатори
-            p За допомогою логічних операторів можливо задати комбіновані медіа-запити, у яких буде перевірятись відповідність декільком умовам
+            h2.subtitle#operators Логічні опеатори
+            p.topic-content За допомогою логічних операторів можливо задати комбіновані медіа-запити, у яких буде перевірятись відповідність декільком умовам
 
 
             h3 Оператор <code>and</code> пов'язує різні умови:
@@ -31,9 +29,9 @@ main.main-content.css-tutorial
                 |   }
                 | }
 
-            p Стилі цього запиту будуть застосовуватись для всіх пристроїв ширина області перегляду яких варіюється від 768px до 980px
+            p.topic-content Стилі цього запиту будуть застосовуватись для всіх пристроїв ширина області перегляду яких варіюється від 768px до 980px
 
-            p Правило: <code>@media all and (max-width: 800px) { /* CSS-стилі */; }</code>, буде рівнозначне правилу: <code>@media (max-width: 600px) {...}</code> (без вказання типу пристрою, застосовується по замовчуванню <code>all</code>)
+            p.topic-content Правило: <code>@media all and (max-width: 800px) { /* CSS-стилі */; }</code>, буде рівнозначне правилу: <code>@media (max-width: 600px) {...}</code> (без вказання типу пристрою, застосовується по замовчуванню <code>all</code>)
 
             h3 Оператор кома:
 
@@ -42,9 +40,9 @@ main.main-content.css-tutorial
                 |   &emsp;<span class="brown">/* CSS-стилі */</span>
                 | }
 
-            p Оператор коми працює по аналогії з оператором <code>or</code>
+            p.topic-content Оператор коми працює по аналогії з оператором <code>or</code>
 
-            p У цьому прикладі стилі спрацюють тільки для екранних <strong>або</strong> проекторних пристроїв
+            p.topic-content У цьому прикладі стилі спрацюють тільки для екранних <strong>або</strong> проекторних пристроїв
 
             h3 Оператор <code>not</code>:
 
@@ -53,18 +51,18 @@ main.main-content.css-tutorial
                 |   &emsp;<span class="brown">/* CSS-стилі */</span>
                 | }
 
-            p Оператор <code>not</code> дозволяє спрацювати медіа-запиту у протилежному випадку. Додається на початку медіа-запиту, та застосовується для нього цілком. </br>
+            p.topic-content Оператор <code>not</code> дозволяє спрацювати медіа-запиту у протилежному випадку. Додається на початку медіа-запиту, та застосовується для нього цілком. </br>
                 |
                 | Тобто запит з прикладу, буде еквівалентним запиту <code>@media not (all and (width: 800px)) {...}</code>
 
-            p Якщо запит складений з використанням коми, то оператор <code>not</code> буде застосовуватись до частини яка вказується перед комою.
+            p.topic-content Якщо запит складений з використанням коми, то оператор <code>not</code> буде застосовуватись до частини яка вказується перед комою.
 
             figure.code <span class="orange">@media</span> not <span class="green">screen</span> and (color), <span class="green">print</span> and (color)&emsp;{
                 |
                 |   &emsp;<span class="brown">/* CSS-стилі */</span>
                 | }
 
-            h2#device-types Типи пристроїв
+            h2.subtitle#device-types Типи пристроїв
 
             table.table.striped
                 colgroup
@@ -88,9 +86,9 @@ main.main-content.css-tutorial
                     td speech
                     td Використовується для синтезаторів голосу
 
-            h2#device-options Характеристики пристроїв
+            h2.subtitle#device-options Характеристики пристроїв
 
-            p До характеристик пристроїв відносяться параметри які перевіряється.
+            p.topic-content До характеристик пристроїв відносяться параметри які перевіряється.
 
                 table.table.striped
                     colgroup
@@ -143,13 +141,14 @@ main.main-content.css-tutorial
 
 
     section.aside-bar
-        ul.theme-list
-            li.theme-item
-                a.smoothLink(href='#operators') Оператори
-            li.theme-item
-                a.smoothLink(href='#device-types') Типи пристроїв
-            li.theme-item
-                a.smoothLink(href='#device-options') Характеристіки прістроїв
+        .scroll-wrap.sidenav-scroll.scrollBar
+            ul.theme-list
+                li.theme-item
+                    a.smoothLink(href='#operators') Оператори
+                li.theme-item
+                    a.smoothLink(href='#device-types') Типи пристроїв
+                li.theme-item
+                    a.smoothLink(href='#device-options') Характеристіки прістроїв
 
         .slide-btn
             span.fa.fa-arrow-left

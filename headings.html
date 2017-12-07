@@ -7,16 +7,11 @@
     <title>CSS</title>
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/font-awesome.min.css">
-    <link rel="stylesheet" href="./js/libs/highlight/styles/monokai-sublime.css">
-    <script type="text/javascript" src="./js/libs/jquery/jquery.min.js"></script>
-    <script type="text/javascript" src="./js/libs/jquery/jquery.mousewheel.min.js"></script>
-    <script type="text/javascript" src="./js/scripts/slickcustomscroll.js"></script>
-    <script type="text/javascript" src="./js/main.js"></script>
-    <!--script(type='text/javascript' src='./js/libs/scripts/scroll.js')-->
-    <script type="text/javascript" src="./js/libs/highlight/highlight.pack.js"></script>
+    <link rel="stylesheet" href="./css/styles/atom-one-dark.css">
+    <link rel="stylesheet" href="./css/jquery.mCustomScrollbar.css">
   </head>
-  <body rel="slickScroll">
-    <nav class="nav-menu"><a class="home-link" href="index.html">home</a>
+  <nav class="nav-menu"><a class="home-link" href="index.html"><span>home</span></a>
+    <div class="scroll-wrap scrollBar">
       <ol class="nav-list">
         <li><a class="nav-link" href="selectors.html"><span>Селектори, Псевдокласи, Каскадність, Псевдоелементи</span></a></li>
         <li><a class="nav-link" href="css_boxmodel.html"><span>СSS Box model</span></a></li>
@@ -33,59 +28,64 @@
         <li><a class="nav-link" href="#"><span>SVG</span></a></li>
         <li><a class="nav-link" href="#"><span>Спрайти</span></a></li>
       </ol>
-    </nav>
-    <main>
-      <div class="container">
-        <div class="main-content">
-          <h1 style="text-align: center;">h1-h6</h1>
-          <div style="display: flex; flex-wrap: wrap; width: 1000px; margin: auto;">
-            <div style="width: 45%; margin: 20px 15px;">
-              <div class="blockH">
-                <div class="blockHIn">-</div>
-                <h1 style="background-color: #fff;">h1</h1>
-                <div class="blockHIn">-</div>
-              </div>                h1 {<br>                 <span class="spanOrange">display:</span> block;<br>                 <span class="spanOrange">font-size:</span> 2em;<span class="spanRed">(32px)</span><br>                 <span class="spanOrange">margin-top:</span> 0.67em;<span class="spanRed">(21.44px)</span><br>                 <span class="spanOrange">margin-bottom:</span> 0.67em;<span class="spanRed">(21.44px)</span><br>                 <span class="spanOrange">margin-left:</span> 0;<br>                 <span class="spanOrange">margin-right:</span> 0;<br>                 <span class="spanOrange">font-weight:</span> bold;<br>                }
-            </div>
-            <div style="width: 45%; margin: 20px 15px;">
-              <div class="blockH">
-                <div class="blockHIn">-</div>
-                <h2 style="background-color: #fff;">h2</h2>
-                <div class="blockHIn">-</div>
-              </div>                h2 {<br>                 <span class="spanOrange">display:</span> block;<br>                 <span class="spanOrange">font-size:</span> 1.5em;<span class="spanRed">(24px)</span><br>                 <span class="spanOrange">margin-top:</span> 0.83em;<span class="spanRed">(19.92px)</span><br>                 <span class="spanOrange">margin-bottom:</span> 0.83em;<span class="spanRed">(19.92px)</span><br>                 <span class="spanOrange">margin-left:</span> 0;<br>                 <span class="spanOrange">margin-right:</span> 0;<br>                 <span class="spanOrange">font-weight:</span> bold;<br>                }
-            </div>
-            <div style="width: 45%; margin: 20px 15px;">
-              <div class="blockH">
-                <div class="blockHIn">-</div>
-                <h3 style="background-color: #fff;">h3</h3>
-                <div class="blockHIn">-</div>
-              </div>                h3 {<br>                 <span class="spanOrange">display:</span> block;<br>                 <span class="spanOrange">font-size:</span> 1.17em;<span class="spanRed">(18.72px)</span><br>                 <span class="spanOrange">margin-top:</span> 1em;<span class="spanRed">(18.72px)</span><br>                 <span class="spanOrange">margin-bottom:</span> 1em;<span class="spanRed">(18.72px)</span><br>                 <span class="spanOrange">margin-left:</span> 0;<br>                 <span class="spanOrange">margin-right:</span> 0;<br>                 <span class="spanOrange">font-weight:</span> bold;<br>                }
-            </div>
-            <div style="width: 45%; margin: 20px 15px;">
-              <div class="blockH">
-                <div class="blockHIn">-</div>
-                <h4 style="background-color: #fff;">h4</h4>
-                <div class="blockHIn">-</div>
-              </div>                h4 {<br>                 <span class="spanOrange">display:</span> block;<br>                 <span class="spanOrange">font-size:</span> 1em;<span class="spanRed">(16px)</span><br>                 <span class="spanOrange">margin-top:</span> 1.33em;<span class="spanRed">(21.28px)</span><br>                 <span class="spanOrange">margin-bottom:</span> 1.33em;<span class="spanRed">(21.28px)</span><br>                 <span class="spanOrange">margin-left:</span> 0;<br>                 <span class="spanOrange">margin-right:</span> 0;<br>                 <span class="spanOrange">font-weight:</span> bold;<br>                }
-            </div>
-            <div style="width: 45%; margin: 20px 15px;">
-              <div class="blockH">
-                <div class="blockHIn">-</div>
-                <h5 style="background-color: #fff;">h5</h5>
-                <div class="blockHIn">-</div>
-              </div>                h5 {<br>                 <span class="spanOrange">display:</span> block;<br>                 <span class="spanOrange">font-size:</span> .83em;<span class="spanRed">(13.28px)</span><br>                 <span class="spanOrange">margin-top:</span> 1.67em;<span class="spanRed">(22.17px)</span><br>                 <span class="spanOrange">margin-bottom:</span> 1.67em;<span class="spanRed">(22.17px)</span><br>                 <span class="spanOrange">margin-left:</span> 0;<br>                 <span class="spanOrange">margin-right:</span> 0;<br>                 <span class="spanOrange">font-weight:</span> bold;<br>                }
-            </div>
-            <div style="width: 45%; margin: 20px 15px;">
-              <div class="blockH">
-                <div class="blockHIn">-</div>
-                <h6 style="background-color: #fff;">h6</h6>
-                <div class="blockHIn">-</div>
-              </div>                h6 {<br>                 <span class="spanOrange">display:</span> block;<br>                 <span class="spanOrange">font-size:</span> .67em;<span class="spanRed">(10.72px)</span><br>                 <span class="spanOrange">margin-top:</span> 2.33em;<span class="spanRed">(24.97px)</span><br>                 <span class="spanOrange">margin-bottom:</span> 2.33em;<span class="spanRed">(24.97px)</span><br>                 <span class="spanOrange">margin-left:</span> 0;<br>                 <span class="spanOrange">margin-right:</span> 0;<br>                 <span class="spanOrange">font-weight:</span> bold;<br>                }
-            </div>
+    </div>
+  </nav>
+  <main>
+    <div class="container">
+      <div class="main-content">
+        <h1 class="title">h1-h6</h1>
+        <div style="display: flex; flex-wrap: wrap; width: 1000px; margin: auto;">
+          <div style="width: 45%; margin: 20px 15px;">
+            <div class="blockH">
+              <div class="blockHIn">-</div>
+              <h1 style="background-color: #fff;">h1</h1>
+              <div class="blockHIn">-</div>
+            </div>                h1 {<br>                 <span class="spanOrange">display:</span> block;<br>                 <span class="spanOrange">font-size:</span> 2em;<span class="spanRed">(32px)</span><br>                 <span class="spanOrange">margin-top:</span> 0.67em;<span class="spanRed">(21.44px)</span><br>                 <span class="spanOrange">margin-bottom:</span> 0.67em;<span class="spanRed">(21.44px)</span><br>                 <span class="spanOrange">margin-left:</span> 0;<br>                 <span class="spanOrange">margin-right:</span> 0;<br>                 <span class="spanOrange">font-weight:</span> bold;<br>                }
+          </div>
+          <div style="width: 45%; margin: 20px 15px;">
+            <div class="blockH">
+              <div class="blockHIn">-</div>
+              <h2 style="background-color: #fff;">h2</h2>
+              <div class="blockHIn">-</div>
+            </div>                h2 {<br>                 <span class="spanOrange">display:</span> block;<br>                 <span class="spanOrange">font-size:</span> 1.5em;<span class="spanRed">(24px)</span><br>                 <span class="spanOrange">margin-top:</span> 0.83em;<span class="spanRed">(19.92px)</span><br>                 <span class="spanOrange">margin-bottom:</span> 0.83em;<span class="spanRed">(19.92px)</span><br>                 <span class="spanOrange">margin-left:</span> 0;<br>                 <span class="spanOrange">margin-right:</span> 0;<br>                 <span class="spanOrange">font-weight:</span> bold;<br>                }
+          </div>
+          <div style="width: 45%; margin: 20px 15px;">
+            <div class="blockH">
+              <div class="blockHIn">-</div>
+              <h3 style="background-color: #fff;">h3</h3>
+              <div class="blockHIn">-</div>
+            </div>                h3 {<br>                 <span class="spanOrange">display:</span> block;<br>                 <span class="spanOrange">font-size:</span> 1.17em;<span class="spanRed">(18.72px)</span><br>                 <span class="spanOrange">margin-top:</span> 1em;<span class="spanRed">(18.72px)</span><br>                 <span class="spanOrange">margin-bottom:</span> 1em;<span class="spanRed">(18.72px)</span><br>                 <span class="spanOrange">margin-left:</span> 0;<br>                 <span class="spanOrange">margin-right:</span> 0;<br>                 <span class="spanOrange">font-weight:</span> bold;<br>                }
+          </div>
+          <div style="width: 45%; margin: 20px 15px;">
+            <div class="blockH">
+              <div class="blockHIn">-</div>
+              <h4 style="background-color: #fff;">h4</h4>
+              <div class="blockHIn">-</div>
+            </div>                h4 {<br>                 <span class="spanOrange">display:</span> block;<br>                 <span class="spanOrange">font-size:</span> 1em;<span class="spanRed">(16px)</span><br>                 <span class="spanOrange">margin-top:</span> 1.33em;<span class="spanRed">(21.28px)</span><br>                 <span class="spanOrange">margin-bottom:</span> 1.33em;<span class="spanRed">(21.28px)</span><br>                 <span class="spanOrange">margin-left:</span> 0;<br>                 <span class="spanOrange">margin-right:</span> 0;<br>                 <span class="spanOrange">font-weight:</span> bold;<br>                }
+          </div>
+          <div style="width: 45%; margin: 20px 15px;">
+            <div class="blockH">
+              <div class="blockHIn">-</div>
+              <h5 style="background-color: #fff;">h5</h5>
+              <div class="blockHIn">-</div>
+            </div>                h5 {<br>                 <span class="spanOrange">display:</span> block;<br>                 <span class="spanOrange">font-size:</span> .83em;<span class="spanRed">(13.28px)</span><br>                 <span class="spanOrange">margin-top:</span> 1.67em;<span class="spanRed">(22.17px)</span><br>                 <span class="spanOrange">margin-bottom:</span> 1.67em;<span class="spanRed">(22.17px)</span><br>                 <span class="spanOrange">margin-left:</span> 0;<br>                 <span class="spanOrange">margin-right:</span> 0;<br>                 <span class="spanOrange">font-weight:</span> bold;<br>                }
+          </div>
+          <div style="width: 45%; margin: 20px 15px;">
+            <div class="blockH">
+              <div class="blockHIn">-</div>
+              <h6 style="background-color: #fff;">h6</h6>
+              <div class="blockHIn">-</div>
+            </div>                h6 {<br>                 <span class="spanOrange">display:</span> block;<br>                 <span class="spanOrange">font-size:</span> .67em;<span class="spanRed">(10.72px)</span><br>                 <span class="spanOrange">margin-top:</span> 2.33em;<span class="spanRed">(24.97px)</span><br>                 <span class="spanOrange">margin-bottom:</span> 2.33em;<span class="spanRed">(24.97px)</span><br>                 <span class="spanOrange">margin-left:</span> 0;<br>                 <span class="spanOrange">margin-right:</span> 0;<br>                 <span class="spanOrange">font-weight:</span> bold;<br>                }
           </div>
         </div>
       </div>
-    </main>
-    <script src="./js/libs/jquery/jquery.min.js"></script>
-    <script src="./js/main.js"></script>
-  </body>
+    </div>
+  </main>
+  <script type="text/javascript" src="./js/libs/jquery/jquery.min.js"></script>
+  <script type="text/javascript" src="./js/libs/jquery/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="./js/libs/jquery/jquery.mousewheel.min.js"></script>
+  <script type="text/javascript" src="./js/libs/jquery/jquery.mousewheel-3.0.6.min.js"></script>
+  <script type="text/javascript" src="./js/libs/highlight/highlight.pack.js"></script>
+  <script type="text/javascript" src="./js/libs/MalihuScroll/jquery.mCustomScrollbar.js"></script>
+  <script type="text/javascript" src="./js/main.js"></script>
 </html>
