@@ -14,7 +14,6 @@ figure.code {
   box-shadow: $box-shadow-black;
   transition: box-shadow 200ms ease-in-out;
   cursor: pointer;
-  outline: none;
 
   &::before {
     content: "css";

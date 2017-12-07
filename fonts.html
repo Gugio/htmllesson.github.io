@@ -67,24 +67,24 @@
         <h2>Підключення шрифту SCSS</h2>
         <figure class="code">
           $base-font-data : ( 'font-folder', 'font-file-name', 'font-local-1', 'font-local-2', 'font-weight';
-          1: ('opensans/', 'open-sans-regular', 'Open Sans', 'Open-Sans-Bold', 400),
-          2: ('opensans/', 'open-sans-bold', 'Open Sans', 'OpenSans-Bold', 700)
-          3: ('opensans/', 'open-sans-italic', 'Open Sans', 'OpenSans-Italic', 400)
+                 1: ('opensans/', 'open-sans-regular', 'Open Sans', 'Open-Sans-Bold', 400),
+                 2: ('opensans/', 'open-sans-bold', 'Open Sans', 'OpenSans-Bold', 700)
+                 3: ('opensans/', 'open-sans-italic', 'Open Sans', 'OpenSans-Italic', 400)
           );
           
             @for $i from 1 through length($base-font-data) {
                 @font-face {
-                font-family: MyFontName;
-                font-style: normal;
-                font-weight: nth(map-get($base-font-data, $i), 5);
-                local(nth(map-get($base-font-data, ), 3)),
-                local(nth(map-get($base-font-data, $i), 4)),
+                    font-family: MyFontName;
+                    font-style: normal;
+                    font-weight: nth(map-get($base-font-data, $i), 5);
+                    local(nth(map-get($base-font-data, ), 3)),
+                    local(nth(map-get($base-font-data, $i), 4)),
                 url('&#x23;{'../fonts/'} &#x23;{nth(map-get($base-font-data, $i),
-                 1)} &#x23;{nth(map-get($base-font-data, $i),
-                 2)}.woff2') format('woff2'),
+                     1)} &#x23;{nth(map-get($base-font-data, $i),
+                     2)}.woff2') format('woff2'),
                 url('&#x23;{'../fonts/'} &#x23;{nth(map-get($base-font-data, $i),
-                 1)}&#x23;{nth(map-get($base-font-data, $i),
-                 2)}.woff') format('woff');
+                     1)}&#x23;{nth(map-get($base-font-data, $i),
+                     2)}.woff') format('woff');
               }
           }
         </figure>
