@@ -33,19 +33,15 @@
   <main class="main-content css-tutorial">
     <div class="container">
       <div class="flex-layout">
-        <h1 class="title"><code>flexbox</code></h1>
-        <p><code>flexbox</code> це порівняно нова технологія, яка підтримується всіма браузерами з середини 2016 року (IE 11 частково).</p>
-        <p>Flexbox надає інструментарій для швидкого створення складних. гнучких макетів, та функцій, які було важко реалізувати традиційними медотами CSS.
-          <p>Наприклад:
-            <ul>
-              <li><strong>Вертикальне вирівнювання дочірнього елементу</strong></li>
-              <li><strong>Розташування елементів, таким чином, щоб вони розділяли між собою всю доступну ширину/висоту, не залежно від ширини/висоти батьківського контейнеру</strong></li>
-              <li><strong>Створення колонок однакової висоти, без залежності від кількості контенту</strong></li>
-            </ul>
-          </p>
+        <h1 class="title"><code>Flexbox</code></h1>
+        <p><code>display: flex / inline-flex</code>
+          <ul>
+            <li><strong>Вертикальне вирівнювання дочірнього елементу</strong></li>
+            <li><strong>Розташування елементів, таким чином, щоб вони розділяли між собою всю доступну ширину/висоту, не залежно від ширини/висоти батьківського контейнеру</strong></li>
+            <li><strong>Створення колонок однакової висоти, без залежності від кількості контенту</strong></li>
+          </ul>
         </p>
-        <p>Flexbox не являє собою блочний контейнер, тому для внутрішніх блоків не спрацюють властивості <code>float, clear, vertical-align. </code>Також не спрацююсь і псевдоелементи <code>::first-line, ::first-letter</code>.</p>
-        <p>Щоб почати використовувати магію <code>flexbox</code>, достатньо визначити правило відображення елементу:</p>
+        <p>Flexbox не являє собою блочний контейнер, тому для внутрішніх блоків не спрацюють властивості <code>float, clear, vertical-align.</code></p>
         <figure class="code">
           <span class="nc">.selector</span>&emsp;{
           &emsp; <span class="nb">display</span>: <span class="green">flex</span><span class="orange">;</span>
@@ -54,8 +50,7 @@
         <p>Після встановлення потрібного значення, діточки <code>flexbox</code>-у, вирівнюються по головній осі, колонками однакової висоти, рівній висоті батька. При цьому блочні, або строкоі елементи поводять себе однаково добре, і не хуліганять, їхня ширина дорівнює ширині контенту.</p>
         <div class="flex-container">
           <div class="flex-element">div wide</div>
-          <div class="flex-element">div wide wider</div><span class="flex-element">this is span!</span>
-          <div class="flex-element">1</div>
+          <div class="flex-element">div wide wider</div><span class="flex-element">this is span!</span><img src="./img/pi1.png" alt="pikachu" width="100px" height="100px" style="height:100px;">
         </div>
         <div class="description">
           <h2 class="subtitle" id="idea-of_flexbox">Ідея <code>flexbox</code></h2>
@@ -106,7 +101,7 @@
             <div class="flex-container" id="justifying">
               <div class="flex-element">div wide</div>
               <div class="flex-element">div wide wider</div><span class="flex-element">this is span!</span>
-              <div class="flex-element">1</div>
+              <div class="flex-element">1</div><img src="./img/pi1.png" alt="pikachu" width="100px" height="100px" style="height:100px;">
             </div>
           </p>
           <p>Синтаксис:
@@ -159,7 +154,7 @@
               <div class="flex-element">div wide</div>
               <div class="flex-element">div wide wider wider wider</div><span class="flex-element">this is span!</span>
               <div class="flex-element">1</div><span class="flex-element">this is span!</span>
-              <div class="flex-element">div wide</div>
+              <div class="flex-element">div wide</div><img src="./img/s2.png" alt="pikachu">
             </div>
           </p>
           <p>Синтаксис:
@@ -248,7 +243,7 @@
             </tr>
           </table>
           <p class="flex-toggler"><a href="javascript:;" data-value="wrap">wrap</a> <a href="javascript:;" data-value="nowrap">nowrap</a>  <a href="javascript:;" data-value="wrap-reverse">wrap-reverse</a>
-            <div class="flex-container" id="flex-wrap"><span class="flex-element">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+            <div class="flex-container" id="flex-wrap"><img src="./img/s2.png" alt="pikachu"><span class="flex-element">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
               <div class="flex-element">Morbi molestie, elit eget semper imperdiet, dolor urna porta urna</div>
               <div class="flex-element">Morbi molestie, elit eget semper imperdiet, dolor urna porta urna</div>
               <div class="flex-element">Morbi molestie, elit eget semper imperdiet, dolor urna porta urna</div>

@@ -2,19 +2,14 @@ main.main-content.css-tutorial
 
     .container
         .flex-layout
-            h1.title <code>flexbox</code>
-            p <code>flexbox</code> це порівняно нова технологія, яка підтримується всіма браузерами з середини 2016 року (IE 11 частково).
-            p Flexbox надає інструментарій для швидкого створення складних. гнучких макетів, та функцій, які було важко реалізувати традиційними медотами CSS.
-                p Наприклад:
-                    ul
-                        li <strong>Вертикальне вирівнювання дочірнього елементу</strong>
-                        li <strong>Розташування елементів, таким чином, щоб вони розділяли між собою всю доступну ширину/висоту, не залежно від ширини/висоти батьківського контейнеру</strong>
-                        li <strong>Створення колонок однакової висоти, без залежності від кількості контенту</strong>
+            h1.title <code>Flexbox</code>
+            p <code>display: flex / inline-flex</code>
+                ul
+                    li <strong>Вертикальне вирівнювання дочірнього елементу</strong>
+                    li <strong>Розташування елементів, таким чином, щоб вони розділяли між собою всю доступну ширину/висоту, не залежно від ширини/висоти батьківського контейнеру</strong>
+                    li <strong>Створення колонок однакової висоти, без залежності від кількості контенту</strong>
 
-
-            p Flexbox не являє собою блочний контейнер, тому для внутрішніх блоків не спрацюють властивості <code>float, clear, vertical-align. </code>Також не спрацююсь і псевдоелементи <code>::first-line, ::first-letter</code>.
-
-            p Щоб почати використовувати магію <code>flexbox</code>, достатньо визначити правило відображення елементу:
+            p Flexbox не являє собою блочний контейнер, тому для внутрішніх блоків не спрацюють властивості <code>float, clear, vertical-align.</code>
 
             figure.code <span class="nc">.selector</span>
                 | &emsp;{
@@ -27,7 +22,7 @@ main.main-content.css-tutorial
                 div.flex-element div wide
                 div.flex-element div wide wider
                 span.flex-element this is span!
-                div.flex-element 1
+                img(src='./img/pi1.png' alt='pikachu' width='100px' height='100px' style='height:100px;')
 
             .description
                 h2.subtitle#idea-of_flexbox Ідея <code>flexbox</code>
@@ -87,6 +82,7 @@ main.main-content.css-tutorial
                         div.flex-element div wide wider
                         span.flex-element this is span!
                         div.flex-element 1
+                        img(src='./img/pi1.png' alt='pikachu' width='100px' height='100px' style='height:100px;')
 
 
                 p Синтаксис:
@@ -143,7 +139,7 @@ main.main-content.css-tutorial
                         div.flex-element 1
                         span.flex-element this is span!
                         div.flex-element div wide
-
+                        img(src='./img/s2.png' alt='pikachu' )
 
                 p Синтаксис:
                     figure.code <span class="nc">.selector</span>
@@ -237,6 +233,7 @@ main.main-content.css-tutorial
 
                 p.flex-toggler <a href="javascript:;" data-value="wrap">wrap</a> <a href="javascript:;" data-value="nowrap">nowrap</a>  <a href="javascript:;" data-value="wrap-reverse">wrap-reverse</a>
                     div#flex-wrap.flex-container
+                        img(src='./img/s2.png' alt='pikachu')
                         span.flex-element Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         div.flex-element Morbi molestie, elit eget semper imperdiet, dolor urna porta urna
                         div.flex-element Morbi molestie, elit eget semper imperdiet, dolor urna porta urna

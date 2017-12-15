@@ -296,15 +296,16 @@
   background: rgba(228, 225, 228, .5);
 
   .trans-element {
-    width: 170px;
+    text-align: center;
+    width: 195px;
     height: 100px;
     line-height: 100px;
     margin: 0 auto;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.6s ease-in-out;
   }
 }
 
-.one, .four, .seven, .ten {
+.one, .four, .seven,.sevenX,.sevenY, .ten {
   background: rgba(135, 86, 120, .4);
 }
 
@@ -325,11 +326,11 @@
 }
 
 .three:hover {
-  transform: translate(-20px, 20px);
+  transform: translate(20px, 20px);
 }
 
 .four:hover {
-  transform: scaleX(-1);
+  transform: scaleX(0.8);
 }
 
 .five:hover {
@@ -340,8 +341,14 @@
   transform: scale(1.2, 0.5);
 }
 
+
+.sevenX:hover {
+  transform: rotateX(180deg);
+}.sevenY:hover {
+   transform: rotateY(180deg);
+ }
 .seven:hover {
-  transform: rotate(720deg);
+  transform: rotate(180deg);
 }
 
 .eight:hover {
@@ -353,7 +360,7 @@
 }
 
 .ten:hover {
-  transform: skew(-20deg, 20deg);
+  transform: skew(20deg, -20deg);
 }
 
 .eleven:hover {
@@ -412,6 +419,28 @@
   background: #00E4F6;
   transform-origin: 50px 50px;
 
+}
+
+.animated_example {
+  border: 1px solid #ccc;
+  font-size: 0.9em;
+  padding: 10px;
+  width: 600px;
+  margin: 0 auto 150px;
+
+  .e {
+    background: #fc0;
+    box-sizing: border-box;
+    width: 190px;
+    padding: 10px;
+    margin: 5px 0;
+    transition: width 3s;
+    white-space: nowrap;
+  }
+
+  &:hover .e {
+    width: 100%;
+  }
 }
 
 

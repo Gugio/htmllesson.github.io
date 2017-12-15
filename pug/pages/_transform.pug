@@ -5,7 +5,7 @@ main.main-content.css-tutorial
 
             h1.title <code>transform</code>
             p CSS трансформації. Змінюють розмір, форму та положення елементів на сторінці.
-            p Трансформуються елементи зі значенням <code color="green">display: block;, inline-block;</code> а також <code color="green">table-row, table-row-group, table-header-group, table-footer-group, table-cell, table-caption</code>
+            p Трансформуються елементи зі значенням <code color="green">display: block / inline-block;</code> а також <code color="green">table-row, table-row-group, table-header-group, table-footer-group, table-cell, table-caption</code>
             p Існує два види трансформації: 2D і 3D.
 
             h2.subtitle Функція трансформації <code>transform</code>
@@ -18,90 +18,102 @@ main.main-content.css-tutorial
                     col
                     col
 
-                tr
-                    td <code>none</code>
-                    td Дефолтне значення. Відміняє трансформацію, якщо раніше вона була задана.
-
-                tr
-                    td <code>matrix(a, c, b, d, x, y)</code>
-                    td Зміщує елементи та задає спосіб їх трансформації, дозволяє поєднати кілька функцій одночасно. У якості трансформації допускається поворот, масштабування, нахил, та зміна положення.  <br> Значення А - змінює масштаб по горизонталі. Задається від 0 до 1. Менше 1 - зменшує, більше 1 - збільшує <br> Значення С - деформує сторони  по осі Y.  Приймає числові значення. Від'ємне зсуває -вниз, додатнє - вверх. <br> Значення B - деформує сторони  по осі X.  Приймає числові значення. Від'ємне зсуває - вправо, додатнє - вліво. <br> Значення D - змінює масштаб по вертикалі. Задається від 0 до 1. Менше 1 - зменшує, більше 1 - збільшує. <br> Значення Х - зміщує елемент по осі X.  Приймає числові значення. Від'ємне зміщує - вліво, додатнє - вправо. <br> Значення Y - зміщує елемент по осі Y. Приймає числові значення. Від'ємне зміщує - вверх, додатнє - вниз.
-
-                tr
-                    td <code>translate(x,y)</code>
-                    td Зсуває елемент по осям (x,y), відносно його положення. Додатнє значення - вправо по Х, або вниз по Y.  Від'ємне значення - вліво по Х, або вверх по Y.
 
                 tr
                     td <code>translateX(n)</code>
-                    td Зсуває елемент по осі Х. Приймає числові/відсоткові значення.
+                    td Зсуває елемент по осі Х. Приймає px/em/rem/%. % - береться від значення до якого використовується transition а не від батьківського елемента
+                    td
+                        .transform-wrap
+                            .trans-element.one translateX(20px)
 
                 tr
                     td <code>translateY(n)</code>
-                    td Зсуває елемент по осі Y. Приймає числові/відсоткові значення.
-
+                    td Зсуває елемент по осі Y. Приймає px/em/rem/%.
+                    td
+                        .transform-wrap
+                            .trans-element.two translateY(-20px)
                 tr
-                    td <code>scale(x,y)</code>
-                    td Масштабує елементи по осям. Значення від 1 до 0 - зменшують елемент. Перше значення масштабує по висоті, друг - по ширині.
+                    td <code>translate(x,y)</code>
+                    td Зсуває елемент по осям (x,y), відносно його положення. Додатнє значення - вправо по Х, або вниз по Y.  Від'ємне значення - вліво по Х, або вверх по Y.
+                    td
+                        .transform-wrap
+                            .trans-element.three translate(20px, 20px)
 
                 tr
                     td <code>scaleX(n)</code>
                     td Масштабує елемент по ширині, роблячи його вужче/ширше. Якщо значення більше 1 то елемент стає ширшим, нижче 1 - вужчим
-
+                    td
+                        .transform-wrap
+                            .trans-element.four scaleX(0.8)
                 tr
                     td <code>scaleY(n)</code>
                     td Масштабує елемент по висоті, роблячи його вище/коротше. Якщо значення більше 1 то елемент стає вищим, нижче 1 - коротшим
+                    td
+                        .transform-wrap
+                            .trans-element.five scaleY(1.2)
 
+                tr
+                    td <code>scale(x,y)</code>
+                    td Масштабує елементи по осям. Значення від 1 до 0 - зменшують елемент. Перше значення масштабує по висоті, друг - по ширині.
+                    td
+                        .transform-wrap
+                            .trans-element.six scale(1.2, 0.5)
+                tr
+                    td <code>rotateX(градус)</code>
+                    td Використовується для обертання елементу довкола його X осі. Приймаються значення у градусах (360deg). Від'ємне значення обертає елемент проти годинникової стрілки, додатнє - за годинниковою стрілкою.
+                    td
+                        .transform-wrap
+                            .trans-element.sevenX rotateX(180deg)
+                tr
+                    td <code>rotateY(градус)</code>
+                    td Використовується для обертання елементу довкола його Y осі. Приймаються значення у градусах (360deg). Від'ємне значення обертає елемент проти годинникової стрілки, додатнє - за годинниковою стрілкою.
+                    td
+                        .transform-wrap
+                            .trans-element.sevenY rotateY(180deg)
                 tr
                     td <code>rotate(градус)</code>
                     td Використовується для обертання елементу довкола його центру. Приймаються значення у градусах (360deg). Від'ємне значення обертає елемент проти годинникової стрілки, додатнє - за годинниковою стрілкою.
+                    td
+                        .transform-wrap
+                            .trans-element.seven rotate(180deg)
 
-                tr
-                    td <code>skew(x-градус, y-градус)</code>
-                    td Деформація сторін елементу відносно осейю Якщо вказано одне значення, інше вираховується автоматично.
 
                 tr
                     td <code>skewX(градус)</code>
                     td Деформує сторони по осі Х
+                    td
+                        .transform-wrap
+                            .trans-element.eight skewX(20deg)
 
                 tr
                     td <code>skewY(градус)</code>
                     td Деформує сторони по осі Y
+                    td
+                        .transform-wrap
+                            .trans-element.nine skewY(-20deg)
+                tr
+                    td <code>skew(x-градус, y-градус)</code>
+                    td Деформація сторін елементу відносно осейю Якщо вказано одне значення, інше вираховується автоматично.
+                    td
+                        .transform-wrap
+                            .trans-element.ten skew(20deg, -20deg)
 
-
-
-            .transform-samples
-                .transform-wrap
-                    .trans-element.one translateX(20px)
-
-                .transform-wrap
-                    .trans-element.two translateY(-20px)
-
-                .transform-wrap
-                    .trans-element.three translate(-20px, 20px)
-
-                .transform-wrap
-                    .trans-element.four scaleX(-1)
-
-                .transform-wrap
-                    .trans-element.five scaleY(1.2)
-
-                .transform-wrap
-                    .trans-element.six scale(1.2, 0.5)
-
-                .transform-wrap
-                    .trans-element.seven rotate(720deg)
-
-                .transform-wrap
-                    .trans-element.eight skewX(20deg)
-
-                .transform-wrap
-                    .trans-element.nine skewY(-20deg)
-
-                .transform-wrap
-                    .trans-element.ten skew(-20deg, 20deg)
-
-                .transform-wrap
-                    .trans-element.eleven matrix(1.2,0,0.5,1.2,50,0)
-
+                tr
+                    td <code>matrix(a, b, c, d, x, y)</code>
+                    td Зміщує елементи та задає спосіб їх трансформації, дозволяє поєднати кілька функцій одночасно.
+                        | У якості трансформації допускається поворот, масштабування, нахил, та зміна положення.  <br>
+                        | Значення А - змінює масштаб по горизонталі (scaleX). Задається від 0 до 1. Менше 1 - зменшує, більше 1 - збільшує <br>
+                        | Значення B - деформує сторони  по осі Y (skewY).  Приймає числові значення. Від'ємне зсуває -вниз, додатнє - вверх. <br>
+                        | Значення C - деформує сторони  по осі X (skewX).  Приймає числові значення. Від'ємне зсуває - вправо, додатнє - вліво. <br>
+                        | Значення D - змінює масштаб по вертикалі (scaleY). Задається від 0 до 1. Менше 1 - зменшує, більше 1 - збільшує. <br>
+                        | Значення Х - зміщує елемент по осі X (translateX).  Приймає числові значення. Від'ємне зміщує - вліво, додатнє - вправо. <br>
+                        | Значення Y - зміщує елемент по осі Y (translateY). Приймає числові значення. Від'ємне зміщує - вверх, додатнє - вниз.
+                    td
+                        .transform-wrap
+                            .trans-element.eleven matrix(1.2,0,0.5,1.2,50,0)
+                tr
+                    td <code>none</code>
+                    td Дефолтне значення. Відміняє трансформацію, якщо раніше вона була задана.
 
 
             h2.subtitle#transform-origin Точка трансформації <code>transform-origin</code>
@@ -115,49 +127,77 @@ main.main-content.css-tutorial
                     col
 
                 tr
-                    td <code>вісь Х (left, center, right, %)</code>
-                    td Пара значень. Задана за допомогою ключових слів, одиниць довжини <code>px/em/rem...</code> та відсоткових значень. Визначає відносно якої частини елементу буде відбуватись трансформація.
+                    td <code>transform-origin: x y z;</code>
+                    td Пара значень. Задана за допомогою ключових слів, одиниць довжини <code>px/em/rem/%</code>. Визначає відносно якої частини елементу буде відбуватись трансформація. Використовується з rotate, scale і skew
+                    td
+                        .transform-wrap
+                            .trans-element.seven(style='transform-origin:top left') transform-origin: top left
 
-                tr
-                    td <code>вісь Y (top, center, bottom, %)</code>
-
-
-            .origin-wrapper
-                .origin-sample
-                    .animated-origin.element-1 50% 50%
-
-                .origin-sample
-                    .animated-origin.element-2 top left
-
-                .origin-sample
-                    .animated-origin.element-3 110% 110%
-
-                .origin-sample
-                    .animated-origin.element-4 50px 50px
-
-
-
+            //.origin-wrapper
+            //    .origin-sample
+            //        .animated-origin.element-1 50% 50%
+            //
+            //    .origin-sample
+            //        .animated-origin.element-2 top left
+            //
+            //    .origin-sample
+            //        .animated-origin.element-3 110% 110%
+            //
+            //    .origin-sample
+            //        .animated-origin.element-4 50px 50px
+            //
+            //
+            //
 
             h2.subtitle#transition СSS переходи <code>transition</code>
             p.topic-content СSS переходи дозволяють анімувати значення основні на інші, за заданий проміжок часу.
-            p.topic-content Зміна властивостей відбувється при якому-небудь івенті. Найчастіше спрацьовує псевдоклас :hover.
-            p.topic-content Переходи застосовуються до всых елементыв, включно з псевдоелементами :before :after.
+            p.topic-content Зміна властивостей відбувється при якому-небудь івенті.
+            p.topic-content Переходи застосовуються до всіх елементів, включно з псевдоелементами :before :after.<br>
+                | transition: transition-property transition-duration transition-timing-function transition-delay
 
 
             table.table.striped
                 colgroup
-                    col(width='180px')
+                    col(width='300px')
                     col
                     col
 
                 tr
-                    td <code>вісь Х (left, center, right, %)</code>
-                    td Пара значень. Задана за допомогою ключових слів, одиниць довжини <code>px/em/rem...</code> та відсоткових значень. Визначає відносно якої частини елементу буде відбуватись трансформація.
-
+                    td <code>transition-property: none / all / властивості</code>
+                    td Визначає до яких властивостей буде застосована "таймінг" функція. all - дефолтне значення.
                 tr
-                    td <code>вісь Y (top, center, bottom, %)</code>
+                    td <code>transition-duration: s / ms </code>
+                    td Задає час в секундах або мілісекундах, скільки повинна тривати анімація переходу до її завершення. За замовчуванням значення дорівнює 0s, це означає, що ніякої анімації немає, перехід відбувається миттєво.<br>
+                        | Можна вказати кілька значень, перераховуючи їх через кому. Кожне значення застосовується до властивостей, заданих через transition-property.
+                tr
+                    td <code>transition-timing-function: ease / ease-in / ease-out / ease-in-out / linear /
+                        | step-start / step-end / steps() / cubic-bezier()</code>
+                    td Являє собою математичну функцію, яка показує, як швидко за часом змінюється вказане через transition-property значення властивості. Початкова точка має координати 0.0, 0.0, кінцева - 1.0, 1.0, при цьому функція по осі ординат може перевищувати ці значення в більшу або меншу сторону.<br>
+                        | <span class='orange'>ease</span> - Анімація починається повільно, потім прискорюється і до кінця руху знову сповільнюється. Аналогічно cubic-bezier (0.25,0.1,0.25,1).<br>
+                        | <span class='orange'>ease-in</span> - Анімація повільно починається, до кінця прискорюється. Аналогічно cubic-bezier (0.42,0,1,1).<br>
+                        | <span class='orange'>ease-out</span> - Анімація починається швидко, до кінця сповільнюється. Аналогічно cubic-bezier (0,0,0.58,1).<br>
+                        | <span class='orange'>ease-in-out</span> - Анімація починається і закінчується повільно. Аналогічно cubic-bezier (0.42,0,0.58,1).<br>
+                        | <span class='orange'>linear</span> - Однакова швидкість від початку і до кінця.<br>
+                        | <span class='orange'>step-start</span> - Як такої анімації немає. Стильові властивості відразу ж приймають кінцеве значення.<br>
+                        | <span class='orange'>step-end</span> - Як такої анімації немає. Стильові властивості знаходяться в початковому значенні заданий час, потім відразу ж приймають кінцеве значення.<br>
+                        | <span class='orange'>steps</span> - Ступінчаста функція, що має задане число кроків. transition-timing-function: steps (<число>, start | end)
+                tr
+                    td transition-delay: s / ms
+                    td Bстановлює час очікування перед запуском ефекту переходу. Значення 0s запускає анімацію відразу ж. Негативне значення також включає анімацію без затримок, але може привести до зміни виду початку анімації.<br>
+                       | Припустимо вказувати кілька значень, перераховуючи їх через кому. Кожне значення буде застосовуватися до властивості, заданому в параметрах transition-property.
 
 
+            div.animated_example
+               div.e(style="transition-timing-function: ease") ease
+               div.e(style="transition-timing-function: ease-in") ease-in
+               div.e(style="transition-timing-function: ease-out") ease-out
+               div.e(style="transition-timing-function: ease-in-out") ease-in-out
+               div.e(style="transition-timing-function: linear") linear
+               div.e(style="transition-timing-function: step-start") step-start
+               div.e(style="transition-timing-function: step-end") step-end
+               div.e(style="transition-timing-function: steps(5, start)") steps(5, start)
+               div.e(style="transition-timing-function: steps(5, end)") steps(5, end)
+               div.e(style="transition-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0)") cubic-bezier(0.1, -0.6, 0.2, 0)
 
 
     section.aside-bar
